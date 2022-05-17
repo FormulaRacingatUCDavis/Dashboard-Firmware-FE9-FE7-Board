@@ -1,0 +1,9 @@
+RGB3_1 RED
+RGB2_1 Green
+RGB1_1 Blue
+
+Left HV
+Right Drive. 
+Standing on the left of the vehicle. 
+
+
