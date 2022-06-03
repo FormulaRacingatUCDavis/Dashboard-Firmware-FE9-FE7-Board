@@ -1,0 +1,607 @@
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"GraphicLCDIntf_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.GraphicLCDIntf_SaveConfig,"ax",%progbits
+  20              		.align	2
+  21              		.global	GraphicLCDIntf_SaveConfig
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	GraphicLCDIntf_SaveConfig, %function
+  25              	GraphicLCDIntf_SaveConfig:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\GraphicLCDIntf_PM.c"
+   1:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * File Name: GraphicLCDIntf_PM.c
+   3:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Version 1.80
+   4:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+   5:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Description:
+   6:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  This file contains the setup, control and status commands to support 
+   7:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  the component operations in Low-power mode.  
+   8:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+   9:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** ********************************************************************************
+  10:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Copyright 2008-2018, Cypress Semiconductor Corporation.  All rights reserved.
+  11:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  12:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  13:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * the software package with which this file was provided.
+  14:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *******************************************************************************/
+  15:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  16:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** #include "GraphicLCDIntf.h" 
+  17:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  18:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  19:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** /*******************************************************************************
+  20:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Function Name: GraphicLCDIntf_SaveConfig
+  21:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** ********************************************************************************
+  22:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  23:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Summary:
+  24:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  All configuration registers are retention. Nothing to save here.
+  25:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  26:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *******************************************************************************/
+  27:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** void GraphicLCDIntf_SaveConfig(void) 
+  28:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** {   
+  28              		.loc 1 28 0
+  29              		.cfi_startproc
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 2
+
+
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33 0000 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE0:
+  36              		.size	GraphicLCDIntf_SaveConfig, .-GraphicLCDIntf_SaveConfig
+  37 0002 00BF     		.section	.text.GraphicLCDIntf_RestoreConfig,"ax",%progbits
+  38              		.align	2
+  39              		.global	GraphicLCDIntf_RestoreConfig
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	GraphicLCDIntf_RestoreConfig, %function
+  43              	GraphicLCDIntf_RestoreConfig:
+  44              	.LFB1:
+  29:Generated_Source\PSoC5/GraphicLCDIntf_PM.c ****     
+  30:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** }
+  31:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  32:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  33:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** /*******************************************************************************
+  34:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Function Name: GraphicLCDIntf_RestoreConfig
+  35:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** ********************************************************************************
+  36:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  37:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Summary:
+  38:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  All configuration registers are retention. Nothing to restore here.
+  39:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  40:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *******************************************************************************/
+  41:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** void GraphicLCDIntf_RestoreConfig(void) 
+  42:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** {    
+  45              		.loc 1 42 0
+  46              		.cfi_startproc
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 0, uses_anonymous_args = 0
+  49              		@ link register save eliminated.
+  50 0000 7047     		bx	lr
+  51              		.cfi_endproc
+  52              	.LFE1:
+  53              		.size	GraphicLCDIntf_RestoreConfig, .-GraphicLCDIntf_RestoreConfig
+  54 0002 00BF     		.section	.text.GraphicLCDIntf_Sleep,"ax",%progbits
+  55              		.align	2
+  56              		.global	GraphicLCDIntf_Sleep
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	GraphicLCDIntf_Sleep, %function
+  60              	GraphicLCDIntf_Sleep:
+  61              	.LFB2:
+  43:Generated_Source\PSoC5/GraphicLCDIntf_PM.c ****     
+  44:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** }
+  45:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  46:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  47:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** /*******************************************************************************
+  48:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Function Name: GraphicLCDIntf_Sleep
+  49:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** ********************************************************************************
+  50:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  51:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Summary:
+  52:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  Disables block's operation and saves its configuration. Should be called 
+  53:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  prior to entering Sleep.
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 3
+
+
+  54:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  55:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *******************************************************************************/
+  56:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** void GraphicLCDIntf_Sleep(void) 
+  57:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** {
+  62              		.loc 1 57 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		.loc 1 57 0
+  67 0000 08B5     		push	{r3, lr}
+  68              		.cfi_def_cfa_offset 8
+  69              		.cfi_offset 3, -8
+  70              		.cfi_offset 14, -4
+  58:Generated_Source\PSoC5/GraphicLCDIntf_PM.c ****     GraphicLCDIntf_Stop();
+  71              		.loc 1 58 0
+  72 0002 FFF7FEFF 		bl	GraphicLCDIntf_Stop
+  73              	.LVL0:
+  74 0006 08BD     		pop	{r3, pc}
+  75              		.cfi_endproc
+  76              	.LFE2:
+  77              		.size	GraphicLCDIntf_Sleep, .-GraphicLCDIntf_Sleep
+  78              		.section	.text.GraphicLCDIntf_Wakeup,"ax",%progbits
+  79              		.align	2
+  80              		.global	GraphicLCDIntf_Wakeup
+  81              		.thumb
+  82              		.thumb_func
+  83              		.type	GraphicLCDIntf_Wakeup, %function
+  84              	GraphicLCDIntf_Wakeup:
+  85              	.LFB3:
+  59:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** }
+  60:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  61:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** 
+  62:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** /*******************************************************************************
+  63:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Function Name: GraphicLCDIntf_Wakeup
+  64:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** ********************************************************************************
+  65:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  66:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** * Summary:
+  67:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  Enables block's operation and restores its configuration. Should be called
+  68:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *  after awaking from Sleep.
+  69:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *
+  70:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** *******************************************************************************/
+  71:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** void GraphicLCDIntf_Wakeup(void) 
+  72:Generated_Source\PSoC5/GraphicLCDIntf_PM.c **** {
+  86              		.loc 1 72 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90 0000 08B5     		push	{r3, lr}
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 3, -8
+  93              		.cfi_offset 14, -4
+  73:Generated_Source\PSoC5/GraphicLCDIntf_PM.c ****     GraphicLCDIntf_Enable();
+  94              		.loc 1 73 0
+  95 0002 FFF7FEFF 		bl	GraphicLCDIntf_Enable
+  96              	.LVL1:
+  97 0006 08BD     		pop	{r3, pc}
+  98              		.cfi_endproc
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 4
+
+
+  99              	.LFE3:
+ 100              		.size	GraphicLCDIntf_Wakeup, .-GraphicLCDIntf_Wakeup
+ 101              		.text
+ 102              	.Letext0:
+ 103              		.file 2 "Generated_Source\\PSoC5\\GraphicLCDIntf.h"
+ 104              		.section	.debug_info,"",%progbits
+ 105              	.Ldebug_info0:
+ 106 0000 F3000000 		.4byte	0xf3
+ 107 0004 0400     		.2byte	0x4
+ 108 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 109 000a 04       		.byte	0x4
+ 110 000b 01       		.uleb128 0x1
+ 111 000c 3E000000 		.4byte	.LASF18
+ 112 0010 0C       		.byte	0xc
+ 113 0011 B1010000 		.4byte	.LASF19
+ 114 0015 36010000 		.4byte	.LASF20
+ 115 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 116 001d 00000000 		.4byte	0
+ 117 0021 00000000 		.4byte	.Ldebug_line0
+ 118 0025 02       		.uleb128 0x2
+ 119 0026 01       		.byte	0x1
+ 120 0027 06       		.byte	0x6
+ 121 0028 FA010000 		.4byte	.LASF0
+ 122 002c 02       		.uleb128 0x2
+ 123 002d 01       		.byte	0x1
+ 124 002e 08       		.byte	0x8
+ 125 002f 30000000 		.4byte	.LASF1
+ 126 0033 02       		.uleb128 0x2
+ 127 0034 02       		.byte	0x2
+ 128 0035 05       		.byte	0x5
+ 129 0036 A7010000 		.4byte	.LASF2
+ 130 003a 02       		.uleb128 0x2
+ 131 003b 02       		.byte	0x2
+ 132 003c 07       		.byte	0x7
+ 133 003d F8000000 		.4byte	.LASF3
+ 134 0041 02       		.uleb128 0x2
+ 135 0042 04       		.byte	0x4
+ 136 0043 05       		.byte	0x5
+ 137 0044 F1010000 		.4byte	.LASF4
+ 138 0048 02       		.uleb128 0x2
+ 139 0049 04       		.byte	0x4
+ 140 004a 07       		.byte	0x7
+ 141 004b E6000000 		.4byte	.LASF5
+ 142 004f 02       		.uleb128 0x2
+ 143 0050 08       		.byte	0x8
+ 144 0051 05       		.byte	0x5
+ 145 0052 94010000 		.4byte	.LASF6
+ 146 0056 02       		.uleb128 0x2
+ 147 0057 08       		.byte	0x8
+ 148 0058 07       		.byte	0x7
+ 149 0059 1F010000 		.4byte	.LASF7
+ 150 005d 03       		.uleb128 0x3
+ 151 005e 04       		.byte	0x4
+ 152 005f 05       		.byte	0x5
+ 153 0060 696E7400 		.ascii	"int\000"
+ 154 0064 02       		.uleb128 0x2
+ 155 0065 04       		.byte	0x4
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 5
+
+
+ 156 0066 07       		.byte	0x7
+ 157 0067 12010000 		.4byte	.LASF8
+ 158 006b 02       		.uleb128 0x2
+ 159 006c 04       		.byte	0x4
+ 160 006d 04       		.byte	0x4
+ 161 006e 14000000 		.4byte	.LASF9
+ 162 0072 02       		.uleb128 0x2
+ 163 0073 08       		.byte	0x8
+ 164 0074 04       		.byte	0x4
+ 165 0075 0B010000 		.4byte	.LASF10
+ 166 0079 02       		.uleb128 0x2
+ 167 007a 01       		.byte	0x1
+ 168 007b 08       		.byte	0x8
+ 169 007c A2010000 		.4byte	.LASF11
+ 170 0080 04       		.uleb128 0x4
+ 171 0081 CC000000 		.4byte	.LASF12
+ 172 0085 01       		.byte	0x1
+ 173 0086 1B       		.byte	0x1b
+ 174 0087 00000000 		.4byte	.LFB0
+ 175 008b 02000000 		.4byte	.LFE0-.LFB0
+ 176 008f 01       		.uleb128 0x1
+ 177 0090 9C       		.byte	0x9c
+ 178 0091 04       		.uleb128 0x4
+ 179 0092 06020000 		.4byte	.LASF13
+ 180 0096 01       		.byte	0x1
+ 181 0097 29       		.byte	0x29
+ 182 0098 00000000 		.4byte	.LFB1
+ 183 009c 02000000 		.4byte	.LFE1-.LFB1
+ 184 00a0 01       		.uleb128 0x1
+ 185 00a1 9C       		.byte	0x9c
+ 186 00a2 05       		.uleb128 0x5
+ 187 00a3 DC010000 		.4byte	.LASF14
+ 188 00a7 01       		.byte	0x1
+ 189 00a8 38       		.byte	0x38
+ 190 00a9 00000000 		.4byte	.LFB2
+ 191 00ad 08000000 		.4byte	.LFE2-.LFB2
+ 192 00b1 01       		.uleb128 0x1
+ 193 00b2 9C       		.byte	0x9c
+ 194 00b3 C1000000 		.4byte	0xc1
+ 195 00b7 06       		.uleb128 0x6
+ 196 00b8 06000000 		.4byte	.LVL0
+ 197 00bc E0000000 		.4byte	0xe0
+ 198 00c0 00       		.byte	0
+ 199 00c1 05       		.uleb128 0x5
+ 200 00c2 1A000000 		.4byte	.LASF15
+ 201 00c6 01       		.byte	0x1
+ 202 00c7 47       		.byte	0x47
+ 203 00c8 00000000 		.4byte	.LFB3
+ 204 00cc 08000000 		.4byte	.LFE3-.LFB3
+ 205 00d0 01       		.uleb128 0x1
+ 206 00d1 9C       		.byte	0x9c
+ 207 00d2 E0000000 		.4byte	0xe0
+ 208 00d6 06       		.uleb128 0x6
+ 209 00d7 06000000 		.4byte	.LVL1
+ 210 00db EB000000 		.4byte	0xeb
+ 211 00df 00       		.byte	0
+ 212 00e0 07       		.uleb128 0x7
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 6
+
+
+ 213 00e1 00000000 		.4byte	.LASF16
+ 214 00e5 00000000 		.4byte	.LASF16
+ 215 00e9 02       		.byte	0x2
+ 216 00ea 28       		.byte	0x28
+ 217 00eb 07       		.uleb128 0x7
+ 218 00ec 7E010000 		.4byte	.LASF17
+ 219 00f0 7E010000 		.4byte	.LASF17
+ 220 00f4 02       		.byte	0x2
+ 221 00f5 3A       		.byte	0x3a
+ 222 00f6 00       		.byte	0
+ 223              		.section	.debug_abbrev,"",%progbits
+ 224              	.Ldebug_abbrev0:
+ 225 0000 01       		.uleb128 0x1
+ 226 0001 11       		.uleb128 0x11
+ 227 0002 01       		.byte	0x1
+ 228 0003 25       		.uleb128 0x25
+ 229 0004 0E       		.uleb128 0xe
+ 230 0005 13       		.uleb128 0x13
+ 231 0006 0B       		.uleb128 0xb
+ 232 0007 03       		.uleb128 0x3
+ 233 0008 0E       		.uleb128 0xe
+ 234 0009 1B       		.uleb128 0x1b
+ 235 000a 0E       		.uleb128 0xe
+ 236 000b 55       		.uleb128 0x55
+ 237 000c 17       		.uleb128 0x17
+ 238 000d 11       		.uleb128 0x11
+ 239 000e 01       		.uleb128 0x1
+ 240 000f 10       		.uleb128 0x10
+ 241 0010 17       		.uleb128 0x17
+ 242 0011 00       		.byte	0
+ 243 0012 00       		.byte	0
+ 244 0013 02       		.uleb128 0x2
+ 245 0014 24       		.uleb128 0x24
+ 246 0015 00       		.byte	0
+ 247 0016 0B       		.uleb128 0xb
+ 248 0017 0B       		.uleb128 0xb
+ 249 0018 3E       		.uleb128 0x3e
+ 250 0019 0B       		.uleb128 0xb
+ 251 001a 03       		.uleb128 0x3
+ 252 001b 0E       		.uleb128 0xe
+ 253 001c 00       		.byte	0
+ 254 001d 00       		.byte	0
+ 255 001e 03       		.uleb128 0x3
+ 256 001f 24       		.uleb128 0x24
+ 257 0020 00       		.byte	0
+ 258 0021 0B       		.uleb128 0xb
+ 259 0022 0B       		.uleb128 0xb
+ 260 0023 3E       		.uleb128 0x3e
+ 261 0024 0B       		.uleb128 0xb
+ 262 0025 03       		.uleb128 0x3
+ 263 0026 08       		.uleb128 0x8
+ 264 0027 00       		.byte	0
+ 265 0028 00       		.byte	0
+ 266 0029 04       		.uleb128 0x4
+ 267 002a 2E       		.uleb128 0x2e
+ 268 002b 00       		.byte	0
+ 269 002c 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 7
+
+
+ 270 002d 19       		.uleb128 0x19
+ 271 002e 03       		.uleb128 0x3
+ 272 002f 0E       		.uleb128 0xe
+ 273 0030 3A       		.uleb128 0x3a
+ 274 0031 0B       		.uleb128 0xb
+ 275 0032 3B       		.uleb128 0x3b
+ 276 0033 0B       		.uleb128 0xb
+ 277 0034 27       		.uleb128 0x27
+ 278 0035 19       		.uleb128 0x19
+ 279 0036 11       		.uleb128 0x11
+ 280 0037 01       		.uleb128 0x1
+ 281 0038 12       		.uleb128 0x12
+ 282 0039 06       		.uleb128 0x6
+ 283 003a 40       		.uleb128 0x40
+ 284 003b 18       		.uleb128 0x18
+ 285 003c 9742     		.uleb128 0x2117
+ 286 003e 19       		.uleb128 0x19
+ 287 003f 00       		.byte	0
+ 288 0040 00       		.byte	0
+ 289 0041 05       		.uleb128 0x5
+ 290 0042 2E       		.uleb128 0x2e
+ 291 0043 01       		.byte	0x1
+ 292 0044 3F       		.uleb128 0x3f
+ 293 0045 19       		.uleb128 0x19
+ 294 0046 03       		.uleb128 0x3
+ 295 0047 0E       		.uleb128 0xe
+ 296 0048 3A       		.uleb128 0x3a
+ 297 0049 0B       		.uleb128 0xb
+ 298 004a 3B       		.uleb128 0x3b
+ 299 004b 0B       		.uleb128 0xb
+ 300 004c 27       		.uleb128 0x27
+ 301 004d 19       		.uleb128 0x19
+ 302 004e 11       		.uleb128 0x11
+ 303 004f 01       		.uleb128 0x1
+ 304 0050 12       		.uleb128 0x12
+ 305 0051 06       		.uleb128 0x6
+ 306 0052 40       		.uleb128 0x40
+ 307 0053 18       		.uleb128 0x18
+ 308 0054 9742     		.uleb128 0x2117
+ 309 0056 19       		.uleb128 0x19
+ 310 0057 01       		.uleb128 0x1
+ 311 0058 13       		.uleb128 0x13
+ 312 0059 00       		.byte	0
+ 313 005a 00       		.byte	0
+ 314 005b 06       		.uleb128 0x6
+ 315 005c 898201   		.uleb128 0x4109
+ 316 005f 00       		.byte	0
+ 317 0060 11       		.uleb128 0x11
+ 318 0061 01       		.uleb128 0x1
+ 319 0062 31       		.uleb128 0x31
+ 320 0063 13       		.uleb128 0x13
+ 321 0064 00       		.byte	0
+ 322 0065 00       		.byte	0
+ 323 0066 07       		.uleb128 0x7
+ 324 0067 2E       		.uleb128 0x2e
+ 325 0068 00       		.byte	0
+ 326 0069 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 8
+
+
+ 327 006a 19       		.uleb128 0x19
+ 328 006b 3C       		.uleb128 0x3c
+ 329 006c 19       		.uleb128 0x19
+ 330 006d 6E       		.uleb128 0x6e
+ 331 006e 0E       		.uleb128 0xe
+ 332 006f 03       		.uleb128 0x3
+ 333 0070 0E       		.uleb128 0xe
+ 334 0071 3A       		.uleb128 0x3a
+ 335 0072 0B       		.uleb128 0xb
+ 336 0073 3B       		.uleb128 0x3b
+ 337 0074 0B       		.uleb128 0xb
+ 338 0075 00       		.byte	0
+ 339 0076 00       		.byte	0
+ 340 0077 00       		.byte	0
+ 341              		.section	.debug_aranges,"",%progbits
+ 342 0000 34000000 		.4byte	0x34
+ 343 0004 0200     		.2byte	0x2
+ 344 0006 00000000 		.4byte	.Ldebug_info0
+ 345 000a 04       		.byte	0x4
+ 346 000b 00       		.byte	0
+ 347 000c 0000     		.2byte	0
+ 348 000e 0000     		.2byte	0
+ 349 0010 00000000 		.4byte	.LFB0
+ 350 0014 02000000 		.4byte	.LFE0-.LFB0
+ 351 0018 00000000 		.4byte	.LFB1
+ 352 001c 02000000 		.4byte	.LFE1-.LFB1
+ 353 0020 00000000 		.4byte	.LFB2
+ 354 0024 08000000 		.4byte	.LFE2-.LFB2
+ 355 0028 00000000 		.4byte	.LFB3
+ 356 002c 08000000 		.4byte	.LFE3-.LFB3
+ 357 0030 00000000 		.4byte	0
+ 358 0034 00000000 		.4byte	0
+ 359              		.section	.debug_ranges,"",%progbits
+ 360              	.Ldebug_ranges0:
+ 361 0000 00000000 		.4byte	.LFB0
+ 362 0004 02000000 		.4byte	.LFE0
+ 363 0008 00000000 		.4byte	.LFB1
+ 364 000c 02000000 		.4byte	.LFE1
+ 365 0010 00000000 		.4byte	.LFB2
+ 366 0014 08000000 		.4byte	.LFE2
+ 367 0018 00000000 		.4byte	.LFB3
+ 368 001c 08000000 		.4byte	.LFE3
+ 369 0020 00000000 		.4byte	0
+ 370 0024 00000000 		.4byte	0
+ 371              		.section	.debug_line,"",%progbits
+ 372              	.Ldebug_line0:
+ 373 0000 9B000000 		.section	.debug_str,"MS",%progbits,1
+ 373      02005500 
+ 373      00000201 
+ 373      FB0E0D00 
+ 373      01010101 
+ 374              	.LASF16:
+ 375 0000 47726170 		.ascii	"GraphicLCDIntf_Stop\000"
+ 375      6869634C 
+ 375      4344496E 
+ 375      74665F53 
+ 375      746F7000 
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 9
+
+
+ 376              	.LASF9:
+ 377 0014 666C6F61 		.ascii	"float\000"
+ 377      7400
+ 378              	.LASF15:
+ 379 001a 47726170 		.ascii	"GraphicLCDIntf_Wakeup\000"
+ 379      6869634C 
+ 379      4344496E 
+ 379      74665F57 
+ 379      616B6575 
+ 380              	.LASF1:
+ 381 0030 756E7369 		.ascii	"unsigned char\000"
+ 381      676E6564 
+ 381      20636861 
+ 381      7200
+ 382              	.LASF18:
+ 383 003e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 383      43313120 
+ 383      352E342E 
+ 383      31203230 
+ 383      31363036 
+ 384 0071 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 384      20726576 
+ 384      6973696F 
+ 384      6E203233 
+ 384      37373135 
+ 385 00a4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 385      66756E63 
+ 385      74696F6E 
+ 385      2D736563 
+ 385      74696F6E 
+ 386              	.LASF12:
+ 387 00cc 47726170 		.ascii	"GraphicLCDIntf_SaveConfig\000"
+ 387      6869634C 
+ 387      4344496E 
+ 387      74665F53 
+ 387      61766543 
+ 388              	.LASF5:
+ 389 00e6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 389      20756E73 
+ 389      69676E65 
+ 389      6420696E 
+ 389      7400
+ 390              	.LASF3:
+ 391 00f8 73686F72 		.ascii	"short unsigned int\000"
+ 391      7420756E 
+ 391      7369676E 
+ 391      65642069 
+ 391      6E7400
+ 392              	.LASF10:
+ 393 010b 646F7562 		.ascii	"double\000"
+ 393      6C6500
+ 394              	.LASF8:
+ 395 0112 756E7369 		.ascii	"unsigned int\000"
+ 395      676E6564 
+ 395      20696E74 
+ 395      00
+ 396              	.LASF7:
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 10
+
+
+ 397 011f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 397      206C6F6E 
+ 397      6720756E 
+ 397      7369676E 
+ 397      65642069 
+ 398              	.LASF20:
+ 399 0136 5A3A5C44 		.ascii	"Z:\\Documents\\UCD\\FRUCD\\Dashboard-Firmware-FE9-F"
+ 399      6F63756D 
+ 399      656E7473 
+ 399      5C554344 
+ 399      5C465255 
+ 400 0165 45372D42 		.ascii	"E7-Board\\Dashboard.cydsn\000"
+ 400      6F617264 
+ 400      5C446173 
+ 400      68626F61 
+ 400      72642E63 
+ 401              	.LASF17:
+ 402 017e 47726170 		.ascii	"GraphicLCDIntf_Enable\000"
+ 402      6869634C 
+ 402      4344496E 
+ 402      74665F45 
+ 402      6E61626C 
+ 403              	.LASF6:
+ 404 0194 6C6F6E67 		.ascii	"long long int\000"
+ 404      206C6F6E 
+ 404      6720696E 
+ 404      7400
+ 405              	.LASF11:
+ 406 01a2 63686172 		.ascii	"char\000"
+ 406      00
+ 407              	.LASF2:
+ 408 01a7 73686F72 		.ascii	"short int\000"
+ 408      7420696E 
+ 408      7400
+ 409              	.LASF19:
+ 410 01b1 47656E65 		.ascii	"Generated_Source\\PSoC5\\GraphicLCDIntf_PM.c\000"
+ 410      72617465 
+ 410      645F536F 
+ 410      75726365 
+ 410      5C50536F 
+ 411              	.LASF14:
+ 412 01dc 47726170 		.ascii	"GraphicLCDIntf_Sleep\000"
+ 412      6869634C 
+ 412      4344496E 
+ 412      74665F53 
+ 412      6C656570 
+ 413              	.LASF4:
+ 414 01f1 6C6F6E67 		.ascii	"long int\000"
+ 414      20696E74 
+ 414      00
+ 415              	.LASF0:
+ 416 01fa 7369676E 		.ascii	"signed char\000"
+ 416      65642063 
+ 416      68617200 
+ 417              	.LASF13:
+ 418 0206 47726170 		.ascii	"GraphicLCDIntf_RestoreConfig\000"
+ 418      6869634C 
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cccBEslX.s 			page 11
+
+
+ 418      4344496E 
+ 418      74665F52 
+ 418      6573746F 
+ 419              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

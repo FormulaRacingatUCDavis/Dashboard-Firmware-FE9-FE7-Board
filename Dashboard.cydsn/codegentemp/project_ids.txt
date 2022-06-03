@@ -1,0 +1,6 @@
+Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cyprj|dbc94285-a042-4264-88b5-a98ccb1f5d44
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|edb9f9f7-9190-4aa9-a279-d970ce68aad8
+\\vmware-host\Shared Folders\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|11bd0d2a-a298-42b0-902b-5a2fc41ea87a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2a131261-aea9-490e-a030-4d419e57d2a2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c1121d27-199b-430c-8dcf-d97e28bd35a5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2a2eb99b-adfe-4377-8a48-548388aadb8d

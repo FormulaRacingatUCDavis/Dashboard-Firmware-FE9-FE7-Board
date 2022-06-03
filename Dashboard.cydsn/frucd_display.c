@@ -22,6 +22,7 @@ void calibrateScreen() {
 
 // Initializes dashboard layout/labels
 void initDashTemplate() {
+    UG_FillScreen(C_BLACK);
     UG_PutString(68, 10, "PACK SOC");
     UG_PutString(297, 10, "MAX PACK T");
     UG_PutString(10, 195, "STATE:");
@@ -35,7 +36,7 @@ void initDashTemplate() {
  * - handle variety of digit counts
  * - color decision logic is in here
  */
-void disp_SOC(int data) {
+void disp_SOC(uint8 data) {
     UG_FontSelect(&FONT_32X53);
     UG_COLOR color;
     if (data == 100) {
@@ -62,8 +63,6 @@ void disp_SOC(int data) {
                 color = C_ORANGE;
             } else {
                 color = C_RED;
-                UG_FillFrame(30, 35, 210, 170, C_BLACK);
-                UG_FillFrame(30, 35, 210, 170, color);
             }
             data_s[2] = '%';
             data_s[3] = '\0';
@@ -86,7 +85,7 @@ void disp_SOC(int data) {
     UG_FontSelect(&FONT_12X16);
 }
 
-void disp_max_pack_temp(int data) {
+void disp_max_pack_temp(uint8 data) {
     // choose color
     UG_COLOR color;
     if (data < 45) {
@@ -176,6 +175,15 @@ void disp_state(uint8 state) { // TODO
                 }
                 UG_PutColorString(100, 195, "BSPD TRIPD", C_BLACK, color); //whitespace to clear
                 break;
+            case ESTOP:
+                color = C_RED;
+                if (color != last_state_color) {
+                    // only draw rectangle if color changed
+                    UG_FillFrame(95, 185, 240, 215, color);
+                    last_state_color = color;
+                }
+                UG_PutColorString(100, 195, "SHTDWN OPN", C_BLACK, color); //whitespace to clear
+                break;
         }
         
     } else {
@@ -203,11 +211,45 @@ void disp_state(uint8 state) { // TODO
     }
 }
 
-void disp_glv_v(int data) { // TODO
-    data = 0;
+void disp_glv_v(uint16 data) {
+    // format to 0-1200 range
+    data *= 12;
+    data = 100 * (data / 0xfff) + (100 * data / 0xfff - 100 * (data / 0xfff));
+    UG_COLOR color;
+    if (data > 1150) {
+        color = C_GREEN;
+    } else if (data > 1100) {
+        color = C_YELLOW;
+    } else if (data > 1050) {
+        color = C_ORANGE;
+    } else {
+        color = C_RED;
+    }
+    if (color != last_glv_v_color) {
+        // only draw rectangle if color changed
+        UG_FillFrame(95, 230, 182, 260, color);
+        last_glv_v_color = color;
+    }
+    char data_s[7];
+    sprintf(data_s, "%d", data);
+    // handle 3 digit cases; 2 and 1 are practically impossible
+    if (data < 1000) {
+        data_s[3] = data_s[2];
+        data_s[2] = data_s[1];
+        data_s[1] = data_s[0];  
+        data_s[0] = ' ';
+    }
+    // shift over fractional part
+    data_s[4] = data_s[3];
+    data_s[3] = data_s[2];
+    // add syntax
+    data_s[2] = '.';
+    data_s[5] = 'V';
+    data_s[6] = '\0';
+    UG_PutColorString(100, 240, data_s, C_BLACK, color);
 }
 
-void disp_mc_temp(int data) {
+void disp_mc_temp(uint8 data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 185, 470, 215, C_GREEN);
@@ -227,7 +269,7 @@ void disp_mc_temp(int data) {
     }
 }
 
-void disp_motor_temp(int data) {
+void disp_motor_temp(uint8 data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 230, 470, 260, C_GREEN);

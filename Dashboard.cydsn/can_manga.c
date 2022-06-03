@@ -16,6 +16,8 @@
 #include "cytypes.h"
 //#include "data.h"
 #include "frucd_display.h"
+// temp
+#include "BMS.h"
 
 extern volatile uint32_t pedalOK;
 extern volatile double THROTTLE_MULTIPLIER;
@@ -35,7 +37,7 @@ volatile uint8_t ABS_MOTOR_RPM = 0;
 volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
 
-volatile uint8_t ESTOP; //Tehya test
+//volatile uint8_t ESTOP; //Tehya test
 
 volatile uint8_t VOLT_B1;
 volatile uint8_t VOLT_B2;
@@ -110,6 +112,7 @@ uint8_t getEStop()
 void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
+    BMS_Write(1);
     disp_mc_temp(69);
     
     
@@ -167,7 +170,7 @@ void can_receive(uint8_t *msg, int ID)
             bms_status = (data[CAN_DATA_BYTE_3] << 8) | data[CAN_DATA_BYTE_4];  
             break;
         case 0x366: //Tehya test
-            ESTOP = data[CAN_DATA_BYTE_1];
+            //ESTOP = data[CAN_DATA_BYTE_1];
             break;
     }
     
