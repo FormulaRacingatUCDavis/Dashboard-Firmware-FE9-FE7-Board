@@ -16,9 +16,11 @@
 #include "cytypes.h"
 //#include "data.h"
 #include "frucd_display.h"
-// temp
-#include "BMS.h"
+// indicator LEDs
+#include "BMS_LED.h"
+#include "IMD_LED.h"
 
+extern volatile vcu_state state;
 extern volatile uint32_t pedalOK;
 extern volatile double THROTTLE_MULTIPLIER;
 extern const double THROTTLE_MAP[8];
@@ -112,17 +114,17 @@ uint8_t getEStop()
 void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
-    BMS_Write(1);
-    disp_mc_temp(69);
-    
     
     uint8_t data[8];
     int i = 0;
     for (i = 0; i < 8; i++)
         data[i] = msg[i];
-        
+    
     switch (ID) 
     {
+        case VEHICLE_STATE:
+            state = msg[CAN_DATA_BYTE_1];
+            break;
         case 0x0566: // Curtis Status
             CAPACITOR_VOLT = msg[CAN_DATA_BYTE_1];
             ABS_MOTOR_RPM = msg[CAN_DATA_BYTE_5];
@@ -217,15 +219,14 @@ void can_send(uint8_t data[8], uint32_t ID)
 	CAN_SendMsg(&message); 
 }
 
-void can_send_status(
-    uint8_t state,
-    uint8_t errorState)
+void can_send_switches(
+    uint8_t sw_status)
 {
     //max and min voltage means the voltage of single cell
         uint8_t data[8];
         
-        data[0] = state;
-        data[1] = errorState;
+        data[0] = sw_status;
+        data[1] = 0;
         
         data[2] = 0;
         data[3] = 0;
@@ -235,7 +236,7 @@ void can_send_status(
         data[6] = 0;
         data[7] = 0;
 
-        can_send(data, 0x626);
+        can_send(data, SWITCHES);
 
         
 } // can_send_status()

@@ -16,6 +16,16 @@
 
 //volatile uint32 CURRENT = 0; 
     
+typedef enum {
+    VEHICLE_STATE = 0x0c0,
+    SWITCHES = 0x0d0,
+    TORQUE_REQUEST_COMMAND = 0x766,
+    BMS_STATUS_MSG = 0x380,
+    PEI_CURRENT = 0x387,
+    BMS_VOLTAGES = 0x388,
+    BMS_TEMPERATURES = 0x389
+} CAN_ID;
+    
 // Basic CAN functionality
 void can_receive(uint8_t *msg, int ID);
 void can_test_send();
@@ -23,7 +33,7 @@ void can_send(uint8_t data[8], uint32_t ID);
 
 // Advanced CAN functionality
 void can_send_cmd(uint8_t SetInterlock, uint16_t VCL_Throttle_High, uint16_t VCL_Throttle_Low, uint8_t E_Stop_Check);
-void can_send_status(uint8_t state, uint8_t errorState);
+void can_send_switches(uint8_t sw_status);
 void can_send_charge(uint8_t charge, uint8_t save_soc);
 
 uint8_t getCapacitorVoltage();

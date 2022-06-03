@@ -121,6 +121,17 @@ void disp_state(uint8 state) { // TODO
         // *************** FAULTS ***************
         uint8 fault = state & 0x7f; // mask off fault bit
         switch(fault) {
+            case NONE: // STARTUP (effectively)
+                // not obtainable via CAN
+                // would only show when hardcoded on startup
+                color = C_YELLOW;
+                if (color != last_state_color) {
+                    // only draw rectangle if color changed
+                    UG_FillFrame(95, 185, 240, 215, color);
+                    last_state_color = color;
+                }
+                UG_PutColorString(100, 195, " STARTUP  ", C_BLACK, color);
+                break;
             case DRIVE_REQUEST_FROM_LV:
                 color = C_RED;
                 if (color != last_state_color) {
@@ -213,8 +224,8 @@ void disp_state(uint8 state) { // TODO
 
 void disp_glv_v(uint16 data) {
     // format to 0-1200 range
-    data *= 12;
-    data = 100 * (data / 0xfff) + (100 * data / 0xfff - 100 * (data / 0xfff));
+    data *= 1; // conversion 1187/265 also *1000
+    data = 100 * (data / 0xffff) + (100 * data / 0xffff - 100 * (data / 0xffff));
     UG_COLOR color;
     if (data > 1150) {
         color = C_GREEN;

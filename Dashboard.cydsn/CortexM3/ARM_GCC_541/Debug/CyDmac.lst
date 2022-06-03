@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
   28:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
   29:Generated_Source\PSoC5/CyDmac.c **** 
   30:Generated_Source\PSoC5/CyDmac.c **** #include "CyDmac.h"
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 2
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 2
 
 
   31:Generated_Source\PSoC5/CyDmac.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
   42 000a 07E0     		b	.L2
   43              	.LVL1:
   44              	.L3:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 3
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 3
 
 
   71:Generated_Source\PSoC5/CyDmac.c ****     {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
   88:Generated_Source\PSoC5/CyDmac.c **** *  None
   89:Generated_Source\PSoC5/CyDmac.c **** *
   90:Generated_Source\PSoC5/CyDmac.c **** * Return:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 4
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 4
 
 
   91:Generated_Source\PSoC5/CyDmac.c **** *  Errors of the last failed DMA transaction.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  119:Generated_Source\PSoC5/CyDmac.c **** * Summary:
  120:Generated_Source\PSoC5/CyDmac.c **** *  Clears the error bits in the error register of the DMAC.
  121:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 5
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 5
 
 
  122:Generated_Source\PSoC5/CyDmac.c **** * Parameters:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  149:Generated_Source\PSoC5/CyDmac.c **** 
  150:Generated_Source\PSoC5/CyDmac.c **** 
  151:Generated_Source\PSoC5/CyDmac.c **** /*******************************************************************************
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 6
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 6
 
 
  152:Generated_Source\PSoC5/CyDmac.c **** * Function Name: CyDmacErrorAddress
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  181:Generated_Source\PSoC5/CyDmac.c **** *  channel handle.
  182:Generated_Source\PSoC5/CyDmac.c **** *
  183:Generated_Source\PSoC5/CyDmac.c **** * Parameters:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 7
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 7
 
 
  184:Generated_Source\PSoC5/CyDmac.c **** *  None
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  208:Generated_Source\PSoC5/CyDmac.c ****             break;
  188              		.loc 1 208 0
  189 001a 04E0     		b	.L18
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 8
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 8
 
 
  190              	.LVL11:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  227              		.section	.text.CyDmaChFree,"ax",%progbits
  228              		.align	2
  229              		.global	CyDmaChFree
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 9
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 9
 
 
  230              		.thumb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  253 000c 0123     		movs	r3, #1
  254 000e 03FA04F4 		lsl	r4, r3, r4
  255 0012 054A     		ldr	r2, .L30
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 10
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 10
 
 
  256 0014 1368     		ldr	r3, [r2]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  274:Generated_Source\PSoC5/CyDmac.c **** *   A handle previously returned by CyDmaChAlloc() or DMA_DmaInitalize().
  275:Generated_Source\PSoC5/CyDmac.c **** *
  276:Generated_Source\PSoC5/CyDmac.c **** *  uint8 preserveTds:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 11
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 11
 
 
  277:Generated_Source\PSoC5/CyDmac.c **** *   Preserves the original TD state when the TD has completed. This parameter
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  304 000a 5A5C     		ldrb	r2, [r3, r1]	@ zero_extendqisi2
  305 000c 42F02002 		orr	r2, r2, #32
  306 0010 5A54     		strb	r2, [r3, r1]
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 12
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 12
 
 
  307 0012 05E0     		b	.L35
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  345              		.global	CyDmaChDisable
  346              		.thumb
  347              		.thumb_func
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 13
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 13
 
 
  348              		.type	CyDmaChDisable, %function
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  366 000e C254     		strb	r2, [r0, r3]
  367:Generated_Source\PSoC5/CyDmac.c **** 
  368:Generated_Source\PSoC5/CyDmac.c ****         /* Store intermediate and final TD states on top of original TD chain */
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 14
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 14
 
 
  369:Generated_Source\PSoC5/CyDmac.c ****         CY_DMA_CH_STRUCT_PTR[chHandle].basic_cfg[0] &= ((uint8) (~CY_DMA_CH_BASIC_CFG_WORK_SEP));
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  392:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
  393:Generated_Source\PSoC5/CyDmac.c **** cystatus CyDmaClearPendingDrq(uint8 chHandle) 
  394:Generated_Source\PSoC5/CyDmac.c **** {
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 15
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 15
 
 
  397              		.loc 1 394 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  439              		.thumb
  440              		.thumb_func
  441              		.type	CyDmaChPriority, %function
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 16
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 16
 
 
  442              	CyDmaChPriority:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  463 0010 01F00E01 		and	r1, r1, #14
  464 0014 1943     		orrs	r1, r1, r3
  465 0016 8154     		strb	r1, [r0, r2]
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 17
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 17
 
 
  466              	.LVL46:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  466:Generated_Source\PSoC5/CyDmac.c **** *  CYRET_SUCCESS if successful.
  467:Generated_Source\PSoC5/CyDmac.c **** *  CYRET_BAD_PARAM if chHandle is invalid.
  468:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 18
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 18
 
 
  469:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  519              	.LVL52:
  520 001e 00F18040 		add	r0, r0, #1073741824
  521 0022 00F5EC40 		add	r0, r0, #30208
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 19
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 19
 
 
  522              	.LVL53:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  520:Generated_Source\PSoC5/CyDmac.c **** *  uint8 startTd:
  521:Generated_Source\PSoC5/CyDmac.c **** *   Set the TD index as the first TD associated with the channel. Zero is
  522:Generated_Source\PSoC5/CyDmac.c **** *   a valid TD index.
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 20
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 20
 
 
  523:Generated_Source\PSoC5/CyDmac.c **** *
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  586              		.thumb
  587              		.thumb_func
  588              		.type	CyDmaChSetRequest, %function
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 21
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 21
 
 
  589              	CyDmaChSetRequest:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  574:Generated_Source\PSoC5/CyDmac.c ****         status = CYRET_SUCCESS;
  610              		.loc 1 574 0
  611 0014 0020     		movs	r0, #0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 22
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 22
 
 
  612 0016 7047     		bx	lr
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  638              		@ frame_needed = 0, uses_anonymous_args = 0
  639              		@ link register save eliminated.
  640              	.LVL70:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 23
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 23
 
 
  602:Generated_Source\PSoC5/CyDmac.c ****     cystatus status = CY_DMA_INVALID_CHANNEL;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  622:Generated_Source\PSoC5/CyDmac.c **** *  uint8 chHandle:
  623:Generated_Source\PSoC5/CyDmac.c **** *   A handle previously returned by CyDmaChAlloc() or DMA_DmaInitalize().
  624:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 24
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 24
 
 
  625:Generated_Source\PSoC5/CyDmac.c **** *  uint8 * currentTd:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  661:Generated_Source\PSoC5/CyDmac.c ****         if(NULL != state)
  692              		.loc 1 661 0
  693 0014 42B1     		cbz	r2, .L80
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 25
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 25
 
 
  662:Generated_Source\PSoC5/CyDmac.c ****         {
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  678:Generated_Source\PSoC5/CyDmac.c **** * Sets configuration information of the channel.
  679:Generated_Source\PSoC5/CyDmac.c **** *
  680:Generated_Source\PSoC5/CyDmac.c **** * Parameters:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 26
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 26
 
 
  681:Generated_Source\PSoC5/CyDmac.c **** *  uint8 chHandle:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  743              		.cfi_offset 4, -4
  722:Generated_Source\PSoC5/CyDmac.c ****     {
  723:Generated_Source\PSoC5/CyDmac.c ****         CY_DMA_CFGMEM_STRUCT_PTR[chHandle].CFG0[0] = (burstCount & 0x7Fu) | ((uint8)((requestPerBur
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 27
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 27
 
 
  744              		.loc 1 723 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  788              		.cfi_def_cfa_offset 0
  789              	.LVL90:
  790 0042 7047     		bx	lr
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 28
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 28
 
 
  791              		.cfi_endproc
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  817 000a 182B     		cmp	r3, #24
  818 000c 0BD9     		bls	.L90
  761:Generated_Source\PSoC5/CyDmac.c ****     {
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 29
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 29
 
 
  762:Generated_Source\PSoC5/CyDmac.c ****         /* Get pointer to Next available. */
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  857              		.thumb_func
  858              		.type	CyDmaTdFree, %function
  859              	CyDmaTdFree:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 30
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 30
 
 
  860              	.LFB17:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  804:Generated_Source\PSoC5/CyDmac.c ****         /* Set new Next Available. */
  805:Generated_Source\PSoC5/CyDmac.c ****         CyDmaTdFreeIndex = tdHandle;
  886              		.loc 1 805 0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 31
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 31
 
 
  887 001e 1470     		strb	r4, [r2]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  829:Generated_Source\PSoC5/CyDmac.c **** *******************************************************************************/
  830:Generated_Source\PSoC5/CyDmac.c **** uint8 CyDmaTdFreeCount(void) 
  831:Generated_Source\PSoC5/CyDmac.c **** {
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 32
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 32
 
 
  918              		.loc 1 831 0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  859:Generated_Source\PSoC5/CyDmac.c **** *  uint8 configuration:
  860:Generated_Source\PSoC5/CyDmac.c **** *   Stores the Bit field of configuration bits.
  861:Generated_Source\PSoC5/CyDmac.c **** *
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 33
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 33
 
 
  862:Generated_Source\PSoC5/CyDmac.c **** *   CY_DMA_TD_SWAP_EN        - Perform endian swap
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  961 000e 00F18040 		add	r0, r0, #1073741824
  962 0012 00F5F040 		add	r0, r0, #30720
  963              	.LVL104:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 34
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 34
 
 
  900:Generated_Source\PSoC5/CyDmac.c ****         CY_SET_REG16(convert, transferCount);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  918:Generated_Source\PSoC5/CyDmac.c **** *
  919:Generated_Source\PSoC5/CyDmac.c **** * Summary:
  920:Generated_Source\PSoC5/CyDmac.c **** *  Retrieves the configuration of the TD. If a NULL pointer is passed as a
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 35
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 35
 
 
  921:Generated_Source\PSoC5/CyDmac.c **** *  parameter, that parameter is skipped. You may request only the values you are
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1013 0008 41B1     		cbz	r1, .L109
  1014              	.LBB4:
  960:Generated_Source\PSoC5/CyDmac.c ****         {
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 36
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 36
 
 
  961:Generated_Source\PSoC5/CyDmac.c ****             /* Get 12 bits of transfer count */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1049 003c 0020     		movs	r0, #0
  1050 003e 02E0     		b	.L108
  1051              	.LVL118:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 37
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 37
 
 
  1052              	.L111:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
 1001:Generated_Source\PSoC5/CyDmac.c **** *
 1002:Generated_Source\PSoC5/CyDmac.c **** *  uint16 destination:
 1003:Generated_Source\PSoC5/CyDmac.c **** *   The lower 16 address bits of the destination of the data transfer.
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 38
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 38
 
 
 1004:Generated_Source\PSoC5/CyDmac.c **** *
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
 1027:Generated_Source\PSoC5/CyDmac.c **** 
 1028:Generated_Source\PSoC5/CyDmac.c ****     return(status);
 1029:Generated_Source\PSoC5/CyDmac.c **** }
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 39
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 39
 
 
  1114              		.loc 1 1029 0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1134 0000 10F0800F 		tst	r0, #128
  1135 0004 11D1     		bne	.L120
 1064:Generated_Source\PSoC5/CyDmac.c ****     {
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 40
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 40
 
 
 1065:Generated_Source\PSoC5/CyDmac.c ****         /* If we have a pointer. */
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1172              		.loc 1 1081 0
  1173 002e 0020     		movs	r0, #0
  1174              	.LVL140:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 41
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 41
 
 
 1082:Generated_Source\PSoC5/CyDmac.c ****     }
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
 1114:Generated_Source\PSoC5/CyDmac.c ****     {
 1115:Generated_Source\PSoC5/CyDmac.c ****         if (0u != enableRR)
  1197              		.loc 1 1115 0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 42
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 42
 
 
  1198 0004 39B1     		cbz	r1, .L124
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1237              		.type	CyDmaTdFreeIndex, %object
  1238              		.size	CyDmaTdFreeIndex, 1
  1239              	CyDmaTdFreeIndex:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 43
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 43
 
 
  1240 0000 7F       		.byte	127
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1294 004b D1010000 		.4byte	.LASF5
  1295 004f 02       		.uleb128 0x2
  1296 0050 08       		.byte	0x8
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 44
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 44
 
 
  1297 0051 05       		.byte	0x5
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1351 00c2 77000000 		.4byte	0x77
  1352 00c6 04       		.uleb128 0x4
  1353 00c7 A4020000 		.4byte	.LASF17
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 45
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 45
 
 
  1354 00cb 02       		.byte	0x2
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1408 0138 22010000 		.4byte	0x122
  1409 013c 05       		.uleb128 0x5
  1410 013d 22010000 		.4byte	0x122
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 46
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 46
 
 
  1411 0141 05       		.uleb128 0x5
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1465 01b0 05       		.uleb128 0x5
  1466 01b1 22010000 		.4byte	0x122
  1467 01b5 05       		.uleb128 0x5
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 47
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 47
 
 
  1468 01b6 22010000 		.4byte	0x122
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1522 0237 01       		.uleb128 0x1
  1523 0238 9C       		.byte	0x9c
  1524 0239 10       		.uleb128 0x10
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 48
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 48
 
 
  1525 023a 47040000 		.4byte	.LASF39
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1579 02c1 A4000000 		.4byte	0xa4
  1580 02c5 ED000000 		.4byte	.LLST6
  1581 02c9 0D       		.uleb128 0xd
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 49
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 49
 
 
  1582 02ca D9000000 		.4byte	.LASF37
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1636 0356 6201     		.2byte	0x162
  1637 0358 6B000000 		.4byte	0x6b
  1638 035c E2010000 		.4byte	.LLST11
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 50
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 50
 
 
  1639 0360 14       		.uleb128 0x14
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1693 03eb 01       		.byte	0x1
  1694 03ec AF01     		.2byte	0x1af
  1695 03ee 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 51
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 51
 
 
  1696 03f2 2A030000 		.4byte	.LLST17
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1750 047d 01       		.byte	0x1
  1751 047e 1102     		.2byte	0x211
  1752 0480 A4000000 		.4byte	0xa4
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 52
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 52
 
 
  1753 0484 00000000 		.4byte	.LFB11
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1807 050c 12       		.uleb128 0x12
  1808 050d ED040000 		.4byte	.LASF59
  1809 0511 01       		.byte	0x1
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 53
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 53
 
 
  1810 0512 5802     		.2byte	0x258
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1864 0595 A4000000 		.4byte	0xa4
  1865 0599 16060000 		.4byte	.LLST32
  1866 059d 00       		.byte	0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 54
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 54
 
 
  1867 059e 15       		.uleb128 0x15
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1921 062a 5D070000 		.4byte	.LLST39
  1922 062e 00       		.byte	0
  1923 062f 12       		.uleb128 0x12
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 55
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 55
 
 
  1924 0630 3C000000 		.4byte	.LASF69
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  1978 06c0 37090000 		.4byte	0x937
  1979 06c4 11       		.uleb128 0x11
  1980 06c5 2A000000 		.4byte	.LVL100
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 56
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 56
 
 
  1981 06c9 42090000 		.4byte	0x942
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2035 0745 71080000 		.4byte	.LLST45
  2036 0749 18       		.uleb128 0x18
  2037 074a 0C000000 		.4byte	.LBB3
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 57
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 57
 
 
  2038 074e 14000000 		.4byte	.LBE3-.LBB3
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2092 07d6 A2040000 		.4byte	.LASF54
  2093 07da 01       		.byte	0x1
  2094 07db C203     		.2byte	0x3c2
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 58
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 58
 
 
  2095 07dd 72040000 		.4byte	0x472
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2149 085c A4000000 		.4byte	0xa4
  2150 0860 00000000 		.4byte	.LFB22
  2151 0864 32000000 		.4byte	.LFE22-.LFB22
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 59
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 59
 
 
  2152 0868 01       		.uleb128 0x1
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2206 08ea 01       		.byte	0x1
  2207 08eb 5504     		.2byte	0x455
  2208 08ed 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 60
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 60
 
 
  2209 08f1 01       		.uleb128 0x1
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2263 0008 0E       		.uleb128 0xe
  2264 0009 1B       		.uleb128 0x1b
  2265 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 61
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 61
 
 
  2266 000b 55       		.uleb128 0x55
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2320 0041 0E       		.uleb128 0xe
  2321 0042 0B       		.uleb128 0xb
  2322 0043 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 62
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 62
 
 
  2323 0044 3A       		.uleb128 0x3a
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2377 007a 0B       		.uleb128 0xb
  2378 007b 0D       		.uleb128 0xd
  2379 007c 00       		.byte	0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 63
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 63
 
 
  2380 007d 03       		.uleb128 0x3
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2434 00b4 00       		.byte	0
  2435 00b5 3F       		.uleb128 0x3f
  2436 00b6 19       		.uleb128 0x19
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 64
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 64
 
 
  2437 00b7 03       		.uleb128 0x3
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2491 00ee 40       		.uleb128 0x40
  2492 00ef 18       		.uleb128 0x18
  2493 00f0 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 65
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 65
 
 
  2494 00f2 19       		.uleb128 0x19
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2548 012b 00       		.byte	0
  2549 012c 00       		.byte	0
  2550 012d 14       		.uleb128 0x14
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 66
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 66
 
 
  2551 012e 34       		.uleb128 0x34
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2605 0164 06       		.uleb128 0x6
  2606 0165 40       		.uleb128 0x40
  2607 0166 18       		.uleb128 0x18
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 67
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 67
 
 
  2608 0167 9742     		.uleb128 0x2117
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2662 019f 00       		.byte	0
  2663 01a0 1B       		.uleb128 0x1b
  2664 01a1 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 68
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 68
 
 
  2665 01a2 00       		.byte	0
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2719 0057 00000000 		.4byte	0
  2720 005b 00000000 		.4byte	0
  2721              	.LLST3:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 69
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 69
 
 
  2722 005f 06000000 		.4byte	.LVL8
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2776 00e5 00000000 		.4byte	0
  2777 00e9 00000000 		.4byte	0
  2778              	.LLST6:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 70
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 70
 
 
  2779 00ed 00000000 		.4byte	.LVL19
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2833 0171 0A000000 		.4byte	.LVL25
  2834 0175 14000000 		.4byte	.LVL26
  2835 0179 0400     		.2byte	0x4
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 71
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 71
 
 
  2836 017b F3       		.byte	0xf3
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2890 01fa 9F       		.byte	0x9f
  2891 01fb 1C000000 		.4byte	.LVL35
  2892 01ff 1E000000 		.4byte	.LVL36
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 72
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 72
 
 
  2893 0203 0100     		.2byte	0x1
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  2947 0283 50       		.byte	0x50
  2948 0284 9F       		.byte	0x9f
  2949 0285 00000000 		.4byte	0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 73
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 73
 
 
  2950 0289 00000000 		.4byte	0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3004 030d 1C000000 		.4byte	.LVL47
  3005 0311 0400     		.2byte	0x4
  3006 0313 F3       		.byte	0xf3
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 74
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 74
 
 
  3007 0314 01       		.uleb128 0x1
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3061 0398 30000000 		.4byte	.LVL58
  3062 039c 32000000 		.4byte	.LFE10
  3063 03a0 0400     		.2byte	0x4
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 75
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 75
 
 
  3064 03a2 F3       		.byte	0xf3
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3118 042b 70       		.byte	0x70
  3119 042c 04       		.sleb128 4
  3120 042d 9F       		.byte	0x9f
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 76
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 76
 
 
  3121 042e 28000000 		.4byte	.LVL54
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3175 04b0 00000000 		.4byte	0
  3176              	.LLST26:
  3177 04b4 00000000 		.4byte	.LVL64
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 77
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 77
 
 
  3178 04b8 0A000000 		.4byte	.LVL65
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3232 053a 0200     		.2byte	0x2
  3233 053c 31       		.byte	0x31
  3234 053d 9F       		.byte	0x9f
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 78
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 78
 
 
  3235 053e 1A000000 		.4byte	.LVL69
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3289              	.LLST31:
  3290 05c3 00000000 		.4byte	.LVL75
  3291 05c7 1C000000 		.4byte	.LVL76
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 79
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 79
 
 
  3292 05cb 0100     		.2byte	0x1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3346 064b 01       		.uleb128 0x1
  3347 064c 50       		.byte	0x50
  3348 064d 9F       		.byte	0x9f
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 80
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 80
 
 
  3349 064e 3C000000 		.4byte	.LVL87
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3403 06cd 40000000 		.4byte	.LVL89
  3404 06d1 44000000 		.4byte	.LFE15
  3405 06d5 0400     		.2byte	0x4
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 81
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 81
 
 
  3406 06d7 F3       		.byte	0xf3
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3460 0754 04       		.sleb128 4
  3461 0755 00000000 		.4byte	0
  3462 0759 00000000 		.4byte	0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 82
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 82
 
 
  3463              	.LLST39:
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3517 07e3 0D000000 		.4byte	.LVL99-1
  3518 07e7 0100     		.2byte	0x1
  3519 07e9 50       		.byte	0x50
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 83
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 83
 
 
  3520 07ea 0D000000 		.4byte	.LVL99-1
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3574 0869 00000000 		.4byte	0
  3575 086d 00000000 		.4byte	0
  3576              	.LLST45:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 84
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 84
 
 
  3577 0871 00000000 		.4byte	.LVL102
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3631 08f7 50       		.byte	0x50
  3632 08f8 46000000 		.4byte	.LVL121
  3633 08fc 4A000000 		.4byte	.LFE20
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 85
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 85
 
 
  3634 0900 0400     		.2byte	0x4
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3688 0979 9F       		.byte	0x9f
  3689 097a 00000000 		.4byte	0
  3690 097e 00000000 		.4byte	0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 86
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 86
 
 
  3691              	.LLST50:
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3744 0a03 50       		.byte	0x50
  3745 0a04 1A000000 		.4byte	.LVL129
  3746 0a08 1C000000 		.4byte	.LFE21
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 87
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 87
 
 
  3747 0a0c 0400     		.2byte	0x4
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3801 0a8a 50       		.byte	0x50
  3802 0a8b 9F       		.byte	0x9f
  3803 0a8c 2A000000 		.4byte	.LVL137
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 88
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 88
 
 
  3804 0a90 2C000000 		.4byte	.LVL138
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3857 0b0b 28000000 		.4byte	.LVL136
  3858 0b0f 0300     		.2byte	0x3
  3859 0b11 70       		.byte	0x70
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 89
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 89
 
 
  3860 0b12 06       		.sleb128 6
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3914 0004 0200     		.2byte	0x2
  3915 0006 00000000 		.4byte	.Ldebug_info0
  3916 000a 04       		.byte	0x4
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 90
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 90
 
 
  3917 000b 00       		.byte	0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  3971              	.Ldebug_ranges0:
  3972 0000 00000000 		.4byte	.LFB0
  3973 0004 34000000 		.4byte	.LFE0
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 91
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 91
 
 
  3974 0008 00000000 		.4byte	.LFB1
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4024      01010101 
  4025              	.LASF10:
  4026 0000 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 92
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 92
 
 
  4026      313600
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4047              	.LASF72:
  4048 00b6 74644861 		.ascii	"tdHandle\000"
  4048      6E646C65 
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 93
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 93
 
 
  4048      00
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4075      6F617264 
  4075      5C446173 
  4075      68626F61 
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 94
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 94
 
 
  4075      72642E63 
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4099      65744578 
  4099      74656E64 
  4099      65644164 
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 95
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 95
 
 
  4100              	.LASF83:
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4123      20646F75 
  4123      626C6500 
  4124              	.LASF81:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 96
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 96
 
 
  4125 02d3 4379446D 		.ascii	"CyDmaChRoundRobin\000"
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4147      20636861 
  4147      7200
  4148              	.LASF2:
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 97
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 97
 
 
  4149 037a 73686F72 		.ascii	"short int\000"
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4171      00
  4172              	.LASF80:
  4173 046c 4379446D 		.ascii	"CyDmaTdGetAddress\000"
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 98
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 98
 
 
  4173      61546447 
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 1
  4199      65737400 
  4200              	.LASF55:
  4201 0507 4379446D 		.ascii	"CyDmaChSetInitialTd\000"
-ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc0fcmv7.s 			page 99
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\ccuseCor.s 			page 99
 
 
  4201      61436853 

@@ -97,8 +97,8 @@ typedef enum
 }Error_State;*/
 
 /* Switch state defines -- Active High*/ 
-#define SWITCH_ON         (1u)
-#define SWITCH_OFF        (0u)
+//#define SWITCH_ON         (1u)
+//#define SWITCH_OFF        (0u)
 /* Switch debounce delay in milliseconds */
 #define SWITCH_DEBOUNCE_UNIT   (1u)
 /* Number of debounce units to count delay, before consider that switch is pressed */
@@ -107,8 +107,8 @@ typedef enum
 static uint32 ReadSwSwitch(void);
 
 /* Global variable used to store switch state */
-uint8 HVSwitch = SWITCH_OFF;
-uint8 DriveSwitch = SWITCH_OFF;
+volatile uint8 switches = 0;
+
 volatile vcu_state state = LV;
 volatile vcu_fault fault = NONE;
 
@@ -184,10 +184,20 @@ int main()
     CAN_Start();
     LED_color_wheel(200);
     // set low to get lit
-    IMD_Write(0);
-    BMS_Write(0);
+    IMD_LED_Write(0);
+    BMS_LED_Write(0);
     
-    initDashTemplate();   
+    // 
+	ADC_GLV_V_Start();
+    
+    // initialize display layout
+    initDashTemplate();
+    
+    
+    disp_mc_temp(state);
+    disp_motor_temp(state);
+    disp_max_pack_temp(10);
+    disp_state(FAULT);
     
     for(;;)
     {
@@ -209,51 +219,50 @@ int main()
                 bms_error = bms_status;
         }
         
+        // check switches
+        if (HV_Read()) {
+            switches |= 0b10;
+            IMD_LED_Write(0);
+        } else {
+            switches &= 0b11111101;
+            IMD_LED_Write(1);
+        }
+        if (Drive_Read()) {
+            switches |= 0b1;
+            BMS_LED_Write(0);
+        } else {
+            switches &= 0b11111110;
+            BMS_LED_Write(1);
+        }
+        // send switches
+        can_send_switches(switches);
+        
+        int soc = 0;
+        disp_state(state);
+        uint16 glv_v = (int16_t)ADC_GLV_V_CountsTo_mVolts(ADC_GLV_V_Read16());
+        //uint16 glv_v = ADC_GLV_V_GetResult16();//0x7ff;
+        
+        disp_SOC(soc);
+        disp_glv_v(glv_v);//HV_Read());
+        soc++;
+        if (soc > 100) {
+            soc = 0;
+            // get 3.3V CAN Transceiver
+            //can_send_status(17, 43);
+        }
+        
         switch(state)
         {    
 
             // startup -- 
             case LV:
-                disp_mc_temp(98);
-                disp_motor_temp(72);
-                int soc = 0;
-                int t = 40;
-                disp_max_pack_temp(t);
-                int st = 0;
-                int glv_v = 0x7ff;
-                while(1) {
-                    disp_SOC(soc);
-                    disp_state(st);
-                    disp_glv_v(glv_v);//HV_Read());
-                    soc++;
-                    if (soc > 100) {
-                        soc = 0;
-                        // get 3.3V CAN Transceiver
-                        //can_send_status(17, 43);
-                    }/*
-                    t++;
-                    if (t == 60) {
-                        t = 40;
-                    }*/
-                    st++;
-                    if (st == DRIVE + 1) {
-                        st = FAULT;
-                    }
-                    if (st == FAULT + ESTOP + 1) {
-                        st = LV;
-                    }
-                    glv_v += 10;
-                    if (glv_v > 0xfff) {
-                        glv_v = 0x7ff;
-                    }
-                }
 
                 Buzzer_Write(0);
                 CyDelay(50);
                 
                 Buzzer_Write(1);
                 
-                state = LV;
+                //state = LV;
                 
             break;
 #if 0    

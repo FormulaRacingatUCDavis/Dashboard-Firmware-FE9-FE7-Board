@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: BMS.h  
+* File Name: BMS_LED.h  
 * Version 2.10
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_BMS_ALIASES_H) /* Pins BMS_ALIASES_H */
-#define CY_PINS_BMS_ALIASES_H
+#if !defined(CY_PINS_BMS_LED_ALIASES_H) /* Pins BMS_LED_ALIASES_H */
+#define CY_PINS_BMS_LED_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,8 +25,8 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define BMS_0		(BMS__0__PC)
+#define BMS_LED_0		(BMS_LED__0__PC)
 
-#endif /* End Pins BMS_ALIASES_H */
+#endif /* End Pins BMS_LED_ALIASES_H */
 
 /* [] END OF FILE */

@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Jun 1 2022 19:57:00
+#File Generated:     Jun 3 2022 03:36:48
 
 #Purpose:            
 
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	14/192
     UDBS                        :	9/24
-    IOs                         :	38/72
+    IOs                         :	39/72
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -79,7 +79,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  63.9 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -87,6 +91,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
@@ -100,7 +105,11 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  63.9 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  24.0 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -108,6 +117,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
@@ -124,11 +134,11 @@ Final Design Statistics
     Number of Status            	:	4
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	38
+    Number of IOs       	:	39
 
 Device Utilization Summary
     Macrocells                  :	14/192
-    IOs                         :	38/72
+    IOs                         :	39/72
 
 
 
@@ -144,7 +154,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  63.9 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -152,6 +166,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
@@ -172,7 +187,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  63.9 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  26.3 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -180,6 +199,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
@@ -193,7 +213,11 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  63.9 MHz | Target:  28.6 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  28.6 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -201,13 +225,14 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.3 (sec)
+D2088: Phase 7, elapsed time : 0.4 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	5
@@ -217,11 +242,11 @@ Final Design Statistics
     Number of Status            	:	4
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	38
+    Number of IOs       	:	39
 
 Device Utilization Summary
     Macrocells                  :	14/192
-    IOs                         :	38/72
+    IOs                         :	39/72
 
 
 
@@ -237,7 +262,11 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
+Number of clocks: 14
+Clock: ADC_GLV_V_Ext_CP_Clk | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_Ext_CP_Clk(routed) | Frequency: N/A       | Target:  24.0 MHz
+Clock: ADC_GLV_V_theACLK    | Frequency: N/A       | Target:   0.6 MHz
+Clock: ADC_GLV_V_theACLK(fixed-function) | Frequency: N/A       | Target:   0.6 MHz
 Clock: Clock_1              | Frequency:  61.7 MHz | Target:  31.3 MHz
 Clock: CyBUS_CLK            | Frequency:  35.7 MHz | Target:  31.3 MHz
 Clock: CyBUS_CLK(fixed-function) | Frequency: N/A       | Target:  24.0 MHz
@@ -245,6 +274,7 @@ Clock: CyILO                | Frequency: N/A       | Target:   0.1 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyMASTER_CLK         | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyPLL_OUT            | Frequency: N/A       | Target:  24.0 MHz
+Clock: \ADC_GLV_V:DSM\/dec_clock | Frequency: N/A       | Target:   0.1 MHz
 Clock: timer_clock          | Frequency: N/A       | Target:   0.0 MHz
 Clock: timer_clock(fixed-function) | Frequency: N/A       | Target:   0.0 MHz
 
@@ -257,5 +287,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.6 sec.
+I2076: Total run-time: 1.5 sec.
 

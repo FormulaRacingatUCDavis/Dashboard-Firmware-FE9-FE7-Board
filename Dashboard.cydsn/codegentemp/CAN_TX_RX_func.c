@@ -628,7 +628,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     #endif /* CY_PSOC3 || CY_PSOC5 */
         {
             /* `#START MESSAGE_BASIC_RECEIVED` */
-
+            IMD_Write(1);
             /* `#END` */
 
             #ifdef CAN_RECEIVE_MSG_CALLBACK
