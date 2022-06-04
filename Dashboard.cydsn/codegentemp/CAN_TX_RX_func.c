@@ -628,7 +628,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     #endif /* CY_PSOC3 || CY_PSOC5 */
         {
             /* `#START MESSAGE_BASIC_RECEIVED` */
-            IMD_Write(1);
+            
+            int ID = CAN_GET_RX_ID(rxMailbox);
+            CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
+            uint8_t data[8];
+            int i = 0;
+            for (i = 0; i < 8; i++)
+                data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
+            
+            can_receive(data, ID);
             /* `#END` */
 
             #ifdef CAN_RECEIVE_MSG_CALLBACK

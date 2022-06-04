@@ -23,7 +23,6 @@
 
 #include "CAN.h"
 #include "cyapicallbacks.h"
-#include "can_manga.h"
 
 /* `#START TX_RX_FUNCTION` */
 

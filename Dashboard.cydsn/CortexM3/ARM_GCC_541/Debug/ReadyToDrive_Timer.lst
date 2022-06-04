@@ -1,0 +1,2314 @@
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ReadyToDrive_Timer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.ReadyToDrive_Timer_Enable,"ax",%progbits
+  20              		.align	2
+  21              		.global	ReadyToDrive_Timer_Enable
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	ReadyToDrive_Timer_Enable, %function
+  25              	ReadyToDrive_Timer_Enable:
+  26              	.LFB1:
+  27              		.file 1 "Generated_Source\\PSoC5\\ReadyToDrive_Timer.c"
+   1:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * File Name: ReadyToDrive_Timer.c
+   3:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Version 2.80
+   4:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+   5:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Description:
+   6:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
+   7:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
+   8:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  or be used as a capture timer as well.  The capture can be initiated
+   9:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  by a positive or negative edge signal as well as via software.
+  10:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  A trigger input can be programmed to enable the timer on rising edge
+  11:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  falling edge, either edge or continous run.
+  12:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Interrupts may be generated due to a terminal count condition
+  13:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  or a capture event.
+  14:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  15:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Note:
+  16:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  17:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+  18:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Copyright 2008-2017, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  24:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #include "ReadyToDrive_Timer.h"
+  25:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  26:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint8 ReadyToDrive_Timer_initVar = 0u;
+  27:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  28:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  29:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+  30:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_Init
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 2
+
+
+  31:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+  32:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  33:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+  34:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Initialize to the schematic state
+  35:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  36:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+  37:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+  38:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  39:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+  40:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+  41:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+  42:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+  43:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_Init(void) 
+  44:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+  45:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(!ReadyToDrive_Timer_UsingFixedFunction)
+  46:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             /* Interrupt State Backup for Critical Region*/
+  47:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             uint8 ReadyToDrive_Timer_interruptState;
+  48:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Interrupt state back up for Fixed Function only */
+  49:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  50:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (ReadyToDrive_Timer_UsingFixedFunction)
+  51:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
+  52:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ReadyToDrive_Timer_CTRL_ENABLE;
+  53:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  54:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear the mode bits for continuous run mode */
+  55:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (CY_PSOC5A)
+  56:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_CONTROL2 &= ((uint8)(~ReadyToDrive_Timer_CTRL_MODE_MASK));
+  57:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
+  58:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  59:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
+  60:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_CONTROL3 &= ((uint8)(~ReadyToDrive_Timer_CTRL_MODE_MASK));
+  61:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  62:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  63:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  64:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_RunModeUsed != 0x0u)
+  65:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             /* Set 3rd bit of Control register to enable one shot mode */
+  66:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_CONTROL |= 0x04u;
+  67:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
+  68:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  69:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_RunModeUsed == 2)
+  70:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #if (CY_PSOC5A)
+  71:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
+  72:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 interrupt) is enabled*/
+  73:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL2 |= 0x03u;
+  74:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
+  75:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  76:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  77:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
+  78:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 interrupt) is enabled*/
+  79:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 |= 0x03u;
+  80:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
+  81:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  82:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
+  83:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  84:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_UsingHWEnable != 0)
+  85:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #if (CY_PSOC5A)
+  86:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+  87:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL2 |= ReadyToDrive_Timer_CTRL_MODE_PULSEWIDTH;
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 3
+
+
+  88:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
+  89:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  90:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  91:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
+  92:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 &= ((uint8)(~ReadyToDrive_Timer_CTRL_RCOD_MASK));
+  93:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 |= ReadyToDrive_Timer_CTRL_RCOD;
+  94:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  95:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
+  96:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 &= ((uint8)(~ReadyToDrive_Timer_CTRL_ENBL_MASK));
+  97:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 |= ReadyToDrive_Timer_CTRL_ENBL;
+  98:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+  99:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+ 100:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 ReadyToDrive_Timer_CONTROL3 |= ReadyToDrive_Timer_CTRL_MODE_CONTINUOUS;
+ 101:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
+ 102:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 103:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Configure Run Mode with hardware enable */
+ 104:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 105:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 106:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_RT1 &= ((uint8)(~ReadyToDrive_Timer_RT1_MASK));
+ 107:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_RT1 |= ReadyToDrive_Timer_SYNC;
+ 108:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 109:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /*Enable DSI Sync all all inputs of the Timer*/
+ 110:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_RT1 &= ((uint8)(~ReadyToDrive_Timer_SYNCDSI_MASK));
+ 111:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_RT1 |= ReadyToDrive_Timer_SYNCDSI_EN;
+ 112:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 113:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Set the IRQ to use the status register interrupts */
+ 114:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL2 |= ReadyToDrive_Timer_CTRL2_IRQ_SEL;
+ 115:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
+ 116:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 117:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Set Initial values from Configuration */
+ 118:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_WritePeriod(ReadyToDrive_Timer_INIT_PERIOD);
+ 119:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_WriteCounter(ReadyToDrive_Timer_INIT_PERIOD);
+ 120:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 121:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (ReadyToDrive_Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
+ 122:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CAPTURE_COUNT_CTRL |= ReadyToDrive_Timer_CNTR_ENABLE;
+ 123:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_SetCaptureCount(ReadyToDrive_Timer_INIT_CAPTURE_COUNT);
+ 124:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Configure capture counter value */
+ 125:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 126:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UsingFixedFunction)
+ 127:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_SoftwareCaptureMode)
+ 128:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_SetCaptureMode(ReadyToDrive_Timer_INIT_CAPTURE_MODE);
+ 129:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
+ 130:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 131:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_SoftwareTriggerMode)
+ 132:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED)
+ 133:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 if (0u == (ReadyToDrive_Timer_CONTROL & ReadyToDrive_Timer__B_TIMER__TM_SOFTWARE))
+ 134:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 {
+ 135:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                     ReadyToDrive_Timer_SetTriggerMode(ReadyToDrive_Timer_INIT_TRIGGER_MODE);
+ 136:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****                 }
+ 137:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             #endif /* (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) */
+ 138:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
+ 139:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 140:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
+ 141:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Enter Critical Region*/
+ 142:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_interruptState = CyEnterCriticalSection();
+ 143:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 144:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 4
+
+
+ 145:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_STATUS_AUX_CTRL |= ReadyToDrive_Timer_STATUS_ACTL_INT_EN_MASK;
+ 146:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 147:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Exit Critical Region*/
+ 148:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         CyExitCriticalSection(ReadyToDrive_Timer_interruptState);
+ 149:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 150:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_EnableTriggerMode)
+ 151:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_EnableTrigger();
+ 152:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 153:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 		
+ 154:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 		
+ 155:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #if (ReadyToDrive_Timer_InterruptOnCaptureCount && !ReadyToDrive_Timer_UDB_CONTROL_REG_REMO
+ 156:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****             ReadyToDrive_Timer_SetInterruptCount(ReadyToDrive_Timer_INIT_INT_CAPTURE_COUNT);
+ 157:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
+ 158:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 159:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_ClearFIFO();
+ 160:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ 161:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 162:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_SetInterruptMode(ReadyToDrive_Timer_INIT_INTERRUPT_MODE);
+ 163:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 164:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 165:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 166:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 167:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_Enable
+ 168:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 169:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 170:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 171:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Enable the Timer
+ 172:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 173:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 174:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 175:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 176:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 177:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 178:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 179:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 180:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_Enable(void) 
+ 181:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+  28              		.loc 1 181 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 182:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 183:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (ReadyToDrive_Timer_UsingFixedFunction)
+ 184:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_GLOBAL_ENABLE |= ReadyToDrive_Timer_BLOCK_EN_MASK;
+ 185:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_GLOBAL_STBY_ENABLE |= ReadyToDrive_Timer_BLOCK_STBY_EN_MASK;
+ 186:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
+ 187:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 188:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Remove assignment if control register is removed */
+ 189:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED || ReadyToDrive_Timer_UsingFixedFunction)
+ 190:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL |= ReadyToDrive_Timer_CTRL_ENABLE;
+  33              		.loc 1 190 0
+  34 0000 024A     		ldr	r2, .L2
+  35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  36 0004 43F08003 		orr	r3, r3, #128
+  37 0008 1370     		strb	r3, [r2]
+  38 000a 7047     		bx	lr
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 5
+
+
+  39              	.L3:
+  40              		.align	2
+  41              	.L2:
+  42 000c 75640040 		.word	1073767541
+  43              		.cfi_endproc
+  44              	.LFE1:
+  45              		.size	ReadyToDrive_Timer_Enable, .-ReadyToDrive_Timer_Enable
+  46              		.section	.text.ReadyToDrive_Timer_Stop,"ax",%progbits
+  47              		.align	2
+  48              		.global	ReadyToDrive_Timer_Stop
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	ReadyToDrive_Timer_Stop, %function
+  52              	ReadyToDrive_Timer_Stop:
+  53              	.LFB3:
+ 191:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 192:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 193:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 194:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 195:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 196:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_Start
+ 197:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 198:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 199:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 200:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The start function initializes the timer with the default values, the
+ 201:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  enables the timerto begin counting.  It does not enable interrupts,
+ 202:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  the EnableInt command should be called if interrupt generation is required.
+ 203:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 204:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 205:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 206:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 207:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 208:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 209:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 210:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Global variables:
+ 211:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  ReadyToDrive_Timer_initVar: Is modified when this function is called for the
+ 212:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *   first time. Is used to ensure that initialization happens only once.
+ 213:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 214:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 215:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_Start(void) 
+ 216:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 217:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     if(ReadyToDrive_Timer_initVar == 0u)
+ 218:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     {
+ 219:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_Init();
+ 220:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 221:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_initVar = 1u;   /* Clear this bit for Initialization */
+ 222:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     }
+ 223:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 224:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Enable the Timer */
+ 225:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_Enable();
+ 226:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 227:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 228:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 229:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 230:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_Stop
+ 231:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 232:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 6
+
+
+ 233:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 234:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The stop function halts the timer, but does not change any modes or disable
+ 235:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  interrupts.
+ 236:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 237:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 238:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 239:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 240:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 241:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 242:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 243:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 244:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *               has no effect on the operation of the timer.
+ 245:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 246:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 247:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_Stop(void) 
+ 248:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+  54              		.loc 1 248 0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+ 249:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Disable Timer */
+ 250:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED || ReadyToDrive_Timer_UsingFixedFunction)
+ 251:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ((uint8)(~ReadyToDrive_Timer_CTRL_ENABLE));
+  59              		.loc 1 251 0
+  60 0000 024A     		ldr	r2, .L5
+  61 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  62 0004 03F07F03 		and	r3, r3, #127
+  63 0008 1370     		strb	r3, [r2]
+  64 000a 7047     		bx	lr
+  65              	.L6:
+  66              		.align	2
+  67              	.L5:
+  68 000c 75640040 		.word	1073767541
+  69              		.cfi_endproc
+  70              	.LFE3:
+  71              		.size	ReadyToDrive_Timer_Stop, .-ReadyToDrive_Timer_Stop
+  72              		.section	.text.ReadyToDrive_Timer_SetInterruptMode,"ax",%progbits
+  73              		.align	2
+  74              		.global	ReadyToDrive_Timer_SetInterruptMode
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	ReadyToDrive_Timer_SetInterruptMode, %function
+  78              	ReadyToDrive_Timer_SetInterruptMode:
+  79              	.LFB4:
+ 252:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 253:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 254:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
+ 255:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (ReadyToDrive_Timer_UsingFixedFunction)
+ 256:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_GLOBAL_ENABLE &= ((uint8)(~ReadyToDrive_Timer_BLOCK_EN_MASK));
+ 257:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~ReadyToDrive_Timer_BLOCK_STBY_EN_MASK));
+ 258:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
+ 259:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 260:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 261:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 262:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 263:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SetInterruptMode
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 7
+
+
+ 264:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 265:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 266:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 267:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
+ 268:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The twosources are caputure and terminal.  One, both or neither may
+ 269:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  be selected.
+ 270:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 271:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 272:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
+ 273:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                   terminal count or capture.
+ 274:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 275:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 276:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 277:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 278:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 279:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SetInterruptMode(uint8 interruptMode) 
+ 280:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+  80              		.loc 1 280 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		@ link register save eliminated.
+  85              	.LVL0:
+ 281:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_STATUS_MASK = interruptMode;
+  86              		.loc 1 281 0
+  87 0000 014B     		ldr	r3, .L8
+  88 0002 1870     		strb	r0, [r3]
+  89 0004 7047     		bx	lr
+  90              	.L9:
+  91 0006 00BF     		.align	2
+  92              	.L8:
+  93 0008 87640040 		.word	1073767559
+  94              		.cfi_endproc
+  95              	.LFE4:
+  96              		.size	ReadyToDrive_Timer_SetInterruptMode, .-ReadyToDrive_Timer_SetInterruptMode
+  97              		.section	.text.ReadyToDrive_Timer_SoftwareCapture,"ax",%progbits
+  98              		.align	2
+  99              		.global	ReadyToDrive_Timer_SoftwareCapture
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	ReadyToDrive_Timer_SoftwareCapture, %function
+ 103              	ReadyToDrive_Timer_SoftwareCapture:
+ 104              	.LFB5:
+ 282:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 283:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 284:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 285:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 286:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SoftwareCapture
+ 287:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 288:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 289:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 290:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function forces a capture independent of the capture signal.
+ 291:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 292:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 293:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 294:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 295:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 8
+
+
+ 296:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 297:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 298:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Side Effects:
+ 299:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  An existing hardware capture could be overwritten.
+ 300:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 301:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 302:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SoftwareCapture(void) 
+ 303:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 105              		.loc 1 303 0
+ 106              		.cfi_startproc
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109              		@ link register save eliminated.
+ 304:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Generate a software capture by reading the counter register */
+ 305:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 306:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         (void)CY_GET_REG16(ReadyToDrive_Timer_COUNTER_LSB_PTR);
+ 307:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 308:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         (void)CY_GET_REG8(ReadyToDrive_Timer_COUNTER_LSB_PTR_8BIT);
+ 110              		.loc 1 308 0
+ 111 0000 014B     		ldr	r3, .L11
+ 112 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 113 0004 7047     		bx	lr
+ 114              	.L12:
+ 115 0006 00BF     		.align	2
+ 116              	.L11:
+ 117 0008 05640040 		.word	1073767429
+ 118              		.cfi_endproc
+ 119              	.LFE5:
+ 120              		.size	ReadyToDrive_Timer_SoftwareCapture, .-ReadyToDrive_Timer_SoftwareCapture
+ 121              		.section	.text.ReadyToDrive_Timer_ReadStatusRegister,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	ReadyToDrive_Timer_ReadStatusRegister
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	ReadyToDrive_Timer_ReadStatusRegister, %function
+ 127              	ReadyToDrive_Timer_ReadStatusRegister:
+ 128              	.LFB6:
+ 309:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif/* (ReadyToDrive_Timer_UsingFixedFunction) */
+ 310:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Capture Data is now in the FIFO */
+ 311:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 312:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 313:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 314:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 315:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadStatusRegister
+ 316:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 317:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 318:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 319:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Reads the status register and returns it's state. This function should use
+ 320:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  defined types for the bit-field information as the bits in this register may
+ 321:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  be permuteable.
+ 322:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 323:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 324:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 325:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 326:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 327:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The contents of the status register
+ 328:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 9
+
+
+ 329:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Side Effects:
+ 330:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Status register bits may be clear on read.
+ 331:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 332:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 333:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint8   ReadyToDrive_Timer_ReadStatusRegister(void) 
+ 334:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 129              		.loc 1 334 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 335:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     return (ReadyToDrive_Timer_STATUS);
+ 134              		.loc 1 335 0
+ 135 0000 014B     		ldr	r3, .L14
+ 136 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 336:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 137              		.loc 1 336 0
+ 138 0004 7047     		bx	lr
+ 139              	.L15:
+ 140 0006 00BF     		.align	2
+ 141              	.L14:
+ 142 0008 67640040 		.word	1073767527
+ 143              		.cfi_endproc
+ 144              	.LFE6:
+ 145              		.size	ReadyToDrive_Timer_ReadStatusRegister, .-ReadyToDrive_Timer_ReadStatusRegister
+ 146              		.section	.text.ReadyToDrive_Timer_ReadControlRegister,"ax",%progbits
+ 147              		.align	2
+ 148              		.global	ReadyToDrive_Timer_ReadControlRegister
+ 149              		.thumb
+ 150              		.thumb_func
+ 151              		.type	ReadyToDrive_Timer_ReadControlRegister, %function
+ 152              	ReadyToDrive_Timer_ReadControlRegister:
+ 153              	.LFB7:
+ 337:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 338:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 339:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+ 340:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 341:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 342:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 343:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadControlRegister
+ 344:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 345:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 346:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 347:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Reads the control register and returns it's value.
+ 348:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 349:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 350:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 351:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 352:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 353:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The contents of the control register
+ 354:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 355:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 356:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint8 ReadyToDrive_Timer_ReadControlRegister(void) 
+ 357:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 154              		.loc 1 357 0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 10
+
+
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158              		@ link register save eliminated.
+ 358:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) 
+ 359:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         return ((uint8)ReadyToDrive_Timer_CONTROL);
+ 159              		.loc 1 359 0
+ 160 0000 014B     		ldr	r3, .L17
+ 161 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 360:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 361:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         return (0);
+ 362:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) */
+ 363:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 162              		.loc 1 363 0
+ 163 0004 7047     		bx	lr
+ 164              	.L18:
+ 165 0006 00BF     		.align	2
+ 166              	.L17:
+ 167 0008 75640040 		.word	1073767541
+ 168              		.cfi_endproc
+ 169              	.LFE7:
+ 170              		.size	ReadyToDrive_Timer_ReadControlRegister, .-ReadyToDrive_Timer_ReadControlRegister
+ 171              		.section	.text.ReadyToDrive_Timer_WriteControlRegister,"ax",%progbits
+ 172              		.align	2
+ 173              		.global	ReadyToDrive_Timer_WriteControlRegister
+ 174              		.thumb
+ 175              		.thumb_func
+ 176              		.type	ReadyToDrive_Timer_WriteControlRegister, %function
+ 177              	ReadyToDrive_Timer_WriteControlRegister:
+ 178              	.LFB8:
+ 364:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 365:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 366:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 367:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_WriteControlRegister
+ 368:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 369:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 370:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 371:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Sets the bit-field of the control register.
+ 372:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 373:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 374:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  control: The contents of the control register
+ 375:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 376:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 377:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 378:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 379:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_WriteControlRegister(uint8 control) 
+ 380:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 179              		.loc 1 380 0
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183              		@ link register save eliminated.
+ 184              	.LVL1:
+ 381:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) 
+ 382:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL = control;
+ 185              		.loc 1 382 0
+ 186 0000 014B     		ldr	r3, .L20
+ 187 0002 1870     		strb	r0, [r3]
+ 188 0004 7047     		bx	lr
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 11
+
+
+ 189              	.L21:
+ 190 0006 00BF     		.align	2
+ 191              	.L20:
+ 192 0008 75640040 		.word	1073767541
+ 193              		.cfi_endproc
+ 194              	.LFE8:
+ 195              		.size	ReadyToDrive_Timer_WriteControlRegister, .-ReadyToDrive_Timer_WriteControlRegister
+ 196              		.section	.text.ReadyToDrive_Timer_ReadPeriod,"ax",%progbits
+ 197              		.align	2
+ 198              		.global	ReadyToDrive_Timer_ReadPeriod
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.type	ReadyToDrive_Timer_ReadPeriod, %function
+ 202              	ReadyToDrive_Timer_ReadPeriod:
+ 203              	.LFB9:
+ 383:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 384:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         control = 0u;
+ 385:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) */
+ 386:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 387:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 388:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* Remove API if control register is unused */
+ 389:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 390:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 391:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 392:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadPeriod
+ 393:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 394:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 395:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 396:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function returns the current value of the Period.
+ 397:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 398:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 399:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 400:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 401:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 402:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The present value of the counter.
+ 403:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 404:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 405:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint32 ReadyToDrive_Timer_ReadPeriod(void) 
+ 406:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 204              		.loc 1 406 0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		@ link register save eliminated.
+ 407:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 408:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****        return ((uint32)CY_GET_REG16(ReadyToDrive_Timer_PERIOD_LSB_PTR));
+ 409:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #else
+ 410:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****        return (CY_GET_REG32(ReadyToDrive_Timer_PERIOD_LSB_PTR));
+ 209              		.loc 1 410 0
+ 210 0000 014B     		ldr	r3, .L23
+ 211 0002 1868     		ldr	r0, [r3]	@ unaligned
+ 411:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #endif /* (ReadyToDrive_Timer_UsingFixedFunction) */
+ 412:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 212              		.loc 1 412 0
+ 213 0004 7047     		bx	lr
+ 214              	.L24:
+ 215 0006 00BF     		.align	2
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 12
+
+
+ 216              	.L23:
+ 217 0008 25640040 		.word	1073767461
+ 218              		.cfi_endproc
+ 219              	.LFE9:
+ 220              		.size	ReadyToDrive_Timer_ReadPeriod, .-ReadyToDrive_Timer_ReadPeriod
+ 221              		.section	.text.ReadyToDrive_Timer_WritePeriod,"ax",%progbits
+ 222              		.align	2
+ 223              		.global	ReadyToDrive_Timer_WritePeriod
+ 224              		.thumb
+ 225              		.thumb_func
+ 226              		.type	ReadyToDrive_Timer_WritePeriod, %function
+ 227              	ReadyToDrive_Timer_WritePeriod:
+ 228              	.LFB10:
+ 413:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 414:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 415:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 416:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_WritePeriod
+ 417:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 418:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 419:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 420:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function is used to change the period of the counter.  The new period
+ 421:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  will be loaded the next time terminal count is detected.
+ 422:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 423:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 424:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
+ 425:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *          result in the counter remaining at zero.
+ 426:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 427:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 428:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 429:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 430:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 431:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_WritePeriod(uint32 period) 
+ 432:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 229              		.loc 1 432 0
+ 230              		.cfi_startproc
+ 231              		@ args = 0, pretend = 0, frame = 0
+ 232              		@ frame_needed = 0, uses_anonymous_args = 0
+ 233              		@ link register save eliminated.
+ 234              	.LVL2:
+ 433:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 434:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         uint16 period_temp = (uint16)period;
+ 435:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         CY_SET_REG16(ReadyToDrive_Timer_PERIOD_LSB_PTR, period_temp);
+ 436:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 437:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         CY_SET_REG32(ReadyToDrive_Timer_PERIOD_LSB_PTR, period);
+ 235              		.loc 1 437 0
+ 236 0000 014B     		ldr	r3, .L26
+ 237 0002 1860     		str	r0, [r3]	@ unaligned
+ 238 0004 7047     		bx	lr
+ 239              	.L27:
+ 240 0006 00BF     		.align	2
+ 241              	.L26:
+ 242 0008 25640040 		.word	1073767461
+ 243              		.cfi_endproc
+ 244              	.LFE10:
+ 245              		.size	ReadyToDrive_Timer_WritePeriod, .-ReadyToDrive_Timer_WritePeriod
+ 246              		.section	.text.ReadyToDrive_Timer_ReadCapture,"ax",%progbits
+ 247              		.align	2
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 13
+
+
+ 248              		.global	ReadyToDrive_Timer_ReadCapture
+ 249              		.thumb
+ 250              		.thumb_func
+ 251              		.type	ReadyToDrive_Timer_ReadCapture, %function
+ 252              	ReadyToDrive_Timer_ReadCapture:
+ 253              	.LFB11:
+ 438:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
+ 439:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 440:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 441:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 442:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 443:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadCapture
+ 444:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 445:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 446:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 447:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function returns the last value captured.
+ 448:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 449:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 450:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 451:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 452:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 453:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Present Capture value.
+ 454:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 455:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 456:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint32 ReadyToDrive_Timer_ReadCapture(void) 
+ 457:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 254              		.loc 1 457 0
+ 255              		.cfi_startproc
+ 256              		@ args = 0, pretend = 0, frame = 0
+ 257              		@ frame_needed = 0, uses_anonymous_args = 0
+ 258              		@ link register save eliminated.
+ 458:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 459:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****        return ((uint32)CY_GET_REG16(ReadyToDrive_Timer_CAPTURE_LSB_PTR));
+ 460:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #else
+ 461:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****        return (CY_GET_REG32(ReadyToDrive_Timer_CAPTURE_LSB_PTR));
+ 259              		.loc 1 461 0
+ 260 0000 014B     		ldr	r3, .L29
+ 261 0002 1868     		ldr	r0, [r3]	@ unaligned
+ 462:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #endif /* (ReadyToDrive_Timer_UsingFixedFunction) */
+ 463:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 262              		.loc 1 463 0
+ 263 0004 7047     		bx	lr
+ 264              	.L30:
+ 265 0006 00BF     		.align	2
+ 266              	.L29:
+ 267 0008 45640040 		.word	1073767493
+ 268              		.cfi_endproc
+ 269              	.LFE11:
+ 270              		.size	ReadyToDrive_Timer_ReadCapture, .-ReadyToDrive_Timer_ReadCapture
+ 271              		.section	.text.ReadyToDrive_Timer_WriteCounter,"ax",%progbits
+ 272              		.align	2
+ 273              		.global	ReadyToDrive_Timer_WriteCounter
+ 274              		.thumb
+ 275              		.thumb_func
+ 276              		.type	ReadyToDrive_Timer_WriteCounter, %function
+ 277              	ReadyToDrive_Timer_WriteCounter:
+ 278              	.LFB12:
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 14
+
+
+ 464:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 465:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 466:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 467:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_WriteCounter
+ 468:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 469:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 470:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 471:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This funtion is used to set the counter to a specific value
+ 472:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 473:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 474:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  counter:  New counter value.
+ 475:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 476:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 477:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 478:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 479:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 480:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_WriteCounter(uint32 counter) 
+ 481:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 279              		.loc 1 481 0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283              		@ link register save eliminated.
+ 284              	.LVL3:
+ 482:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****    #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 483:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* This functionality is removed until a FixedFunction HW update to
+ 484:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****          * allow this register to be written
+ 485:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****          */
+ 486:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         CY_SET_REG16(ReadyToDrive_Timer_COUNTER_LSB_PTR, (uint16)counter);
+ 487:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         
+ 488:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 489:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         CY_SET_REG32(ReadyToDrive_Timer_COUNTER_LSB_PTR, counter);
+ 285              		.loc 1 489 0
+ 286 0000 014B     		ldr	r3, .L32
+ 287 0002 1860     		str	r0, [r3]	@ unaligned
+ 288 0004 7047     		bx	lr
+ 289              	.L33:
+ 290 0006 00BF     		.align	2
+ 291              	.L32:
+ 292 0008 05640040 		.word	1073767429
+ 293              		.cfi_endproc
+ 294              	.LFE12:
+ 295              		.size	ReadyToDrive_Timer_WriteCounter, .-ReadyToDrive_Timer_WriteCounter
+ 296              		.section	.text.ReadyToDrive_Timer_ReadCounter,"ax",%progbits
+ 297              		.align	2
+ 298              		.global	ReadyToDrive_Timer_ReadCounter
+ 299              		.thumb
+ 300              		.thumb_func
+ 301              		.type	ReadyToDrive_Timer_ReadCounter, %function
+ 302              	ReadyToDrive_Timer_ReadCounter:
+ 303              	.LFB13:
+ 490:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
+ 491:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 492:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 493:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 494:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 495:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadCounter
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 15
+
+
+ 496:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 497:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 498:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 499:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function returns the current counter value.
+ 500:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 501:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 502:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 503:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 504:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 505:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Present compare value.
+ 506:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 507:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 508:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint32 ReadyToDrive_Timer_ReadCounter(void) 
+ 509:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 304              		.loc 1 509 0
+ 305              		.cfi_startproc
+ 306              		@ args = 0, pretend = 0, frame = 0
+ 307              		@ frame_needed = 0, uses_anonymous_args = 0
+ 308              		@ link register save eliminated.
+ 510:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Force capture by reading Accumulator */
+ 511:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Must first do a software capture to be able to read the counter */
+ 512:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 513:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 514:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         (void)CY_GET_REG16(ReadyToDrive_Timer_COUNTER_LSB_PTR);
+ 515:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 516:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         (void)CY_GET_REG8(ReadyToDrive_Timer_COUNTER_LSB_PTR_8BIT);
+ 309              		.loc 1 516 0
+ 310 0000 024B     		ldr	r3, .L35
+ 311 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 517:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif/* (ReadyToDrive_Timer_UsingFixedFunction) */
+ 518:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 519:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 520:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(ReadyToDrive_Timer_UsingFixedFunction)
+ 521:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         return ((uint32)CY_GET_REG16(ReadyToDrive_Timer_CAPTURE_LSB_PTR));
+ 522:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #else
+ 523:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         return (CY_GET_REG32(ReadyToDrive_Timer_CAPTURE_LSB_PTR));
+ 312              		.loc 1 523 0
+ 313 0004 024B     		ldr	r3, .L35+4
+ 314 0006 1868     		ldr	r0, [r3]	@ unaligned
+ 524:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* (ReadyToDrive_Timer_UsingFixedFunction) */
+ 525:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 315              		.loc 1 525 0
+ 316 0008 7047     		bx	lr
+ 317              	.L36:
+ 318 000a 00BF     		.align	2
+ 319              	.L35:
+ 320 000c 05640040 		.word	1073767429
+ 321 0010 45640040 		.word	1073767493
+ 322              		.cfi_endproc
+ 323              	.LFE13:
+ 324              		.size	ReadyToDrive_Timer_ReadCounter, .-ReadyToDrive_Timer_ReadCounter
+ 325              		.section	.text.ReadyToDrive_Timer_ClearFIFO,"ax",%progbits
+ 326              		.align	2
+ 327              		.global	ReadyToDrive_Timer_ClearFIFO
+ 328              		.thumb
+ 329              		.thumb_func
+ 330              		.type	ReadyToDrive_Timer_ClearFIFO, %function
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 16
+
+
+ 331              	ReadyToDrive_Timer_ClearFIFO:
+ 332              	.LFB14:
+ 526:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 527:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 528:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if(!ReadyToDrive_Timer_UsingFixedFunction) /* UDB Specific Functions */
+ 529:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 530:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     
+ 531:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 532:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****  * The functions below this point are only available using the UDB
+ 533:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****  * implementation.  If a feature is selected, then the API is enabled.
+ 534:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****  ******************************************************************************/
+ 535:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 536:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 537:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if (ReadyToDrive_Timer_SoftwareCaptureMode)
+ 538:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 539:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 540:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 541:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SetCaptureMode
+ 542:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 543:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 544:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 545:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function sets the capture mode to either rising or falling edge.
+ 546:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 547:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 548:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  captureMode: This parameter sets the capture mode of the UDB capture feature
+ 549:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The parameter values are defined using the
+ 550:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  #define ReadyToDrive_Timer__B_TIMER__CM_NONE 0
+ 551:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #define ReadyToDrive_Timer__B_TIMER__CM_RISINGEDGE 1
+ 552:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #define ReadyToDrive_Timer__B_TIMER__CM_FALLINGEDGE 2
+ 553:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #define ReadyToDrive_Timer__B_TIMER__CM_EITHEREDGE 3
+ 554:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #define ReadyToDrive_Timer__B_TIMER__CM_SOFTWARE 4
+ 555:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****  identifiers
+ 556:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  The following are the possible values of the parameter
+ 557:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  ReadyToDrive_Timer__B_TIMER__CM_NONE        - Set Capture mode to None
+ 558:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  ReadyToDrive_Timer__B_TIMER__CM_RISINGEDGE  - Rising edge of Capture input
+ 559:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  ReadyToDrive_Timer__B_TIMER__CM_FALLINGEDGE - Falling edge of Capture input
+ 560:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  ReadyToDrive_Timer__B_TIMER__CM_EITHEREDGE  - Either edge of Capture input
+ 561:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 562:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 563:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 564:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 565:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 566:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SetCaptureMode(uint8 captureMode) 
+ 567:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 568:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 569:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     captureMode = ((uint8)((uint8)captureMode << ReadyToDrive_Timer_CTRL_CAP_MODE_SHIFT));
+ 570:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     captureMode &= (ReadyToDrive_Timer_CTRL_CAP_MODE_MASK);
+ 571:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 572:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED)
+ 573:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear the Current Setting */
+ 574:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ((uint8)(~ReadyToDrive_Timer_CTRL_CAP_MODE_MASK));
+ 575:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 576:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Write The New Setting */
+ 577:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL |= captureMode;
+ 578:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) */
+ 579:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 580:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* Remove API if Capture Mode is not Software Controlled */
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 17
+
+
+ 581:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 582:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 583:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if (ReadyToDrive_Timer_SoftwareTriggerMode)
+ 584:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 585:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 586:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 587:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SetTriggerMode
+ 588:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 589:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 590:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 591:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function sets the trigger input mode
+ 592:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 593:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 594:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  triggerMode: Pass one of the pre-defined Trigger Modes (except Software)
+ 595:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #define ReadyToDrive_Timer__B_TIMER__TM_NONE 0x00u
+ 596:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #define ReadyToDrive_Timer__B_TIMER__TM_RISINGEDGE 0x04u
+ 597:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #define ReadyToDrive_Timer__B_TIMER__TM_FALLINGEDGE 0x08u
+ 598:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #define ReadyToDrive_Timer__B_TIMER__TM_EITHEREDGE 0x0Cu
+ 599:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #define ReadyToDrive_Timer__B_TIMER__TM_SOFTWARE 0x10u
+ 600:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 601:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 602:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 603:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 604:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 605:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SetTriggerMode(uint8 triggerMode) 
+ 606:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 607:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 608:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     triggerMode &= ReadyToDrive_Timer_CTRL_TRIG_MODE_MASK;
+ 609:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 610:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is
+ 611:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     
+ 612:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear the Current Setting */
+ 613:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ((uint8)(~ReadyToDrive_Timer_CTRL_TRIG_MODE_MASK));
+ 614:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 615:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Write The New Setting */
+ 616:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL |= (triggerMode | ReadyToDrive_Timer__B_TIMER__TM_SOFTWARE);
+ 617:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 618:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 619:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* Remove API if Trigger Mode is not Software Controlled */
+ 620:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 621:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if (ReadyToDrive_Timer_EnableTriggerMode)
+ 622:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 623:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 624:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 625:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_EnableTrigger
+ 626:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 627:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 628:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 629:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Sets the control bit enabling Hardware Trigger mode
+ 630:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 631:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 632:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 633:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 634:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 635:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 636:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 637:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 18
+
+
+ 638:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_EnableTrigger(void) 
+ 639:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 640:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED)   /* Remove assignment if control register is
+ 641:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL |= ReadyToDrive_Timer_CTRL_TRIG_EN;
+ 642:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 643:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 644:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 645:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 646:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 647:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_DisableTrigger
+ 648:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 649:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 650:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 651:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Clears the control bit enabling Hardware Trigger mode
+ 652:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 653:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 654:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 655:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 656:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 657:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 658:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 659:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 660:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_DisableTrigger(void) 
+ 661:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 662:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED )   /* Remove assignment if control register i
+ 663:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ((uint8)(~ReadyToDrive_Timer_CTRL_TRIG_EN));
+ 664:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Remove code section if control register is not used */
+ 665:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 666:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* Remove API is Trigger Mode is set to None */
+ 667:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 668:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if(ReadyToDrive_Timer_InterruptOnCaptureCount)
+ 669:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 670:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 671:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 672:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SetInterruptCount
+ 673:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 674:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 675:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 676:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function sets the capture count before an interrupt is triggered.
+ 677:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 678:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 679:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  interruptCount:  A value between 0 and 3 is valid.  If the value is 0, then
+ 680:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                   an interrupt will occur each time a capture occurs.
+ 681:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                   A value of 1 to 3 will cause the interrupt
+ 682:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                   to delay by the same number of captures.
+ 683:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 684:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 685:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 686:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 687:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 688:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SetInterruptCount(uint8 interruptCount) 
+ 689:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 690:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     /* This must only set to two bits of the control register associated */
+ 691:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     interruptCount &= ReadyToDrive_Timer_CTRL_INTCNT_MASK;
+ 692:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 693:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED)
+ 694:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Clear the Current Setting */
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 19
+
+
+ 695:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL &= ((uint8)(~ReadyToDrive_Timer_CTRL_INTCNT_MASK));
+ 696:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         /* Write The New Setting */
+ 697:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         ReadyToDrive_Timer_CONTROL |= interruptCount;
+ 698:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* (!ReadyToDrive_Timer_UDB_CONTROL_REG_REMOVED) */
+ 699:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 700:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* ReadyToDrive_Timer_InterruptOnCaptureCount */
+ 701:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 702:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 703:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #if (ReadyToDrive_Timer_UsingHWCaptureCounter)
+ 704:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 705:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 706:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 707:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_SetCaptureCount
+ 708:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 709:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 710:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 711:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function sets the capture count
+ 712:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 713:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 714:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  captureCount: A value between 2 and 127 inclusive is valid.  A value of 1
+ 715:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                to 127 will cause the interrupt to delay by the same number of
+ 716:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *                captures.
+ 717:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 718:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 719:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 720:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 721:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 722:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_SetCaptureCount(uint8 captureCount) 
+ 723:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 724:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_CAP_COUNT = captureCount;
+ 725:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 726:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 727:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 728:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 729:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ReadCaptureCount
+ 730:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ 731:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 732:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 733:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function reads the capture count setting
+ 734:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 735:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 736:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 737:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 738:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 739:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  Returns the Capture Count Setting
+ 740:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 741:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 742:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** uint8 ReadyToDrive_Timer_ReadCaptureCount(void) 
+ 743:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 744:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     return ((uint8)ReadyToDrive_Timer_CAP_COUNT);
+ 745:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 746:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** #endif /* ReadyToDrive_Timer_UsingHWCaptureCounter */
+ 747:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 748:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 749:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** /*******************************************************************************
+ 750:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Function Name: ReadyToDrive_Timer_ClearFIFO
+ 751:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** ********************************************************************************
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 20
+
+
+ 752:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 753:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Summary:
+ 754:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  This function clears all capture data from the capture FIFO
+ 755:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 756:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Parameters:
+ 757:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 758:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 759:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** * Return:
+ 760:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *  void
+ 761:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *
+ 762:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** *******************************************************************************/
+ 763:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** void ReadyToDrive_Timer_ClearFIFO(void) 
+ 764:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** {
+ 333              		.loc 1 764 0
+ 334              		.cfi_startproc
+ 335              		@ args = 0, pretend = 0, frame = 0
+ 336              		@ frame_needed = 0, uses_anonymous_args = 0
+ 337 0000 08B5     		push	{r3, lr}
+ 338              		.cfi_def_cfa_offset 8
+ 339              		.cfi_offset 3, -8
+ 340              		.cfi_offset 14, -4
+ 765:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     while(0u != (ReadyToDrive_Timer_ReadStatusRegister() & ReadyToDrive_Timer_STATUS_FIFONEMP))
+ 341              		.loc 1 765 0
+ 342 0002 01E0     		b	.L38
+ 343              	.L39:
+ 766:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     {
+ 767:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****         (void)ReadyToDrive_Timer_ReadCapture();
+ 344              		.loc 1 767 0
+ 345 0004 FFF7FEFF 		bl	ReadyToDrive_Timer_ReadCapture
+ 346              	.LVL4:
+ 347              	.L38:
+ 765:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     while(0u != (ReadyToDrive_Timer_ReadStatusRegister() & ReadyToDrive_Timer_STATUS_FIFONEMP))
+ 348              		.loc 1 765 0
+ 349 0008 FFF7FEFF 		bl	ReadyToDrive_Timer_ReadStatusRegister
+ 350              	.LVL5:
+ 351 000c 10F0080F 		tst	r0, #8
+ 352 0010 F8D1     		bne	.L39
+ 768:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     }
+ 769:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 353              		.loc 1 769 0
+ 354 0012 08BD     		pop	{r3, pc}
+ 355              		.cfi_endproc
+ 356              	.LFE14:
+ 357              		.size	ReadyToDrive_Timer_ClearFIFO, .-ReadyToDrive_Timer_ClearFIFO
+ 358              		.section	.text.ReadyToDrive_Timer_Init,"ax",%progbits
+ 359              		.align	2
+ 360              		.global	ReadyToDrive_Timer_Init
+ 361              		.thumb
+ 362              		.thumb_func
+ 363              		.type	ReadyToDrive_Timer_Init, %function
+ 364              	ReadyToDrive_Timer_Init:
+ 365              	.LFB0:
+  44:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #if(!ReadyToDrive_Timer_UsingFixedFunction)
+ 366              		.loc 1 44 0
+ 367              		.cfi_startproc
+ 368              		@ args = 0, pretend = 0, frame = 0
+ 369              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 21
+
+
+ 370 0000 10B5     		push	{r4, lr}
+ 371              		.cfi_def_cfa_offset 8
+ 372              		.cfi_offset 4, -8
+ 373              		.cfi_offset 14, -4
+ 118:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     ReadyToDrive_Timer_WriteCounter(ReadyToDrive_Timer_INIT_PERIOD);
+ 374              		.loc 1 118 0
+ 375 0002 0B4C     		ldr	r4, .L43
+ 376 0004 2046     		mov	r0, r4
+ 377 0006 FFF7FEFF 		bl	ReadyToDrive_Timer_WritePeriod
+ 378              	.LVL6:
+ 119:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 379              		.loc 1 119 0
+ 380 000a 2046     		mov	r0, r4
+ 381 000c FFF7FEFF 		bl	ReadyToDrive_Timer_WriteCounter
+ 382              	.LVL7:
+ 142:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 383              		.loc 1 142 0
+ 384 0010 FFF7FEFF 		bl	CyEnterCriticalSection
+ 385              	.LVL8:
+ 145:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 386              		.loc 1 145 0
+ 387 0014 074A     		ldr	r2, .L43+4
+ 388 0016 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 389 0018 43F01003 		orr	r3, r3, #16
+ 390 001c 1370     		strb	r3, [r2]
+ 148:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 391              		.loc 1 148 0
+ 392 001e FFF7FEFF 		bl	CyExitCriticalSection
+ 393              	.LVL9:
+ 159:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ 394              		.loc 1 159 0
+ 395 0022 FFF7FEFF 		bl	ReadyToDrive_Timer_ClearFIFO
+ 396              	.LVL10:
+ 162:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 397              		.loc 1 162 0
+ 398 0026 0120     		movs	r0, #1
+ 399 0028 FFF7FEFF 		bl	ReadyToDrive_Timer_SetInterruptMode
+ 400              	.LVL11:
+ 401 002c 10BD     		pop	{r4, pc}
+ 402              	.L44:
+ 403 002e 00BF     		.align	2
+ 404              	.L43:
+ 405 0030 FF6BDC02 		.word	47999999
+ 406 0034 97640040 		.word	1073767575
+ 407              		.cfi_endproc
+ 408              	.LFE0:
+ 409              		.size	ReadyToDrive_Timer_Init, .-ReadyToDrive_Timer_Init
+ 410              		.section	.text.ReadyToDrive_Timer_Start,"ax",%progbits
+ 411              		.align	2
+ 412              		.global	ReadyToDrive_Timer_Start
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.type	ReadyToDrive_Timer_Start, %function
+ 416              	ReadyToDrive_Timer_Start:
+ 417              	.LFB2:
+ 216:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     if(ReadyToDrive_Timer_initVar == 0u)
+ 418              		.loc 1 216 0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 22
+
+
+ 419              		.cfi_startproc
+ 420              		@ args = 0, pretend = 0, frame = 0
+ 421              		@ frame_needed = 0, uses_anonymous_args = 0
+ 422 0000 08B5     		push	{r3, lr}
+ 423              		.cfi_def_cfa_offset 8
+ 424              		.cfi_offset 3, -8
+ 425              		.cfi_offset 14, -4
+ 217:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     {
+ 426              		.loc 1 217 0
+ 427 0002 054B     		ldr	r3, .L48
+ 428 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 429 0006 23B9     		cbnz	r3, .L46
+ 219:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** 
+ 430              		.loc 1 219 0
+ 431 0008 FFF7FEFF 		bl	ReadyToDrive_Timer_Init
+ 432              	.LVL12:
+ 221:Generated_Source\PSoC5/ReadyToDrive_Timer.c ****     }
+ 433              		.loc 1 221 0
+ 434 000c 0122     		movs	r2, #1
+ 435 000e 024B     		ldr	r3, .L48
+ 436 0010 1A70     		strb	r2, [r3]
+ 437              	.L46:
+ 225:Generated_Source\PSoC5/ReadyToDrive_Timer.c **** }
+ 438              		.loc 1 225 0
+ 439 0012 FFF7FEFF 		bl	ReadyToDrive_Timer_Enable
+ 440              	.LVL13:
+ 441 0016 08BD     		pop	{r3, pc}
+ 442              	.L49:
+ 443              		.align	2
+ 444              	.L48:
+ 445 0018 00000000 		.word	.LANCHOR0
+ 446              		.cfi_endproc
+ 447              	.LFE2:
+ 448              		.size	ReadyToDrive_Timer_Start, .-ReadyToDrive_Timer_Start
+ 449              		.global	ReadyToDrive_Timer_initVar
+ 450              		.bss
+ 451              		.set	.LANCHOR0,. + 0
+ 452              		.type	ReadyToDrive_Timer_initVar, %object
+ 453              		.size	ReadyToDrive_Timer_initVar, 1
+ 454              	ReadyToDrive_Timer_initVar:
+ 455 0000 00       		.space	1
+ 456              		.text
+ 457              	.Letext0:
+ 458              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 459              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
+ 460              		.section	.debug_info,"",%progbits
+ 461              	.Ldebug_info0:
+ 462 0000 EA020000 		.4byte	0x2ea
+ 463 0004 0400     		.2byte	0x4
+ 464 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 465 000a 04       		.byte	0x4
+ 466 000b 01       		.uleb128 0x1
+ 467 000c E7000000 		.4byte	.LASF39
+ 468 0010 0C       		.byte	0xc
+ 469 0011 4B000000 		.4byte	.LASF40
+ 470 0015 F3020000 		.4byte	.LASF41
+ 471 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 23
+
+
+ 472 001d 00000000 		.4byte	0
+ 473 0021 00000000 		.4byte	.Ldebug_line0
+ 474 0025 02       		.uleb128 0x2
+ 475 0026 01       		.byte	0x1
+ 476 0027 06       		.byte	0x6
+ 477 0028 00040000 		.4byte	.LASF0
+ 478 002c 02       		.uleb128 0x2
+ 479 002d 01       		.byte	0x1
+ 480 002e 08       		.byte	0x8
+ 481 002f D9000000 		.4byte	.LASF1
+ 482 0033 02       		.uleb128 0x2
+ 483 0034 02       		.byte	0x2
+ 484 0035 05       		.byte	0x5
+ 485 0036 83030000 		.4byte	.LASF2
+ 486 003a 02       		.uleb128 0x2
+ 487 003b 02       		.byte	0x2
+ 488 003c 07       		.byte	0x7
+ 489 003d 38000000 		.4byte	.LASF3
+ 490 0041 02       		.uleb128 0x2
+ 491 0042 04       		.byte	0x4
+ 492 0043 05       		.byte	0x5
+ 493 0044 CB030000 		.4byte	.LASF4
+ 494 0048 02       		.uleb128 0x2
+ 495 0049 04       		.byte	0x4
+ 496 004a 07       		.byte	0x7
+ 497 004b 7A010000 		.4byte	.LASF5
+ 498 004f 02       		.uleb128 0x2
+ 499 0050 08       		.byte	0x8
+ 500 0051 05       		.byte	0x5
+ 501 0052 00000000 		.4byte	.LASF6
+ 502 0056 02       		.uleb128 0x2
+ 503 0057 08       		.byte	0x8
+ 504 0058 07       		.byte	0x7
+ 505 0059 85000000 		.4byte	.LASF7
+ 506 005d 03       		.uleb128 0x3
+ 507 005e 04       		.byte	0x4
+ 508 005f 05       		.byte	0x5
+ 509 0060 696E7400 		.ascii	"int\000"
+ 510 0064 02       		.uleb128 0x2
+ 511 0065 04       		.byte	0x4
+ 512 0066 07       		.byte	0x7
+ 513 0067 D0020000 		.4byte	.LASF8
+ 514 006b 04       		.uleb128 0x4
+ 515 006c 8C010000 		.4byte	.LASF9
+ 516 0070 02       		.byte	0x2
+ 517 0071 3801     		.2byte	0x138
+ 518 0073 2C000000 		.4byte	0x2c
+ 519 0077 04       		.uleb128 0x4
+ 520 0078 8C020000 		.4byte	.LASF10
+ 521 007c 02       		.byte	0x2
+ 522 007d 3A01     		.2byte	0x13a
+ 523 007f 48000000 		.4byte	0x48
+ 524 0083 02       		.uleb128 0x2
+ 525 0084 04       		.byte	0x4
+ 526 0085 04       		.byte	0x4
+ 527 0086 77000000 		.4byte	.LASF11
+ 528 008a 02       		.uleb128 0x2
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 24
+
+
+ 529 008b 08       		.byte	0x8
+ 530 008c 04       		.byte	0x4
+ 531 008d 1D020000 		.4byte	.LASF12
+ 532 0091 02       		.uleb128 0x2
+ 533 0092 01       		.byte	0x1
+ 534 0093 08       		.byte	0x8
+ 535 0094 D4030000 		.4byte	.LASF13
+ 536 0098 04       		.uleb128 0x4
+ 537 0099 75010000 		.4byte	.LASF14
+ 538 009d 02       		.byte	0x2
+ 539 009e E201     		.2byte	0x1e2
+ 540 00a0 A4000000 		.4byte	0xa4
+ 541 00a4 05       		.uleb128 0x5
+ 542 00a5 6B000000 		.4byte	0x6b
+ 543 00a9 04       		.uleb128 0x4
+ 544 00aa 0E000000 		.4byte	.LASF15
+ 545 00ae 02       		.byte	0x2
+ 546 00af E401     		.2byte	0x1e4
+ 547 00b1 B5000000 		.4byte	0xb5
+ 548 00b5 05       		.uleb128 0x5
+ 549 00b6 77000000 		.4byte	0x77
+ 550 00ba 02       		.uleb128 0x2
+ 551 00bb 08       		.byte	0x8
+ 552 00bc 04       		.byte	0x4
+ 553 00bd F4030000 		.4byte	.LASF16
+ 554 00c1 02       		.uleb128 0x2
+ 555 00c2 04       		.byte	0x4
+ 556 00c3 07       		.byte	0x7
+ 557 00c4 3B030000 		.4byte	.LASF17
+ 558 00c8 06       		.uleb128 0x6
+ 559 00c9 8D030000 		.4byte	.LASF18
+ 560 00cd 01       		.byte	0x1
+ 561 00ce B4       		.byte	0xb4
+ 562 00cf 00000000 		.4byte	.LFB1
+ 563 00d3 10000000 		.4byte	.LFE1-.LFB1
+ 564 00d7 01       		.uleb128 0x1
+ 565 00d8 9C       		.byte	0x9c
+ 566 00d9 06       		.uleb128 0x6
+ 567 00da 6B030000 		.4byte	.LASF19
+ 568 00de 01       		.byte	0x1
+ 569 00df F7       		.byte	0xf7
+ 570 00e0 00000000 		.4byte	.LFB3
+ 571 00e4 10000000 		.4byte	.LFE3-.LFB3
+ 572 00e8 01       		.uleb128 0x1
+ 573 00e9 9C       		.byte	0x9c
+ 574 00ea 07       		.uleb128 0x7
+ 575 00eb A7030000 		.4byte	.LASF23
+ 576 00ef 01       		.byte	0x1
+ 577 00f0 1701     		.2byte	0x117
+ 578 00f2 00000000 		.4byte	.LFB4
+ 579 00f6 0C000000 		.4byte	.LFE4-.LFB4
+ 580 00fa 01       		.uleb128 0x1
+ 581 00fb 9C       		.byte	0x9c
+ 582 00fc 0F010000 		.4byte	0x10f
+ 583 0100 08       		.uleb128 0x8
+ 584 0101 5D030000 		.4byte	.LASF25
+ 585 0105 01       		.byte	0x1
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 25
+
+
+ 586 0106 1701     		.2byte	0x117
+ 587 0108 6B000000 		.4byte	0x6b
+ 588 010c 01       		.uleb128 0x1
+ 589 010d 50       		.byte	0x50
+ 590 010e 00       		.byte	0
+ 591 010f 09       		.uleb128 0x9
+ 592 0110 9A010000 		.4byte	.LASF20
+ 593 0114 01       		.byte	0x1
+ 594 0115 2E01     		.2byte	0x12e
+ 595 0117 00000000 		.4byte	.LFB5
+ 596 011b 0C000000 		.4byte	.LFE5-.LFB5
+ 597 011f 01       		.uleb128 0x1
+ 598 0120 9C       		.byte	0x9c
+ 599 0121 0A       		.uleb128 0xa
+ 600 0122 93020000 		.4byte	.LASF21
+ 601 0126 01       		.byte	0x1
+ 602 0127 4D01     		.2byte	0x14d
+ 603 0129 6B000000 		.4byte	0x6b
+ 604 012d 00000000 		.4byte	.LFB6
+ 605 0131 0C000000 		.4byte	.LFE6-.LFB6
+ 606 0135 01       		.uleb128 0x1
+ 607 0136 9C       		.byte	0x9c
+ 608 0137 0A       		.uleb128 0xa
+ 609 0138 65020000 		.4byte	.LASF22
+ 610 013c 01       		.byte	0x1
+ 611 013d 6401     		.2byte	0x164
+ 612 013f 6B000000 		.4byte	0x6b
+ 613 0143 00000000 		.4byte	.LFB7
+ 614 0147 0C000000 		.4byte	.LFE7-.LFB7
+ 615 014b 01       		.uleb128 0x1
+ 616 014c 9C       		.byte	0x9c
+ 617 014d 07       		.uleb128 0x7
+ 618 014e DD010000 		.4byte	.LASF24
+ 619 0152 01       		.byte	0x1
+ 620 0153 7B01     		.2byte	0x17b
+ 621 0155 00000000 		.4byte	.LFB8
+ 622 0159 0C000000 		.4byte	.LFE8-.LFB8
+ 623 015d 01       		.uleb128 0x1
+ 624 015e 9C       		.byte	0x9c
+ 625 015f 72010000 		.4byte	0x172
+ 626 0163 08       		.uleb128 0x8
+ 627 0164 92010000 		.4byte	.LASF26
+ 628 0168 01       		.byte	0x1
+ 629 0169 7B01     		.2byte	0x17b
+ 630 016b 6B000000 		.4byte	0x6b
+ 631 016f 01       		.uleb128 0x1
+ 632 0170 50       		.byte	0x50
+ 633 0171 00       		.byte	0
+ 634 0172 0A       		.uleb128 0xa
+ 635 0173 BB000000 		.4byte	.LASF27
+ 636 0177 01       		.byte	0x1
+ 637 0178 9501     		.2byte	0x195
+ 638 017a 77000000 		.4byte	0x77
+ 639 017e 00000000 		.4byte	.LFB9
+ 640 0182 0C000000 		.4byte	.LFE9-.LFB9
+ 641 0186 01       		.uleb128 0x1
+ 642 0187 9C       		.byte	0x9c
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 26
+
+
+ 643 0188 07       		.uleb128 0x7
+ 644 0189 46020000 		.4byte	.LASF28
+ 645 018d 01       		.byte	0x1
+ 646 018e AF01     		.2byte	0x1af
+ 647 0190 00000000 		.4byte	.LFB10
+ 648 0194 0C000000 		.4byte	.LFE10-.LFB10
+ 649 0198 01       		.uleb128 0x1
+ 650 0199 9C       		.byte	0x9c
+ 651 019a AD010000 		.4byte	0x1ad
+ 652 019e 08       		.uleb128 0x8
+ 653 019f 31000000 		.4byte	.LASF29
+ 654 01a3 01       		.byte	0x1
+ 655 01a4 AF01     		.2byte	0x1af
+ 656 01a6 77000000 		.4byte	0x77
+ 657 01aa 01       		.uleb128 0x1
+ 658 01ab 50       		.byte	0x50
+ 659 01ac 00       		.byte	0
+ 660 01ad 0A       		.uleb128 0xa
+ 661 01ae 0C040000 		.4byte	.LASF30
+ 662 01b2 01       		.byte	0x1
+ 663 01b3 C801     		.2byte	0x1c8
+ 664 01b5 77000000 		.4byte	0x77
+ 665 01b9 00000000 		.4byte	.LFB11
+ 666 01bd 0C000000 		.4byte	.LFE11-.LFB11
+ 667 01c1 01       		.uleb128 0x1
+ 668 01c2 9C       		.byte	0x9c
+ 669 01c3 07       		.uleb128 0x7
+ 670 01c4 BD010000 		.4byte	.LASF31
+ 671 01c8 01       		.byte	0x1
+ 672 01c9 E001     		.2byte	0x1e0
+ 673 01cb 00000000 		.4byte	.LFB12
+ 674 01cf 0C000000 		.4byte	.LFE12-.LFB12
+ 675 01d3 01       		.uleb128 0x1
+ 676 01d4 9C       		.byte	0x9c
+ 677 01d5 E8010000 		.4byte	0x1e8
+ 678 01d9 08       		.uleb128 0x8
+ 679 01da 7D000000 		.4byte	.LASF32
+ 680 01de 01       		.byte	0x1
+ 681 01df E001     		.2byte	0x1e0
+ 682 01e1 77000000 		.4byte	0x77
+ 683 01e5 01       		.uleb128 0x1
+ 684 01e6 50       		.byte	0x50
+ 685 01e7 00       		.byte	0
+ 686 01e8 0A       		.uleb128 0xa
+ 687 01e9 9C000000 		.4byte	.LASF33
+ 688 01ed 01       		.byte	0x1
+ 689 01ee FC01     		.2byte	0x1fc
+ 690 01f0 77000000 		.4byte	0x77
+ 691 01f4 00000000 		.4byte	.LFB13
+ 692 01f8 14000000 		.4byte	.LFE13-.LFB13
+ 693 01fc 01       		.uleb128 0x1
+ 694 01fd 9C       		.byte	0x9c
+ 695 01fe 07       		.uleb128 0x7
+ 696 01ff 14000000 		.4byte	.LASF34
+ 697 0203 01       		.byte	0x1
+ 698 0204 FB02     		.2byte	0x2fb
+ 699 0206 00000000 		.4byte	.LFB14
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 27
+
+
+ 700 020a 14000000 		.4byte	.LFE14-.LFB14
+ 701 020e 01       		.uleb128 0x1
+ 702 020f 9C       		.byte	0x9c
+ 703 0210 27020000 		.4byte	0x227
+ 704 0214 0B       		.uleb128 0xb
+ 705 0215 08000000 		.4byte	.LVL4
+ 706 0219 AD010000 		.4byte	0x1ad
+ 707 021d 0B       		.uleb128 0xb
+ 708 021e 0C000000 		.4byte	.LVL5
+ 709 0222 21010000 		.4byte	0x121
+ 710 0226 00       		.byte	0
+ 711 0227 0C       		.uleb128 0xc
+ 712 0228 05020000 		.4byte	.LASF35
+ 713 022c 01       		.byte	0x1
+ 714 022d 2B       		.byte	0x2b
+ 715 022e 00000000 		.4byte	.LFB0
+ 716 0232 38000000 		.4byte	.LFE0-.LFB0
+ 717 0236 01       		.uleb128 0x1
+ 718 0237 9C       		.byte	0x9c
+ 719 0238 9E020000 		.4byte	0x29e
+ 720 023c 0D       		.uleb128 0xd
+ 721 023d 24020000 		.4byte	.LASF42
+ 722 0241 01       		.byte	0x1
+ 723 0242 2F       		.byte	0x2f
+ 724 0243 6B000000 		.4byte	0x6b
+ 725 0247 00000000 		.4byte	.LLST0
+ 726 024b 0E       		.uleb128 0xe
+ 727 024c 0A000000 		.4byte	.LVL6
+ 728 0250 88010000 		.4byte	0x188
+ 729 0254 5F020000 		.4byte	0x25f
+ 730 0258 0F       		.uleb128 0xf
+ 731 0259 01       		.uleb128 0x1
+ 732 025a 50       		.byte	0x50
+ 733 025b 02       		.uleb128 0x2
+ 734 025c 74       		.byte	0x74
+ 735 025d 00       		.sleb128 0
+ 736 025e 00       		.byte	0
+ 737 025f 0E       		.uleb128 0xe
+ 738 0260 10000000 		.4byte	.LVL7
+ 739 0264 C3010000 		.4byte	0x1c3
+ 740 0268 73020000 		.4byte	0x273
+ 741 026c 0F       		.uleb128 0xf
+ 742 026d 01       		.uleb128 0x1
+ 743 026e 50       		.byte	0x50
+ 744 026f 02       		.uleb128 0x2
+ 745 0270 74       		.byte	0x74
+ 746 0271 00       		.sleb128 0
+ 747 0272 00       		.byte	0
+ 748 0273 0B       		.uleb128 0xb
+ 749 0274 14000000 		.4byte	.LVL8
+ 750 0278 D7020000 		.4byte	0x2d7
+ 751 027c 0B       		.uleb128 0xb
+ 752 027d 22000000 		.4byte	.LVL9
+ 753 0281 E2020000 		.4byte	0x2e2
+ 754 0285 0B       		.uleb128 0xb
+ 755 0286 26000000 		.4byte	.LVL10
+ 756 028a FE010000 		.4byte	0x1fe
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 28
+
+
+ 757 028e 10       		.uleb128 0x10
+ 758 028f 2C000000 		.4byte	.LVL11
+ 759 0293 EA000000 		.4byte	0xea
+ 760 0297 0F       		.uleb128 0xf
+ 761 0298 01       		.uleb128 0x1
+ 762 0299 50       		.byte	0x50
+ 763 029a 01       		.uleb128 0x1
+ 764 029b 31       		.byte	0x31
+ 765 029c 00       		.byte	0
+ 766 029d 00       		.byte	0
+ 767 029e 0C       		.uleb128 0xc
+ 768 029f 44030000 		.4byte	.LASF36
+ 769 02a3 01       		.byte	0x1
+ 770 02a4 D7       		.byte	0xd7
+ 771 02a5 00000000 		.4byte	.LFB2
+ 772 02a9 1C000000 		.4byte	.LFE2-.LFB2
+ 773 02ad 01       		.uleb128 0x1
+ 774 02ae 9C       		.byte	0x9c
+ 775 02af C6020000 		.4byte	0x2c6
+ 776 02b3 0B       		.uleb128 0xb
+ 777 02b4 0C000000 		.4byte	.LVL12
+ 778 02b8 27020000 		.4byte	0x227
+ 779 02bc 0B       		.uleb128 0xb
+ 780 02bd 16000000 		.4byte	.LVL13
+ 781 02c1 C8000000 		.4byte	0xc8
+ 782 02c5 00       		.byte	0
+ 783 02c6 11       		.uleb128 0x11
+ 784 02c7 D9030000 		.4byte	.LASF43
+ 785 02cb 01       		.byte	0x1
+ 786 02cc 1A       		.byte	0x1a
+ 787 02cd 6B000000 		.4byte	0x6b
+ 788 02d1 05       		.uleb128 0x5
+ 789 02d2 03       		.byte	0x3
+ 790 02d3 00000000 		.4byte	ReadyToDrive_Timer_initVar
+ 791 02d7 12       		.uleb128 0x12
+ 792 02d8 B9020000 		.4byte	.LASF37
+ 793 02dc B9020000 		.4byte	.LASF37
+ 794 02e0 03       		.byte	0x3
+ 795 02e1 7E       		.byte	0x7e
+ 796 02e2 12       		.uleb128 0x12
+ 797 02e3 DD020000 		.4byte	.LASF38
+ 798 02e7 DD020000 		.4byte	.LASF38
+ 799 02eb 03       		.byte	0x3
+ 800 02ec 7F       		.byte	0x7f
+ 801 02ed 00       		.byte	0
+ 802              		.section	.debug_abbrev,"",%progbits
+ 803              	.Ldebug_abbrev0:
+ 804 0000 01       		.uleb128 0x1
+ 805 0001 11       		.uleb128 0x11
+ 806 0002 01       		.byte	0x1
+ 807 0003 25       		.uleb128 0x25
+ 808 0004 0E       		.uleb128 0xe
+ 809 0005 13       		.uleb128 0x13
+ 810 0006 0B       		.uleb128 0xb
+ 811 0007 03       		.uleb128 0x3
+ 812 0008 0E       		.uleb128 0xe
+ 813 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 29
+
+
+ 814 000a 0E       		.uleb128 0xe
+ 815 000b 55       		.uleb128 0x55
+ 816 000c 17       		.uleb128 0x17
+ 817 000d 11       		.uleb128 0x11
+ 818 000e 01       		.uleb128 0x1
+ 819 000f 10       		.uleb128 0x10
+ 820 0010 17       		.uleb128 0x17
+ 821 0011 00       		.byte	0
+ 822 0012 00       		.byte	0
+ 823 0013 02       		.uleb128 0x2
+ 824 0014 24       		.uleb128 0x24
+ 825 0015 00       		.byte	0
+ 826 0016 0B       		.uleb128 0xb
+ 827 0017 0B       		.uleb128 0xb
+ 828 0018 3E       		.uleb128 0x3e
+ 829 0019 0B       		.uleb128 0xb
+ 830 001a 03       		.uleb128 0x3
+ 831 001b 0E       		.uleb128 0xe
+ 832 001c 00       		.byte	0
+ 833 001d 00       		.byte	0
+ 834 001e 03       		.uleb128 0x3
+ 835 001f 24       		.uleb128 0x24
+ 836 0020 00       		.byte	0
+ 837 0021 0B       		.uleb128 0xb
+ 838 0022 0B       		.uleb128 0xb
+ 839 0023 3E       		.uleb128 0x3e
+ 840 0024 0B       		.uleb128 0xb
+ 841 0025 03       		.uleb128 0x3
+ 842 0026 08       		.uleb128 0x8
+ 843 0027 00       		.byte	0
+ 844 0028 00       		.byte	0
+ 845 0029 04       		.uleb128 0x4
+ 846 002a 16       		.uleb128 0x16
+ 847 002b 00       		.byte	0
+ 848 002c 03       		.uleb128 0x3
+ 849 002d 0E       		.uleb128 0xe
+ 850 002e 3A       		.uleb128 0x3a
+ 851 002f 0B       		.uleb128 0xb
+ 852 0030 3B       		.uleb128 0x3b
+ 853 0031 05       		.uleb128 0x5
+ 854 0032 49       		.uleb128 0x49
+ 855 0033 13       		.uleb128 0x13
+ 856 0034 00       		.byte	0
+ 857 0035 00       		.byte	0
+ 858 0036 05       		.uleb128 0x5
+ 859 0037 35       		.uleb128 0x35
+ 860 0038 00       		.byte	0
+ 861 0039 49       		.uleb128 0x49
+ 862 003a 13       		.uleb128 0x13
+ 863 003b 00       		.byte	0
+ 864 003c 00       		.byte	0
+ 865 003d 06       		.uleb128 0x6
+ 866 003e 2E       		.uleb128 0x2e
+ 867 003f 00       		.byte	0
+ 868 0040 3F       		.uleb128 0x3f
+ 869 0041 19       		.uleb128 0x19
+ 870 0042 03       		.uleb128 0x3
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 30
+
+
+ 871 0043 0E       		.uleb128 0xe
+ 872 0044 3A       		.uleb128 0x3a
+ 873 0045 0B       		.uleb128 0xb
+ 874 0046 3B       		.uleb128 0x3b
+ 875 0047 0B       		.uleb128 0xb
+ 876 0048 27       		.uleb128 0x27
+ 877 0049 19       		.uleb128 0x19
+ 878 004a 11       		.uleb128 0x11
+ 879 004b 01       		.uleb128 0x1
+ 880 004c 12       		.uleb128 0x12
+ 881 004d 06       		.uleb128 0x6
+ 882 004e 40       		.uleb128 0x40
+ 883 004f 18       		.uleb128 0x18
+ 884 0050 9742     		.uleb128 0x2117
+ 885 0052 19       		.uleb128 0x19
+ 886 0053 00       		.byte	0
+ 887 0054 00       		.byte	0
+ 888 0055 07       		.uleb128 0x7
+ 889 0056 2E       		.uleb128 0x2e
+ 890 0057 01       		.byte	0x1
+ 891 0058 3F       		.uleb128 0x3f
+ 892 0059 19       		.uleb128 0x19
+ 893 005a 03       		.uleb128 0x3
+ 894 005b 0E       		.uleb128 0xe
+ 895 005c 3A       		.uleb128 0x3a
+ 896 005d 0B       		.uleb128 0xb
+ 897 005e 3B       		.uleb128 0x3b
+ 898 005f 05       		.uleb128 0x5
+ 899 0060 27       		.uleb128 0x27
+ 900 0061 19       		.uleb128 0x19
+ 901 0062 11       		.uleb128 0x11
+ 902 0063 01       		.uleb128 0x1
+ 903 0064 12       		.uleb128 0x12
+ 904 0065 06       		.uleb128 0x6
+ 905 0066 40       		.uleb128 0x40
+ 906 0067 18       		.uleb128 0x18
+ 907 0068 9742     		.uleb128 0x2117
+ 908 006a 19       		.uleb128 0x19
+ 909 006b 01       		.uleb128 0x1
+ 910 006c 13       		.uleb128 0x13
+ 911 006d 00       		.byte	0
+ 912 006e 00       		.byte	0
+ 913 006f 08       		.uleb128 0x8
+ 914 0070 05       		.uleb128 0x5
+ 915 0071 00       		.byte	0
+ 916 0072 03       		.uleb128 0x3
+ 917 0073 0E       		.uleb128 0xe
+ 918 0074 3A       		.uleb128 0x3a
+ 919 0075 0B       		.uleb128 0xb
+ 920 0076 3B       		.uleb128 0x3b
+ 921 0077 05       		.uleb128 0x5
+ 922 0078 49       		.uleb128 0x49
+ 923 0079 13       		.uleb128 0x13
+ 924 007a 02       		.uleb128 0x2
+ 925 007b 18       		.uleb128 0x18
+ 926 007c 00       		.byte	0
+ 927 007d 00       		.byte	0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 31
+
+
+ 928 007e 09       		.uleb128 0x9
+ 929 007f 2E       		.uleb128 0x2e
+ 930 0080 00       		.byte	0
+ 931 0081 3F       		.uleb128 0x3f
+ 932 0082 19       		.uleb128 0x19
+ 933 0083 03       		.uleb128 0x3
+ 934 0084 0E       		.uleb128 0xe
+ 935 0085 3A       		.uleb128 0x3a
+ 936 0086 0B       		.uleb128 0xb
+ 937 0087 3B       		.uleb128 0x3b
+ 938 0088 05       		.uleb128 0x5
+ 939 0089 27       		.uleb128 0x27
+ 940 008a 19       		.uleb128 0x19
+ 941 008b 11       		.uleb128 0x11
+ 942 008c 01       		.uleb128 0x1
+ 943 008d 12       		.uleb128 0x12
+ 944 008e 06       		.uleb128 0x6
+ 945 008f 40       		.uleb128 0x40
+ 946 0090 18       		.uleb128 0x18
+ 947 0091 9742     		.uleb128 0x2117
+ 948 0093 19       		.uleb128 0x19
+ 949 0094 00       		.byte	0
+ 950 0095 00       		.byte	0
+ 951 0096 0A       		.uleb128 0xa
+ 952 0097 2E       		.uleb128 0x2e
+ 953 0098 00       		.byte	0
+ 954 0099 3F       		.uleb128 0x3f
+ 955 009a 19       		.uleb128 0x19
+ 956 009b 03       		.uleb128 0x3
+ 957 009c 0E       		.uleb128 0xe
+ 958 009d 3A       		.uleb128 0x3a
+ 959 009e 0B       		.uleb128 0xb
+ 960 009f 3B       		.uleb128 0x3b
+ 961 00a0 05       		.uleb128 0x5
+ 962 00a1 27       		.uleb128 0x27
+ 963 00a2 19       		.uleb128 0x19
+ 964 00a3 49       		.uleb128 0x49
+ 965 00a4 13       		.uleb128 0x13
+ 966 00a5 11       		.uleb128 0x11
+ 967 00a6 01       		.uleb128 0x1
+ 968 00a7 12       		.uleb128 0x12
+ 969 00a8 06       		.uleb128 0x6
+ 970 00a9 40       		.uleb128 0x40
+ 971 00aa 18       		.uleb128 0x18
+ 972 00ab 9742     		.uleb128 0x2117
+ 973 00ad 19       		.uleb128 0x19
+ 974 00ae 00       		.byte	0
+ 975 00af 00       		.byte	0
+ 976 00b0 0B       		.uleb128 0xb
+ 977 00b1 898201   		.uleb128 0x4109
+ 978 00b4 00       		.byte	0
+ 979 00b5 11       		.uleb128 0x11
+ 980 00b6 01       		.uleb128 0x1
+ 981 00b7 31       		.uleb128 0x31
+ 982 00b8 13       		.uleb128 0x13
+ 983 00b9 00       		.byte	0
+ 984 00ba 00       		.byte	0
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 32
+
+
+ 985 00bb 0C       		.uleb128 0xc
+ 986 00bc 2E       		.uleb128 0x2e
+ 987 00bd 01       		.byte	0x1
+ 988 00be 3F       		.uleb128 0x3f
+ 989 00bf 19       		.uleb128 0x19
+ 990 00c0 03       		.uleb128 0x3
+ 991 00c1 0E       		.uleb128 0xe
+ 992 00c2 3A       		.uleb128 0x3a
+ 993 00c3 0B       		.uleb128 0xb
+ 994 00c4 3B       		.uleb128 0x3b
+ 995 00c5 0B       		.uleb128 0xb
+ 996 00c6 27       		.uleb128 0x27
+ 997 00c7 19       		.uleb128 0x19
+ 998 00c8 11       		.uleb128 0x11
+ 999 00c9 01       		.uleb128 0x1
+ 1000 00ca 12       		.uleb128 0x12
+ 1001 00cb 06       		.uleb128 0x6
+ 1002 00cc 40       		.uleb128 0x40
+ 1003 00cd 18       		.uleb128 0x18
+ 1004 00ce 9742     		.uleb128 0x2117
+ 1005 00d0 19       		.uleb128 0x19
+ 1006 00d1 01       		.uleb128 0x1
+ 1007 00d2 13       		.uleb128 0x13
+ 1008 00d3 00       		.byte	0
+ 1009 00d4 00       		.byte	0
+ 1010 00d5 0D       		.uleb128 0xd
+ 1011 00d6 34       		.uleb128 0x34
+ 1012 00d7 00       		.byte	0
+ 1013 00d8 03       		.uleb128 0x3
+ 1014 00d9 0E       		.uleb128 0xe
+ 1015 00da 3A       		.uleb128 0x3a
+ 1016 00db 0B       		.uleb128 0xb
+ 1017 00dc 3B       		.uleb128 0x3b
+ 1018 00dd 0B       		.uleb128 0xb
+ 1019 00de 49       		.uleb128 0x49
+ 1020 00df 13       		.uleb128 0x13
+ 1021 00e0 02       		.uleb128 0x2
+ 1022 00e1 17       		.uleb128 0x17
+ 1023 00e2 00       		.byte	0
+ 1024 00e3 00       		.byte	0
+ 1025 00e4 0E       		.uleb128 0xe
+ 1026 00e5 898201   		.uleb128 0x4109
+ 1027 00e8 01       		.byte	0x1
+ 1028 00e9 11       		.uleb128 0x11
+ 1029 00ea 01       		.uleb128 0x1
+ 1030 00eb 31       		.uleb128 0x31
+ 1031 00ec 13       		.uleb128 0x13
+ 1032 00ed 01       		.uleb128 0x1
+ 1033 00ee 13       		.uleb128 0x13
+ 1034 00ef 00       		.byte	0
+ 1035 00f0 00       		.byte	0
+ 1036 00f1 0F       		.uleb128 0xf
+ 1037 00f2 8A8201   		.uleb128 0x410a
+ 1038 00f5 00       		.byte	0
+ 1039 00f6 02       		.uleb128 0x2
+ 1040 00f7 18       		.uleb128 0x18
+ 1041 00f8 9142     		.uleb128 0x2111
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 33
+
+
+ 1042 00fa 18       		.uleb128 0x18
+ 1043 00fb 00       		.byte	0
+ 1044 00fc 00       		.byte	0
+ 1045 00fd 10       		.uleb128 0x10
+ 1046 00fe 898201   		.uleb128 0x4109
+ 1047 0101 01       		.byte	0x1
+ 1048 0102 11       		.uleb128 0x11
+ 1049 0103 01       		.uleb128 0x1
+ 1050 0104 31       		.uleb128 0x31
+ 1051 0105 13       		.uleb128 0x13
+ 1052 0106 00       		.byte	0
+ 1053 0107 00       		.byte	0
+ 1054 0108 11       		.uleb128 0x11
+ 1055 0109 34       		.uleb128 0x34
+ 1056 010a 00       		.byte	0
+ 1057 010b 03       		.uleb128 0x3
+ 1058 010c 0E       		.uleb128 0xe
+ 1059 010d 3A       		.uleb128 0x3a
+ 1060 010e 0B       		.uleb128 0xb
+ 1061 010f 3B       		.uleb128 0x3b
+ 1062 0110 0B       		.uleb128 0xb
+ 1063 0111 49       		.uleb128 0x49
+ 1064 0112 13       		.uleb128 0x13
+ 1065 0113 3F       		.uleb128 0x3f
+ 1066 0114 19       		.uleb128 0x19
+ 1067 0115 02       		.uleb128 0x2
+ 1068 0116 18       		.uleb128 0x18
+ 1069 0117 00       		.byte	0
+ 1070 0118 00       		.byte	0
+ 1071 0119 12       		.uleb128 0x12
+ 1072 011a 2E       		.uleb128 0x2e
+ 1073 011b 00       		.byte	0
+ 1074 011c 3F       		.uleb128 0x3f
+ 1075 011d 19       		.uleb128 0x19
+ 1076 011e 3C       		.uleb128 0x3c
+ 1077 011f 19       		.uleb128 0x19
+ 1078 0120 6E       		.uleb128 0x6e
+ 1079 0121 0E       		.uleb128 0xe
+ 1080 0122 03       		.uleb128 0x3
+ 1081 0123 0E       		.uleb128 0xe
+ 1082 0124 3A       		.uleb128 0x3a
+ 1083 0125 0B       		.uleb128 0xb
+ 1084 0126 3B       		.uleb128 0x3b
+ 1085 0127 0B       		.uleb128 0xb
+ 1086 0128 00       		.byte	0
+ 1087 0129 00       		.byte	0
+ 1088 012a 00       		.byte	0
+ 1089              		.section	.debug_loc,"",%progbits
+ 1090              	.Ldebug_loc0:
+ 1091              	.LLST0:
+ 1092 0000 14000000 		.4byte	.LVL8
+ 1093 0004 21000000 		.4byte	.LVL9-1
+ 1094 0008 0100     		.2byte	0x1
+ 1095 000a 50       		.byte	0x50
+ 1096 000b 00000000 		.4byte	0
+ 1097 000f 00000000 		.4byte	0
+ 1098              		.section	.debug_aranges,"",%progbits
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 34
+
+
+ 1099 0000 8C000000 		.4byte	0x8c
+ 1100 0004 0200     		.2byte	0x2
+ 1101 0006 00000000 		.4byte	.Ldebug_info0
+ 1102 000a 04       		.byte	0x4
+ 1103 000b 00       		.byte	0
+ 1104 000c 0000     		.2byte	0
+ 1105 000e 0000     		.2byte	0
+ 1106 0010 00000000 		.4byte	.LFB1
+ 1107 0014 10000000 		.4byte	.LFE1-.LFB1
+ 1108 0018 00000000 		.4byte	.LFB3
+ 1109 001c 10000000 		.4byte	.LFE3-.LFB3
+ 1110 0020 00000000 		.4byte	.LFB4
+ 1111 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1112 0028 00000000 		.4byte	.LFB5
+ 1113 002c 0C000000 		.4byte	.LFE5-.LFB5
+ 1114 0030 00000000 		.4byte	.LFB6
+ 1115 0034 0C000000 		.4byte	.LFE6-.LFB6
+ 1116 0038 00000000 		.4byte	.LFB7
+ 1117 003c 0C000000 		.4byte	.LFE7-.LFB7
+ 1118 0040 00000000 		.4byte	.LFB8
+ 1119 0044 0C000000 		.4byte	.LFE8-.LFB8
+ 1120 0048 00000000 		.4byte	.LFB9
+ 1121 004c 0C000000 		.4byte	.LFE9-.LFB9
+ 1122 0050 00000000 		.4byte	.LFB10
+ 1123 0054 0C000000 		.4byte	.LFE10-.LFB10
+ 1124 0058 00000000 		.4byte	.LFB11
+ 1125 005c 0C000000 		.4byte	.LFE11-.LFB11
+ 1126 0060 00000000 		.4byte	.LFB12
+ 1127 0064 0C000000 		.4byte	.LFE12-.LFB12
+ 1128 0068 00000000 		.4byte	.LFB13
+ 1129 006c 14000000 		.4byte	.LFE13-.LFB13
+ 1130 0070 00000000 		.4byte	.LFB14
+ 1131 0074 14000000 		.4byte	.LFE14-.LFB14
+ 1132 0078 00000000 		.4byte	.LFB0
+ 1133 007c 38000000 		.4byte	.LFE0-.LFB0
+ 1134 0080 00000000 		.4byte	.LFB2
+ 1135 0084 1C000000 		.4byte	.LFE2-.LFB2
+ 1136 0088 00000000 		.4byte	0
+ 1137 008c 00000000 		.4byte	0
+ 1138              		.section	.debug_ranges,"",%progbits
+ 1139              	.Ldebug_ranges0:
+ 1140 0000 00000000 		.4byte	.LFB1
+ 1141 0004 10000000 		.4byte	.LFE1
+ 1142 0008 00000000 		.4byte	.LFB3
+ 1143 000c 10000000 		.4byte	.LFE3
+ 1144 0010 00000000 		.4byte	.LFB4
+ 1145 0014 0C000000 		.4byte	.LFE4
+ 1146 0018 00000000 		.4byte	.LFB5
+ 1147 001c 0C000000 		.4byte	.LFE5
+ 1148 0020 00000000 		.4byte	.LFB6
+ 1149 0024 0C000000 		.4byte	.LFE6
+ 1150 0028 00000000 		.4byte	.LFB7
+ 1151 002c 0C000000 		.4byte	.LFE7
+ 1152 0030 00000000 		.4byte	.LFB8
+ 1153 0034 0C000000 		.4byte	.LFE8
+ 1154 0038 00000000 		.4byte	.LFB9
+ 1155 003c 0C000000 		.4byte	.LFE9
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 35
+
+
+ 1156 0040 00000000 		.4byte	.LFB10
+ 1157 0044 0C000000 		.4byte	.LFE10
+ 1158 0048 00000000 		.4byte	.LFB11
+ 1159 004c 0C000000 		.4byte	.LFE11
+ 1160 0050 00000000 		.4byte	.LFB12
+ 1161 0054 0C000000 		.4byte	.LFE12
+ 1162 0058 00000000 		.4byte	.LFB13
+ 1163 005c 14000000 		.4byte	.LFE13
+ 1164 0060 00000000 		.4byte	.LFB14
+ 1165 0064 14000000 		.4byte	.LFE14
+ 1166 0068 00000000 		.4byte	.LFB0
+ 1167 006c 38000000 		.4byte	.LFE0
+ 1168 0070 00000000 		.4byte	.LFB2
+ 1169 0074 1C000000 		.4byte	.LFE2
+ 1170 0078 00000000 		.4byte	0
+ 1171 007c 00000000 		.4byte	0
+ 1172              		.section	.debug_line,"",%progbits
+ 1173              	.Ldebug_line0:
+ 1174 0000 79010000 		.section	.debug_str,"MS",%progbits,1
+ 1174      02005A00 
+ 1174      00000201 
+ 1174      FB0E0D00 
+ 1174      01010101 
+ 1175              	.LASF6:
+ 1176 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1176      206C6F6E 
+ 1176      6720696E 
+ 1176      7400
+ 1177              	.LASF15:
+ 1178 000e 72656733 		.ascii	"reg32\000"
+ 1178      3200
+ 1179              	.LASF34:
+ 1180 0014 52656164 		.ascii	"ReadyToDrive_Timer_ClearFIFO\000"
+ 1180      79546F44 
+ 1180      72697665 
+ 1180      5F54696D 
+ 1180      65725F43 
+ 1181              	.LASF29:
+ 1182 0031 70657269 		.ascii	"period\000"
+ 1182      6F6400
+ 1183              	.LASF3:
+ 1184 0038 73686F72 		.ascii	"short unsigned int\000"
+ 1184      7420756E 
+ 1184      7369676E 
+ 1184      65642069 
+ 1184      6E7400
+ 1185              	.LASF40:
+ 1186 004b 47656E65 		.ascii	"Generated_Source\\PSoC5\\ReadyToDrive_Timer.c\000"
+ 1186      72617465 
+ 1186      645F536F 
+ 1186      75726365 
+ 1186      5C50536F 
+ 1187              	.LASF11:
+ 1188 0077 666C6F61 		.ascii	"float\000"
+ 1188      7400
+ 1189              	.LASF32:
+ 1190 007d 636F756E 		.ascii	"counter\000"
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 36
+
+
+ 1190      74657200 
+ 1191              	.LASF7:
+ 1192 0085 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1192      206C6F6E 
+ 1192      6720756E 
+ 1192      7369676E 
+ 1192      65642069 
+ 1193              	.LASF33:
+ 1194 009c 52656164 		.ascii	"ReadyToDrive_Timer_ReadCounter\000"
+ 1194      79546F44 
+ 1194      72697665 
+ 1194      5F54696D 
+ 1194      65725F52 
+ 1195              	.LASF27:
+ 1196 00bb 52656164 		.ascii	"ReadyToDrive_Timer_ReadPeriod\000"
+ 1196      79546F44 
+ 1196      72697665 
+ 1196      5F54696D 
+ 1196      65725F52 
+ 1197              	.LASF1:
+ 1198 00d9 756E7369 		.ascii	"unsigned char\000"
+ 1198      676E6564 
+ 1198      20636861 
+ 1198      7200
+ 1199              	.LASF39:
+ 1200 00e7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1200      43313120 
+ 1200      352E342E 
+ 1200      31203230 
+ 1200      31363036 
+ 1201 011a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1201      20726576 
+ 1201      6973696F 
+ 1201      6E203233 
+ 1201      37373135 
+ 1202 014d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1202      66756E63 
+ 1202      74696F6E 
+ 1202      2D736563 
+ 1202      74696F6E 
+ 1203              	.LASF14:
+ 1204 0175 72656738 		.ascii	"reg8\000"
+ 1204      00
+ 1205              	.LASF5:
+ 1206 017a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1206      20756E73 
+ 1206      69676E65 
+ 1206      6420696E 
+ 1206      7400
+ 1207              	.LASF9:
+ 1208 018c 75696E74 		.ascii	"uint8\000"
+ 1208      3800
+ 1209              	.LASF26:
+ 1210 0192 636F6E74 		.ascii	"control\000"
+ 1210      726F6C00 
+ 1211              	.LASF20:
+ 1212 019a 52656164 		.ascii	"ReadyToDrive_Timer_SoftwareCapture\000"
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 37
+
+
+ 1212      79546F44 
+ 1212      72697665 
+ 1212      5F54696D 
+ 1212      65725F53 
+ 1213              	.LASF31:
+ 1214 01bd 52656164 		.ascii	"ReadyToDrive_Timer_WriteCounter\000"
+ 1214      79546F44 
+ 1214      72697665 
+ 1214      5F54696D 
+ 1214      65725F57 
+ 1215              	.LASF24:
+ 1216 01dd 52656164 		.ascii	"ReadyToDrive_Timer_WriteControlRegister\000"
+ 1216      79546F44 
+ 1216      72697665 
+ 1216      5F54696D 
+ 1216      65725F57 
+ 1217              	.LASF35:
+ 1218 0205 52656164 		.ascii	"ReadyToDrive_Timer_Init\000"
+ 1218      79546F44 
+ 1218      72697665 
+ 1218      5F54696D 
+ 1218      65725F49 
+ 1219              	.LASF12:
+ 1220 021d 646F7562 		.ascii	"double\000"
+ 1220      6C6500
+ 1221              	.LASF42:
+ 1222 0224 52656164 		.ascii	"ReadyToDrive_Timer_interruptState\000"
+ 1222      79546F44 
+ 1222      72697665 
+ 1222      5F54696D 
+ 1222      65725F69 
+ 1223              	.LASF28:
+ 1224 0246 52656164 		.ascii	"ReadyToDrive_Timer_WritePeriod\000"
+ 1224      79546F44 
+ 1224      72697665 
+ 1224      5F54696D 
+ 1224      65725F57 
+ 1225              	.LASF22:
+ 1226 0265 52656164 		.ascii	"ReadyToDrive_Timer_ReadControlRegister\000"
+ 1226      79546F44 
+ 1226      72697665 
+ 1226      5F54696D 
+ 1226      65725F52 
+ 1227              	.LASF10:
+ 1228 028c 75696E74 		.ascii	"uint32\000"
+ 1228      333200
+ 1229              	.LASF21:
+ 1230 0293 52656164 		.ascii	"ReadyToDrive_Timer_ReadStatusRegister\000"
+ 1230      79546F44 
+ 1230      72697665 
+ 1230      5F54696D 
+ 1230      65725F52 
+ 1231              	.LASF37:
+ 1232 02b9 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1232      74657243 
+ 1232      72697469 
+ 1232      63616C53 
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 38
+
+
+ 1232      65637469 
+ 1233              	.LASF8:
+ 1234 02d0 756E7369 		.ascii	"unsigned int\000"
+ 1234      676E6564 
+ 1234      20696E74 
+ 1234      00
+ 1235              	.LASF38:
+ 1236 02dd 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1236      69744372 
+ 1236      69746963 
+ 1236      616C5365 
+ 1236      6374696F 
+ 1237              	.LASF41:
+ 1238 02f3 5A3A5C44 		.ascii	"Z:\\Documents\\UCD\\FRUCD\\Dashboard-Firmware-FE9-F"
+ 1238      6F63756D 
+ 1238      656E7473 
+ 1238      5C554344 
+ 1238      5C465255 
+ 1239 0322 45372D42 		.ascii	"E7-Board\\Dashboard.cydsn\000"
+ 1239      6F617264 
+ 1239      5C446173 
+ 1239      68626F61 
+ 1239      72642E63 
+ 1240              	.LASF17:
+ 1241 033b 73697A65 		.ascii	"sizetype\000"
+ 1241      74797065 
+ 1241      00
+ 1242              	.LASF36:
+ 1243 0344 52656164 		.ascii	"ReadyToDrive_Timer_Start\000"
+ 1243      79546F44 
+ 1243      72697665 
+ 1243      5F54696D 
+ 1243      65725F53 
+ 1244              	.LASF25:
+ 1245 035d 696E7465 		.ascii	"interruptMode\000"
+ 1245      72727570 
+ 1245      744D6F64 
+ 1245      6500
+ 1246              	.LASF19:
+ 1247 036b 52656164 		.ascii	"ReadyToDrive_Timer_Stop\000"
+ 1247      79546F44 
+ 1247      72697665 
+ 1247      5F54696D 
+ 1247      65725F53 
+ 1248              	.LASF2:
+ 1249 0383 73686F72 		.ascii	"short int\000"
+ 1249      7420696E 
+ 1249      7400
+ 1250              	.LASF18:
+ 1251 038d 52656164 		.ascii	"ReadyToDrive_Timer_Enable\000"
+ 1251      79546F44 
+ 1251      72697665 
+ 1251      5F54696D 
+ 1251      65725F45 
+ 1252              	.LASF23:
+ 1253 03a7 52656164 		.ascii	"ReadyToDrive_Timer_SetInterruptMode\000"
+ 1253      79546F44 
+ARM GAS  C:\Users\ANDREY~1\AppData\Local\Temp\cc74D24V.s 			page 39
+
+
+ 1253      72697665 
+ 1253      5F54696D 
+ 1253      65725F53 
+ 1254              	.LASF4:
+ 1255 03cb 6C6F6E67 		.ascii	"long int\000"
+ 1255      20696E74 
+ 1255      00
+ 1256              	.LASF13:
+ 1257 03d4 63686172 		.ascii	"char\000"
+ 1257      00
+ 1258              	.LASF43:
+ 1259 03d9 52656164 		.ascii	"ReadyToDrive_Timer_initVar\000"
+ 1259      79546F44 
+ 1259      72697665 
+ 1259      5F54696D 
+ 1259      65725F69 
+ 1260              	.LASF16:
+ 1261 03f4 6C6F6E67 		.ascii	"long double\000"
+ 1261      20646F75 
+ 1261      626C6500 
+ 1262              	.LASF0:
+ 1263 0400 7369676E 		.ascii	"signed char\000"
+ 1263      65642063 
+ 1263      68617200 
+ 1264              	.LASF30:
+ 1265 040c 52656164 		.ascii	"ReadyToDrive_Timer_ReadCapture\000"
+ 1265      79546F44 
+ 1265      72697665 
+ 1265      5F54696D 
+ 1265      65725F52 
+ 1266              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -33,7 +33,7 @@ void disp_SOC(uint8 data);
 void disp_max_pack_temp(uint8 data);
 void disp_state(uint8 state); // TODO
 void disp_glv_v(uint16 data); // TODO
-void disp_mc_temp(uint8 data);
-void disp_motor_temp(uint8 data);
+void disp_mc_temp(uint16 data);
+void disp_motor_temp(uint16 data);
 
 /* [] END OF FILE */

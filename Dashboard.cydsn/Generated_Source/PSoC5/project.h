@@ -71,6 +71,8 @@
 #include "GLV_V_aliases.h"
 #include "GLV_V.h"
 #include "ADC_GLV_V.h"
+#include "ReadyToDrive_Timer.h"
+#include "ReadyToDrive_Int.h"
 #include "ADC_GLV_V_AMux.h"
 #include "ADC_GLV_V_Ext_CP_Clk.h"
 #include "ADC_GLV_V_IRQ.h"

@@ -59,10 +59,6 @@ void displayData() {
         //libTFT_DrawString("BSPD TRIGGERED",0,0,8,RED, Font16x16);
         UG_PutString(100, 5 , "test");
     }
-    else{
-        //UG_PutString(0, 0, PACK_TEMP_s);
-        //UG_PutString(0, 100, charge_s);
-    }
 }
 
 CY_ISR(ISR_WDT){
@@ -72,43 +68,14 @@ CY_ISR(ISR_WDT){
     WDT_Reset_Write(1);
 }
 
-/*typedef enum 
-{
-	Startup,
-	//LV,
-	Precharging,
-	HV_Enabled,
-	Drive,
-	Fault
-    
-}Dash_State;
-
-typedef enum 
-{
-	OK,
-	fromLV,
-	fromPrecharging,
-	fromHV_Enabled,
-	fromDrive,
-    fromFault,
-    fromBMS,
-    nodeFailure
-    
-}Error_State;*/
-
-/* Switch state defines -- Active High*/ 
-//#define SWITCH_ON         (1u)
-//#define SWITCH_OFF        (0u)
 /* Switch debounce delay in milliseconds */
 #define SWITCH_DEBOUNCE_UNIT   (1u)
 /* Number of debounce units to count delay, before consider that switch is pressed */
 #define SWITCH_DEBOUNCE_PERIOD (10u)
-/* Function prototypes */
-static uint32 ReadSwSwitch(void);
-
 /* Global variable used to store switch state */
 volatile uint8 switches = 0;
 
+// vehicle state from VCU
 volatile vcu_state state = LV;
 volatile vcu_fault fault = NONE;
 
@@ -117,7 +84,13 @@ volatile uint32_t pedalOK = 0; // for pedal node
 
 volatile int previous_state = -1; // used for SOC writing
 
+// info from BMS
+volatile uint8 soc = 0;
 volatile BMS_STATUS bms_status = NO_ERROR;
+
+// info from MC and motor
+volatile uint16 mc_temp = 0;
+volatile uint16 motor_temp = 0;
 
 /*******************************************************************************
 * Function Name: main
@@ -143,10 +116,10 @@ int main()
 {   
     EEPROM_1_Start();
     
-    UG_COLOR color[3];
+    /*UG_COLOR color[3];
     color[0] = C_RED;
     color[1] = C_GREEN;
-    color[2] = C_BLUE;
+    color[2] = C_BLUE;*/
     
     D_BL_Write(1);
     GraphicLCDIntf_Start();
@@ -159,12 +132,12 @@ int main()
     calibrateScreen();
     
     //Tach Meter Stuff
-    uint8_t value=0; // replace the value with 
-    int8_t direction=1;
+    //uint8_t value=0; // replace the value with 
+    //int8_t direction=1;
     
     //precharging time counter
-    volatile uint32_t PrechargingTimeCount = 0;
-    uint32_t DriveTimeCount = 0;
+    //volatile uint32_t PrechargingTimeCount = 0;
+    //uint32_t DriveTimeCount = 0;
 
     CyGlobalIntEnable;
     
@@ -183,21 +156,17 @@ int main()
     //CAN_Init();
     CAN_Start();
     LED_color_wheel(200);
-    // set low to get lit
-    IMD_LED_Write(0);
-    BMS_LED_Write(0);
+    // active low
+    IMD_LED_Write(1);
+    BMS_LED_Write(1);
+    // buzzer off
+    Buzzer_Write(0);
     
-    // 
 	ADC_GLV_V_Start();
     
     // initialize display layout
     initDashTemplate();
-    
-    
-    disp_mc_temp(state);
-    disp_motor_temp(state);
-    disp_max_pack_temp(10);
-    disp_state(FAULT);
+    disp_state(FAULT); // effectively STARTUP
     
     for(;;)
     {
@@ -222,33 +191,46 @@ int main()
         // check switches
         if (HV_Read()) {
             switches |= 0b10;
-            IMD_LED_Write(0);
         } else {
             switches &= 0b11111101;
-            IMD_LED_Write(1);
         }
         if (Drive_Read()) {
             switches |= 0b1;
-            BMS_LED_Write(0);
         } else {
             switches &= 0b11111110;
-            BMS_LED_Write(1);
         }
         // send switches
         can_send_switches(switches);
         
-        int soc = 0;
+        // indicator LEDs
+        BMS_LED_Write(!bms_status); // active low
+        // TODO: IMD_LED_Write(1); // active low
+        
+        // START display latest data
+        disp_SOC(soc);
+        disp_max_pack_temp(PACK_TEMP);
+        
         disp_state(state);
         uint16 glv_v = (int16_t)ADC_GLV_V_CountsTo_mVolts(ADC_GLV_V_Read16());
-        //uint16 glv_v = ADC_GLV_V_GetResult16();//0x7ff;
+        disp_glv_v(glv_v);
         
-        disp_SOC(soc);
-        disp_glv_v(glv_v);//HV_Read());
-        soc++;
-        if (soc > 100) {
-            soc = 0;
-            // get 3.3V CAN Transceiver
-            //can_send_status(17, 43);
+        disp_mc_temp(mc_temp);
+        disp_motor_temp(motor_temp);
+        // END display latest data
+        
+        if (state == DRIVE && previous_state == HV_ENABLED) {
+            // entered drive; sound ready to drive buzzer
+            Buzzer_Write(1);
+            // EV.10.5.2: Sounded continuously for
+            // minimum 1 second and a maximum of 3 seconds
+            ReadyToDrive_Int_Start();
+            ReadyToDrive_Timer_Init();
+            ReadyToDrive_Timer_Enable();
+        }
+        previous_state = state;
+        if (state != DRIVE) {
+            // exited drive
+            Buzzer_Write(0);
         }
         
         switch(state)
@@ -257,10 +239,6 @@ int main()
             // startup -- 
             case LV:
 
-                Buzzer_Write(0);
-                CyDelay(50);
-                
-                Buzzer_Write(1);
                 
                 //state = LV;
                 
@@ -286,10 +264,6 @@ int main()
 
                 Buzzer_Write(0);
                 
-                // RGB code goes here
-                // pick a color
-                // all on. 
-                LED_color(C_YELLOW);
                 
             break;
                 
@@ -435,63 +409,6 @@ int main()
                     break;
                 }
                 
-                previous_state = Drive;
-            break;
-                
-	        case Fault:
-                
-                CAN_GlobalIntEnable();
-                CAN_Init();
-                CAN_Start();
-                //nodeCheckStart();
-                
-                can_send_status(state, error_state);
-                
-                //
-                // RGB code goes here
-                // flashing red
-                LED_color(C_RED);
-                CyDelay(1000);
-                LED_color(LEDOFF);
-                CyDelay(1000);
-                
-                Buzzer_Write(0);
-                
-                if(error_state == fromBMS) {}
-                UG_PutString(0, 0, "DASH FAULT");
-                UG_PutString(0, 100, error_state_s);
-                
-                if(error_state == fromBMS) {
-                    UG_PutString(110, 20, PACK_TEMP_s);
-                    UG_PutString(110, 52, bms_error_s);
-                    UG_PutString(180, 0, ERROR_NODE_s);
-                    UG_PutString(188, 0, ERROR_IDX_s);
-                }
-                
-                if (error_state == fromDrive) {   
-                    can_send_cmd(1, Throttle_High, Throttle_Low, 0); // setInterlock
-                    
-                    CyDelay(200);
-                    
-                    // Curtis Come back online again without error
-                    if((getCurtisHeartBeatCheck())) // EDIT: Removed !(Curtis_Fault_Check(data_queue,data_head,data_tail) & 
-                    {
-                        state = LV;
-                        error_state = OK;
-                    }
-                    else if(0xFF == getAckRx()) //ACK received
-                    {
-                        state = HV_Enabled;
-                        error_state = OK;
-                    }                   
-                }
-                else if (error_state == nodeFailure) {
-                    state = Fault;
-                }
-                else if (error_state == fromBMS) {
-                    state = Fault;
-                }
-            break;
 #endif
                 
             default:

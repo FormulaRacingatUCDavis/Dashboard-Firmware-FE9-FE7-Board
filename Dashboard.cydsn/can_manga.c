@@ -30,6 +30,10 @@ extern volatile int32 CURRENT;
 extern volatile int ERROR_NODE;
 extern volatile int ERROR_IDX;
 
+// info from MC and motor
+extern volatile uint16 mc_temp;
+extern volatile uint16 motor_temp;
+
 volatile uint8_t CAPACITOR_VOLT = 0;
 volatile uint8_t CURTIS_FAULT_CHECK = 0;
 volatile uint8_t CURTIS_HEART_BEAT_CHECK = 0;
@@ -45,6 +49,7 @@ volatile uint8_t VOLT_B1;
 volatile uint8_t VOLT_B2;
 volatile uint8_t VOLT_B3;
 volatile uint8_t VOLT_B4;
+extern volatile uint8 soc; //new
 extern volatile uint32_t voltage;
 extern volatile BMS_STATUS bms_status;
 
@@ -127,7 +132,9 @@ void can_receive(uint8_t *msg, int ID)
             break;
         case 0x0566: // Curtis Status
             CAPACITOR_VOLT = msg[CAN_DATA_BYTE_1];
-            ABS_MOTOR_RPM = msg[CAN_DATA_BYTE_5];
+            ABS_MOTOR_RPM = msg[CAN_DATA_BYTE_3];
+            motor_temp = msg[CAN_DATA_BYTE_5] << 8;
+            motor_temp += msg[CAN_DATA_BYTE_6];
             break;
         case 0xA6:  // errors sent from MC node
             CURTIS_FAULT_CHECK = 0x1;
@@ -137,29 +144,25 @@ void can_receive(uint8_t *msg, int ID)
             break;
         case 0x0666:    // pdoAwk from motor controller
             ACK_RX = msg[CAN_DATA_BYTE_1];
+            mc_temp = msg[CAN_DATA_BYTE_7] << 8;
+            mc_temp += msg[CAN_DATA_BYTE_8];
             break;
-        case 0x0201:    // BSPD (brake position from pedal node)
-            ERROR_TOLERANCE = msg[CAN_DATA_BYTE_1];
-            BSPD_CATCH = msg[CAN_DATA_BYTE_5];
-            break;
-        case 0x0200:    // throttle
-            pedalOK = 0x0;
-            THROTTLE_HIGH = data[CAN_DATA_BYTE_2];
-            THROTTLE_LOW = data[CAN_DATA_BYTE_3];
-            break;
-        case 0x388:    // BMS voltage data 
+        case BMS_VOLTAGES:    // BMS voltage data 
             VOLT_B4 = data[CAN_DATA_BYTE_5];
             VOLT_B3 = data[CAN_DATA_BYTE_6];
             VOLT_B2 = data[CAN_DATA_BYTE_7];
             VOLT_B1 = data[CAN_DATA_BYTE_8];
             voltage = (VOLT_B4 << 24) | (VOLT_B3 << 16) | (VOLT_B2 << 8) | VOLT_B1; 
             break;
-        case 0x389:   // BMS Temp data
+        case BMS_STATUS_MSG:
+            soc = data[CAN_DATA_BYTE_2];
+            ERROR_IDX = data[CAN_DATA_BYTE_3]; // bms error flags
+            ERROR_NODE = data[CAN_DATA_BYTE_4]; // bms error flags
+            break;
+        case BMS_TEMPERATURES:
             //ERROR_IDX = data[CAN_DATA_BYTE_6];
             //ERROR_NODE = data[CAN_DATA_BYTE_7];
             PACK_TEMP = data[CAN_DATA_BYTE_8];
-            disp_max_pack_temp(PACK_TEMP);
-            //tempAttenuate();
             break;
         case 0x521: // current data from IVT
             current_bytes[0] = data[CAN_DATA_BYTE_3];

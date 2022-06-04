@@ -260,7 +260,7 @@ void disp_glv_v(uint16 data) {
     UG_PutColorString(100, 240, data_s, C_BLACK, color);
 }
 
-void disp_mc_temp(uint8 data) {
+void disp_mc_temp(uint16 data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 185, 470, 215, C_GREEN);
@@ -280,7 +280,7 @@ void disp_mc_temp(uint8 data) {
     }
 }
 
-void disp_motor_temp(uint8 data) {
+void disp_motor_temp(uint16 data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 230, 470, 260, C_GREEN);

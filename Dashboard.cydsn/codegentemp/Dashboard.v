@@ -1,6 +1,6 @@
 // ======================================================================
 // Dashboard.v generated from TopDesign.cysch
-// 06/03/2022 at 03:36
+// 06/04/2022 at 00:13
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -732,9 +732,90 @@ module ADC_DelSig_v3_20_4 (
 
 endmodule
 
+// Timer_v2_80(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG32, CySetRegReplacementString=CY_SET_REG32, DeviceFamily=PSoC5, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=true, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=1, NumberOfCaptures=1, param45=1, Period=47999999, RegDefReplacementString=reg32, RegSizeReplacementString=uint32, Resolution=32, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=false, UDB32=true, UDB8=false, UDBControlReg=true, UsesHWEnable=0, VerilogSectionReplacementString=sT32, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_80, CY_CONFIG_TITLE=ReadyToDrive_Timer, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=ReadyToDrive_Timer, CY_INSTANCE_SHORT_NAME=ReadyToDrive_Timer, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=80, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=ReadyToDrive_Timer, )
+module Timer_v2_80_5 (
+    capture,
+    capture_out,
+    clock,
+    enable,
+    interrupt,
+    reset,
+    tc,
+    trigger);
+    input       capture;
+    output      capture_out;
+    input       clock;
+    input       enable;
+    output      interrupt;
+    input       reset;
+    output      tc;
+    input       trigger;
+
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 1;
+    parameter Resolution = 32;
+    parameter SiliconRevision = "0";
+
+          wire  Net_260;
+          wire  Net_261;
+          wire  Net_266;
+          wire  Net_102;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_260));
+
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_55;
+
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_53;
+
+    B_Timer_v2_80 TimerUDB (
+        .capture_in(capture),
+        .capture_out(capture_out),
+        .clock(clock),
+        .enable(enable),
+        .interrupt(Net_55),
+        .reset(reset),
+        .tc(Net_53),
+        .trigger(trigger));
+    defparam TimerUDB.Capture_Count = 2;
+    defparam TimerUDB.CaptureCounterEnabled = 0;
+    defparam TimerUDB.CaptureMode = 0;
+    defparam TimerUDB.EnableMode = 0;
+    defparam TimerUDB.InterruptOnCapture = 0;
+    defparam TimerUDB.Resolution = 32;
+    defparam TimerUDB.RunMode = 0;
+    defparam TimerUDB.TriggerMode = 0;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = Net_102;
+
+
+
+endmodule
+
 // top
 module top ;
 
+          wire  Net_534;
+          wire  Net_513;
+          wire  Net_512;
+          wire  Net_319;
+          wire  Net_318;
+          wire  Net_511;
+          wire  Net_510;
+          wire  Net_509;
     electrical  Net_314;
           wire  Net_313;
     electrical  Net_312;
@@ -746,12 +827,12 @@ module top ;
           wire [7:0] Net_272;
           wire [7:0] Net_270;
           wire  Net_271;
-          wire  Net_138;
-          wire  Net_141;
-          wire  Net_137;
-          wire  Net_140;
-          wire  Net_139;
-          wire  Net_162;
+          wire  Net_397;
+          wire  Net_396;
+          wire  Net_395;
+          wire  Net_394;
+          wire  Net_393;
+          wire  Net_533;
           wire  Net_59;
           wire  Net_62;
           wire  Net_58;
@@ -765,14 +846,18 @@ module top ;
           wire  Net_50;
           wire  Net_31;
           wire  Net_46;
-    electrical  Net_18;
-    electrical  Net_8;
-    electrical  Net_23;
+    electrical  Net_328;
+    electrical  Net_329;
+    electrical  Net_327;
     electrical  Net_10;
           wire  Net_13;
           wire  Net_2;
           wire  Net_12;
           wire  Net_11;
+          wire  Net_899;
+          wire  Net_136;
+          wire  Net_135;
+          wire  Net_133;
           wire  Net_28;
           wire  Net_52;
           wire  Net_131;
@@ -782,9 +867,6 @@ module top ;
           wire  Net_127;
           wire [7:0] Net_269;
           wire [7:0] Net_86;
-          wire  Net_136;
-          wire  Net_135;
-          wire  Net_133;
           wire  Net_57;
           wire  Net_56;
           wire  Net_54;
@@ -1020,7 +1102,7 @@ module top ;
     cy_annotation_universal_v1_0 DriveGND (
         .connect({
             Net_10,
-            Net_23
+            Net_327
         })
     );
     defparam DriveGND.comp_name = "SwitchSPST_v1_0";
@@ -1038,7 +1120,7 @@ module top ;
 
     cy_annotation_universal_v1_0 GND_1 (
         .connect({
-            Net_8
+            Net_329
         })
     );
     defparam GND_1.comp_name = "Gnd_v1_0";
@@ -1047,8 +1129,8 @@ module top ;
 
     cy_annotation_universal_v1_0 HVGND (
         .connect({
-            Net_8,
-            Net_18
+            Net_329,
+            Net_328
         })
     );
     defparam HVGND.comp_name = "SwitchSPST_v1_0";
@@ -1196,7 +1278,7 @@ module top ;
 		  .io({tmpIO_0__HV_net[0:0]}),
 		  .siovref(tmpSIOVREF__HV_net),
 		  .interrupt({tmpINTERRUPT_0__HV_net[0:0]}),
-		  .annotation({Net_18}),
+		  .annotation({Net_328}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1272,7 +1354,7 @@ module top ;
 		  .io({tmpIO_0__Drive_net[0:0]}),
 		  .siovref(tmpSIOVREF__Drive_net),
 		  .interrupt({tmpINTERRUPT_0__Drive_net[0:0]}),
-		  .annotation({Net_23}),
+		  .annotation({Net_327}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2113,12 +2195,12 @@ module top ;
 
     Timer_v2_80_3 WDT_Timer (
         .capture(1'b0),
-        .capture_out(Net_140),
+        .capture_out(Net_394),
         .clock(Net_133),
         .enable(1'b1),
         .interrupt(Net_136),
         .reset(Net_135),
-        .tc(Net_141),
+        .tc(Net_396),
         .trigger(1'b1));
     defparam WDT_Timer.CaptureCount = 2;
     defparam WDT_Timer.CaptureCounterEnabled = 0;
@@ -2841,6 +2923,45 @@ module top ;
         .soc(1'b1),
         .vminus(Net_314),
         .vplus(Net_307));
+
+    Timer_v2_80_5 ReadyToDrive_Timer (
+        .capture(1'b0),
+        .capture_out(Net_510),
+        .clock(Net_899),
+        .enable(1'b1),
+        .interrupt(Net_318),
+        .reset(Net_319),
+        .tc(Net_512),
+        .trigger(1'b1));
+    defparam ReadyToDrive_Timer.CaptureCount = 2;
+    defparam ReadyToDrive_Timer.CaptureCounterEnabled = 0;
+    defparam ReadyToDrive_Timer.DeviceFamily = "PSoC5";
+    defparam ReadyToDrive_Timer.InterruptOnCapture = 0;
+    defparam ReadyToDrive_Timer.InterruptOnTC = 1;
+    defparam ReadyToDrive_Timer.Resolution = 32;
+    defparam ReadyToDrive_Timer.SiliconRevision = "0";
+
+
+	cy_clock_v1_0
+		#(.id("eae209c1-0724-4de4-8d48-0c98798b0a9b"),
+		  .source_clock_id("75C2148C-3656-4d8a-846D-0CAE99AB6FF7"),
+		  .divisor(0),
+		  .period("0"),
+		  .is_direct(1),
+		  .is_digital(1))
+		timer_clock_3
+		 (.clock_out(Net_899));
+
+
+    ZeroTerminal ZeroTerminal_4 (
+        .z(Net_319));
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ReadyToDrive_Int
+		 (.int_signal(Net_318));
+
 
 
 

@@ -2,7 +2,7 @@
 --	Conversion of Dashboard.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Jun 03 03:36:44 2022
+--	Sat Jun 04 00:13:06 2022
 --
 
 USE cypress.cypress.all;
@@ -36,9 +36,9 @@ SIGNAL tmpIO_0__LED_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_net_0 : bit;
 TERMINAL Net_10 : bit;
-TERMINAL Net_23 : bit;
-TERMINAL Net_8 : bit;
-TERMINAL Net_18 : bit;
+TERMINAL Net_327 : bit;
+TERMINAL Net_329 : bit;
+TERMINAL Net_328 : bit;
 SIGNAL tmpOE__Buzzer_net_0 : bit;
 SIGNAL tmpFB_0__Buzzer_net_0 : bit;
 SIGNAL tmpIO_0__Buzzer_net_0 : bit;
@@ -408,7 +408,7 @@ SIGNAL Net_135 : bit;
 SIGNAL \WDT_Timer:Net_260\ : bit;
 SIGNAL Net_136 : bit;
 SIGNAL \WDT_Timer:Net_55\ : bit;
-SIGNAL Net_141 : bit;
+SIGNAL Net_396 : bit;
 SIGNAL \WDT_Timer:Net_53\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:ClockOutFromEnBlock\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:Clk_Ctl_i\ : bit;
@@ -441,7 +441,7 @@ SIGNAL \WDT_Timer:TimerUDB:tc_i\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:tc_reg_i\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:hwEnable_reg\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:capture_out_reg_i\ : bit;
-SIGNAL Net_140 : bit;
+SIGNAL Net_394 : bit;
 SIGNAL \WDT_Timer:TimerUDB:capt_fifo_load_int\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:runmode_enable\ : bit;
 SIGNAL \WDT_Timer:TimerUDB:trig_reg\ : bit;
@@ -895,6 +895,348 @@ SIGNAL \ADC_GLV_V:Net_252\ : bit;
 SIGNAL \ADC_GLV_V:soc\ : bit;
 SIGNAL \ADC_GLV_V:Net_268\ : bit;
 SIGNAL \ADC_GLV_V:Net_270\ : bit;
+SIGNAL \ReadyToDrive_Timer:Net_260\ : bit;
+SIGNAL Net_318 : bit;
+SIGNAL \ReadyToDrive_Timer:Net_55\ : bit;
+SIGNAL Net_512 : bit;
+SIGNAL \ReadyToDrive_Timer:Net_53\ : bit;
+SIGNAL Net_899 : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:Clk_Ctl_i\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_7\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_6\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_5\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_4\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_3\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:control_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_enable\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_ten\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_cmode_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_cmode_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_tmode_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_tmode_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_ic_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:ctrl_ic_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:fifo_load_polarized\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capture_last\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capt_fifo_load\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:timer_enable\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:run_mode\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:hwEnable\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_tc\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:trigger_enable\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:per_zero\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:tc_i\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:tc_reg_i\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capture_out_reg_i\ : bit;
+SIGNAL Net_510 : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capt_fifo_load_int\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:runmode_enable\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:trig_reg\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_6\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_5\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_4\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:fifo_full\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:status_3\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:fifo_nempty\ : bit;
+SIGNAL Net_319 : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:cs_addr_2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:cs_addr_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:cs_addr_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc11\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc14\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc10\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc13\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc9\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:nc12\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_2\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_2\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_1\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_0\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb2\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce0_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl0_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z0_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff0_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ce1_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cl1_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:z1_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ff1_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:ov_msb_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:co_msb_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmsb_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:so_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_bus_stat_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f0_blk_stat_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_bus_stat_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_3\ : bit;
+ATTRIBUTE port_state_att of \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:f1_blk_stat_reg_3\:SIGNAL IS 2;
+SIGNAL \ReadyToDrive_Timer:Net_102\ : bit;
+SIGNAL \ReadyToDrive_Timer:Net_266\ : bit;
 SIGNAL \Node_Timer:TimerUDB:capture_last\\D\ : bit;
 SIGNAL \Node_Timer:TimerUDB:tc_reg_i\\D\ : bit;
 SIGNAL \Node_Timer:TimerUDB:hwEnable_reg\\D\ : bit;
@@ -912,6 +1254,10 @@ SIGNAL Net_132D : bit;
 SIGNAL Net_129D : bit;
 SIGNAL Net_130D : bit;
 SIGNAL Net_127D : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capture_last\\D\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:tc_reg_i\\D\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:hwEnable_reg\\D\ : bit;
+SIGNAL \ReadyToDrive_Timer:TimerUDB:capture_out_reg_i\\D\ : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -968,6 +1314,8 @@ Net_130D <= (\GraphicLCDIntf:state_0\
 	OR \GraphicLCDIntf:state_3\);
 
 Net_127D <= ((not \GraphicLCDIntf:state_3\ and not \GraphicLCDIntf:state_2\ and \GraphicLCDIntf:state_1\));
+
+\ReadyToDrive_Timer:TimerUDB:status_tc\ <= ((\ReadyToDrive_Timer:TimerUDB:control_7\ and \ReadyToDrive_Timer:TimerUDB:per_zero\));
 
 RX:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"1425177d-0d0e-4468-8bcc-e638e5509a9b",
@@ -1204,7 +1552,7 @@ DriveGND:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
 		port_names=>"T1, T2",
 		width=>2)
-	PORT MAP(connect=>(Net_10, Net_23));
+	PORT MAP(connect=>(Net_10, Net_327));
 GND_2:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Gnd_v1_0",
 		port_names=>"T1",
@@ -1214,12 +1562,12 @@ GND_1:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Gnd_v1_0",
 		port_names=>"T1",
 		width=>1)
-	PORT MAP(connect=>Net_8);
+	PORT MAP(connect=>Net_329);
 HVGND:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
 		port_names=>"T1, T2",
 		width=>2)
-	PORT MAP(connect=>(Net_8, Net_18));
+	PORT MAP(connect=>(Net_329, Net_328));
 Buzzer:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4da11063-6e5d-46ee-ad8f-d5d399df80cd",
 		drive_mode=>"110",
@@ -1352,7 +1700,7 @@ HV:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__HV_net_0),
 		siovref=>(tmpSIOVREF__HV_net_0),
-		annotation=>Net_18,
+		annotation=>Net_328,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__RX_net_0,
 		in_reset=>zero,
@@ -1422,7 +1770,7 @@ Drive:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__Drive_net_0),
 		siovref=>(tmpSIOVREF__Drive_net_0),
-		annotation=>Net_23,
+		annotation=>Net_327,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__RX_net_0,
 		in_reset=>zero,
@@ -3710,6 +4058,393 @@ GLV_V:cy_psoc3_pins_v1_10
 		ext_start=>tmpOE__RX_net_0,
 		mod_reset=>\ADC_GLV_V:mod_reset\,
 		interrupt=>Net_310);
+\ReadyToDrive_Timer:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_899,
+		enable=>tmpOE__RX_net_0,
+		clock_out=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\);
+\ReadyToDrive_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_899,
+		enable=>tmpOE__RX_net_0,
+		clock_out=>\ReadyToDrive_Timer:TimerUDB:Clk_Ctl_i\);
+\ReadyToDrive_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"11111111",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>\ReadyToDrive_Timer:TimerUDB:Clk_Ctl_i\,
+		control=>(\ReadyToDrive_Timer:TimerUDB:control_7\, \ReadyToDrive_Timer:TimerUDB:control_6\, \ReadyToDrive_Timer:TimerUDB:control_5\, \ReadyToDrive_Timer:TimerUDB:control_4\,
+			\ReadyToDrive_Timer:TimerUDB:control_3\, \ReadyToDrive_Timer:TimerUDB:control_2\, \ReadyToDrive_Timer:TimerUDB:control_1\, \ReadyToDrive_Timer:TimerUDB:control_0\));
+\ReadyToDrive_Timer:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"0000011",
+		cy_int_mask=>"1111111")
+	PORT MAP(reset=>zero,
+		clock=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		status=>(zero, zero, zero, \ReadyToDrive_Timer:TimerUDB:status_3\,
+			\ReadyToDrive_Timer:TimerUDB:status_2\, zero, \ReadyToDrive_Timer:TimerUDB:status_tc\),
+		interrupt=>Net_318);
+\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:u0\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(zero, \ReadyToDrive_Timer:TimerUDB:control_7\, \ReadyToDrive_Timer:TimerUDB:per_zero\),
+		route_si=>zero,
+		route_ci=>zero,
+		f0_load=>zero,
+		f1_load=>zero,
+		d0_load=>zero,
+		d1_load=>zero,
+		ce0=>open,
+		cl0=>open,
+		z0=>\ReadyToDrive_Timer:TimerUDB:nc0\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\ReadyToDrive_Timer:TimerUDB:nc11\,
+		f0_blk_stat=>\ReadyToDrive_Timer:TimerUDB:nc14\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>zero,
+		co=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry0\,
+		sir=>zero,
+		sor=>open,
+		sil=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right0\,
+		sol=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left0\,
+		msbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb0\,
+		msbo=>open,
+		cei=>(zero, zero),
+		ceo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_0\),
+		cli=>(zero, zero),
+		clo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_0\),
+		zi=>(zero, zero),
+		zo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_0\),
+		fi=>(zero, zero),
+		fo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_0\),
+		capi=>(zero, zero),
+		capo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_0\),
+		cfbi=>zero,
+		cfbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb0\,
+		pi=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		po=>open);
+\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:u1\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(zero, \ReadyToDrive_Timer:TimerUDB:control_7\, \ReadyToDrive_Timer:TimerUDB:per_zero\),
+		route_si=>zero,
+		route_ci=>zero,
+		f0_load=>zero,
+		f1_load=>zero,
+		d0_load=>zero,
+		d1_load=>zero,
+		ce0=>open,
+		cl0=>open,
+		z0=>\ReadyToDrive_Timer:TimerUDB:nc1\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\ReadyToDrive_Timer:TimerUDB:nc10\,
+		f0_blk_stat=>\ReadyToDrive_Timer:TimerUDB:nc13\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry0\,
+		co=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry1\,
+		sir=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left0\,
+		sor=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right0\,
+		sil=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right1\,
+		sol=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left1\,
+		msbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb1\,
+		msbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb0\,
+		cei=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq0_0\),
+		ceo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_0\),
+		cli=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt0_0\),
+		clo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_0\),
+		zi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero0_0\),
+		zo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_0\),
+		fi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff0_0\),
+		fo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_0\),
+		capi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap0_0\),
+		capo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_0\),
+		cfbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb0\,
+		cfbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb1\,
+		pi=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		po=>open);
+\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:u2\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(zero, \ReadyToDrive_Timer:TimerUDB:control_7\, \ReadyToDrive_Timer:TimerUDB:per_zero\),
+		route_si=>zero,
+		route_ci=>zero,
+		f0_load=>zero,
+		f1_load=>zero,
+		d0_load=>zero,
+		d1_load=>zero,
+		ce0=>open,
+		cl0=>open,
+		z0=>\ReadyToDrive_Timer:TimerUDB:nc2\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\ReadyToDrive_Timer:TimerUDB:nc9\,
+		f0_blk_stat=>\ReadyToDrive_Timer:TimerUDB:nc12\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry1\,
+		co=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry2\,
+		sir=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left1\,
+		sor=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right1\,
+		sil=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right2\,
+		sol=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left2\,
+		msbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb2\,
+		msbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb1\,
+		cei=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq1_0\),
+		ceo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_0\),
+		cli=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt1_0\),
+		clo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_0\),
+		zi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero1_0\),
+		zo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_0\),
+		fi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff1_0\),
+		fo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_0\),
+		capi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap1_0\),
+		capo=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_0\),
+		cfbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb1\,
+		cfbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb2\,
+		pi=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		po=>open);
+\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:u3\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(zero, \ReadyToDrive_Timer:TimerUDB:control_7\, \ReadyToDrive_Timer:TimerUDB:per_zero\),
+		route_si=>zero,
+		route_ci=>zero,
+		f0_load=>zero,
+		f1_load=>zero,
+		d0_load=>zero,
+		d1_load=>zero,
+		ce0=>open,
+		cl0=>open,
+		z0=>\ReadyToDrive_Timer:TimerUDB:per_zero\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\ReadyToDrive_Timer:TimerUDB:status_3\,
+		f0_blk_stat=>\ReadyToDrive_Timer:TimerUDB:status_2\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:carry2\,
+		co=>open,
+		sir=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_left2\,
+		sor=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:sh_right2\,
+		sil=>zero,
+		sol=>open,
+		msbi=>zero,
+		msbo=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:msb2\,
+		cei=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_eq2_0\),
+		ceo=>open,
+		cli=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_lt2_0\),
+		clo=>open,
+		zi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_zero2_0\),
+		zo=>open,
+		fi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cmp_ff2_0\),
+		fo=>open,
+		capi=>(\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_1\, \ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cap2_0\),
+		capo=>open,
+		cfbi=>\ReadyToDrive_Timer:TimerUDB:sT32:timerdp:cfb2\,
+		cfbo=>open,
+		pi=>(zero, zero, zero, zero,
+			zero, zero, zero, zero),
+		po=>open);
+timer_clock_3:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"eae209c1-0724-4de4-8d48-0c98798b0a9b",
+		source_clock_id=>"75C2148C-3656-4d8a-846D-0CAE99AB6FF7",
+		divisor=>0,
+		period=>"0",
+		is_direct=>'1',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_899,
+		dig_domain_out=>open);
+ReadyToDrive_Int:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_318);
 \Node_Timer:TimerUDB:capture_last\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\Node_Timer:TimerUDB:ClockOutFromEnBlock\,
@@ -3778,5 +4513,21 @@ Net_127:cy_dff
 	PORT MAP(d=>Net_127D,
 		clk=>\GraphicLCDIntf:op_clk\,
 		q=>Net_127);
+\ReadyToDrive_Timer:TimerUDB:capture_last\:cy_dff
+	PORT MAP(d=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\ReadyToDrive_Timer:TimerUDB:capture_last\);
+\ReadyToDrive_Timer:TimerUDB:tc_reg_i\:cy_dff
+	PORT MAP(d=>\ReadyToDrive_Timer:TimerUDB:status_tc\,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\ReadyToDrive_Timer:TimerUDB:tc_reg_i\);
+\ReadyToDrive_Timer:TimerUDB:hwEnable_reg\:cy_dff
+	PORT MAP(d=>\ReadyToDrive_Timer:TimerUDB:control_7\,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\ReadyToDrive_Timer:TimerUDB:hwEnable_reg\);
+\ReadyToDrive_Timer:TimerUDB:capture_out_reg_i\:cy_dff
+	PORT MAP(d=>zero,
+		clk=>\ReadyToDrive_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\ReadyToDrive_Timer:TimerUDB:capture_out_reg_i\);
 
 END R_T_L;
