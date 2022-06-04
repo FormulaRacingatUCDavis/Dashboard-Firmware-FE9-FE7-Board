@@ -36,7 +36,7 @@ void initDashTemplate() {
  * - handle variety of digit counts
  * - color decision logic is in here
  */
-void disp_SOC(uint8 data) {
+void disp_SOC(uint8_t data) {
     UG_FontSelect(&FONT_32X53);
     UG_COLOR color;
     if (data == 100) {
@@ -85,7 +85,7 @@ void disp_SOC(uint8 data) {
     UG_FontSelect(&FONT_12X16);
 }
 
-void disp_max_pack_temp(uint8 data) {
+void disp_max_pack_temp(uint8_t data) {
     // choose color
     UG_COLOR color;
     if (data < 45) {
@@ -114,7 +114,7 @@ void disp_max_pack_temp(uint8 data) {
     UG_FontSelect(&FONT_12X16);
 }
 
-void disp_state(uint8 state) { // TODO
+void disp_state(uint8_t state) { // TODO
     UG_COLOR color;
     // check fault bit
     if (state & 0x80) {
@@ -222,10 +222,12 @@ void disp_state(uint8 state) { // TODO
     }
 }
 
-void disp_glv_v(uint16 data) {
-    // format to 0-1200 range
-    data *= 1; // conversion 1187/265 also *1000
-    data = 100 * (data / 0xffff) + (100 * data / 0xffff - 100 * (data / 0xffff));
+void disp_glv_v(uint32_t data) {
+    // translate from voltage divider measurement to true voltage
+    // y = 0.4295x + 18.254
+    data *= 859;
+    data /= 2000; // 0.4295
+    data += 18;
     UG_COLOR color;
     if (data > 1150) {
         color = C_GREEN;
@@ -260,7 +262,7 @@ void disp_glv_v(uint16 data) {
     UG_PutColorString(100, 240, data_s, C_BLACK, color);
 }
 
-void disp_mc_temp(uint16 data) {
+void disp_mc_temp(uint16_t data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 185, 470, 215, C_GREEN);
@@ -280,7 +282,7 @@ void disp_mc_temp(uint16 data) {
     }
 }
 
-void disp_motor_temp(uint16 data) {
+void disp_motor_temp(uint16_t data) {
     if (data >= 100) {
         // handle 3 digit cases
         UG_FillFrame(410, 230, 470, 260, C_GREEN);

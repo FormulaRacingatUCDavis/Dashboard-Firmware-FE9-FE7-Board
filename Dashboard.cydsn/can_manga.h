@@ -23,7 +23,11 @@ typedef enum {
     BMS_STATUS_MSG = 0x380,
     PEI_CURRENT = 0x387,
     BMS_VOLTAGES = 0x388,
-    BMS_TEMPERATURES = 0x389
+    BMS_TEMPERATURES = 0x389,
+    MC_ESTOP = 0x366,
+    MC_DEBUG = 0x466,
+    MC_PDO_SEND = 0x566,
+    MC_PDO_ACK = 0x666
 } CAN_ID;
     
 // Basic CAN functionality

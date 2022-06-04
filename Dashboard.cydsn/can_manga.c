@@ -26,13 +26,17 @@ extern volatile double THROTTLE_MULTIPLIER;
 extern const double THROTTLE_MAP[8];
 extern volatile uint8_t PACK_TEMP;
 extern volatile uint8_t BSPD_CATCH;
-extern volatile int32 CURRENT;
-extern volatile int ERROR_NODE;
-extern volatile int ERROR_IDX;
+extern volatile uint16_t CURRENT;
+//extern volatile int ERROR_NODE;
+//extern volatile int ERROR_IDX;
+extern volatile uint8_t soc;
+extern volatile uint32_t voltage;
+extern volatile BMS_STATUS bms_status;
+extern volatile uint8_t shutdown_flags;
 
 // info from MC and motor
-extern volatile uint16 mc_temp;
-extern volatile uint16 motor_temp;
+extern volatile uint16_t mc_temp;
+extern volatile uint16_t motor_temp;
 
 volatile uint8_t CAPACITOR_VOLT = 0;
 volatile uint8_t CURTIS_FAULT_CHECK = 0;
@@ -44,14 +48,6 @@ volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
 
 //volatile uint8_t ESTOP; //Tehya test
-
-volatile uint8_t VOLT_B1;
-volatile uint8_t VOLT_B2;
-volatile uint8_t VOLT_B3;
-volatile uint8_t VOLT_B4;
-extern volatile uint8 soc; //new
-extern volatile uint32_t voltage;
-extern volatile BMS_STATUS bms_status;
 
 
 uint8 current_bytes[4] = {0};
@@ -95,18 +91,6 @@ uint8_t getABSMotorRPM()
     return ABS_MOTOR_RPM;
 }
 
-// throttle is sent in two 8 bit values to create one 16 bit value
-// hight and low refer to high and low bit sequences of the whole value
-uint8_t getPedalLow()
-{
-    return THROTTLE_LOW;
-}
-
-uint8_t getPedalHigh()
-{
-    return THROTTLE_HIGH;
-}
-
 //Tehya test
 //will be a 1 if the estop was pressed (I'm making it a special case because I want to test rn)
 uint8_t getEStop()
@@ -120,21 +104,26 @@ void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
     
-    uint8_t data[8];
+    /*uint8_t data[8];
     int i = 0;
     for (i = 0; i < 8; i++)
-        data[i] = msg[i];
+        data[i] = msg[i];*/
     
     switch (ID) 
     {
         case VEHICLE_STATE:
             state = msg[CAN_DATA_BYTE_1];
             break;
-        case 0x0566: // Curtis Status
+        case MC_PDO_SEND:
             CAPACITOR_VOLT = msg[CAN_DATA_BYTE_1];
             ABS_MOTOR_RPM = msg[CAN_DATA_BYTE_3];
+            mc_temp = msg[CAN_DATA_BYTE_7] << 8;
+            mc_temp += msg[CAN_DATA_BYTE_8];
+            break;
+        case MC_PDO_ACK:
+            ACK_RX = msg[CAN_DATA_BYTE_1];
             motor_temp = msg[CAN_DATA_BYTE_5] << 8;
-            motor_temp += msg[CAN_DATA_BYTE_6];
+            motor_temp |= msg[CAN_DATA_BYTE_6];
             break;
         case 0xA6:  // errors sent from MC node
             CURTIS_FAULT_CHECK = 0x1;
@@ -142,40 +131,27 @@ void can_receive(uint8_t *msg, int ID)
         case 0x726:     // from motor controller to confirm that node is still active
             CURTIS_HEART_BEAT_CHECK = 0x1;
             break;
-        case 0x0666:    // pdoAwk from motor controller
-            ACK_RX = msg[CAN_DATA_BYTE_1];
-            mc_temp = msg[CAN_DATA_BYTE_7] << 8;
-            mc_temp += msg[CAN_DATA_BYTE_8];
-            break;
-        case BMS_VOLTAGES:    // BMS voltage data 
-            VOLT_B4 = data[CAN_DATA_BYTE_5];
-            VOLT_B3 = data[CAN_DATA_BYTE_6];
-            VOLT_B2 = data[CAN_DATA_BYTE_7];
-            VOLT_B1 = data[CAN_DATA_BYTE_8];
-            voltage = (VOLT_B4 << 24) | (VOLT_B3 << 16) | (VOLT_B2 << 8) | VOLT_B1; 
+        case BMS_VOLTAGES:
+            voltage = msg[CAN_DATA_BYTE_5] << 24;
+            voltage |= msg[CAN_DATA_BYTE_6] << 16;
+            voltage |= msg[CAN_DATA_BYTE_7] << 8;
+            voltage |= msg[CAN_DATA_BYTE_8];
             break;
         case BMS_STATUS_MSG:
-            soc = data[CAN_DATA_BYTE_2];
-            ERROR_IDX = data[CAN_DATA_BYTE_3]; // bms error flags
-            ERROR_NODE = data[CAN_DATA_BYTE_4]; // bms error flags
+            soc = msg[CAN_DATA_BYTE_2];
+            bms_status = msg[CAN_DATA_BYTE_3] << 8;    // bms error flags
+            bms_status |= msg[CAN_DATA_BYTE_4];        // bms error flags
             break;
         case BMS_TEMPERATURES:
-            //ERROR_IDX = data[CAN_DATA_BYTE_6];
-            //ERROR_NODE = data[CAN_DATA_BYTE_7];
-            PACK_TEMP = data[CAN_DATA_BYTE_8];
+            PACK_TEMP = msg[CAN_DATA_BYTE_8];
             break;
-        case 0x521: // current data from IVT
-            current_bytes[0] = data[CAN_DATA_BYTE_3];
-            current_bytes[1] = data[CAN_DATA_BYTE_4];
-            current_bytes[2] = data[CAN_DATA_BYTE_5];
-            current_bytes[3] = data[CAN_DATA_BYTE_6];
-            CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8) + current_bytes[3]; // check CAN to be sure
-            break;
-        case 0x188:
-            bms_status = (data[CAN_DATA_BYTE_3] << 8) | data[CAN_DATA_BYTE_4];  
+        case PEI_CURRENT:
+            CURRENT = msg[CAN_DATA_BYTE_1] << 8;
+            CURRENT |= msg[CAN_DATA_BYTE_2];
+            shutdown_flags = msg[CAN_DATA_BYTE_3];
             break;
         case 0x366: //Tehya test
-            //ESTOP = data[CAN_DATA_BYTE_1];
+            //ESTOP = msg[CAN_DATA_BYTE_1];
             break;
     }
     

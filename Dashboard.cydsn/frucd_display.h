@@ -29,11 +29,11 @@ void initDashTemplate();
  * BEGIN: functions to show data on dash
  * - color decision logic is in here
  */
-void disp_SOC(uint8 data);
-void disp_max_pack_temp(uint8 data);
-void disp_state(uint8 state); // TODO
-void disp_glv_v(uint16 data); // TODO
-void disp_mc_temp(uint16 data);
-void disp_motor_temp(uint16 data);
+void disp_SOC(uint8_t data);
+void disp_max_pack_temp(uint8_t data);
+void disp_state(uint8_t state); // TODO
+void disp_glv_v(uint32_t data); // TODO
+void disp_mc_temp(uint16_t data);
+void disp_motor_temp(uint16_t data);
 
 /* [] END OF FILE */

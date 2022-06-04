@@ -8,9 +8,10 @@
 #include "fonts.h"
 
 // declared external in can_manga.c
-volatile uint8 PACK_TEMP = 0;
-volatile uint8 BSPD_CATCH = 0;
-volatile int32 CURRENT = 0;
+volatile uint8_t PACK_TEMP = 0;
+volatile uint8_t BSPD_CATCH = 0;
+volatile uint16_t CURRENT = 0;
+volatile uint8_t shutdown_flags;
 volatile int ERROR_NODE;
 volatile int ERROR_IDX;
 volatile uint32_t voltage = 0;
@@ -147,7 +148,6 @@ int main()
     WDT_Timer_Start();
     isr_wdt_StartEx(ISR_WDT);
     
-    bms_status = NO_ERROR;
     int bms_error;
     int faulted = 0;
     
@@ -156,11 +156,6 @@ int main()
     //CAN_Init();
     CAN_Start();
     LED_color_wheel(200);
-    // active low
-    IMD_LED_Write(1);
-    BMS_LED_Write(1);
-    // buzzer off
-    Buzzer_Write(0);
     
 	ADC_GLV_V_Start();
     
@@ -188,7 +183,7 @@ int main()
                 bms_error = bms_status;
         }
         
-        // check switches
+        // check driver switches
         if (HV_Read()) {
             switches |= 0b10;
         } else {
@@ -199,30 +194,30 @@ int main()
         } else {
             switches &= 0b11111110;
         }
-        // send switches
+        // send driver switches
         can_send_switches(switches);
         
-        // indicator LEDs
-        BMS_LED_Write(!bms_status); // active low
-        // TODO: IMD_LED_Write(1); // active low
+        // indicator LEDs (active low)
+        BMS_LED_Write(!bms_status);
+        IMD_LED_Write(shutdown_flags & 0b00100000); // bitmask for IMD_OK
         
-        // START display latest data
+        /*      START display latest data       */
         disp_SOC(soc);
         disp_max_pack_temp(PACK_TEMP);
         
         disp_state(state);
-        uint16 glv_v = (int16_t)ADC_GLV_V_CountsTo_mVolts(ADC_GLV_V_Read16());
+        uint32_t glv_v = (int32_t)ADC_GLV_V_CountsTo_mVolts(ADC_GLV_V_Read16());
         disp_glv_v(glv_v);
         
         disp_mc_temp(mc_temp);
         disp_motor_temp(motor_temp);
-        // END display latest data
+        /*      END display latest data         */
         
         if (state == DRIVE && previous_state == HV_ENABLED) {
             // entered drive; sound ready to drive buzzer
             Buzzer_Write(1);
-            // EV.10.5.2: Sounded continuously for
-            // minimum 1 second and a maximum of 3 seconds
+            // EV.10.5.2: Sounded continuously for minimum 1 second
+            // and a maximum of 3 seconds [we use 2 seconds]
             ReadyToDrive_Int_Start();
             ReadyToDrive_Timer_Init();
             ReadyToDrive_Timer_Enable();
@@ -448,26 +443,6 @@ CY_ISR(ISR_CAN)
 
     /* Acknowledges receipt of new message */
     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
-
-    ///* Clear Receive Message flag */
-    //CAN_INT_SR_REG.byte[1u] = CAN_RX_MESSAGE_MASK;
-    /* Switch Status message received */
-   // if ((CY_GET_REG16((reg16 *) &CAN_BUF_SR_REG.byte[0u]) & CAN_RX_MAILBOX_0_SHIFT) != 0u)
-   // {        
-   //     receiveMailboxNumber = CAN_RX_MAILBOX_switchStatus;
-
-        /* Acknowledges receipt of new message */
-   //     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_switchStatus);
-   // }
-
-    /* ADC data message received */
-   // if ((CY_GET_REG16((reg16 *) &CAN_BUF_SR_REG.byte[0u]) & CAN_RX_MAILBOX_1_SHIFT) != 0u)
-   // {
-   //     receiveMailboxNumber = CAN_RX_MAILBOX_ADCdata;
-
-        /* Acknowledges receipt of new message */
-   //     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_ADCdata);
-   // }
 }
 
 

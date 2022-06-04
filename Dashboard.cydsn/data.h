@@ -44,7 +44,7 @@ typedef enum{
     CHARGE_HAULT = 0x2000,
     FULL = 0x4000,
     PRECHARGE_CLOSED = 0x8000
-}BMS_STATUS;
+} BMS_STATUS;
 
 typedef struct
 {
