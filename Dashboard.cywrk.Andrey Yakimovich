@@ -296,13 +296,13 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Dashboard.cydsn\main.c" />
-<name v=".\Dashboard.cydsn\frucd_display.c" />
 <name v=".\Dashboard.cydsn\can_manga.c" />
-<name v=".\Dashboard.cydsn\frucd_display.h" />
-<name v=".\Dashboard.cydsn\data.h" />
-<name v=".\Dashboard.cydsn\Dashboard.cydwr" />
+<name v=".\Dashboard.cydsn\can_manga.h" />
+<name v=".\Dashboard.cydsn\frucd_display.c" />
 <name v=".\Dashboard.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Dashboard.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" />
+<name v=".\Dashboard.cydsn\Dashboard.cydwr" />
+<name v=".\Dashboard.cydsn\data.h" />
+<name v=".\Dashboard.cydsn\frucd_display.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -310,7 +310,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="795, 529" SelectedTabbedMdiWindow="0657c2b3-7bb6-4882-85c5-ec24cf9735e3"><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\main.c" Guid="c304d096-d029-463c-a091-c839ea4066a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.c" Guid="22f853a3-0cee-45c5-a6db-1a0249837f3f" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.c" Guid="0fc62bc8-84ee-43dd-82b8-4b1fda83b9a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.h" Guid="a0bcca4d-7661-46f1-9f74-836eacbe8341" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\data.h" Guid="e2dc012d-f393-4896-9676-a72d1925bfc5" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr" Guid="2f517e64-f60a-4758-bfdb-37a4c1a0ec1e" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch" Guid="a709c773-59ef-4f5f-a55d-ae79aa95f0cf" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="0657c2b3-7bb6-4882-85c5-ec24cf9735e3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="811, 529" SelectedTabbedMdiWindow="c304d096-d029-463c-a091-c839ea4066a8"><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\main.c" Guid="c304d096-d029-463c-a091-c839ea4066a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.c" Guid="0fc62bc8-84ee-43dd-82b8-4b1fda83b9a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.h" Guid="f9fe11b9-04d9-4fd4-a8b6-fadf44002954" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.c" Guid="22f853a3-0cee-45c5-a6db-1a0249837f3f" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch" Guid="d6d292dc-13bc-484e-a8b7-3f3ad372769e" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr" Guid="bd3f92d9-d20d-4a22-af53-6eab28e2ebbe" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\data.h" Guid="c9c07645-4793-4334-a1af-e4720d9796c6" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.h" Guid="f35d5ecf-0e6b-4ba1-961b-9b2a3ee5713d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

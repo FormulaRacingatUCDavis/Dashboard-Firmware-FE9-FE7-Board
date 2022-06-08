@@ -26,8 +26,6 @@
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-#include "Buzzer.h"
-#include "ReadyToDrive_Timer.h"
 /* `#START ReadyToDrive_Int_intc` */
 /* `#END` */
 

@@ -11,7 +11,7 @@
 volatile uint8_t PACK_TEMP = 0;
 volatile uint8_t BSPD_CATCH = 0;
 volatile uint16_t CURRENT = 0;
-volatile uint8_t shutdown_flags;
+volatile uint8_t shutdown_flags = 0;
 volatile int ERROR_NODE;
 volatile int ERROR_IDX;
 volatile uint32_t voltage = 0;

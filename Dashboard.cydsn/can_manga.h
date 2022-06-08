@@ -18,7 +18,7 @@
     
 typedef enum {
     VEHICLE_STATE = 0x0c0,
-    SWITCHES = 0x0d0,
+    DRIVER_SWITCHES = 0x0d0,
     TORQUE_REQUEST_COMMAND = 0x766,
     BMS_STATUS_MSG = 0x380,
     PEI_CURRENT = 0x387,

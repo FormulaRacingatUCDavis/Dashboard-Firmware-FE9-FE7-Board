@@ -1,6 +1,6 @@
 # Component constraints for Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch
 # Project: Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cyprj
-# Date: Sat, 04 Jun 2022 07:13:03 GMT
+# Date: Wed, 08 Jun 2022 14:20:52 GMT
 # GraphicLCDIntf
 # False paths present for both 8 and 16 bits Graphic LCD Interface configurations 
 expr {(8) == 8 ?

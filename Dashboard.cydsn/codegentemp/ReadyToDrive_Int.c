@@ -27,7 +27,6 @@
 *  Place your includes, defines and code here 
 ********************************************************************************/
 /* `#START ReadyToDrive_Int_intc` */
-
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE

@@ -104,11 +104,6 @@ void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
     
-    /*uint8_t data[8];
-    int i = 0;
-    for (i = 0; i < 8; i++)
-        data[i] = msg[i];*/
-    
     switch (ID) 
     {
         case VEHICLE_STATE:
@@ -215,7 +210,7 @@ void can_send_switches(
         data[6] = 0;
         data[7] = 0;
 
-        can_send(data, SWITCHES);
+        can_send(data, DRIVER_SWITCHES);
 
         
 } // can_send_status()
@@ -255,15 +250,3 @@ void can_send_charge(uint8_t charge, uint8_t save_soc) {
     
     can_send(data, 0x389);
 }
-/* MOVE TO VCU
-void tempAttenuate() {
-    int t = PACK_TEMP - 50;
-    if (t < 0) {
-        THROTTLE_MULTIPLIER = 1;   
-    } else if (t < 8) {
-        THROTTLE_MULTIPLIER = THROTTLE_MAP[t] / 100.0; 
-    } else if (t >= 8) {
-        THROTTLE_MULTIPLIER = THROTTLE_MAP[7] / 100.0; 
-    }
-}*/
-
