@@ -25,7 +25,32 @@
 #include "cyapicallbacks.h"
 
 /* `#START TX_RX_FUNCTION` */
+#include "data.h"
 
+extern volatile vcu_state state;
+extern volatile uint32_t pedalOK;
+extern volatile uint8_t PACK_TEMP;
+extern volatile uint8_t BSPD_CATCH;
+extern volatile uint16_t CURRENT;
+//extern volatile int ERROR_NODE;
+//extern volatile int ERROR_IDX;
+extern volatile uint8_t soc;
+extern volatile uint32_t voltage;
+extern volatile BMS_STATUS bms_status;
+extern volatile uint8_t shutdown_flags;
+
+// info from MC and motor
+extern volatile uint16_t mc_temp;
+extern volatile uint16_t motor_temp;
+
+extern volatile uint8_t CAPACITOR_VOLT;
+extern volatile uint8_t CURTIS_FAULT_CHECK;
+extern volatile uint8_t CURTIS_HEART_BEAT_CHECK;
+extern volatile uint8_t ACK_RX;
+extern volatile uint8_t ERROR_TOLERANCE;
+extern volatile uint8_t ABS_MOTOR_RPM;
+extern volatile uint8_t THROTTLE_HIGH;
+extern volatile uint8_t THROTTLE_LOW;
 /* `#END` */
 
 
@@ -186,7 +211,7 @@ void CAN_TxCancel(uint8 bufferId)
 
 #if (CAN_TX0_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_SendMsgDash_status
+    * FUNCTION NAME:   CAN_SendMsgDRIVER_SWITCHES
     ********************************************************************************
     *
     * Summary:
@@ -205,7 +230,7 @@ void CAN_TxCancel(uint8 bufferId)
     *    CAN_FAIL              The function failed
     *
     *******************************************************************************/
-    uint8 CAN_SendMsgDash_status(void) 
+    uint8 CAN_SendMsgDRIVER_SWITCHES(void) 
     {
         uint8 result = CYRET_SUCCESS;
 
@@ -219,13 +244,13 @@ void CAN_TxCancel(uint8 bufferId)
             }
             else
             {
-                /* `#START MESSAGE_Dash_status_TRASMITTED` */
+                /* `#START MESSAGE_DRIVER_SWITCHES_TRASMITTED` */
 
                 /* `#END` */
 
-                #ifdef CAN_SEND_MSG_Dash_status_CALLBACK
-                    CAN_SendMsg_Dash_status_Callback();
-                #endif /* CAN_SEND_MSG_Dash_status_CALLBACK */
+                #ifdef CAN_SEND_MSG_DRIVER_SWITCHES_CALLBACK
+                    CAN_SendMsg_DRIVER_SWITCHES_Callback();
+                #endif /* CAN_SEND_MSG_DRIVER_SWITCHES_CALLBACK */
 
                 CY_SET_REG32(CAN_TX_CMD_PTR(0u),
                 CY_GET_REG32(CAN_TX_CMD_PTR(0u)) | CAN_SEND_MESSAGE);
@@ -238,7 +263,7 @@ void CAN_TxCancel(uint8 bufferId)
 
 #if (CAN_TX1_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_SendMsgDash_cmd
+    * FUNCTION NAME:   CAN_SendMsg1
     ********************************************************************************
     *
     * Summary:
@@ -257,7 +282,7 @@ void CAN_TxCancel(uint8 bufferId)
     *    CAN_FAIL              The function failed
     *
     *******************************************************************************/
-    uint8 CAN_SendMsgDash_cmd(void) 
+    uint8 CAN_SendMsg1(void) 
     {
         uint8 result = CYRET_SUCCESS;
 
@@ -271,13 +296,13 @@ void CAN_TxCancel(uint8 bufferId)
             }
             else
             {
-                /* `#START MESSAGE_Dash_cmd_TRASMITTED` */
+                /* `#START MESSAGE_1_TRASMITTED` */
 
                 /* `#END` */
 
-                #ifdef CAN_SEND_MSG_Dash_cmd_CALLBACK
-                    CAN_SendMsg_Dash_cmd_Callback();
-                #endif /* CAN_SEND_MSG_Dash_cmd_CALLBACK */
+                #ifdef CAN_SEND_MSG_1_CALLBACK
+                    CAN_SendMsg_1_Callback();
+                #endif /* CAN_SEND_MSG_1_CALLBACK */
 
                 CY_SET_REG32(CAN_TX_CMD_PTR(1u),
                 CY_GET_REG32(CAN_TX_CMD_PTR(1u)) | CAN_SEND_MESSAGE);
@@ -629,14 +654,14 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
         {
             /* `#START MESSAGE_BASIC_RECEIVED` */
             
-            int ID = CAN_GET_RX_ID(rxMailbox);
+            /*int ID = CAN_GET_RX_ID(rxMailbox);
             CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
             uint8_t data[8];
             int i = 0;
             for (i = 0; i < 8; i++)
                 data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
             
-            can_receive(data, ID);
+            can_receive(data, ID);*/
             /* `#END` */
 
             #ifdef CAN_RECEIVE_MSG_CALLBACK
@@ -654,7 +679,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX0_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsg0
+    * FUNCTION NAME:   CAN_ReceiveMsgVEHICLE_STATE
     ********************************************************************************
     *
     * Summary:
@@ -672,15 +697,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg0(void) 
+    void CAN_ReceiveMsgVEHICLE_STATE(void) 
     {
-        /* `#START MESSAGE_0_RECEIVED` */
-
+        /* `#START MESSAGE_VEHICLE_STATE_RECEIVED` */
+        state = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_VEHICLE_STATE);
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_0_CALLBACK
-            CAN_ReceiveMsg_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_VEHICLE_STATE_CALLBACK
+            CAN_ReceiveMsg_VEHICLE_STATE_Callback();
+        #endif /* CAN_RECEIVE_MSG_VEHICLE_STATE_CALLBACK */
 
         CAN_RX[0u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -689,7 +714,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX1_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:    CAN_ReceiveMsg1
+    * FUNCTION NAME:    CAN_ReceiveMsgBMS_STATUS_MSG
     ********************************************************************************
     *
     * Summary:
@@ -707,15 +732,18 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg1(void) 
+    void CAN_ReceiveMsgBMS_STATUS_MSG(void) 
     {
-        /* `#START MESSAGE_1_RECEIVED` */
-
+        /* `#START MESSAGE_BMS_STATUS_MSG_RECEIVED` */
+        soc = CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_BMS_STATUS_MSG);
+        bms_status = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_BMS_STATUS_MSG) << 8;    // bms error flags
+        bms_status |= CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_BMS_STATUS_MSG);        // bms error flags
+        
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_1_CALLBACK
-            CAN_ReceiveMsg_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK
+            CAN_ReceiveMsg_BMS_STATUS_MSG_Callback();
+        #endif /* CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK */
 
         CAN_RX[1u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -724,7 +752,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX2_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsg2
+    * FUNCTION NAME:   CAN_ReceiveMsgBMS_TEMPERATURES
     ********************************************************************************
     *
     * Summary:
@@ -742,15 +770,16 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg2(void) 
+    void CAN_ReceiveMsgBMS_TEMPERATURES(void) 
     {
-        /* `#START MESSAGE_2_RECEIVED` */
-
+        /* `#START MESSAGE_BMS_TEMPERATURES_RECEIVED` */
+        PACK_TEMP = CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_BMS_TEMPERATURES);
+        
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_2_CALLBACK
-            CAN_ReceiveMsg_2_Callback();
-        #endif /* CAN_RECEIVE_MSG_2_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK
+            CAN_ReceiveMsg_BMS_TEMPERATURES_Callback();
+        #endif /* CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK */
 
         CAN_RX[2u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -759,7 +788,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX3_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsg3
+    * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_SEND
     ********************************************************************************
     *
     * Summary:
@@ -777,15 +806,17 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg3(void) 
+    void CAN_ReceiveMsgMC_PDO_SEND(void) 
     {
-        /* `#START MESSAGE_3_RECEIVED` */
-
+        /* `#START MESSAGE_MC_PDO_SEND_RECEIVED` */
+        motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
+        
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_3_CALLBACK
-            CAN_ReceiveMsg_3_Callback();
-        #endif /* CAN_RECEIVE_MSG_3_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK
+            CAN_ReceiveMsg_MC_PDO_SEND_Callback();
+        #endif /* CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK */
 
         CAN_RX[3u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -794,7 +825,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX4_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsg4
+    * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_ACK
     ********************************************************************************
     *
     * Summary:
@@ -812,15 +843,17 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg4(void) 
+    void CAN_ReceiveMsgMC_PDO_ACK(void) 
     {
-        /* `#START MESSAGE_4_RECEIVED` */
+        /* `#START MESSAGE_MC_PDO_ACK_RECEIVED` */
+        mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_4_CALLBACK
-            CAN_ReceiveMsg_4_Callback();
-        #endif /* CAN_RECEIVE_MSG_4_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK
+            CAN_ReceiveMsg_MC_PDO_ACK_Callback();
+        #endif /* CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK */
 
         CAN_RX[4u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -829,7 +862,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX5_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsg5
+    * FUNCTION NAME:   CAN_ReceiveMsgPEI_CURRENT
     ********************************************************************************
     *
     * Summary:
@@ -847,15 +880,18 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsg5(void) 
+    void CAN_ReceiveMsgPEI_CURRENT(void) 
     {
-        /* `#START MESSAGE_5_RECEIVED` */
+        /* `#START MESSAGE_PEI_CURRENT_RECEIVED` */
+        CURRENT = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_PEI_CURRENT) << 8;
+        CURRENT |= CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_PEI_CURRENT);
+        shutdown_flags = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_PEI_CURRENT);
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_5_CALLBACK
-            CAN_ReceiveMsg_5_Callback();
-        #endif /* CAN_RECEIVE_MSG_5_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK
+            CAN_ReceiveMsg_PEI_CURRENT_Callback();
+        #endif /* CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK */
 
         CAN_RX[5u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }

@@ -22,8 +22,6 @@
 
 extern volatile vcu_state state;
 extern volatile uint32_t pedalOK;
-extern volatile double THROTTLE_MULTIPLIER;
-extern const double THROTTLE_MAP[8];
 extern volatile uint8_t PACK_TEMP;
 extern volatile uint8_t BSPD_CATCH;
 extern volatile uint16_t CURRENT;
@@ -99,7 +97,7 @@ uint8_t getEStop()
 }
 
 // called from CAN_TX_RX_func.c in the generic RX func
-// tldr: part of an interrupt service routine
+/*/ tldr: part of an interrupt service routine
 void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
@@ -151,7 +149,7 @@ void can_receive(uint8_t *msg, int ID)
     }
     
     CyExitCriticalSection(InterruptState);
-}
+}*/
 
 void can_test_send()
 {

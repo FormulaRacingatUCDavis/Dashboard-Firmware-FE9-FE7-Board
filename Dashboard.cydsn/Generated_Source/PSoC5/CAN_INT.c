@@ -426,6 +426,23 @@
                     if ((CAN_RX_MAILBOX_TYPE & shift) != 0u)
                     {
                         /* RX Full mailboxes handler */
+                        switch(mailboxNumber)
+                        {
+                            case 0u : CAN_ReceiveMsgVEHICLE_STATE();
+                            break;
+                            case 1u : CAN_ReceiveMsgBMS_STATUS_MSG();
+                            break;
+                            case 2u : CAN_ReceiveMsgBMS_TEMPERATURES();
+                            break;
+                            case 3u : CAN_ReceiveMsgMC_PDO_SEND();
+                            break;
+                            case 4u : CAN_ReceiveMsgMC_PDO_ACK();
+                            break;
+                            case 5u : CAN_ReceiveMsgPEI_CURRENT();
+                            break;
+                            default:
+                            break;
+                        }
                     }
                     else
                     {

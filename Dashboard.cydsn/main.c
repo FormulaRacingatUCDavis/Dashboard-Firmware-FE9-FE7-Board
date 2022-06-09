@@ -442,7 +442,7 @@ CY_ISR(ISR_CAN)
     //isrFlag = 1u;    
 
     /* Acknowledges receipt of new message */
-    CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
+    //CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
 }
 
 

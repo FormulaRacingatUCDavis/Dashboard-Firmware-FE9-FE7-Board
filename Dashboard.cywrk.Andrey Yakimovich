@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Dashboard\Dashboard\Source Files\Display_Drivers\frucd_display.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Dashboard\Dashboard\Source Files\data.h">
 <ExpandedNodeIds>
 <v>Dashboard</v>
 <v>Dashboard\Dashboard</v>
@@ -233,29 +233,6 @@
 <v>Dashboard\Dashboard\PSoC 5LP Architecture TRM</v>
 <v>Dashboard\Dashboard\CY8C58LP Family Datasheet</v>
 <v>Dashboard\Dashboard\System Reference Guides</v>
-<v>Dashboard\Dashboard\System Reference Guides\cy_boot_v5_30</v>
-<v>Dashboard\Dashboard\ADC_DelSig_v3_20.pdf</v>
-<v>Dashboard\Dashboard\CAN_v3_0.pdf</v>
-<v>Dashboard\Dashboard\cy_clock_v2_20</v>
-<v>Dashboard\Dashboard\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Dashboard\Dashboard\cy_isr_v1_70</v>
-<v>Dashboard\Dashboard\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>Dashboard\Dashboard\cy_pins_v2_10</v>
-<v>Dashboard\Dashboard\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>Dashboard\Dashboard\cy_pins_v2_20</v>
-<v>Dashboard\Dashboard\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Dashboard\Dashboard\EEPROM_v3_0.pdf</v>
-<v>Dashboard\Dashboard\Gnd_v1_0</v>
-<v>Dashboard\Dashboard\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Dashboard\Dashboard\GraphicLCDIntf_v1_80.pdf</v>
-<v>Dashboard\Dashboard\SwitchSPST_v1_0</v>
-<v>Dashboard\Dashboard\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
-<v>Dashboard\Dashboard\Timer_v2_70</v>
-<v>Dashboard\Dashboard\Timer_v2_70\Timer_v2_70.pdf</v>
-<v>Dashboard\Dashboard\Timer_v2_80</v>
-<v>Dashboard\Dashboard\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>Dashboard\Dashboard\ZeroTerminal</v>
-<v>Dashboard\Dashboard\ZeroTerminal\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Dashboard</v>
@@ -263,29 +240,6 @@
 <v>Dashboard\Dashboard\PSoC 5LP Architecture TRM</v>
 <v>Dashboard\Dashboard\CY8C58LP Family Datasheet</v>
 <v>Dashboard\Dashboard\System Reference Guides</v>
-<v>Dashboard\Dashboard\System Reference Guides\cy_boot_v5_30</v>
-<v>Dashboard\Dashboard\ADC_DelSig_v3_20.pdf</v>
-<v>Dashboard\Dashboard\CAN_v3_0.pdf</v>
-<v>Dashboard\Dashboard\cy_clock_v2_20</v>
-<v>Dashboard\Dashboard\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Dashboard\Dashboard\cy_isr_v1_70</v>
-<v>Dashboard\Dashboard\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
-<v>Dashboard\Dashboard\cy_pins_v2_10</v>
-<v>Dashboard\Dashboard\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>Dashboard\Dashboard\cy_pins_v2_20</v>
-<v>Dashboard\Dashboard\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
-<v>Dashboard\Dashboard\EEPROM_v3_0.pdf</v>
-<v>Dashboard\Dashboard\Gnd_v1_0</v>
-<v>Dashboard\Dashboard\Gnd_v1_0\Gnd_v1_0.pdf</v>
-<v>Dashboard\Dashboard\GraphicLCDIntf_v1_80.pdf</v>
-<v>Dashboard\Dashboard\SwitchSPST_v1_0</v>
-<v>Dashboard\Dashboard\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
-<v>Dashboard\Dashboard\Timer_v2_70</v>
-<v>Dashboard\Dashboard\Timer_v2_70\Timer_v2_70.pdf</v>
-<v>Dashboard\Dashboard\Timer_v2_80</v>
-<v>Dashboard\Dashboard\Timer_v2_80\Timer_v2_80.pdf</v>
-<v>Dashboard\Dashboard\ZeroTerminal</v>
-<v>Dashboard\Dashboard\ZeroTerminal\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -301,8 +255,9 @@
 <name v=".\Dashboard.cydsn\frucd_display.c" />
 <name v=".\Dashboard.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Dashboard.cydsn\Dashboard.cydwr" />
-<name v=".\Dashboard.cydsn\data.h" />
-<name v=".\Dashboard.cydsn\frucd_display.h" />
+<name v=".\Dashboard.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" />
+<name v=".\Dashboard.cydsn\Generated_Source\PSoC5\CAN.h" />
+<name v=".\Dashboard.cydsn\Generated_Source\PSoC5\CAN_INT.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -310,7 +265,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="811, 529" SelectedTabbedMdiWindow="c304d096-d029-463c-a091-c839ea4066a8"><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\main.c" Guid="c304d096-d029-463c-a091-c839ea4066a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.c" Guid="0fc62bc8-84ee-43dd-82b8-4b1fda83b9a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.h" Guid="f9fe11b9-04d9-4fd4-a8b6-fadf44002954" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.c" Guid="22f853a3-0cee-45c5-a6db-1a0249837f3f" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch" Guid="d6d292dc-13bc-484e-a8b7-3f3ad372769e" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr" Guid="bd3f92d9-d20d-4a22-af53-6eab28e2ebbe" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\data.h" Guid="c9c07645-4793-4334-a1af-e4720d9796c6" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.h" Guid="f35d5ecf-0e6b-4ba1-961b-9b2a3ee5713d" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="811, 529" SelectedTabbedMdiWindow="c304d096-d029-463c-a091-c839ea4066a8"><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\main.c" Guid="c304d096-d029-463c-a091-c839ea4066a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.c" Guid="0fc62bc8-84ee-43dd-82b8-4b1fda83b9a8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\can_manga.h" Guid="f9fe11b9-04d9-4fd4-a8b6-fadf44002954" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\frucd_display.c" Guid="22f853a3-0cee-45c5-a6db-1a0249837f3f" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch" Guid="d6d292dc-13bc-484e-a8b7-3f3ad372769e" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr" Guid="bd3f92d9-d20d-4a22-af53-6eab28e2ebbe" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f10ed5c4-555d-4dbb-9274-d8a6404f835c" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" Guid="5fec5d8a-968a-4ca7-a4bf-cbd020a7395f" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Generated_Source\PSoC5\CAN.h" Guid="1096e49f-ae96-4b55-bfcf-35bbd1320cf8" /><DocumentWindow Key="Z:\Documents\UCD\FRUCD\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Generated_Source\PSoC5\CAN_INT.c" Guid="d3a5f7cc-0331-42de-962f-c5aee24d8b55" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
