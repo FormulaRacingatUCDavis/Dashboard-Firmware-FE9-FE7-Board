@@ -49,11 +49,6 @@ int firstDrive = 0;
 /* Global variable used to store receive message mailbox number */
 //volatile uint8 receiveMailboxNumber = 0xFFu;
 
-void nodeCheckStart()
-{
-    Node_Timer_Start();
-    isr_nodeok_Start();
-}
 
 void displayData() {
     if(BSPD_CATCH == 1){
@@ -62,12 +57,6 @@ void displayData() {
     }
 }
 
-CY_ISR(ISR_WDT){
-    WDT_Timer_STATUS;
-    WDT_Reset_Write(0);
-    CyDelay(100);
-    WDT_Reset_Write(1);
-}
 
 /* Switch debounce delay in milliseconds */
 #define SWITCH_DEBOUNCE_UNIT   (1u)
@@ -115,7 +104,6 @@ volatile uint16 motor_temp = 0;
 
 int main()
 {   
-    EEPROM_1_Start();
     
     /*UG_COLOR color[3];
     color[0] = C_RED;
@@ -142,12 +130,6 @@ int main()
 
     CyGlobalIntEnable;
     
-    nodeCheckStart();
-    
-    // WatchDog Timer
-    WDT_Timer_Start();
-    isr_wdt_StartEx(ISR_WDT);
-    
     int bms_error;
     int faulted = 0;
     
@@ -165,8 +147,6 @@ int main()
     
     for(;;)
     {
-        
-        LED_Write(1);
         
         // Check if all nodes are OK
         if (pedalOK > PEDAL_TIMEOUT)
@@ -416,33 +396,6 @@ int main()
 
         
     } 
-}
-
-/*******************************************************************************
-* Function Name: ISR_CAN
-********************************************************************************
-*
-* Summary:
-*  This ISR is executed at a Receive Message event and set receiveMailboxNumber
-*  global variable with receive message mailbox number.
-*
-* Parameters:
-*  None.
-*
-* Return:
-*  None.
-*
-*******************************************************************************/
-CY_ISR(ISR_CAN)
-{   
-    /* Clear Receive Message flag */
-    CAN_INT_SR_REG.byte[1u] = CAN_RX_MESSAGE_MASK;
-
-    /* Set the isrFlag */
-    //isrFlag = 1u;    
-
-    /* Acknowledges receipt of new message */
-    //CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
 }
 
 

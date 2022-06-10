@@ -25,7 +25,32 @@
 #include "cyapicallbacks.h"
 
 /* `#START TX_RX_FUNCTION` */
+#include "data.h"
 
+extern volatile vcu_state state;
+extern volatile uint32_t pedalOK;
+extern volatile uint8_t PACK_TEMP;
+extern volatile uint8_t BSPD_CATCH;
+extern volatile uint16_t CURRENT;
+//extern volatile int ERROR_NODE;
+//extern volatile int ERROR_IDX;
+extern volatile uint8_t soc;
+extern volatile uint32_t voltage;
+extern volatile BMS_STATUS bms_status;
+extern volatile uint8_t shutdown_flags;
+
+// info from MC and motor
+extern volatile uint16_t mc_temp;
+extern volatile uint16_t motor_temp;
+
+extern volatile uint8_t CAPACITOR_VOLT;
+extern volatile uint8_t CURTIS_FAULT_CHECK;
+extern volatile uint8_t CURTIS_HEART_BEAT_CHECK;
+extern volatile uint8_t ACK_RX;
+extern volatile uint8_t ERROR_TOLERANCE;
+extern volatile uint8_t ABS_MOTOR_RPM;
+extern volatile uint8_t THROTTLE_HIGH;
+extern volatile uint8_t THROTTLE_LOW;
 /* `#END` */
 
 
@@ -629,14 +654,14 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
         {
             /* `#START MESSAGE_BASIC_RECEIVED` */
             
-            int ID = CAN_GET_RX_ID(rxMailbox);
+            /*int ID = CAN_GET_RX_ID(rxMailbox);
             CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
             uint8_t data[8];
             int i = 0;
             for (i = 0; i < 8; i++)
                 data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
             
-            can_receive(data, ID);
+            can_receive(data, ID);*/
             /* `#END` */
 
             #ifdef CAN_RECEIVE_MSG_CALLBACK
@@ -784,10 +809,8 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgMC_PDO_SEND(void) 
     {
         /* `#START MESSAGE_MC_PDO_SEND_RECEIVED` */
-        CAPACITOR_VOLT = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_MC_PDO_SEND);
-        ABS_MOTOR_RPM = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_MC_PDO_SEND);
-        mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_SEND) << 8;
-        mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_SEND);
+        motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
         
         /* `#END` */
 
@@ -823,9 +846,8 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgMC_PDO_ACK(void) 
     {
         /* `#START MESSAGE_MC_PDO_ACK_RECEIVED` */
-        ACK_RX = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_MC_PDO_ACK);
-        motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
-        motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
+        mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
 
         /* `#END` */
 
@@ -861,6 +883,9 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgPEI_CURRENT(void) 
     {
         /* `#START MESSAGE_PEI_CURRENT_RECEIVED` */
+        CURRENT = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_PEI_CURRENT) << 8;
+        CURRENT |= CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_PEI_CURRENT);
+        shutdown_flags = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_PEI_CURRENT);
 
         /* `#END` */
 

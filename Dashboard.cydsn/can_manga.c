@@ -194,7 +194,10 @@ void can_send(uint8_t data[8], uint32_t ID)
 void can_send_switches(
     uint8_t sw_status)
 {
-    //max and min voltage means the voltage of single cell
+        CAN_TX_DATA_BYTE1(CAN_TX_MAILBOX_DRIVER_SWITCHES) = sw_status; 
+        CAN_SendMsgDRIVER_SWITCHES(); 
+    
+        /*
         uint8_t data[8];
         
         data[0] = sw_status;
@@ -209,7 +212,7 @@ void can_send_switches(
         data[7] = 0;
 
         can_send(data, DRIVER_SWITCHES);
-
+*/
         
 } // can_send_status()
 
