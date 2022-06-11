@@ -1,5 +1,5 @@
 # Dashboard
-# 2022-06-09 21:24:52Z
+# 2022-06-10 19:44:30Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -29,7 +29,7 @@ set_io "D_CS(0)" iocell 12 1
 set_io "D_WR(0)" iocell 4 5
 set_io "D_BL(0)" iocell 4 7
 set_io "D_RST(0)" iocell 12 0
-set_io "IMD_LED(0)" iocell 3 3
-set_io "BMS_LED(0)" iocell 5 1
+set_io "BMS_LED(0)" iocell 3 3
+set_io "IMD_LED(0)" iocell 5 1
 set_io "GLV_V(0)" iocell 3 2
 set_location "\ADC_GLV_V:DSM\" dsmodcell -1 -1 0

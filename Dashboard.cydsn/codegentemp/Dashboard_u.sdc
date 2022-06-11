@@ -1,6 +1,6 @@
 # Component constraints for C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch
 # Project: C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cyprj
-# Date: Thu, 09 Jun 2022 21:24:48 GMT
+# Date: Fri, 10 Jun 2022 19:44:23 GMT
 # GraphicLCDIntf
 # False paths present for both 8 and 16 bits Graphic LCD Interface configurations 
 expr {(8) == 8 ?

@@ -12278,41 +12278,41 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  934              	.set RGB3_1__SLW, CYREG_PRT2_SLW
  935              	
  936              	/* BMS_LED */
- 937              	.set BMS_LED__0__INTTYPE, CYREG_PICU5_INTTYPE1
- 938              	.set BMS_LED__0__MASK, 0x02
- 939              	.set BMS_LED__0__PC, CYREG_PRT5_PC1
- 940              	.set BMS_LED__0__PORT, 5
- 941              	.set BMS_LED__0__SHIFT, 1
- 942              	.set BMS_LED__AG, CYREG_PRT5_AG
- 943              	.set BMS_LED__AMUX, CYREG_PRT5_AMUX
- 944              	.set BMS_LED__BIE, CYREG_PRT5_BIE
- 945              	.set BMS_LED__BIT_MASK, CYREG_PRT5_BIT_MASK
- 946              	.set BMS_LED__BYP, CYREG_PRT5_BYP
- 947              	.set BMS_LED__CTL, CYREG_PRT5_CTL
- 948              	.set BMS_LED__DM0, CYREG_PRT5_DM0
- 949              	.set BMS_LED__DM1, CYREG_PRT5_DM1
- 950              	.set BMS_LED__DM2, CYREG_PRT5_DM2
- 951              	.set BMS_LED__DR, CYREG_PRT5_DR
- 952              	.set BMS_LED__INP_DIS, CYREG_PRT5_INP_DIS
- 953              	.set BMS_LED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU5_BASE
- 954              	.set BMS_LED__LCD_COM_SEG, CYREG_PRT5_LCD_COM_SEG
- 955              	.set BMS_LED__LCD_EN, CYREG_PRT5_LCD_EN
- 956              	.set BMS_LED__MASK, 0x02
+ 937              	.set BMS_LED__0__INTTYPE, CYREG_PICU3_INTTYPE3
+ 938              	.set BMS_LED__0__MASK, 0x08
+ 939              	.set BMS_LED__0__PC, CYREG_PRT3_PC3
+ 940              	.set BMS_LED__0__PORT, 3
+ 941              	.set BMS_LED__0__SHIFT, 3
+ 942              	.set BMS_LED__AG, CYREG_PRT3_AG
+ 943              	.set BMS_LED__AMUX, CYREG_PRT3_AMUX
+ 944              	.set BMS_LED__BIE, CYREG_PRT3_BIE
+ 945              	.set BMS_LED__BIT_MASK, CYREG_PRT3_BIT_MASK
+ 946              	.set BMS_LED__BYP, CYREG_PRT3_BYP
+ 947              	.set BMS_LED__CTL, CYREG_PRT3_CTL
+ 948              	.set BMS_LED__DM0, CYREG_PRT3_DM0
+ 949              	.set BMS_LED__DM1, CYREG_PRT3_DM1
+ 950              	.set BMS_LED__DM2, CYREG_PRT3_DM2
+ 951              	.set BMS_LED__DR, CYREG_PRT3_DR
+ 952              	.set BMS_LED__INP_DIS, CYREG_PRT3_INP_DIS
+ 953              	.set BMS_LED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU3_BASE
+ 954              	.set BMS_LED__LCD_COM_SEG, CYREG_PRT3_LCD_COM_SEG
+ 955              	.set BMS_LED__LCD_EN, CYREG_PRT3_LCD_EN
+ 956              	.set BMS_LED__MASK, 0x08
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 206
 
 
- 957              	.set BMS_LED__PORT, 5
- 958              	.set BMS_LED__PRT, CYREG_PRT5_PRT
- 959              	.set BMS_LED__PRTDSI__CAPS_SEL, CYREG_PRT5_CAPS_SEL
- 960              	.set BMS_LED__PRTDSI__DBL_SYNC_IN, CYREG_PRT5_DBL_SYNC_IN
- 961              	.set BMS_LED__PRTDSI__OE_SEL0, CYREG_PRT5_OE_SEL0
- 962              	.set BMS_LED__PRTDSI__OE_SEL1, CYREG_PRT5_OE_SEL1
- 963              	.set BMS_LED__PRTDSI__OUT_SEL0, CYREG_PRT5_OUT_SEL0
- 964              	.set BMS_LED__PRTDSI__OUT_SEL1, CYREG_PRT5_OUT_SEL1
- 965              	.set BMS_LED__PRTDSI__SYNC_OUT, CYREG_PRT5_SYNC_OUT
- 966              	.set BMS_LED__PS, CYREG_PRT5_PS
- 967              	.set BMS_LED__SHIFT, 1
- 968              	.set BMS_LED__SLW, CYREG_PRT5_SLW
+ 957              	.set BMS_LED__PORT, 3
+ 958              	.set BMS_LED__PRT, CYREG_PRT3_PRT
+ 959              	.set BMS_LED__PRTDSI__CAPS_SEL, CYREG_PRT3_CAPS_SEL
+ 960              	.set BMS_LED__PRTDSI__DBL_SYNC_IN, CYREG_PRT3_DBL_SYNC_IN
+ 961              	.set BMS_LED__PRTDSI__OE_SEL0, CYREG_PRT3_OE_SEL0
+ 962              	.set BMS_LED__PRTDSI__OE_SEL1, CYREG_PRT3_OE_SEL1
+ 963              	.set BMS_LED__PRTDSI__OUT_SEL0, CYREG_PRT3_OUT_SEL0
+ 964              	.set BMS_LED__PRTDSI__OUT_SEL1, CYREG_PRT3_OUT_SEL1
+ 965              	.set BMS_LED__PRTDSI__SYNC_OUT, CYREG_PRT3_SYNC_OUT
+ 966              	.set BMS_LED__PS, CYREG_PRT3_PS
+ 967              	.set BMS_LED__SHIFT, 3
+ 968              	.set BMS_LED__SLW, CYREG_PRT3_SLW
  969              	
  970              	/* Clock_1 */
  971              	.set Clock_1__CFG0, CYREG_CLKDIST_DCFG1_CFG0
@@ -12326,38 +12326,38 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  979              	.set Clock_1__PM_STBY_MSK, 0x02
  980              	
  981              	/* IMD_LED */
- 982              	.set IMD_LED__0__INTTYPE, CYREG_PICU3_INTTYPE3
- 983              	.set IMD_LED__0__MASK, 0x08
- 984              	.set IMD_LED__0__PC, CYREG_PRT3_PC3
- 985              	.set IMD_LED__0__PORT, 3
- 986              	.set IMD_LED__0__SHIFT, 3
- 987              	.set IMD_LED__AG, CYREG_PRT3_AG
- 988              	.set IMD_LED__AMUX, CYREG_PRT3_AMUX
- 989              	.set IMD_LED__BIE, CYREG_PRT3_BIE
- 990              	.set IMD_LED__BIT_MASK, CYREG_PRT3_BIT_MASK
- 991              	.set IMD_LED__BYP, CYREG_PRT3_BYP
- 992              	.set IMD_LED__CTL, CYREG_PRT3_CTL
- 993              	.set IMD_LED__DM0, CYREG_PRT3_DM0
- 994              	.set IMD_LED__DM1, CYREG_PRT3_DM1
- 995              	.set IMD_LED__DM2, CYREG_PRT3_DM2
- 996              	.set IMD_LED__DR, CYREG_PRT3_DR
- 997              	.set IMD_LED__INP_DIS, CYREG_PRT3_INP_DIS
- 998              	.set IMD_LED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU3_BASE
- 999              	.set IMD_LED__LCD_COM_SEG, CYREG_PRT3_LCD_COM_SEG
- 1000              	.set IMD_LED__LCD_EN, CYREG_PRT3_LCD_EN
- 1001              	.set IMD_LED__MASK, 0x08
- 1002              	.set IMD_LED__PORT, 3
- 1003              	.set IMD_LED__PRT, CYREG_PRT3_PRT
- 1004              	.set IMD_LED__PRTDSI__CAPS_SEL, CYREG_PRT3_CAPS_SEL
- 1005              	.set IMD_LED__PRTDSI__DBL_SYNC_IN, CYREG_PRT3_DBL_SYNC_IN
- 1006              	.set IMD_LED__PRTDSI__OE_SEL0, CYREG_PRT3_OE_SEL0
- 1007              	.set IMD_LED__PRTDSI__OE_SEL1, CYREG_PRT3_OE_SEL1
- 1008              	.set IMD_LED__PRTDSI__OUT_SEL0, CYREG_PRT3_OUT_SEL0
- 1009              	.set IMD_LED__PRTDSI__OUT_SEL1, CYREG_PRT3_OUT_SEL1
- 1010              	.set IMD_LED__PRTDSI__SYNC_OUT, CYREG_PRT3_SYNC_OUT
- 1011              	.set IMD_LED__PS, CYREG_PRT3_PS
- 1012              	.set IMD_LED__SHIFT, 3
- 1013              	.set IMD_LED__SLW, CYREG_PRT3_SLW
+ 982              	.set IMD_LED__0__INTTYPE, CYREG_PICU5_INTTYPE1
+ 983              	.set IMD_LED__0__MASK, 0x02
+ 984              	.set IMD_LED__0__PC, CYREG_PRT5_PC1
+ 985              	.set IMD_LED__0__PORT, 5
+ 986              	.set IMD_LED__0__SHIFT, 1
+ 987              	.set IMD_LED__AG, CYREG_PRT5_AG
+ 988              	.set IMD_LED__AMUX, CYREG_PRT5_AMUX
+ 989              	.set IMD_LED__BIE, CYREG_PRT5_BIE
+ 990              	.set IMD_LED__BIT_MASK, CYREG_PRT5_BIT_MASK
+ 991              	.set IMD_LED__BYP, CYREG_PRT5_BYP
+ 992              	.set IMD_LED__CTL, CYREG_PRT5_CTL
+ 993              	.set IMD_LED__DM0, CYREG_PRT5_DM0
+ 994              	.set IMD_LED__DM1, CYREG_PRT5_DM1
+ 995              	.set IMD_LED__DM2, CYREG_PRT5_DM2
+ 996              	.set IMD_LED__DR, CYREG_PRT5_DR
+ 997              	.set IMD_LED__INP_DIS, CYREG_PRT5_INP_DIS
+ 998              	.set IMD_LED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU5_BASE
+ 999              	.set IMD_LED__LCD_COM_SEG, CYREG_PRT5_LCD_COM_SEG
+ 1000              	.set IMD_LED__LCD_EN, CYREG_PRT5_LCD_EN
+ 1001              	.set IMD_LED__MASK, 0x02
+ 1002              	.set IMD_LED__PORT, 5
+ 1003              	.set IMD_LED__PRT, CYREG_PRT5_PRT
+ 1004              	.set IMD_LED__PRTDSI__CAPS_SEL, CYREG_PRT5_CAPS_SEL
+ 1005              	.set IMD_LED__PRTDSI__DBL_SYNC_IN, CYREG_PRT5_DBL_SYNC_IN
+ 1006              	.set IMD_LED__PRTDSI__OE_SEL0, CYREG_PRT5_OE_SEL0
+ 1007              	.set IMD_LED__PRTDSI__OE_SEL1, CYREG_PRT5_OE_SEL1
+ 1008              	.set IMD_LED__PRTDSI__OUT_SEL0, CYREG_PRT5_OUT_SEL0
+ 1009              	.set IMD_LED__PRTDSI__OUT_SEL1, CYREG_PRT5_OUT_SEL1
+ 1010              	.set IMD_LED__PRTDSI__SYNC_OUT, CYREG_PRT5_SYNC_OUT
+ 1011              	.set IMD_LED__PS, CYREG_PRT5_PS
+ 1012              	.set IMD_LED__SHIFT, 1
+ 1013              	.set IMD_LED__SLW, CYREG_PRT5_SLW
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 207
 
 

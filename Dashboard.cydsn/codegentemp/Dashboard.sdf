@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2022-06-09T21:24:57Z")
+ (DATE "2022-06-10T19:44:37Z")
  (DESIGN "Dashboard")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -244,8 +244,8 @@
     (INTERCONNECT D_WR\(0\)_PAD D_WR\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT D_BL\(0\)_PAD D_BL\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT D_RST\(0\)_PAD D_RST\(0\).pad_in (0.000:0.000:0.000))
-    (INTERCONNECT IMD_LED\(0\)_PAD IMD_LED\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT BMS_LED\(0\)_PAD BMS_LED\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT IMD_LED\(0\)_PAD IMD_LED\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )

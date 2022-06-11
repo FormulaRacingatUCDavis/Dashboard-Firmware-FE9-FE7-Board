@@ -2,8 +2,8 @@
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
   <block name="D_RST" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="D_BL" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="BMS_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="IMD_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="BMS_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="D_RS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="D_WR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

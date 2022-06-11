@@ -178,8 +178,8 @@ int main()
         can_send_switches(switches);
         
         // indicator LEDs (active low)
-        BMS_LED_Write(!bms_status);
-        IMD_LED_Write(shutdown_flags & 0b00100000); // bitmask for IMD_OK
+        BMS_LED_Write((shutdown_flags >> 4) & 0x01); //bitmask for BMS_OK
+        IMD_LED_Write((shutdown_flags >> 5) & 0x01); // bitmask for IMD_OK 
         
         /*      START display latest data       */
         disp_SOC(soc);
