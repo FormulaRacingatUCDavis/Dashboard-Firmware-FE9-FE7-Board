@@ -679,7 +679,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX0_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgVEHICLE_STATE
+    * FUNCTION NAME:   CAN_ReceiveMsgTORQUE_REQUEST
     ********************************************************************************
     *
     * Summary:
@@ -697,15 +697,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgVEHICLE_STATE(void) 
+    void CAN_ReceiveMsgTORQUE_REQUEST(void) 
     {
-        /* `#START MESSAGE_VEHICLE_STATE_RECEIVED` */
-        state = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_VEHICLE_STATE);
+        /* `#START MESSAGE_TORQUE_REQUEST_RECEIVED` */
+        state = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_TORQUE_REQUEST);
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_VEHICLE_STATE_CALLBACK
-            CAN_ReceiveMsg_VEHICLE_STATE_Callback();
-        #endif /* CAN_RECEIVE_MSG_VEHICLE_STATE_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_TORQUE_REQUEST_CALLBACK
+            CAN_ReceiveMsg_TORQUE_REQUEST_Callback();
+        #endif /* CAN_RECEIVE_MSG_TORQUE_REQUEST_CALLBACK */
 
         CAN_RX[0u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
     }
@@ -1249,3 +1249,9 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 
 /* [] END OF FILE */
+#if 0 /* begin disabled code */
+`#start MESSAGE_VEHICLE_STATE_RECEIVED` -- section removed from template
+        state = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_VEHICLE_STATE);
+`#end`
+
+#endif /* end disabled code */

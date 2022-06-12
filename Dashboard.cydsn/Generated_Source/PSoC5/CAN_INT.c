@@ -428,7 +428,7 @@
                         /* RX Full mailboxes handler */
                         switch(mailboxNumber)
                         {
-                            case 0u : CAN_ReceiveMsgVEHICLE_STATE();
+                            case 0u : CAN_ReceiveMsgTORQUE_REQUEST();
                             break;
                             case 1u : CAN_ReceiveMsgBMS_STATUS_MSG();
                             break;

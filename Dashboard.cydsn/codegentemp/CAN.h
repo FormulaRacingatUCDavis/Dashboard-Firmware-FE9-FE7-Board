@@ -306,7 +306,7 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
     uint8 CAN_SendMsg7(void) ;
 #endif /* CAN_TX7_FUNC_ENABLE */
 #if (CAN_RX0_FUNC_ENABLE)
-    void CAN_ReceiveMsgVEHICLE_STATE(void) ;
+    void CAN_ReceiveMsgTORQUE_REQUEST(void) ;
 #endif /* CAN_RX0_FUNC_ENABLE */
 #if (CAN_RX1_FUNC_ENABLE)
     void CAN_ReceiveMsgBMS_STATUS_MSG(void) ;
@@ -421,7 +421,7 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 #define CAN_TX_MAILBOX_7               (7u)
 
 /* RX Defines to link mailbox names with mailbox numbers */
-#define CAN_RX_MAILBOX_VEHICLE_STATE   (0u)
+#define CAN_RX_MAILBOX_TORQUE_REQUEST  (0u)
 #define CAN_RX_MAILBOX_BMS_STATUS_MSG  (1u)
 #define CAN_RX_MAILBOX_BMS_TEMPERATURES (2u)
 #define CAN_RX_MAILBOX_MC_PDO_SEND     (3u)

@@ -64,7 +64,6 @@
 <v>Dashboard\Dashboard\Source Files\Display_Drivers\ugui_SSD1963.c</v>
 <v>Dashboard\Dashboard\Source Files\Display_Drivers\ugui_SSD1963.h</v>
 <v>Dashboard\Dashboard\Source Files\can_manga.c</v>
-<v>Dashboard\Dashboard\Source Files\can_manga.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -145,18 +144,6 @@
 <VisibleNodeIds>
 <v>Dashboard</v>
 <v>Dashboard\Dashboard</v>
-<v>Dashboard\Dashboard\CortexM3</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_AMux.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_Ext_CP_Clk.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_INT.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_IRQ.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_PM.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_GLV_V_theACLK.lst</v>
-<v>Dashboard\Dashboard\CortexM3\ARM_GCC_541\Debug\Listing Files\BMS_LED.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -203,7 +190,6 @@
 <v>Dashboard\Dashboard\cy_isr_v1_70.pdf</v>
 <v>Dashboard\Dashboard\cy_pins_v2_10</v>
 <v>Dashboard\Dashboard\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
-<v>Dashboard\Dashboard\cy_pins_v2_20</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
