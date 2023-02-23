@@ -82,6 +82,10 @@ volatile BMS_STATUS bms_status = NO_ERROR;
 volatile uint16 mc_temp = 0;
 volatile uint16 motor_temp = 0;
 
+
+UG_WINDOW w1; 
+UG_IMAGE i1;
+
 /*******************************************************************************
 * Function Name: main
 ********************************************************************************
@@ -183,6 +187,8 @@ int main()
         
         /*      START display latest data       */
         disp_SOC(soc);
+        
+        if(PACK_TEMP > 99) PACK_TEMP = 99;  //make sure temp is no more than 2 digits```
         disp_max_pack_temp(PACK_TEMP);
         
         disp_state(state);

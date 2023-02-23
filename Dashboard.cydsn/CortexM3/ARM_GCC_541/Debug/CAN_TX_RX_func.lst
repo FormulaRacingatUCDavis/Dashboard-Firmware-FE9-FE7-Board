@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
   28:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #include "data.h"
   29:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
   30:Generated_Source\PSoC5/CAN_TX_RX_func.c **** extern volatile vcu_state state;
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 2
 
 
   31:Generated_Source\PSoC5/CAN_TX_RX_func.c **** extern volatile uint32_t pedalOK;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
   34              		.cfi_def_cfa_offset 20
   35              		.cfi_offset 4, -20
   36              		.cfi_offset 5, -16
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 3
 
 
   37              		.cfi_offset 6, -12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
   63              	.L4:
   64              	.LVL4:
  106:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 4
 
 
  107:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  125:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
  126:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  127:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         if (message->irq != CAN_TRANSMIT_INT_DISABLE)
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 5
 
 
  101              		.loc 1 127 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  136:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             #else /* CY_PSOC4 */
  137:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j, message->msg->byte[j]);
  138:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 6
 
 
  139:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  168 00ac DFB2     		uxtb	r7, r3
  169              	.LVL17:
  169:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 7
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 7
 
 
  170              		.loc 1 169 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  205              	.L23:
  206              		.align	2
  207              	.L22:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 8
 
 
  208 00cc 08A00040 		.word	1073782792
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  240              	.L24:
  241 0014 7047     		bx	lr
  242              	.L27:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 9
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 9
 
 
  243 0016 00BF     		.align	2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  266 0004 13F0010F 		tst	r3, #1
  267 0008 06D1     		bne	.L30
  239:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 10
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 10
 
 
  240:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(0u) & CAN_TX_REQUEST_PENDING) != 0u)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  263:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  264:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX1_FUNC_ENABLE)
  265:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 11
 
 
  266:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  320:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
  321:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
  322:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 12
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 12
 
 
  323:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  377:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
  378:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
  379:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 13
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 13
 
 
  380:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  434:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
  435:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
  436:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 14
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 14
 
 
  437:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  491:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
  492:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
  493:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg5(void) 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 15
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 15
 
 
  494:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  548:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  549:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
  550:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 16
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 16
 
 
  551:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  605:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
  606:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
  607:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 17
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 17
 
 
  608:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  308 0006 12F0010F 		tst	r2, #1
  309 000a 03D0     		beq	.L33
  651:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 18
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 18
 
 
  652:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  685:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
  686:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
  687:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 19
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 19
 
 
  688:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  362              	.LFB68:
  711:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
  712:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX0_FUNC_ENABLE */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 20
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 20
 
 
  713:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
@@ -1171,2135 +1171,2134 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 1
  366              		@ frame_needed = 0, uses_anonymous_args = 0
  367              		@ link register save eliminated.
  737:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_BMS_STATUS_MSG_RECEIVED` */
- 738:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         soc = CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_BMS_STATUS_MSG);
+ 738:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         PACK_TEMP = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_BMS_STATUS_MSG);
  368              		.loc 1 738 0
- 369 0000 094B     		ldr	r3, .L41
- 370 0002 9A7A     		ldrb	r2, [r3, #10]	@ zero_extendqisi2
+ 369 0000 0C4B     		ldr	r3, .L41
+ 370 0002 DA7A     		ldrb	r2, [r3, #11]	@ zero_extendqisi2
  371 0004 D2B2     		uxtb	r2, r2
- 372 0006 0949     		ldr	r1, .L41+4
+ 372 0006 0C49     		ldr	r1, .L41+4
  373 0008 0A70     		strb	r2, [r1]
- 739:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         bms_status = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_BMS_STATUS_MSG) << 8;    // bms error flags
+ 739:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         soc = CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_BMS_STATUS_MSG);
  374              		.loc 1 739 0
- 375 000a 5A7A     		ldrb	r2, [r3, #9]	@ zero_extendqisi2
- 376 000c 1202     		lsls	r2, r2, #8
- 377 000e 0849     		ldr	r1, .L41+8
- 378 0010 0A80     		strh	r2, [r1]	@ movhi
- 740:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         bms_status |= CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_BMS_STATUS_MSG);        // bms error flags
+ 375 000a 9A7A     		ldrb	r2, [r3, #10]	@ zero_extendqisi2
+ 376 000c D2B2     		uxtb	r2, r2
+ 377 000e 0B49     		ldr	r1, .L41+8
+ 378 0010 0A70     		strb	r2, [r1]
+ 740:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         bms_status = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_BMS_STATUS_MSG) << 8;    // bms error flags
  379              		.loc 1 740 0
- 380 0012 187A     		ldrb	r0, [r3, #8]	@ zero_extendqisi2
- 381 0014 0A88     		ldrh	r2, [r1]
- 382 0016 92B2     		uxth	r2, r2
- 383 0018 0243     		orrs	r2, r2, r0
- 384 001a 0A80     		strh	r2, [r1]	@ movhi
- 741:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
- 742:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
- 743:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 744:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK
- 745:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_BMS_STATUS_MSG_Callback();
- 746:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK */
- 747:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 21
+ 380 0012 5A7A     		ldrb	r2, [r3, #9]	@ zero_extendqisi2
+ 381 0014 1202     		lsls	r2, r2, #8
+ 382 0016 0A49     		ldr	r1, .L41+12
+ 383 0018 0A80     		strh	r2, [r1]	@ movhi
+ 741:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         bms_status |= CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_BMS_STATUS_MSG);        // bms error flags
+ 384              		.loc 1 741 0
+ 385 001a 187A     		ldrb	r0, [r3, #8]	@ zero_extendqisi2
+ 386 001c 0A88     		ldrh	r2, [r1]
+ 387 001e 92B2     		uxth	r2, r2
+ 388 0020 0243     		orrs	r2, r2, r0
+ 389 0022 0A80     		strh	r2, [r1]	@ movhi
+ 742:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_BMS_STATUS_MSG);
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 21
 
 
- 748:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[1u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 385              		.loc 1 748 0
- 386 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 387 001e 42F00102 		orr	r2, r2, #1
- 388 0022 1A70     		strb	r2, [r3]
- 389 0024 7047     		bx	lr
- 390              	.L42:
- 391 0026 00BF     		.align	2
- 392              	.L41:
- 393 0028 C0A00040 		.word	1073782976
- 394 002c 00000000 		.word	soc
- 395 0030 00000000 		.word	bms_status
- 396              		.cfi_endproc
- 397              	.LFE68:
- 398              		.size	CAN_ReceiveMsgBMS_STATUS_MSG, .-CAN_ReceiveMsgBMS_STATUS_MSG
- 399              		.section	.text.CAN_ReceiveMsgBMS_TEMPERATURES,"ax",%progbits
+ 390              		.loc 1 742 0
+ 391 0024 DA7B     		ldrb	r2, [r3, #15]	@ zero_extendqisi2
+ 392 0026 0749     		ldr	r1, .L41+16
+ 393 0028 0A80     		strh	r2, [r1]	@ movhi
+ 743:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
+ 744:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 745:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 746:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK
+ 747:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_BMS_STATUS_MSG_Callback();
+ 748:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_BMS_STATUS_MSG_CALLBACK */
+ 749:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 750:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[1u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 394              		.loc 1 750 0
+ 395 002a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 396 002c 42F00102 		orr	r2, r2, #1
+ 397 0030 1A70     		strb	r2, [r3]
+ 398 0032 7047     		bx	lr
+ 399              	.L42:
  400              		.align	2
- 401              		.global	CAN_ReceiveMsgBMS_TEMPERATURES
- 402              		.thumb
- 403              		.thumb_func
- 404              		.type	CAN_ReceiveMsgBMS_TEMPERATURES, %function
- 405              	CAN_ReceiveMsgBMS_TEMPERATURES:
- 406              	.LFB69:
- 749:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 750:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX1_FUNC_ENABLE */
- 751:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 752:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 753:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX2_FUNC_ENABLE)
- 754:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 755:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgBMS_TEMPERATURES
- 756:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 757:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 758:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 759:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 2 Interrupt. Clears the
- 760:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 2 interrupt flag. Generated only for the Receive mailbox
- 761:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
- 762:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 763:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 764:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 765:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 766:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 767:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 768:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 769:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
- 770:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
- 771:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 772:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 773:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgBMS_TEMPERATURES(void) 
- 774:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 407              		.loc 1 774 0
- 408              		.cfi_startproc
- 409              		@ args = 0, pretend = 0, frame = 0
- 410              		@ frame_needed = 0, uses_anonymous_args = 0
- 411              		@ link register save eliminated.
- 775:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_BMS_TEMPERATURES_RECEIVED` */
- 776:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         PACK_TEMP = CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_BMS_TEMPERATURES);
- 412              		.loc 1 776 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 22
+ 401              	.L41:
+ 402 0034 C0A00040 		.word	1073782976
+ 403 0038 00000000 		.word	PACK_TEMP
+ 404 003c 00000000 		.word	soc
+ 405 0040 00000000 		.word	bms_status
+ 406 0044 00000000 		.word	motor_temp
+ 407              		.cfi_endproc
+ 408              	.LFE68:
+ 409              		.size	CAN_ReceiveMsgBMS_STATUS_MSG, .-CAN_ReceiveMsgBMS_STATUS_MSG
+ 410              		.section	.text.CAN_ReceiveMsgBMS_TEMPERATURES,"ax",%progbits
+ 411              		.align	2
+ 412              		.global	CAN_ReceiveMsgBMS_TEMPERATURES
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.type	CAN_ReceiveMsgBMS_TEMPERATURES, %function
+ 416              	CAN_ReceiveMsgBMS_TEMPERATURES:
+ 417              	.LFB69:
+ 751:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 752:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX1_FUNC_ENABLE */
+ 753:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 754:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 755:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX2_FUNC_ENABLE)
+ 756:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 757:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgBMS_TEMPERATURES
+ 758:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 759:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 760:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 761:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 2 Interrupt. Clears the
+ 762:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 2 interrupt flag. Generated only for the Receive mailbox
+ 763:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 764:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 765:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 766:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 767:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 768:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 769:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 770:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 771:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 22
 
 
- 413 0000 044B     		ldr	r3, .L44
- 414 0002 1A7B     		ldrb	r2, [r3, #12]	@ zero_extendqisi2
- 415 0004 D2B2     		uxtb	r2, r2
- 416 0006 0449     		ldr	r1, .L44+4
- 417 0008 0A70     		strb	r2, [r1]
- 777:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
- 778:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
- 779:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 780:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK
- 781:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_BMS_TEMPERATURES_Callback();
- 782:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK */
- 783:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 784:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[2u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 418              		.loc 1 784 0
- 419 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 420 000c 42F00102 		orr	r2, r2, #1
- 421 0010 1A70     		strb	r2, [r3]
- 422 0012 7047     		bx	lr
- 423              	.L45:
- 424              		.align	2
- 425              	.L44:
- 426 0014 E0A00040 		.word	1073783008
- 427 0018 00000000 		.word	PACK_TEMP
- 428              		.cfi_endproc
- 429              	.LFE69:
- 430              		.size	CAN_ReceiveMsgBMS_TEMPERATURES, .-CAN_ReceiveMsgBMS_TEMPERATURES
- 431              		.section	.text.CAN_ReceiveMsgMC_PDO_SEND,"ax",%progbits
- 432              		.align	2
- 433              		.global	CAN_ReceiveMsgMC_PDO_SEND
- 434              		.thumb
- 435              		.thumb_func
- 436              		.type	CAN_ReceiveMsgMC_PDO_SEND, %function
- 437              	CAN_ReceiveMsgMC_PDO_SEND:
- 438              	.LFB70:
- 785:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 786:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX2_FUNC_ENABLE */
- 787:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 788:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 789:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX3_FUNC_ENABLE)
- 790:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 791:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_SEND
- 792:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 793:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 794:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 795:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 3 Interrupt. Clears the
- 796:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 3 interrupt flag. Generated only for the Receive mailbox
- 797:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
- 798:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 799:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 800:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 801:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 802:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 803:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 804:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 805:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
- 806:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
- 807:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 23
+ 772:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 773:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 774:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 775:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgBMS_TEMPERATURES(void) 
+ 776:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 418              		.loc 1 776 0
+ 419              		.cfi_startproc
+ 420              		@ args = 0, pretend = 0, frame = 0
+ 421              		@ frame_needed = 0, uses_anonymous_args = 0
+ 422              		@ link register save eliminated.
+ 777:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_BMS_TEMPERATURES_RECEIVED` */
+ 778:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         PACK_TEMP = CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_BMS_TEMPERATURES);
+ 423              		.loc 1 778 0
+ 424 0000 044B     		ldr	r3, .L44
+ 425 0002 1A7B     		ldrb	r2, [r3, #12]	@ zero_extendqisi2
+ 426 0004 D2B2     		uxtb	r2, r2
+ 427 0006 0449     		ldr	r1, .L44+4
+ 428 0008 0A70     		strb	r2, [r1]
+ 779:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
+ 780:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 781:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 782:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK
+ 783:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_BMS_TEMPERATURES_Callback();
+ 784:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_BMS_TEMPERATURES_CALLBACK */
+ 785:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 786:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[2u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 429              		.loc 1 786 0
+ 430 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 431 000c 42F00102 		orr	r2, r2, #1
+ 432 0010 1A70     		strb	r2, [r3]
+ 433 0012 7047     		bx	lr
+ 434              	.L45:
+ 435              		.align	2
+ 436              	.L44:
+ 437 0014 E0A00040 		.word	1073783008
+ 438 0018 00000000 		.word	PACK_TEMP
+ 439              		.cfi_endproc
+ 440              	.LFE69:
+ 441              		.size	CAN_ReceiveMsgBMS_TEMPERATURES, .-CAN_ReceiveMsgBMS_TEMPERATURES
+ 442              		.section	.text.CAN_ReceiveMsgMC_PDO_SEND,"ax",%progbits
+ 443              		.align	2
+ 444              		.global	CAN_ReceiveMsgMC_PDO_SEND
+ 445              		.thumb
+ 446              		.thumb_func
+ 447              		.type	CAN_ReceiveMsgMC_PDO_SEND, %function
+ 448              	CAN_ReceiveMsgMC_PDO_SEND:
+ 449              	.LFB70:
+ 787:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 788:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX2_FUNC_ENABLE */
+ 789:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 790:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 791:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX3_FUNC_ENABLE)
+ 792:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 793:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_SEND
+ 794:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 795:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 796:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 23
 
 
- 808:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 809:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgMC_PDO_SEND(void) 
- 810:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 439              		.loc 1 810 0
- 440              		.cfi_startproc
- 441              		@ args = 0, pretend = 0, frame = 0
- 442              		@ frame_needed = 0, uses_anonymous_args = 0
- 443              		@ link register save eliminated.
- 811:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_MC_PDO_SEND_RECEIVED` */
- 812:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
- 444              		.loc 1 812 0
- 445 0000 0749     		ldr	r1, .L47
- 446 0002 CB7B     		ldrb	r3, [r1, #15]	@ zero_extendqisi2
- 447 0004 1B02     		lsls	r3, r3, #8
- 448 0006 074A     		ldr	r2, .L47+4
- 449 0008 1380     		strh	r3, [r2]	@ movhi
- 813:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
- 450              		.loc 1 813 0
- 451 000a 897B     		ldrb	r1, [r1, #14]	@ zero_extendqisi2
- 452 000c 1388     		ldrh	r3, [r2]
- 453 000e 9BB2     		uxth	r3, r3
- 454 0010 0B43     		orrs	r3, r3, r1
- 455 0012 1380     		strh	r3, [r2]	@ movhi
- 814:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
- 815:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
- 816:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 817:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK
- 818:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_MC_PDO_SEND_Callback();
- 819:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK */
- 820:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 821:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[3u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 456              		.loc 1 821 0
- 457 0014 044A     		ldr	r2, .L47+8
- 458 0016 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 459 0018 43F00103 		orr	r3, r3, #1
- 460 001c 1370     		strb	r3, [r2]
- 461 001e 7047     		bx	lr
- 462              	.L48:
- 463              		.align	2
- 464              	.L47:
- 465 0020 20A10040 		.word	1073783072
- 466 0024 00000000 		.word	motor_temp
- 467 0028 00A10040 		.word	1073783040
- 468              		.cfi_endproc
- 469              	.LFE70:
- 470              		.size	CAN_ReceiveMsgMC_PDO_SEND, .-CAN_ReceiveMsgMC_PDO_SEND
- 471              		.section	.text.CAN_ReceiveMsgMC_PDO_ACK,"ax",%progbits
- 472              		.align	2
- 473              		.global	CAN_ReceiveMsgMC_PDO_ACK
- 474              		.thumb
- 475              		.thumb_func
- 476              		.type	CAN_ReceiveMsgMC_PDO_ACK, %function
- 477              	CAN_ReceiveMsgMC_PDO_ACK:
- 478              	.LFB71:
- 822:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 823:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX3_FUNC_ENABLE */
- 824:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 24
+ 797:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 3 Interrupt. Clears the
+ 798:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 3 interrupt flag. Generated only for the Receive mailbox
+ 799:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 800:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 801:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 802:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 803:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 804:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 805:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 806:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 807:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ 808:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 809:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 810:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 811:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgMC_PDO_SEND(void) 
+ 812:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 450              		.loc 1 812 0
+ 451              		.cfi_startproc
+ 452              		@ args = 0, pretend = 0, frame = 0
+ 453              		@ frame_needed = 0, uses_anonymous_args = 0
+ 454              		@ link register save eliminated.
+ 813:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_MC_PDO_SEND_RECEIVED` */
+ 814:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         //motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+ 815:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         //motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
+ 816:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         
+ 817:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 818:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 819:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK
+ 820:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_MC_PDO_SEND_Callback();
+ 821:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_MC_PDO_SEND_CALLBACK */
+ 822:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 823:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[3u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 455              		.loc 1 823 0
+ 456 0000 024A     		ldr	r2, .L47
+ 457 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 458 0004 43F00103 		orr	r3, r3, #1
+ 459 0008 1370     		strb	r3, [r2]
+ 460 000a 7047     		bx	lr
+ 461              	.L48:
+ 462              		.align	2
+ 463              	.L47:
+ 464 000c 00A10040 		.word	1073783040
+ 465              		.cfi_endproc
+ 466              	.LFE70:
+ 467              		.size	CAN_ReceiveMsgMC_PDO_SEND, .-CAN_ReceiveMsgMC_PDO_SEND
+ 468              		.section	.text.CAN_ReceiveMsgMC_PDO_ACK,"ax",%progbits
+ 469              		.align	2
+ 470              		.global	CAN_ReceiveMsgMC_PDO_ACK
+ 471              		.thumb
+ 472              		.thumb_func
+ 473              		.type	CAN_ReceiveMsgMC_PDO_ACK, %function
+ 474              	CAN_ReceiveMsgMC_PDO_ACK:
+ 475              	.LFB71:
+ 824:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 825:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX3_FUNC_ENABLE */
+ 826:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 827:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 24
 
 
- 825:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 826:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX4_FUNC_ENABLE)
- 827:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 828:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_ACK
- 829:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 830:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 831:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 832:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 4 Interrupt. Clears the
- 833:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 4 interrupt flag. Generated only for the Receive mailbox
- 834:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
- 835:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 836:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 837:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 838:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 839:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 840:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 841:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 842:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
- 843:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
- 844:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 845:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 846:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgMC_PDO_ACK(void) 
- 847:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 479              		.loc 1 847 0
- 480              		.cfi_startproc
- 481              		@ args = 0, pretend = 0, frame = 0
- 482              		@ frame_needed = 0, uses_anonymous_args = 0
- 483              		@ link register save eliminated.
- 848:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_MC_PDO_ACK_RECEIVED` */
- 849:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
- 484              		.loc 1 849 0
- 485 0000 074A     		ldr	r2, .L50
- 486 0002 537B     		ldrb	r3, [r2, #13]	@ zero_extendqisi2
- 487 0004 1B02     		lsls	r3, r3, #8
- 488 0006 0749     		ldr	r1, .L50+4
- 489 0008 0B80     		strh	r3, [r1]	@ movhi
- 850:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
- 490              		.loc 1 850 0
- 491 000a 107B     		ldrb	r0, [r2, #12]	@ zero_extendqisi2
- 492 000c 0B88     		ldrh	r3, [r1]
- 493 000e 9BB2     		uxth	r3, r3
- 494 0010 0344     		add	r3, r3, r0
- 495 0012 9BB2     		uxth	r3, r3
- 496 0014 0B80     		strh	r3, [r1]	@ movhi
- 851:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 852:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 828:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX4_FUNC_ENABLE)
+ 829:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 830:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgMC_PDO_ACK
+ 831:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 832:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 833:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 834:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 4 Interrupt. Clears the
+ 835:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 4 interrupt flag. Generated only for the Receive mailbox
+ 836:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 837:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 838:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 839:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 840:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 841:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 842:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 843:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 844:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ 845:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 846:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 847:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 848:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgMC_PDO_ACK(void) 
+ 849:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 476              		.loc 1 849 0
+ 477              		.cfi_startproc
+ 478              		@ args = 0, pretend = 0, frame = 0
+ 479              		@ frame_needed = 0, uses_anonymous_args = 0
+ 480              		@ link register save eliminated.
+ 850:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_MC_PDO_ACK_RECEIVED` */
+ 851:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+ 481              		.loc 1 851 0
+ 482 0000 074A     		ldr	r2, .L50
+ 483 0002 537B     		ldrb	r3, [r2, #13]	@ zero_extendqisi2
+ 484 0004 1B02     		lsls	r3, r3, #8
+ 485 0006 0749     		ldr	r1, .L50+4
+ 486 0008 0B80     		strh	r3, [r1]	@ movhi
+ 852:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
+ 487              		.loc 1 852 0
+ 488 000a 107B     		ldrb	r0, [r2, #12]	@ zero_extendqisi2
+ 489 000c 0B88     		ldrh	r3, [r1]
+ 490 000e 9BB2     		uxth	r3, r3
+ 491 0010 0344     		add	r3, r3, r0
+ 492 0012 9BB2     		uxth	r3, r3
+ 493 0014 0B80     		strh	r3, [r1]	@ movhi
  853:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 854:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK
- 855:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_MC_PDO_ACK_Callback();
- 856:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK */
- 857:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 858:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[4u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 497              		.loc 1 858 0
- 498 0016 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 499 0018 43F00103 		orr	r3, r3, #1
- 500 001c 1370     		strb	r3, [r2]
- 501 001e 7047     		bx	lr
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 25
+ 854:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 855:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 856:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK
+ 857:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_MC_PDO_ACK_Callback();
+ 858:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_MC_PDO_ACK_CALLBACK */
+ 859:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 860:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[4u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 494              		.loc 1 860 0
+ 495 0016 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 496 0018 43F00103 		orr	r3, r3, #1
+ 497 001c 1370     		strb	r3, [r2]
+ 498 001e 7047     		bx	lr
+ 499              	.L51:
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 25
 
 
- 502              	.L51:
- 503              		.align	2
- 504              	.L50:
- 505 0020 20A10040 		.word	1073783072
- 506 0024 00000000 		.word	mc_temp
- 507              		.cfi_endproc
- 508              	.LFE71:
- 509              		.size	CAN_ReceiveMsgMC_PDO_ACK, .-CAN_ReceiveMsgMC_PDO_ACK
- 510              		.section	.text.CAN_ReceiveMsgPEI_CURRENT,"ax",%progbits
- 511              		.align	2
- 512              		.global	CAN_ReceiveMsgPEI_CURRENT
- 513              		.thumb
- 514              		.thumb_func
- 515              		.type	CAN_ReceiveMsgPEI_CURRENT, %function
- 516              	CAN_ReceiveMsgPEI_CURRENT:
- 517              	.LFB72:
- 859:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 860:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX4_FUNC_ENABLE */
- 861:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 862:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 863:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX5_FUNC_ENABLE)
- 864:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 865:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgPEI_CURRENT
- 866:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 867:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 868:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 869:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 5 Interrupt. Clears the
- 870:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 5 interrupt flag. Generated only for the Receive mailbox
- 871:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
- 872:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 873:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 874:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 875:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 876:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 877:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 878:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 879:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
- 880:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
- 881:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 882:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 883:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgPEI_CURRENT(void) 
- 884:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 518              		.loc 1 884 0
- 519              		.cfi_startproc
- 520              		@ args = 0, pretend = 0, frame = 0
- 521              		@ frame_needed = 0, uses_anonymous_args = 0
- 522              		@ link register save eliminated.
- 885:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_PEI_CURRENT_RECEIVED` */
- 886:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CURRENT = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_PEI_CURRENT) << 8;
- 523              		.loc 1 886 0
- 524 0000 094B     		ldr	r3, .L53
- 525 0002 DA7A     		ldrb	r2, [r3, #11]	@ zero_extendqisi2
- 526 0004 1202     		lsls	r2, r2, #8
- 527 0006 0949     		ldr	r1, .L53+4
- 528 0008 0A80     		strh	r2, [r1]	@ movhi
- 887:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CURRENT |= CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_PEI_CURRENT);
- 529              		.loc 1 887 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 26
+ 500              		.align	2
+ 501              	.L50:
+ 502 0020 20A10040 		.word	1073783072
+ 503 0024 00000000 		.word	mc_temp
+ 504              		.cfi_endproc
+ 505              	.LFE71:
+ 506              		.size	CAN_ReceiveMsgMC_PDO_ACK, .-CAN_ReceiveMsgMC_PDO_ACK
+ 507              		.section	.text.CAN_ReceiveMsgPEI_CURRENT,"ax",%progbits
+ 508              		.align	2
+ 509              		.global	CAN_ReceiveMsgPEI_CURRENT
+ 510              		.thumb
+ 511              		.thumb_func
+ 512              		.type	CAN_ReceiveMsgPEI_CURRENT, %function
+ 513              	CAN_ReceiveMsgPEI_CURRENT:
+ 514              	.LFB72:
+ 861:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 862:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX4_FUNC_ENABLE */
+ 863:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 864:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 865:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX5_FUNC_ENABLE)
+ 866:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 867:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgPEI_CURRENT
+ 868:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 869:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 870:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 871:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 5 Interrupt. Clears the
+ 872:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 5 interrupt flag. Generated only for the Receive mailbox
+ 873:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 874:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 875:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 876:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 877:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 878:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 879:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 880:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 881:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ 882:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 883:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 884:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 885:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgPEI_CURRENT(void) 
+ 886:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 515              		.loc 1 886 0
+ 516              		.cfi_startproc
+ 517              		@ args = 0, pretend = 0, frame = 0
+ 518              		@ frame_needed = 0, uses_anonymous_args = 0
+ 519              		@ link register save eliminated.
+ 887:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_PEI_CURRENT_RECEIVED` */
+ 888:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CURRENT = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_PEI_CURRENT) << 8;
+ 520              		.loc 1 888 0
+ 521 0000 094B     		ldr	r3, .L53
+ 522 0002 DA7A     		ldrb	r2, [r3, #11]	@ zero_extendqisi2
+ 523 0004 1202     		lsls	r2, r2, #8
+ 524 0006 0949     		ldr	r1, .L53+4
+ 525 0008 0A80     		strh	r2, [r1]	@ movhi
+ 889:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CURRENT |= CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_PEI_CURRENT);
+ 526              		.loc 1 889 0
+ 527 000a 987A     		ldrb	r0, [r3, #10]	@ zero_extendqisi2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 26
 
 
- 530 000a 987A     		ldrb	r0, [r3, #10]	@ zero_extendqisi2
- 531 000c 0A88     		ldrh	r2, [r1]
- 532 000e 92B2     		uxth	r2, r2
- 533 0010 0243     		orrs	r2, r2, r0
- 534 0012 0A80     		strh	r2, [r1]	@ movhi
- 888:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         shutdown_flags = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_PEI_CURRENT);
- 535              		.loc 1 888 0
- 536 0014 5A7A     		ldrb	r2, [r3, #9]	@ zero_extendqisi2
- 537 0016 D2B2     		uxtb	r2, r2
- 538 0018 0549     		ldr	r1, .L53+8
- 539 001a 0A70     		strb	r2, [r1]
- 889:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 890:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 528 000c 0A88     		ldrh	r2, [r1]
+ 529 000e 92B2     		uxth	r2, r2
+ 530 0010 0243     		orrs	r2, r2, r0
+ 531 0012 0A80     		strh	r2, [r1]	@ movhi
+ 890:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         shutdown_flags = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_PEI_CURRENT);
+ 532              		.loc 1 890 0
+ 533 0014 5A7A     		ldrb	r2, [r3, #9]	@ zero_extendqisi2
+ 534 0016 D2B2     		uxtb	r2, r2
+ 535 0018 0549     		ldr	r1, .L53+8
+ 536 001a 0A70     		strb	r2, [r1]
  891:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 892:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK
- 893:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_PEI_CURRENT_Callback();
- 894:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK */
- 895:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 896:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[5u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 540              		.loc 1 896 0
- 541 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
- 542 001e 42F00102 		orr	r2, r2, #1
- 543 0022 1A70     		strb	r2, [r3]
- 544 0024 7047     		bx	lr
- 545              	.L54:
- 546 0026 00BF     		.align	2
- 547              	.L53:
- 548 0028 40A10040 		.word	1073783104
- 549 002c 00000000 		.word	CURRENT
- 550 0030 00000000 		.word	shutdown_flags
- 551              		.cfi_endproc
- 552              	.LFE72:
- 553              		.size	CAN_ReceiveMsgPEI_CURRENT, .-CAN_ReceiveMsgPEI_CURRENT
- 554              		.text
- 555              	.Letext0:
- 556              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 557              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 558              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
- 559              		.file 5 "Generated_Source\\PSoC5\\CAN.h"
- 560              		.file 6 "./data.h"
- 561              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
- 562              		.section	.debug_info,"",%progbits
- 563              	.Ldebug_info0:
- 564 0000 4C050000 		.4byte	0x54c
- 565 0004 0400     		.2byte	0x4
- 566 0006 00000000 		.4byte	.Ldebug_abbrev0
- 567 000a 04       		.byte	0x4
- 568 000b 01       		.uleb128 0x1
- 569 000c 7A040000 		.4byte	.LASF90
- 570 0010 0C       		.byte	0xc
- 571 0011 AA030000 		.4byte	.LASF91
- 572 0015 FC030000 		.4byte	.LASF92
- 573 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 574 001d 00000000 		.4byte	0
- 575 0021 00000000 		.4byte	.Ldebug_line0
- 576 0025 02       		.uleb128 0x2
- 577 0026 01       		.byte	0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 27
+ 892:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 893:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 894:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK
+ 895:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_PEI_CURRENT_Callback();
+ 896:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_PEI_CURRENT_CALLBACK */
+ 897:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 898:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[5u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 537              		.loc 1 898 0
+ 538 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 539 001e 42F00102 		orr	r2, r2, #1
+ 540 0022 1A70     		strb	r2, [r3]
+ 541 0024 7047     		bx	lr
+ 542              	.L54:
+ 543 0026 00BF     		.align	2
+ 544              	.L53:
+ 545 0028 40A10040 		.word	1073783104
+ 546 002c 00000000 		.word	CURRENT
+ 547 0030 00000000 		.word	shutdown_flags
+ 548              		.cfi_endproc
+ 549              	.LFE72:
+ 550              		.size	CAN_ReceiveMsgPEI_CURRENT, .-CAN_ReceiveMsgPEI_CURRENT
+ 551              		.text
+ 552              	.Letext0:
+ 553              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 554              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 555              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
+ 556              		.file 5 "Generated_Source\\PSoC5\\CAN.h"
+ 557              		.file 6 "./data.h"
+ 558              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 559              		.section	.debug_info,"",%progbits
+ 560              	.Ldebug_info0:
+ 561 0000 4C050000 		.4byte	0x54c
+ 562 0004 0400     		.2byte	0x4
+ 563 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 564 000a 04       		.byte	0x4
+ 565 000b 01       		.uleb128 0x1
+ 566 000c 7A040000 		.4byte	.LASF90
+ 567 0010 0C       		.byte	0xc
+ 568 0011 AA030000 		.4byte	.LASF91
+ 569 0015 FC030000 		.4byte	.LASF92
+ 570 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 571 001d 00000000 		.4byte	0
+ 572 0021 00000000 		.4byte	.Ldebug_line0
+ 573 0025 02       		.uleb128 0x2
+ 574 0026 01       		.byte	0x1
+ 575 0027 06       		.byte	0x6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 27
 
 
- 578 0027 06       		.byte	0x6
- 579 0028 2A020000 		.4byte	.LASF0
- 580 002c 03       		.uleb128 0x3
- 581 002d BA010000 		.4byte	.LASF3
- 582 0031 02       		.byte	0x2
- 583 0032 1D       		.byte	0x1d
- 584 0033 37000000 		.4byte	0x37
- 585 0037 02       		.uleb128 0x2
- 586 0038 01       		.byte	0x1
- 587 0039 08       		.byte	0x8
- 588 003a 16020000 		.4byte	.LASF1
- 589 003e 02       		.uleb128 0x2
- 590 003f 02       		.byte	0x2
- 591 0040 05       		.byte	0x5
- 592 0041 B8000000 		.4byte	.LASF2
- 593 0045 03       		.uleb128 0x3
- 594 0046 AD000000 		.4byte	.LASF4
- 595 004a 02       		.byte	0x2
- 596 004b 2B       		.byte	0x2b
- 597 004c 50000000 		.4byte	0x50
- 598 0050 02       		.uleb128 0x2
- 599 0051 02       		.byte	0x2
- 600 0052 07       		.byte	0x7
- 601 0053 B3020000 		.4byte	.LASF5
- 602 0057 03       		.uleb128 0x3
- 603 0058 A0030000 		.4byte	.LASF6
- 604 005c 02       		.byte	0x2
- 605 005d 3F       		.byte	0x3f
- 606 005e 62000000 		.4byte	0x62
- 607 0062 02       		.uleb128 0x2
- 608 0063 04       		.byte	0x4
- 609 0064 05       		.byte	0x5
- 610 0065 8C010000 		.4byte	.LASF7
- 611 0069 02       		.uleb128 0x2
- 612 006a 04       		.byte	0x4
- 613 006b 07       		.byte	0x7
- 614 006c A8010000 		.4byte	.LASF8
- 615 0070 02       		.uleb128 0x2
- 616 0071 08       		.byte	0x8
- 617 0072 05       		.byte	0x5
- 618 0073 68010000 		.4byte	.LASF9
- 619 0077 02       		.uleb128 0x2
- 620 0078 08       		.byte	0x8
- 621 0079 07       		.byte	0x7
- 622 007a 45020000 		.4byte	.LASF10
- 623 007e 04       		.uleb128 0x4
- 624 007f 04       		.byte	0x4
- 625 0080 05       		.byte	0x5
- 626 0081 696E7400 		.ascii	"int\000"
- 627 0085 02       		.uleb128 0x2
- 628 0086 04       		.byte	0x4
- 629 0087 07       		.byte	0x7
- 630 0088 77020000 		.4byte	.LASF11
- 631 008c 03       		.uleb128 0x3
- 632 008d DA000000 		.4byte	.LASF12
- 633 0091 03       		.byte	0x3
- 634 0092 18       		.byte	0x18
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 28
+ 576 0028 2A020000 		.4byte	.LASF0
+ 577 002c 03       		.uleb128 0x3
+ 578 002d BA010000 		.4byte	.LASF3
+ 579 0031 02       		.byte	0x2
+ 580 0032 1D       		.byte	0x1d
+ 581 0033 37000000 		.4byte	0x37
+ 582 0037 02       		.uleb128 0x2
+ 583 0038 01       		.byte	0x1
+ 584 0039 08       		.byte	0x8
+ 585 003a 16020000 		.4byte	.LASF1
+ 586 003e 02       		.uleb128 0x2
+ 587 003f 02       		.byte	0x2
+ 588 0040 05       		.byte	0x5
+ 589 0041 B8000000 		.4byte	.LASF2
+ 590 0045 03       		.uleb128 0x3
+ 591 0046 AD000000 		.4byte	.LASF4
+ 592 004a 02       		.byte	0x2
+ 593 004b 2B       		.byte	0x2b
+ 594 004c 50000000 		.4byte	0x50
+ 595 0050 02       		.uleb128 0x2
+ 596 0051 02       		.byte	0x2
+ 597 0052 07       		.byte	0x7
+ 598 0053 B3020000 		.4byte	.LASF5
+ 599 0057 03       		.uleb128 0x3
+ 600 0058 A0030000 		.4byte	.LASF6
+ 601 005c 02       		.byte	0x2
+ 602 005d 3F       		.byte	0x3f
+ 603 005e 62000000 		.4byte	0x62
+ 604 0062 02       		.uleb128 0x2
+ 605 0063 04       		.byte	0x4
+ 606 0064 05       		.byte	0x5
+ 607 0065 8C010000 		.4byte	.LASF7
+ 608 0069 02       		.uleb128 0x2
+ 609 006a 04       		.byte	0x4
+ 610 006b 07       		.byte	0x7
+ 611 006c A8010000 		.4byte	.LASF8
+ 612 0070 02       		.uleb128 0x2
+ 613 0071 08       		.byte	0x8
+ 614 0072 05       		.byte	0x5
+ 615 0073 68010000 		.4byte	.LASF9
+ 616 0077 02       		.uleb128 0x2
+ 617 0078 08       		.byte	0x8
+ 618 0079 07       		.byte	0x7
+ 619 007a 45020000 		.4byte	.LASF10
+ 620 007e 04       		.uleb128 0x4
+ 621 007f 04       		.byte	0x4
+ 622 0080 05       		.byte	0x5
+ 623 0081 696E7400 		.ascii	"int\000"
+ 624 0085 02       		.uleb128 0x2
+ 625 0086 04       		.byte	0x4
+ 626 0087 07       		.byte	0x7
+ 627 0088 77020000 		.4byte	.LASF11
+ 628 008c 03       		.uleb128 0x3
+ 629 008d DA000000 		.4byte	.LASF12
+ 630 0091 03       		.byte	0x3
+ 631 0092 18       		.byte	0x18
+ 632 0093 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 28
 
 
- 635 0093 2C000000 		.4byte	0x2c
- 636 0097 03       		.uleb128 0x3
- 637 0098 84020000 		.4byte	.LASF13
- 638 009c 03       		.byte	0x3
- 639 009d 24       		.byte	0x24
- 640 009e 45000000 		.4byte	0x45
- 641 00a2 03       		.uleb128 0x3
- 642 00a3 09030000 		.4byte	.LASF14
- 643 00a7 03       		.byte	0x3
- 644 00a8 2C       		.byte	0x2c
- 645 00a9 57000000 		.4byte	0x57
- 646 00ad 05       		.uleb128 0x5
- 647 00ae E2000000 		.4byte	.LASF15
- 648 00b2 04       		.byte	0x4
- 649 00b3 3801     		.2byte	0x138
- 650 00b5 37000000 		.4byte	0x37
- 651 00b9 05       		.uleb128 0x5
- 652 00ba 4C030000 		.4byte	.LASF16
- 653 00be 04       		.byte	0x4
- 654 00bf 3A01     		.2byte	0x13a
- 655 00c1 69000000 		.4byte	0x69
- 656 00c5 02       		.uleb128 0x2
- 657 00c6 04       		.byte	0x4
- 658 00c7 04       		.byte	0x4
- 659 00c8 62010000 		.4byte	.LASF17
- 660 00cc 02       		.uleb128 0x2
- 661 00cd 08       		.byte	0x8
- 662 00ce 04       		.byte	0x4
- 663 00cf 58040000 		.4byte	.LASF18
- 664 00d3 02       		.uleb128 0x2
- 665 00d4 01       		.byte	0x1
- 666 00d5 08       		.byte	0x8
- 667 00d6 81010000 		.4byte	.LASF19
- 668 00da 05       		.uleb128 0x5
- 669 00db 53030000 		.4byte	.LASF20
- 670 00df 04       		.byte	0x4
- 671 00e0 E201     		.2byte	0x1e2
- 672 00e2 E6000000 		.4byte	0xe6
- 673 00e6 06       		.uleb128 0x6
- 674 00e7 AD000000 		.4byte	0xad
- 675 00eb 05       		.uleb128 0x5
- 676 00ec AD020000 		.4byte	.LASF21
- 677 00f0 04       		.byte	0x4
- 678 00f1 E401     		.2byte	0x1e4
- 679 00f3 F7000000 		.4byte	0xf7
- 680 00f7 06       		.uleb128 0x6
- 681 00f8 B9000000 		.4byte	0xb9
- 682 00fc 02       		.uleb128 0x2
- 683 00fd 08       		.byte	0x8
- 684 00fe 04       		.byte	0x4
- 685 00ff F7010000 		.4byte	.LASF22
- 686 0103 02       		.uleb128 0x2
- 687 0104 04       		.byte	0x4
- 688 0105 07       		.byte	0x7
- 689 0106 75000000 		.4byte	.LASF23
- 690 010a 07       		.uleb128 0x7
- 691 010b 08       		.byte	0x8
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 29
+ 633 0097 03       		.uleb128 0x3
+ 634 0098 84020000 		.4byte	.LASF13
+ 635 009c 03       		.byte	0x3
+ 636 009d 24       		.byte	0x24
+ 637 009e 45000000 		.4byte	0x45
+ 638 00a2 03       		.uleb128 0x3
+ 639 00a3 09030000 		.4byte	.LASF14
+ 640 00a7 03       		.byte	0x3
+ 641 00a8 2C       		.byte	0x2c
+ 642 00a9 57000000 		.4byte	0x57
+ 643 00ad 05       		.uleb128 0x5
+ 644 00ae E2000000 		.4byte	.LASF15
+ 645 00b2 04       		.byte	0x4
+ 646 00b3 3801     		.2byte	0x138
+ 647 00b5 37000000 		.4byte	0x37
+ 648 00b9 05       		.uleb128 0x5
+ 649 00ba 4C030000 		.4byte	.LASF16
+ 650 00be 04       		.byte	0x4
+ 651 00bf 3A01     		.2byte	0x13a
+ 652 00c1 69000000 		.4byte	0x69
+ 653 00c5 02       		.uleb128 0x2
+ 654 00c6 04       		.byte	0x4
+ 655 00c7 04       		.byte	0x4
+ 656 00c8 62010000 		.4byte	.LASF17
+ 657 00cc 02       		.uleb128 0x2
+ 658 00cd 08       		.byte	0x8
+ 659 00ce 04       		.byte	0x4
+ 660 00cf 58040000 		.4byte	.LASF18
+ 661 00d3 02       		.uleb128 0x2
+ 662 00d4 01       		.byte	0x1
+ 663 00d5 08       		.byte	0x8
+ 664 00d6 81010000 		.4byte	.LASF19
+ 665 00da 05       		.uleb128 0x5
+ 666 00db 53030000 		.4byte	.LASF20
+ 667 00df 04       		.byte	0x4
+ 668 00e0 E201     		.2byte	0x1e2
+ 669 00e2 E6000000 		.4byte	0xe6
+ 670 00e6 06       		.uleb128 0x6
+ 671 00e7 AD000000 		.4byte	0xad
+ 672 00eb 05       		.uleb128 0x5
+ 673 00ec AD020000 		.4byte	.LASF21
+ 674 00f0 04       		.byte	0x4
+ 675 00f1 E401     		.2byte	0x1e4
+ 676 00f3 F7000000 		.4byte	0xf7
+ 677 00f7 06       		.uleb128 0x6
+ 678 00f8 B9000000 		.4byte	0xb9
+ 679 00fc 02       		.uleb128 0x2
+ 680 00fd 08       		.byte	0x8
+ 681 00fe 04       		.byte	0x4
+ 682 00ff F7010000 		.4byte	.LASF22
+ 683 0103 02       		.uleb128 0x2
+ 684 0104 04       		.byte	0x4
+ 685 0105 07       		.byte	0x7
+ 686 0106 75000000 		.4byte	.LASF23
+ 687 010a 07       		.uleb128 0x7
+ 688 010b 08       		.byte	0x8
+ 689 010c 05       		.byte	0x5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 29
 
 
- 692 010c 05       		.byte	0x5
- 693 010d 6F       		.byte	0x6f
- 694 010e 1F010000 		.4byte	0x11f
- 695 0112 08       		.uleb128 0x8
- 696 0113 E3010000 		.4byte	.LASF25
- 697 0117 05       		.byte	0x5
- 698 0118 71       		.byte	0x71
- 699 0119 1F010000 		.4byte	0x11f
- 700 011d 00       		.byte	0
- 701 011e 00       		.byte	0
- 702 011f 09       		.uleb128 0x9
- 703 0120 AD000000 		.4byte	0xad
- 704 0124 2F010000 		.4byte	0x12f
- 705 0128 0A       		.uleb128 0xa
- 706 0129 03010000 		.4byte	0x103
- 707 012d 07       		.byte	0x7
- 708 012e 00       		.byte	0
- 709 012f 03       		.uleb128 0x3
- 710 0130 92020000 		.4byte	.LASF24
- 711 0134 05       		.byte	0x5
- 712 0135 72       		.byte	0x72
- 713 0136 0A010000 		.4byte	0x10a
- 714 013a 07       		.uleb128 0x7
- 715 013b 08       		.byte	0x8
- 716 013c 05       		.byte	0x5
- 717 013d 75       		.byte	0x75
- 718 013e 4F010000 		.4byte	0x14f
- 719 0142 08       		.uleb128 0x8
- 720 0143 E3010000 		.4byte	.LASF25
- 721 0147 05       		.byte	0x5
- 722 0148 77       		.byte	0x77
- 723 0149 5F010000 		.4byte	0x15f
- 724 014d 00       		.byte	0
- 725 014e 00       		.byte	0
- 726 014f 09       		.uleb128 0x9
- 727 0150 DA000000 		.4byte	0xda
- 728 0154 5F010000 		.4byte	0x15f
- 729 0158 0A       		.uleb128 0xa
- 730 0159 03010000 		.4byte	0x103
- 731 015d 07       		.byte	0x7
- 732 015e 00       		.byte	0
- 733 015f 06       		.uleb128 0x6
- 734 0160 4F010000 		.4byte	0x14f
- 735 0164 03       		.uleb128 0x3
- 736 0165 36020000 		.4byte	.LASF26
- 737 0169 05       		.byte	0x5
- 738 016a 78       		.byte	0x78
- 739 016b 3A010000 		.4byte	0x13a
- 740 016f 07       		.uleb128 0x7
- 741 0170 04       		.byte	0x4
- 742 0171 05       		.byte	0x5
- 743 0172 7B       		.byte	0x7b
- 744 0173 84010000 		.4byte	0x184
- 745 0177 08       		.uleb128 0x8
- 746 0178 E3010000 		.4byte	.LASF25
- 747 017c 05       		.byte	0x5
- 748 017d 7D       		.byte	0x7d
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 30
+ 690 010d 6F       		.byte	0x6f
+ 691 010e 1F010000 		.4byte	0x11f
+ 692 0112 08       		.uleb128 0x8
+ 693 0113 E3010000 		.4byte	.LASF25
+ 694 0117 05       		.byte	0x5
+ 695 0118 71       		.byte	0x71
+ 696 0119 1F010000 		.4byte	0x11f
+ 697 011d 00       		.byte	0
+ 698 011e 00       		.byte	0
+ 699 011f 09       		.uleb128 0x9
+ 700 0120 AD000000 		.4byte	0xad
+ 701 0124 2F010000 		.4byte	0x12f
+ 702 0128 0A       		.uleb128 0xa
+ 703 0129 03010000 		.4byte	0x103
+ 704 012d 07       		.byte	0x7
+ 705 012e 00       		.byte	0
+ 706 012f 03       		.uleb128 0x3
+ 707 0130 92020000 		.4byte	.LASF24
+ 708 0134 05       		.byte	0x5
+ 709 0135 72       		.byte	0x72
+ 710 0136 0A010000 		.4byte	0x10a
+ 711 013a 07       		.uleb128 0x7
+ 712 013b 08       		.byte	0x8
+ 713 013c 05       		.byte	0x5
+ 714 013d 75       		.byte	0x75
+ 715 013e 4F010000 		.4byte	0x14f
+ 716 0142 08       		.uleb128 0x8
+ 717 0143 E3010000 		.4byte	.LASF25
+ 718 0147 05       		.byte	0x5
+ 719 0148 77       		.byte	0x77
+ 720 0149 5F010000 		.4byte	0x15f
+ 721 014d 00       		.byte	0
+ 722 014e 00       		.byte	0
+ 723 014f 09       		.uleb128 0x9
+ 724 0150 DA000000 		.4byte	0xda
+ 725 0154 5F010000 		.4byte	0x15f
+ 726 0158 0A       		.uleb128 0xa
+ 727 0159 03010000 		.4byte	0x103
+ 728 015d 07       		.byte	0x7
+ 729 015e 00       		.byte	0
+ 730 015f 06       		.uleb128 0x6
+ 731 0160 4F010000 		.4byte	0x14f
+ 732 0164 03       		.uleb128 0x3
+ 733 0165 36020000 		.4byte	.LASF26
+ 734 0169 05       		.byte	0x5
+ 735 016a 78       		.byte	0x78
+ 736 016b 3A010000 		.4byte	0x13a
+ 737 016f 07       		.uleb128 0x7
+ 738 0170 04       		.byte	0x4
+ 739 0171 05       		.byte	0x5
+ 740 0172 7B       		.byte	0x7b
+ 741 0173 84010000 		.4byte	0x184
+ 742 0177 08       		.uleb128 0x8
+ 743 0178 E3010000 		.4byte	.LASF25
+ 744 017c 05       		.byte	0x5
+ 745 017d 7D       		.byte	0x7d
+ 746 017e 94010000 		.4byte	0x194
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 30
 
 
- 749 017e 94010000 		.4byte	0x194
- 750 0182 00       		.byte	0
- 751 0183 00       		.byte	0
- 752 0184 09       		.uleb128 0x9
- 753 0185 DA000000 		.4byte	0xda
- 754 0189 94010000 		.4byte	0x194
- 755 018d 0A       		.uleb128 0xa
- 756 018e 03010000 		.4byte	0x103
- 757 0192 03       		.byte	0x3
- 758 0193 00       		.byte	0
- 759 0194 06       		.uleb128 0x6
- 760 0195 84010000 		.4byte	0x184
- 761 0199 03       		.uleb128 0x3
- 762 019a 76010000 		.4byte	.LASF27
- 763 019e 05       		.byte	0x5
- 764 019f 7E       		.byte	0x7e
- 765 01a0 6F010000 		.4byte	0x16f
- 766 01a4 07       		.uleb128 0x7
- 767 01a5 0C       		.byte	0xc
- 768 01a6 05       		.byte	0x5
- 769 01a7 81       		.byte	0x81
- 770 01a8 F4010000 		.4byte	0x1f4
- 771 01ac 0B       		.uleb128 0xb
- 772 01ad 696400   		.ascii	"id\000"
- 773 01b0 05       		.byte	0x5
- 774 01b1 83       		.byte	0x83
- 775 01b2 B9000000 		.4byte	0xb9
- 776 01b6 00       		.byte	0
- 777 01b7 0B       		.uleb128 0xb
- 778 01b8 72747200 		.ascii	"rtr\000"
- 779 01bc 05       		.byte	0x5
- 780 01bd 84       		.byte	0x84
- 781 01be AD000000 		.4byte	0xad
- 782 01c2 04       		.byte	0x4
- 783 01c3 0B       		.uleb128 0xb
- 784 01c4 69646500 		.ascii	"ide\000"
- 785 01c8 05       		.byte	0x5
- 786 01c9 85       		.byte	0x85
- 787 01ca AD000000 		.4byte	0xad
- 788 01ce 05       		.byte	0x5
- 789 01cf 0B       		.uleb128 0xb
- 790 01d0 646C6300 		.ascii	"dlc\000"
- 791 01d4 05       		.byte	0x5
- 792 01d5 86       		.byte	0x86
- 793 01d6 AD000000 		.4byte	0xad
- 794 01da 06       		.byte	0x6
- 795 01db 0B       		.uleb128 0xb
- 796 01dc 69727100 		.ascii	"irq\000"
- 797 01e0 05       		.byte	0x5
- 798 01e1 87       		.byte	0x87
- 799 01e2 AD000000 		.4byte	0xad
- 800 01e6 07       		.byte	0x7
- 801 01e7 0B       		.uleb128 0xb
- 802 01e8 6D736700 		.ascii	"msg\000"
- 803 01ec 05       		.byte	0x5
- 804 01ed 8B       		.byte	0x8b
- 805 01ee F4010000 		.4byte	0x1f4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 31
+ 747 0182 00       		.byte	0
+ 748 0183 00       		.byte	0
+ 749 0184 09       		.uleb128 0x9
+ 750 0185 DA000000 		.4byte	0xda
+ 751 0189 94010000 		.4byte	0x194
+ 752 018d 0A       		.uleb128 0xa
+ 753 018e 03010000 		.4byte	0x103
+ 754 0192 03       		.byte	0x3
+ 755 0193 00       		.byte	0
+ 756 0194 06       		.uleb128 0x6
+ 757 0195 84010000 		.4byte	0x184
+ 758 0199 03       		.uleb128 0x3
+ 759 019a 76010000 		.4byte	.LASF27
+ 760 019e 05       		.byte	0x5
+ 761 019f 7E       		.byte	0x7e
+ 762 01a0 6F010000 		.4byte	0x16f
+ 763 01a4 07       		.uleb128 0x7
+ 764 01a5 0C       		.byte	0xc
+ 765 01a6 05       		.byte	0x5
+ 766 01a7 81       		.byte	0x81
+ 767 01a8 F4010000 		.4byte	0x1f4
+ 768 01ac 0B       		.uleb128 0xb
+ 769 01ad 696400   		.ascii	"id\000"
+ 770 01b0 05       		.byte	0x5
+ 771 01b1 83       		.byte	0x83
+ 772 01b2 B9000000 		.4byte	0xb9
+ 773 01b6 00       		.byte	0
+ 774 01b7 0B       		.uleb128 0xb
+ 775 01b8 72747200 		.ascii	"rtr\000"
+ 776 01bc 05       		.byte	0x5
+ 777 01bd 84       		.byte	0x84
+ 778 01be AD000000 		.4byte	0xad
+ 779 01c2 04       		.byte	0x4
+ 780 01c3 0B       		.uleb128 0xb
+ 781 01c4 69646500 		.ascii	"ide\000"
+ 782 01c8 05       		.byte	0x5
+ 783 01c9 85       		.byte	0x85
+ 784 01ca AD000000 		.4byte	0xad
+ 785 01ce 05       		.byte	0x5
+ 786 01cf 0B       		.uleb128 0xb
+ 787 01d0 646C6300 		.ascii	"dlc\000"
+ 788 01d4 05       		.byte	0x5
+ 789 01d5 86       		.byte	0x86
+ 790 01d6 AD000000 		.4byte	0xad
+ 791 01da 06       		.byte	0x6
+ 792 01db 0B       		.uleb128 0xb
+ 793 01dc 69727100 		.ascii	"irq\000"
+ 794 01e0 05       		.byte	0x5
+ 795 01e1 87       		.byte	0x87
+ 796 01e2 AD000000 		.4byte	0xad
+ 797 01e6 07       		.byte	0x7
+ 798 01e7 0B       		.uleb128 0xb
+ 799 01e8 6D736700 		.ascii	"msg\000"
+ 800 01ec 05       		.byte	0x5
+ 801 01ed 8B       		.byte	0x8b
+ 802 01ee F4010000 		.4byte	0x1f4
+ 803 01f2 08       		.byte	0x8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 31
 
 
- 806 01f2 08       		.byte	0x8
- 807 01f3 00       		.byte	0
- 808 01f4 0C       		.uleb128 0xc
- 809 01f5 04       		.byte	0x4
- 810 01f6 2F010000 		.4byte	0x12f
- 811 01fa 03       		.uleb128 0x3
- 812 01fb 60030000 		.4byte	.LASF28
- 813 01ff 05       		.byte	0x5
- 814 0200 8C       		.byte	0x8c
- 815 0201 A4010000 		.4byte	0x1a4
- 816 0205 07       		.uleb128 0x7
- 817 0206 20       		.byte	0x20
- 818 0207 05       		.byte	0x5
- 819 0208 A0       		.byte	0xa0
- 820 0209 62020000 		.4byte	0x262
- 821 020d 08       		.uleb128 0x8
- 822 020e 24020000 		.4byte	.LASF29
- 823 0212 05       		.byte	0x5
- 824 0213 A2       		.byte	0xa2
- 825 0214 99010000 		.4byte	0x199
- 826 0218 00       		.byte	0
- 827 0219 08       		.uleb128 0x8
- 828 021a E8000000 		.4byte	.LASF30
- 829 021e 05       		.byte	0x5
- 830 021f A3       		.byte	0xa3
- 831 0220 99010000 		.4byte	0x199
- 832 0224 04       		.byte	0x4
- 833 0225 08       		.uleb128 0x8
- 834 0226 85000000 		.4byte	.LASF31
- 835 022a 05       		.byte	0x5
- 836 022b A4       		.byte	0xa4
- 837 022c 64010000 		.4byte	0x164
- 838 0230 08       		.byte	0x8
- 839 0231 08       		.uleb128 0x8
- 840 0232 08050000 		.4byte	.LASF32
- 841 0236 05       		.byte	0x5
- 842 0237 A5       		.byte	0xa5
- 843 0238 99010000 		.4byte	0x199
- 844 023c 10       		.byte	0x10
- 845 023d 08       		.uleb128 0x8
- 846 023e ED000000 		.4byte	.LASF33
- 847 0242 05       		.byte	0x5
- 848 0243 A6       		.byte	0xa6
- 849 0244 99010000 		.4byte	0x199
- 850 0248 14       		.byte	0x14
- 851 0249 08       		.uleb128 0x8
- 852 024a 03020000 		.4byte	.LASF34
- 853 024e 05       		.byte	0x5
- 854 024f A7       		.byte	0xa7
- 855 0250 99010000 		.4byte	0x199
- 856 0254 18       		.byte	0x18
- 857 0255 08       		.uleb128 0x8
- 858 0256 D1020000 		.4byte	.LASF35
- 859 025a 05       		.byte	0x5
- 860 025b A8       		.byte	0xa8
- 861 025c 99010000 		.4byte	0x199
- 862 0260 1C       		.byte	0x1c
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 32
+ 804 01f3 00       		.byte	0
+ 805 01f4 0C       		.uleb128 0xc
+ 806 01f5 04       		.byte	0x4
+ 807 01f6 2F010000 		.4byte	0x12f
+ 808 01fa 03       		.uleb128 0x3
+ 809 01fb 60030000 		.4byte	.LASF28
+ 810 01ff 05       		.byte	0x5
+ 811 0200 8C       		.byte	0x8c
+ 812 0201 A4010000 		.4byte	0x1a4
+ 813 0205 07       		.uleb128 0x7
+ 814 0206 20       		.byte	0x20
+ 815 0207 05       		.byte	0x5
+ 816 0208 A0       		.byte	0xa0
+ 817 0209 62020000 		.4byte	0x262
+ 818 020d 08       		.uleb128 0x8
+ 819 020e 24020000 		.4byte	.LASF29
+ 820 0212 05       		.byte	0x5
+ 821 0213 A2       		.byte	0xa2
+ 822 0214 99010000 		.4byte	0x199
+ 823 0218 00       		.byte	0
+ 824 0219 08       		.uleb128 0x8
+ 825 021a E8000000 		.4byte	.LASF30
+ 826 021e 05       		.byte	0x5
+ 827 021f A3       		.byte	0xa3
+ 828 0220 99010000 		.4byte	0x199
+ 829 0224 04       		.byte	0x4
+ 830 0225 08       		.uleb128 0x8
+ 831 0226 85000000 		.4byte	.LASF31
+ 832 022a 05       		.byte	0x5
+ 833 022b A4       		.byte	0xa4
+ 834 022c 64010000 		.4byte	0x164
+ 835 0230 08       		.byte	0x8
+ 836 0231 08       		.uleb128 0x8
+ 837 0232 08050000 		.4byte	.LASF32
+ 838 0236 05       		.byte	0x5
+ 839 0237 A5       		.byte	0xa5
+ 840 0238 99010000 		.4byte	0x199
+ 841 023c 10       		.byte	0x10
+ 842 023d 08       		.uleb128 0x8
+ 843 023e ED000000 		.4byte	.LASF33
+ 844 0242 05       		.byte	0x5
+ 845 0243 A6       		.byte	0xa6
+ 846 0244 99010000 		.4byte	0x199
+ 847 0248 14       		.byte	0x14
+ 848 0249 08       		.uleb128 0x8
+ 849 024a 03020000 		.4byte	.LASF34
+ 850 024e 05       		.byte	0x5
+ 851 024f A7       		.byte	0xa7
+ 852 0250 99010000 		.4byte	0x199
+ 853 0254 18       		.byte	0x18
+ 854 0255 08       		.uleb128 0x8
+ 855 0256 D1020000 		.4byte	.LASF35
+ 856 025a 05       		.byte	0x5
+ 857 025b A8       		.byte	0xa8
+ 858 025c 99010000 		.4byte	0x199
+ 859 0260 1C       		.byte	0x1c
+ 860 0261 00       		.byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 32
 
 
- 863 0261 00       		.byte	0
- 864 0262 03       		.uleb128 0x3
- 865 0263 E2020000 		.4byte	.LASF36
- 866 0267 05       		.byte	0x5
- 867 0268 A9       		.byte	0xa9
- 868 0269 05020000 		.4byte	0x205
- 869 026d 07       		.uleb128 0x7
- 870 026e 10       		.byte	0x10
- 871 026f 05       		.byte	0x5
- 872 0270 AC       		.byte	0xac
- 873 0271 9A020000 		.4byte	0x29a
- 874 0275 08       		.uleb128 0x8
- 875 0276 86010000 		.4byte	.LASF37
- 876 027a 05       		.byte	0x5
- 877 027b AE       		.byte	0xae
- 878 027c 99010000 		.4byte	0x199
- 879 0280 00       		.byte	0
- 880 0281 08       		.uleb128 0x8
- 881 0282 81030000 		.4byte	.LASF38
- 882 0286 05       		.byte	0x5
- 883 0287 AF       		.byte	0xaf
- 884 0288 99010000 		.4byte	0x199
- 885 028c 04       		.byte	0x4
- 886 028d 08       		.uleb128 0x8
- 887 028e 7E000000 		.4byte	.LASF39
- 888 0292 05       		.byte	0x5
- 889 0293 B0       		.byte	0xb0
- 890 0294 64010000 		.4byte	0x164
- 891 0298 08       		.byte	0x8
- 892 0299 00       		.byte	0
- 893 029a 03       		.uleb128 0x3
- 894 029b 21000000 		.4byte	.LASF40
- 895 029f 05       		.byte	0x5
- 896 02a0 B1       		.byte	0xb1
- 897 02a1 6D020000 		.4byte	0x26d
- 898 02a5 06       		.uleb128 0x6
- 899 02a6 8C000000 		.4byte	0x8c
- 900 02aa 06       		.uleb128 0x6
- 901 02ab 97000000 		.4byte	0x97
- 902 02af 0D       		.uleb128 0xd
- 903 02b0 01       		.byte	0x1
- 904 02b1 37000000 		.4byte	0x37
- 905 02b5 06       		.byte	0x6
- 906 02b6 09       		.byte	0x9
- 907 02b7 D9020000 		.4byte	0x2d9
- 908 02bb 0E       		.uleb128 0xe
- 909 02bc 4C5600   		.ascii	"LV\000"
- 910 02bf 00       		.byte	0
- 911 02c0 0F       		.uleb128 0xf
- 912 02c1 20010000 		.4byte	.LASF41
- 913 02c5 01       		.byte	0x1
- 914 02c6 0F       		.uleb128 0xf
- 915 02c7 5B000000 		.4byte	.LASF42
- 916 02cb 02       		.byte	0x2
- 917 02cc 0F       		.uleb128 0xf
- 918 02cd 67040000 		.4byte	.LASF43
- 919 02d1 03       		.byte	0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 33
+ 861 0262 03       		.uleb128 0x3
+ 862 0263 E2020000 		.4byte	.LASF36
+ 863 0267 05       		.byte	0x5
+ 864 0268 A9       		.byte	0xa9
+ 865 0269 05020000 		.4byte	0x205
+ 866 026d 07       		.uleb128 0x7
+ 867 026e 10       		.byte	0x10
+ 868 026f 05       		.byte	0x5
+ 869 0270 AC       		.byte	0xac
+ 870 0271 9A020000 		.4byte	0x29a
+ 871 0275 08       		.uleb128 0x8
+ 872 0276 86010000 		.4byte	.LASF37
+ 873 027a 05       		.byte	0x5
+ 874 027b AE       		.byte	0xae
+ 875 027c 99010000 		.4byte	0x199
+ 876 0280 00       		.byte	0
+ 877 0281 08       		.uleb128 0x8
+ 878 0282 81030000 		.4byte	.LASF38
+ 879 0286 05       		.byte	0x5
+ 880 0287 AF       		.byte	0xaf
+ 881 0288 99010000 		.4byte	0x199
+ 882 028c 04       		.byte	0x4
+ 883 028d 08       		.uleb128 0x8
+ 884 028e 7E000000 		.4byte	.LASF39
+ 885 0292 05       		.byte	0x5
+ 886 0293 B0       		.byte	0xb0
+ 887 0294 64010000 		.4byte	0x164
+ 888 0298 08       		.byte	0x8
+ 889 0299 00       		.byte	0
+ 890 029a 03       		.uleb128 0x3
+ 891 029b 21000000 		.4byte	.LASF40
+ 892 029f 05       		.byte	0x5
+ 893 02a0 B1       		.byte	0xb1
+ 894 02a1 6D020000 		.4byte	0x26d
+ 895 02a5 06       		.uleb128 0x6
+ 896 02a6 8C000000 		.4byte	0x8c
+ 897 02aa 06       		.uleb128 0x6
+ 898 02ab 97000000 		.4byte	0x97
+ 899 02af 0D       		.uleb128 0xd
+ 900 02b0 01       		.byte	0x1
+ 901 02b1 37000000 		.4byte	0x37
+ 902 02b5 06       		.byte	0x6
+ 903 02b6 09       		.byte	0x9
+ 904 02b7 D9020000 		.4byte	0x2d9
+ 905 02bb 0E       		.uleb128 0xe
+ 906 02bc 4C5600   		.ascii	"LV\000"
+ 907 02bf 00       		.byte	0
+ 908 02c0 0F       		.uleb128 0xf
+ 909 02c1 20010000 		.4byte	.LASF41
+ 910 02c5 01       		.byte	0x1
+ 911 02c6 0F       		.uleb128 0xf
+ 912 02c7 5B000000 		.4byte	.LASF42
+ 913 02cb 02       		.byte	0x2
+ 914 02cc 0F       		.uleb128 0xf
+ 915 02cd 67040000 		.4byte	.LASF43
+ 916 02d1 03       		.byte	0x3
+ 917 02d2 0F       		.uleb128 0xf
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 33
 
 
- 920 02d2 0F       		.uleb128 0xf
- 921 02d3 CA000000 		.4byte	.LASF44
- 922 02d7 80       		.byte	0x80
- 923 02d8 00       		.byte	0
- 924 02d9 03       		.uleb128 0x3
- 925 02da 42030000 		.4byte	.LASF45
- 926 02de 06       		.byte	0x6
- 927 02df 0F       		.byte	0xf
- 928 02e0 AF020000 		.4byte	0x2af
- 929 02e4 0D       		.uleb128 0xd
- 930 02e5 02       		.byte	0x2
- 931 02e6 50000000 		.4byte	0x50
- 932 02ea 06       		.byte	0x6
- 933 02eb 1C       		.byte	0x1c
- 934 02ec 66030000 		.4byte	0x366
- 935 02f0 0F       		.uleb128 0xf
- 936 02f1 3F000000 		.4byte	.LASF46
- 937 02f5 00       		.byte	0
- 938 02f6 0F       		.uleb128 0xf
- 939 02f7 00000000 		.4byte	.LASF47
- 940 02fb 01       		.byte	0x1
- 941 02fc 0F       		.uleb128 0xf
- 942 02fd 12000000 		.4byte	.LASF48
- 943 0301 02       		.byte	0x2
- 944 0302 0F       		.uleb128 0xf
- 945 0303 0E050000 		.4byte	.LASF49
- 946 0307 04       		.byte	0x4
- 947 0308 0F       		.uleb128 0xf
- 948 0309 2F000000 		.4byte	.LASF50
- 949 030d 08       		.byte	0x8
- 950 030e 0F       		.uleb128 0xf
- 951 030f A5020000 		.4byte	.LASF51
- 952 0313 10       		.byte	0x10
- 953 0314 0F       		.uleb128 0xf
- 954 0315 9B010000 		.4byte	.LASF52
- 955 0319 20       		.byte	0x20
- 956 031a 0F       		.uleb128 0xf
- 957 031b 1B030000 		.4byte	.LASF53
- 958 031f 40       		.byte	0x40
- 959 0320 0F       		.uleb128 0xf
- 960 0321 0A020000 		.4byte	.LASF54
- 961 0325 80       		.byte	0x80
- 962 0326 10       		.uleb128 0x10
- 963 0327 67020000 		.4byte	.LASF55
- 964 032b 0001     		.2byte	0x100
- 965 032d 10       		.uleb128 0x10
- 966 032e 10010000 		.4byte	.LASF56
- 967 0332 0002     		.2byte	0x200
- 968 0334 10       		.uleb128 0x10
- 969 0335 11030000 		.4byte	.LASF57
- 970 0339 0004     		.2byte	0x400
- 971 033b 10       		.uleb128 0x10
- 972 033c D0000000 		.4byte	.LASF58
- 973 0340 0004     		.2byte	0x400
- 974 0342 10       		.uleb128 0x10
- 975 0343 FA020000 		.4byte	.LASF59
- 976 0347 0008     		.2byte	0x800
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 34
+ 918 02d3 CA000000 		.4byte	.LASF44
+ 919 02d7 80       		.byte	0x80
+ 920 02d8 00       		.byte	0
+ 921 02d9 03       		.uleb128 0x3
+ 922 02da 42030000 		.4byte	.LASF45
+ 923 02de 06       		.byte	0x6
+ 924 02df 0F       		.byte	0xf
+ 925 02e0 AF020000 		.4byte	0x2af
+ 926 02e4 0D       		.uleb128 0xd
+ 927 02e5 02       		.byte	0x2
+ 928 02e6 50000000 		.4byte	0x50
+ 929 02ea 06       		.byte	0x6
+ 930 02eb 1C       		.byte	0x1c
+ 931 02ec 66030000 		.4byte	0x366
+ 932 02f0 0F       		.uleb128 0xf
+ 933 02f1 3F000000 		.4byte	.LASF46
+ 934 02f5 00       		.byte	0
+ 935 02f6 0F       		.uleb128 0xf
+ 936 02f7 00000000 		.4byte	.LASF47
+ 937 02fb 01       		.byte	0x1
+ 938 02fc 0F       		.uleb128 0xf
+ 939 02fd 12000000 		.4byte	.LASF48
+ 940 0301 02       		.byte	0x2
+ 941 0302 0F       		.uleb128 0xf
+ 942 0303 0E050000 		.4byte	.LASF49
+ 943 0307 04       		.byte	0x4
+ 944 0308 0F       		.uleb128 0xf
+ 945 0309 2F000000 		.4byte	.LASF50
+ 946 030d 08       		.byte	0x8
+ 947 030e 0F       		.uleb128 0xf
+ 948 030f A5020000 		.4byte	.LASF51
+ 949 0313 10       		.byte	0x10
+ 950 0314 0F       		.uleb128 0xf
+ 951 0315 9B010000 		.4byte	.LASF52
+ 952 0319 20       		.byte	0x20
+ 953 031a 0F       		.uleb128 0xf
+ 954 031b 1B030000 		.4byte	.LASF53
+ 955 031f 40       		.byte	0x40
+ 956 0320 0F       		.uleb128 0xf
+ 957 0321 0A020000 		.4byte	.LASF54
+ 958 0325 80       		.byte	0x80
+ 959 0326 10       		.uleb128 0x10
+ 960 0327 67020000 		.4byte	.LASF55
+ 961 032b 0001     		.2byte	0x100
+ 962 032d 10       		.uleb128 0x10
+ 963 032e 10010000 		.4byte	.LASF56
+ 964 0332 0002     		.2byte	0x200
+ 965 0334 10       		.uleb128 0x10
+ 966 0335 11030000 		.4byte	.LASF57
+ 967 0339 0004     		.2byte	0x400
+ 968 033b 10       		.uleb128 0x10
+ 969 033c D0000000 		.4byte	.LASF58
+ 970 0340 0004     		.2byte	0x400
+ 971 0342 10       		.uleb128 0x10
+ 972 0343 FA020000 		.4byte	.LASF59
+ 973 0347 0008     		.2byte	0x800
+ 974 0349 10       		.uleb128 0x10
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 34
 
 
- 977 0349 10       		.uleb128 0x10
- 978 034a D2030000 		.4byte	.LASF60
- 979 034e 0010     		.2byte	0x1000
- 980 0350 10       		.uleb128 0x10
- 981 0351 6B030000 		.4byte	.LASF61
- 982 0355 0020     		.2byte	0x2000
- 983 0357 10       		.uleb128 0x10
- 984 0358 8D020000 		.4byte	.LASF62
- 985 035c 0040     		.2byte	0x4000
- 986 035e 10       		.uleb128 0x10
- 987 035f 31030000 		.4byte	.LASF63
- 988 0363 0080     		.2byte	0x8000
- 989 0365 00       		.byte	0
- 990 0366 03       		.uleb128 0x3
- 991 0367 C6020000 		.4byte	.LASF64
- 992 036b 06       		.byte	0x6
- 993 036c 2F       		.byte	0x2f
- 994 036d E4020000 		.4byte	0x2e4
- 995 0371 11       		.uleb128 0x11
- 996 0372 25030000 		.4byte	.LASF71
- 997 0376 01       		.byte	0x1
- 998 0377 4D       		.byte	0x4d
- 999 0378 AD000000 		.4byte	0xad
- 1000 037c 00000000 		.4byte	.LFB63
- 1001 0380 DC000000 		.4byte	.LFE63-.LFB63
- 1002 0384 01       		.uleb128 0x1
- 1003 0385 9C       		.byte	0x9c
- 1004 0386 F0030000 		.4byte	0x3f0
- 1005 038a 12       		.uleb128 0x12
- 1006 038b 58030000 		.4byte	.LASF69
- 1007 038f 01       		.byte	0x1
- 1008 0390 4D       		.byte	0x4d
- 1009 0391 F0030000 		.4byte	0x3f0
- 1010 0395 00000000 		.4byte	.LLST0
- 1011 0399 13       		.uleb128 0x13
- 1012 039a 6900     		.ascii	"i\000"
- 1013 039c 01       		.byte	0x1
- 1014 039d 4F       		.byte	0x4f
- 1015 039e AD000000 		.4byte	0xad
- 1016 03a2 21000000 		.4byte	.LLST1
- 1017 03a6 13       		.uleb128 0x13
- 1018 03a7 6A00     		.ascii	"j\000"
- 1019 03a9 01       		.byte	0x1
- 1020 03aa 4F       		.byte	0x4f
- 1021 03ab AD000000 		.4byte	0xad
- 1022 03af 4A000000 		.4byte	.LLST2
- 1023 03b3 14       		.uleb128 0x14
- 1024 03b4 95010000 		.4byte	.LASF65
- 1025 03b8 01       		.byte	0x1
- 1026 03b9 4F       		.byte	0x4f
- 1027 03ba AD000000 		.4byte	0xad
- 1028 03be 74000000 		.4byte	.LLST3
- 1029 03c2 14       		.uleb128 0x14
- 1030 03c3 A7000000 		.4byte	.LASF66
- 1031 03c7 01       		.byte	0x1
- 1032 03c8 50       		.byte	0x50
- 1033 03c9 AD000000 		.4byte	0xad
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 35
+ 975 034a D2030000 		.4byte	.LASF60
+ 976 034e 0010     		.2byte	0x1000
+ 977 0350 10       		.uleb128 0x10
+ 978 0351 6B030000 		.4byte	.LASF61
+ 979 0355 0020     		.2byte	0x2000
+ 980 0357 10       		.uleb128 0x10
+ 981 0358 8D020000 		.4byte	.LASF62
+ 982 035c 0040     		.2byte	0x4000
+ 983 035e 10       		.uleb128 0x10
+ 984 035f 31030000 		.4byte	.LASF63
+ 985 0363 0080     		.2byte	0x8000
+ 986 0365 00       		.byte	0
+ 987 0366 03       		.uleb128 0x3
+ 988 0367 C6020000 		.4byte	.LASF64
+ 989 036b 06       		.byte	0x6
+ 990 036c 2F       		.byte	0x2f
+ 991 036d E4020000 		.4byte	0x2e4
+ 992 0371 11       		.uleb128 0x11
+ 993 0372 25030000 		.4byte	.LASF71
+ 994 0376 01       		.byte	0x1
+ 995 0377 4D       		.byte	0x4d
+ 996 0378 AD000000 		.4byte	0xad
+ 997 037c 00000000 		.4byte	.LFB63
+ 998 0380 DC000000 		.4byte	.LFE63-.LFB63
+ 999 0384 01       		.uleb128 0x1
+ 1000 0385 9C       		.byte	0x9c
+ 1001 0386 F0030000 		.4byte	0x3f0
+ 1002 038a 12       		.uleb128 0x12
+ 1003 038b 58030000 		.4byte	.LASF69
+ 1004 038f 01       		.byte	0x1
+ 1005 0390 4D       		.byte	0x4d
+ 1006 0391 F0030000 		.4byte	0x3f0
+ 1007 0395 00000000 		.4byte	.LLST0
+ 1008 0399 13       		.uleb128 0x13
+ 1009 039a 6900     		.ascii	"i\000"
+ 1010 039c 01       		.byte	0x1
+ 1011 039d 4F       		.byte	0x4f
+ 1012 039e AD000000 		.4byte	0xad
+ 1013 03a2 21000000 		.4byte	.LLST1
+ 1014 03a6 13       		.uleb128 0x13
+ 1015 03a7 6A00     		.ascii	"j\000"
+ 1016 03a9 01       		.byte	0x1
+ 1017 03aa 4F       		.byte	0x4f
+ 1018 03ab AD000000 		.4byte	0xad
+ 1019 03af 4A000000 		.4byte	.LLST2
+ 1020 03b3 14       		.uleb128 0x14
+ 1021 03b4 95010000 		.4byte	.LASF65
+ 1022 03b8 01       		.byte	0x1
+ 1023 03b9 4F       		.byte	0x4f
+ 1024 03ba AD000000 		.4byte	0xad
+ 1025 03be 74000000 		.4byte	.LLST3
+ 1026 03c2 14       		.uleb128 0x14
+ 1027 03c3 A7000000 		.4byte	.LASF66
+ 1028 03c7 01       		.byte	0x1
+ 1029 03c8 50       		.byte	0x50
+ 1030 03c9 AD000000 		.4byte	0xad
+ 1031 03cd 92000000 		.4byte	.LLST4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 35
 
 
- 1034 03cd 92000000 		.4byte	.LLST4
- 1035 03d1 14       		.uleb128 0x14
- 1036 03d2 0B000000 		.4byte	.LASF67
- 1037 03d6 01       		.byte	0x1
- 1038 03d7 51       		.byte	0x51
- 1039 03d8 AD000000 		.4byte	0xad
- 1040 03dc BC000000 		.4byte	.LLST5
- 1041 03e0 14       		.uleb128 0x14
- 1042 03e1 5F040000 		.4byte	.LASF68
- 1043 03e5 01       		.byte	0x1
- 1044 03e6 52       		.byte	0x52
- 1045 03e7 B9000000 		.4byte	0xb9
- 1046 03eb F2000000 		.4byte	.LLST6
- 1047 03ef 00       		.byte	0
- 1048 03f0 0C       		.uleb128 0xc
- 1049 03f1 04       		.byte	0x4
- 1050 03f2 F6030000 		.4byte	0x3f6
- 1051 03f6 15       		.uleb128 0x15
- 1052 03f7 FA010000 		.4byte	0x1fa
- 1053 03fb 16       		.uleb128 0x16
- 1054 03fc 4E000000 		.4byte	.LASF73
- 1055 0400 01       		.byte	0x1
- 1056 0401 CB       		.byte	0xcb
- 1057 0402 00000000 		.4byte	.LFB64
- 1058 0406 1C000000 		.4byte	.LFE64-.LFB64
- 1059 040a 01       		.uleb128 0x1
- 1060 040b 9C       		.byte	0x9c
- 1061 040c 20040000 		.4byte	0x420
- 1062 0410 12       		.uleb128 0x12
- 1063 0411 78030000 		.4byte	.LASF70
- 1064 0415 01       		.byte	0x1
- 1065 0416 CB       		.byte	0xcb
- 1066 0417 AD000000 		.4byte	0xad
- 1067 041b 32010000 		.4byte	.LLST7
- 1068 041f 00       		.byte	0
- 1069 0420 11       		.uleb128 0x11
- 1070 0421 8C000000 		.4byte	.LASF72
- 1071 0425 01       		.byte	0x1
- 1072 0426 E9       		.byte	0xe9
- 1073 0427 AD000000 		.4byte	0xad
- 1074 042b 00000000 		.4byte	.LFB65
- 1075 042f 20000000 		.4byte	.LFE65-.LFB65
- 1076 0433 01       		.uleb128 0x1
- 1077 0434 9C       		.byte	0x9c
- 1078 0435 49040000 		.4byte	0x449
- 1079 0439 14       		.uleb128 0x14
- 1080 043a 0B000000 		.4byte	.LASF67
- 1081 043e 01       		.byte	0x1
- 1082 043f EB       		.byte	0xeb
- 1083 0440 AD000000 		.4byte	0xad
- 1084 0444 53010000 		.4byte	.LLST8
- 1085 0448 00       		.byte	0
- 1086 0449 17       		.uleb128 0x17
- 1087 044a 66000000 		.4byte	.LASF74
- 1088 044e 01       		.byte	0x1
- 1089 044f 8702     		.2byte	0x287
- 1090 0451 00000000 		.4byte	.LFB66
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 36
+ 1032 03d1 14       		.uleb128 0x14
+ 1033 03d2 0B000000 		.4byte	.LASF67
+ 1034 03d6 01       		.byte	0x1
+ 1035 03d7 51       		.byte	0x51
+ 1036 03d8 AD000000 		.4byte	0xad
+ 1037 03dc BC000000 		.4byte	.LLST5
+ 1038 03e0 14       		.uleb128 0x14
+ 1039 03e1 5F040000 		.4byte	.LASF68
+ 1040 03e5 01       		.byte	0x1
+ 1041 03e6 52       		.byte	0x52
+ 1042 03e7 B9000000 		.4byte	0xb9
+ 1043 03eb F2000000 		.4byte	.LLST6
+ 1044 03ef 00       		.byte	0
+ 1045 03f0 0C       		.uleb128 0xc
+ 1046 03f1 04       		.byte	0x4
+ 1047 03f2 F6030000 		.4byte	0x3f6
+ 1048 03f6 15       		.uleb128 0x15
+ 1049 03f7 FA010000 		.4byte	0x1fa
+ 1050 03fb 16       		.uleb128 0x16
+ 1051 03fc 4E000000 		.4byte	.LASF73
+ 1052 0400 01       		.byte	0x1
+ 1053 0401 CB       		.byte	0xcb
+ 1054 0402 00000000 		.4byte	.LFB64
+ 1055 0406 1C000000 		.4byte	.LFE64-.LFB64
+ 1056 040a 01       		.uleb128 0x1
+ 1057 040b 9C       		.byte	0x9c
+ 1058 040c 20040000 		.4byte	0x420
+ 1059 0410 12       		.uleb128 0x12
+ 1060 0411 78030000 		.4byte	.LASF70
+ 1061 0415 01       		.byte	0x1
+ 1062 0416 CB       		.byte	0xcb
+ 1063 0417 AD000000 		.4byte	0xad
+ 1064 041b 32010000 		.4byte	.LLST7
+ 1065 041f 00       		.byte	0
+ 1066 0420 11       		.uleb128 0x11
+ 1067 0421 8C000000 		.4byte	.LASF72
+ 1068 0425 01       		.byte	0x1
+ 1069 0426 E9       		.byte	0xe9
+ 1070 0427 AD000000 		.4byte	0xad
+ 1071 042b 00000000 		.4byte	.LFB65
+ 1072 042f 20000000 		.4byte	.LFE65-.LFB65
+ 1073 0433 01       		.uleb128 0x1
+ 1074 0434 9C       		.byte	0x9c
+ 1075 0435 49040000 		.4byte	0x449
+ 1076 0439 14       		.uleb128 0x14
+ 1077 043a 0B000000 		.4byte	.LASF67
+ 1078 043e 01       		.byte	0x1
+ 1079 043f EB       		.byte	0xeb
+ 1080 0440 AD000000 		.4byte	0xad
+ 1081 0444 53010000 		.4byte	.LLST8
+ 1082 0448 00       		.byte	0
+ 1083 0449 17       		.uleb128 0x17
+ 1084 044a 66000000 		.4byte	.LASF74
+ 1085 044e 01       		.byte	0x1
+ 1086 044f 8702     		.2byte	0x287
+ 1087 0451 00000000 		.4byte	.LFB66
+ 1088 0455 1C000000 		.4byte	.LFE66-.LFB66
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 36
 
 
- 1091 0455 1C000000 		.4byte	.LFE66-.LFB66
- 1092 0459 01       		.uleb128 0x1
- 1093 045a 9C       		.byte	0x9c
- 1094 045b 70040000 		.4byte	0x470
- 1095 045f 18       		.uleb128 0x18
- 1096 0460 F0020000 		.4byte	.LASF75
- 1097 0464 01       		.byte	0x1
- 1098 0465 8702     		.2byte	0x287
- 1099 0467 AD000000 		.4byte	0xad
- 1100 046b 72010000 		.4byte	.LLST9
- 1101 046f 00       		.byte	0
- 1102 0470 19       		.uleb128 0x19
- 1103 0471 45010000 		.4byte	.LASF76
- 1104 0475 01       		.byte	0x1
- 1105 0476 BC02     		.2byte	0x2bc
- 1106 0478 00000000 		.4byte	.LFB67
- 1107 047c 1C000000 		.4byte	.LFE67-.LFB67
- 1108 0480 01       		.uleb128 0x1
- 1109 0481 9C       		.byte	0x9c
- 1110 0482 19       		.uleb128 0x19
- 1111 0483 F3000000 		.4byte	.LASF77
- 1112 0487 01       		.byte	0x1
- 1113 0488 DF02     		.2byte	0x2df
- 1114 048a 00000000 		.4byte	.LFB68
- 1115 048e 34000000 		.4byte	.LFE68-.LFB68
- 1116 0492 01       		.uleb128 0x1
- 1117 0493 9C       		.byte	0x9c
- 1118 0494 19       		.uleb128 0x19
- 1119 0495 C4010000 		.4byte	.LASF78
- 1120 0499 01       		.byte	0x1
- 1121 049a 0503     		.2byte	0x305
- 1122 049c 00000000 		.4byte	.LFB69
- 1123 04a0 1C000000 		.4byte	.LFE69-.LFB69
- 1124 04a4 01       		.uleb128 0x1
- 1125 04a5 9C       		.byte	0x9c
- 1126 04a6 19       		.uleb128 0x19
- 1127 04a7 86030000 		.4byte	.LASF79
- 1128 04ab 01       		.byte	0x1
- 1129 04ac 2903     		.2byte	0x329
- 1130 04ae 00000000 		.4byte	.LFB70
- 1131 04b2 2C000000 		.4byte	.LFE70-.LFB70
- 1132 04b6 01       		.uleb128 0x1
- 1133 04b7 9C       		.byte	0x9c
- 1134 04b8 19       		.uleb128 0x19
- 1135 04b9 2C010000 		.4byte	.LASF80
- 1136 04bd 01       		.byte	0x1
- 1137 04be 4E03     		.2byte	0x34e
- 1138 04c0 00000000 		.4byte	.LFB71
- 1139 04c4 28000000 		.4byte	.LFE71-.LFB71
- 1140 04c8 01       		.uleb128 0x1
- 1141 04c9 9C       		.byte	0x9c
- 1142 04ca 19       		.uleb128 0x19
- 1143 04cb E2030000 		.4byte	.LASF81
- 1144 04cf 01       		.byte	0x1
- 1145 04d0 7303     		.2byte	0x373
- 1146 04d2 00000000 		.4byte	.LFB72
- 1147 04d6 34000000 		.4byte	.LFE72-.LFB72
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 37
+ 1089 0459 01       		.uleb128 0x1
+ 1090 045a 9C       		.byte	0x9c
+ 1091 045b 70040000 		.4byte	0x470
+ 1092 045f 18       		.uleb128 0x18
+ 1093 0460 F0020000 		.4byte	.LASF75
+ 1094 0464 01       		.byte	0x1
+ 1095 0465 8702     		.2byte	0x287
+ 1096 0467 AD000000 		.4byte	0xad
+ 1097 046b 72010000 		.4byte	.LLST9
+ 1098 046f 00       		.byte	0
+ 1099 0470 19       		.uleb128 0x19
+ 1100 0471 45010000 		.4byte	.LASF76
+ 1101 0475 01       		.byte	0x1
+ 1102 0476 BC02     		.2byte	0x2bc
+ 1103 0478 00000000 		.4byte	.LFB67
+ 1104 047c 1C000000 		.4byte	.LFE67-.LFB67
+ 1105 0480 01       		.uleb128 0x1
+ 1106 0481 9C       		.byte	0x9c
+ 1107 0482 19       		.uleb128 0x19
+ 1108 0483 F3000000 		.4byte	.LASF77
+ 1109 0487 01       		.byte	0x1
+ 1110 0488 DF02     		.2byte	0x2df
+ 1111 048a 00000000 		.4byte	.LFB68
+ 1112 048e 48000000 		.4byte	.LFE68-.LFB68
+ 1113 0492 01       		.uleb128 0x1
+ 1114 0493 9C       		.byte	0x9c
+ 1115 0494 19       		.uleb128 0x19
+ 1116 0495 C4010000 		.4byte	.LASF78
+ 1117 0499 01       		.byte	0x1
+ 1118 049a 0703     		.2byte	0x307
+ 1119 049c 00000000 		.4byte	.LFB69
+ 1120 04a0 1C000000 		.4byte	.LFE69-.LFB69
+ 1121 04a4 01       		.uleb128 0x1
+ 1122 04a5 9C       		.byte	0x9c
+ 1123 04a6 19       		.uleb128 0x19
+ 1124 04a7 86030000 		.4byte	.LASF79
+ 1125 04ab 01       		.byte	0x1
+ 1126 04ac 2B03     		.2byte	0x32b
+ 1127 04ae 00000000 		.4byte	.LFB70
+ 1128 04b2 10000000 		.4byte	.LFE70-.LFB70
+ 1129 04b6 01       		.uleb128 0x1
+ 1130 04b7 9C       		.byte	0x9c
+ 1131 04b8 19       		.uleb128 0x19
+ 1132 04b9 2C010000 		.4byte	.LASF80
+ 1133 04bd 01       		.byte	0x1
+ 1134 04be 5003     		.2byte	0x350
+ 1135 04c0 00000000 		.4byte	.LFB71
+ 1136 04c4 28000000 		.4byte	.LFE71-.LFB71
+ 1137 04c8 01       		.uleb128 0x1
+ 1138 04c9 9C       		.byte	0x9c
+ 1139 04ca 19       		.uleb128 0x19
+ 1140 04cb E2030000 		.4byte	.LASF81
+ 1141 04cf 01       		.byte	0x1
+ 1142 04d0 7503     		.2byte	0x375
+ 1143 04d2 00000000 		.4byte	.LFB72
+ 1144 04d6 34000000 		.4byte	.LFE72-.LFB72
+ 1145 04da 01       		.uleb128 0x1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 37
 
 
- 1148 04da 01       		.uleb128 0x1
- 1149 04db 9C       		.byte	0x9c
- 1150 04dc 1A       		.uleb128 0x1a
- 1151 04dd 6D040000 		.4byte	.LASF82
- 1152 04e1 07       		.byte	0x7
- 1153 04e2 5506     		.2byte	0x655
- 1154 04e4 E8040000 		.4byte	0x4e8
- 1155 04e8 06       		.uleb128 0x6
- 1156 04e9 A2000000 		.4byte	0xa2
- 1157 04ed 1B       		.uleb128 0x1b
- 1158 04ee 48000000 		.4byte	.LASF83
- 1159 04f2 01       		.byte	0x1
- 1160 04f3 1E       		.byte	0x1e
- 1161 04f4 F8040000 		.4byte	0x4f8
- 1162 04f8 06       		.uleb128 0x6
- 1163 04f9 D9020000 		.4byte	0x2d9
- 1164 04fd 1B       		.uleb128 0x1b
- 1165 04fe D8020000 		.4byte	.LASF84
- 1166 0502 01       		.byte	0x1
- 1167 0503 20       		.byte	0x20
- 1168 0504 A5020000 		.4byte	0x2a5
- 1169 0508 1B       		.uleb128 0x1b
- 1170 0509 19050000 		.4byte	.LASF85
- 1171 050d 01       		.byte	0x1
- 1172 050e 22       		.byte	0x22
- 1173 050f AA020000 		.4byte	0x2aa
- 1174 0513 1C       		.uleb128 0x1c
- 1175 0514 736F6300 		.ascii	"soc\000"
- 1176 0518 01       		.byte	0x1
- 1177 0519 25       		.byte	0x25
- 1178 051a A5020000 		.4byte	0x2a5
- 1179 051e 1B       		.uleb128 0x1b
- 1180 051f 4D040000 		.4byte	.LASF86
- 1181 0523 01       		.byte	0x1
- 1182 0524 27       		.byte	0x27
- 1183 0525 29050000 		.4byte	0x529
- 1184 0529 06       		.uleb128 0x6
- 1185 052a 66030000 		.4byte	0x366
- 1186 052e 1B       		.uleb128 0x1b
- 1187 052f E8010000 		.4byte	.LASF87
- 1188 0533 01       		.byte	0x1
- 1189 0534 28       		.byte	0x28
- 1190 0535 A5020000 		.4byte	0x2a5
- 1191 0539 1B       		.uleb128 0x1b
- 1192 053a C2000000 		.4byte	.LASF88
- 1193 053e 01       		.byte	0x1
- 1194 053f 2B       		.byte	0x2b
- 1195 0540 AA020000 		.4byte	0x2aa
- 1196 0544 1B       		.uleb128 0x1b
- 1197 0545 5C020000 		.4byte	.LASF89
- 1198 0549 01       		.byte	0x1
- 1199 054a 2C       		.byte	0x2c
- 1200 054b AA020000 		.4byte	0x2aa
- 1201 054f 00       		.byte	0
- 1202              		.section	.debug_abbrev,"",%progbits
- 1203              	.Ldebug_abbrev0:
- 1204 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 38
+ 1146 04db 9C       		.byte	0x9c
+ 1147 04dc 1A       		.uleb128 0x1a
+ 1148 04dd 6D040000 		.4byte	.LASF82
+ 1149 04e1 07       		.byte	0x7
+ 1150 04e2 5506     		.2byte	0x655
+ 1151 04e4 E8040000 		.4byte	0x4e8
+ 1152 04e8 06       		.uleb128 0x6
+ 1153 04e9 A2000000 		.4byte	0xa2
+ 1154 04ed 1B       		.uleb128 0x1b
+ 1155 04ee 48000000 		.4byte	.LASF83
+ 1156 04f2 01       		.byte	0x1
+ 1157 04f3 1E       		.byte	0x1e
+ 1158 04f4 F8040000 		.4byte	0x4f8
+ 1159 04f8 06       		.uleb128 0x6
+ 1160 04f9 D9020000 		.4byte	0x2d9
+ 1161 04fd 1B       		.uleb128 0x1b
+ 1162 04fe D8020000 		.4byte	.LASF84
+ 1163 0502 01       		.byte	0x1
+ 1164 0503 20       		.byte	0x20
+ 1165 0504 A5020000 		.4byte	0x2a5
+ 1166 0508 1B       		.uleb128 0x1b
+ 1167 0509 19050000 		.4byte	.LASF85
+ 1168 050d 01       		.byte	0x1
+ 1169 050e 22       		.byte	0x22
+ 1170 050f AA020000 		.4byte	0x2aa
+ 1171 0513 1C       		.uleb128 0x1c
+ 1172 0514 736F6300 		.ascii	"soc\000"
+ 1173 0518 01       		.byte	0x1
+ 1174 0519 25       		.byte	0x25
+ 1175 051a A5020000 		.4byte	0x2a5
+ 1176 051e 1B       		.uleb128 0x1b
+ 1177 051f 4D040000 		.4byte	.LASF86
+ 1178 0523 01       		.byte	0x1
+ 1179 0524 27       		.byte	0x27
+ 1180 0525 29050000 		.4byte	0x529
+ 1181 0529 06       		.uleb128 0x6
+ 1182 052a 66030000 		.4byte	0x366
+ 1183 052e 1B       		.uleb128 0x1b
+ 1184 052f E8010000 		.4byte	.LASF87
+ 1185 0533 01       		.byte	0x1
+ 1186 0534 28       		.byte	0x28
+ 1187 0535 A5020000 		.4byte	0x2a5
+ 1188 0539 1B       		.uleb128 0x1b
+ 1189 053a C2000000 		.4byte	.LASF88
+ 1190 053e 01       		.byte	0x1
+ 1191 053f 2B       		.byte	0x2b
+ 1192 0540 AA020000 		.4byte	0x2aa
+ 1193 0544 1B       		.uleb128 0x1b
+ 1194 0545 5C020000 		.4byte	.LASF89
+ 1195 0549 01       		.byte	0x1
+ 1196 054a 2C       		.byte	0x2c
+ 1197 054b AA020000 		.4byte	0x2aa
+ 1198 054f 00       		.byte	0
+ 1199              		.section	.debug_abbrev,"",%progbits
+ 1200              	.Ldebug_abbrev0:
+ 1201 0000 01       		.uleb128 0x1
+ 1202 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 38
 
 
- 1205 0001 11       		.uleb128 0x11
- 1206 0002 01       		.byte	0x1
- 1207 0003 25       		.uleb128 0x25
- 1208 0004 0E       		.uleb128 0xe
- 1209 0005 13       		.uleb128 0x13
- 1210 0006 0B       		.uleb128 0xb
- 1211 0007 03       		.uleb128 0x3
- 1212 0008 0E       		.uleb128 0xe
- 1213 0009 1B       		.uleb128 0x1b
- 1214 000a 0E       		.uleb128 0xe
- 1215 000b 55       		.uleb128 0x55
- 1216 000c 17       		.uleb128 0x17
- 1217 000d 11       		.uleb128 0x11
- 1218 000e 01       		.uleb128 0x1
- 1219 000f 10       		.uleb128 0x10
- 1220 0010 17       		.uleb128 0x17
- 1221 0011 00       		.byte	0
- 1222 0012 00       		.byte	0
- 1223 0013 02       		.uleb128 0x2
- 1224 0014 24       		.uleb128 0x24
- 1225 0015 00       		.byte	0
- 1226 0016 0B       		.uleb128 0xb
- 1227 0017 0B       		.uleb128 0xb
- 1228 0018 3E       		.uleb128 0x3e
- 1229 0019 0B       		.uleb128 0xb
- 1230 001a 03       		.uleb128 0x3
- 1231 001b 0E       		.uleb128 0xe
- 1232 001c 00       		.byte	0
- 1233 001d 00       		.byte	0
- 1234 001e 03       		.uleb128 0x3
- 1235 001f 16       		.uleb128 0x16
- 1236 0020 00       		.byte	0
- 1237 0021 03       		.uleb128 0x3
- 1238 0022 0E       		.uleb128 0xe
- 1239 0023 3A       		.uleb128 0x3a
- 1240 0024 0B       		.uleb128 0xb
- 1241 0025 3B       		.uleb128 0x3b
- 1242 0026 0B       		.uleb128 0xb
- 1243 0027 49       		.uleb128 0x49
- 1244 0028 13       		.uleb128 0x13
- 1245 0029 00       		.byte	0
- 1246 002a 00       		.byte	0
- 1247 002b 04       		.uleb128 0x4
- 1248 002c 24       		.uleb128 0x24
- 1249 002d 00       		.byte	0
- 1250 002e 0B       		.uleb128 0xb
- 1251 002f 0B       		.uleb128 0xb
- 1252 0030 3E       		.uleb128 0x3e
- 1253 0031 0B       		.uleb128 0xb
- 1254 0032 03       		.uleb128 0x3
- 1255 0033 08       		.uleb128 0x8
- 1256 0034 00       		.byte	0
- 1257 0035 00       		.byte	0
- 1258 0036 05       		.uleb128 0x5
- 1259 0037 16       		.uleb128 0x16
- 1260 0038 00       		.byte	0
- 1261 0039 03       		.uleb128 0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 39
+ 1203 0002 01       		.byte	0x1
+ 1204 0003 25       		.uleb128 0x25
+ 1205 0004 0E       		.uleb128 0xe
+ 1206 0005 13       		.uleb128 0x13
+ 1207 0006 0B       		.uleb128 0xb
+ 1208 0007 03       		.uleb128 0x3
+ 1209 0008 0E       		.uleb128 0xe
+ 1210 0009 1B       		.uleb128 0x1b
+ 1211 000a 0E       		.uleb128 0xe
+ 1212 000b 55       		.uleb128 0x55
+ 1213 000c 17       		.uleb128 0x17
+ 1214 000d 11       		.uleb128 0x11
+ 1215 000e 01       		.uleb128 0x1
+ 1216 000f 10       		.uleb128 0x10
+ 1217 0010 17       		.uleb128 0x17
+ 1218 0011 00       		.byte	0
+ 1219 0012 00       		.byte	0
+ 1220 0013 02       		.uleb128 0x2
+ 1221 0014 24       		.uleb128 0x24
+ 1222 0015 00       		.byte	0
+ 1223 0016 0B       		.uleb128 0xb
+ 1224 0017 0B       		.uleb128 0xb
+ 1225 0018 3E       		.uleb128 0x3e
+ 1226 0019 0B       		.uleb128 0xb
+ 1227 001a 03       		.uleb128 0x3
+ 1228 001b 0E       		.uleb128 0xe
+ 1229 001c 00       		.byte	0
+ 1230 001d 00       		.byte	0
+ 1231 001e 03       		.uleb128 0x3
+ 1232 001f 16       		.uleb128 0x16
+ 1233 0020 00       		.byte	0
+ 1234 0021 03       		.uleb128 0x3
+ 1235 0022 0E       		.uleb128 0xe
+ 1236 0023 3A       		.uleb128 0x3a
+ 1237 0024 0B       		.uleb128 0xb
+ 1238 0025 3B       		.uleb128 0x3b
+ 1239 0026 0B       		.uleb128 0xb
+ 1240 0027 49       		.uleb128 0x49
+ 1241 0028 13       		.uleb128 0x13
+ 1242 0029 00       		.byte	0
+ 1243 002a 00       		.byte	0
+ 1244 002b 04       		.uleb128 0x4
+ 1245 002c 24       		.uleb128 0x24
+ 1246 002d 00       		.byte	0
+ 1247 002e 0B       		.uleb128 0xb
+ 1248 002f 0B       		.uleb128 0xb
+ 1249 0030 3E       		.uleb128 0x3e
+ 1250 0031 0B       		.uleb128 0xb
+ 1251 0032 03       		.uleb128 0x3
+ 1252 0033 08       		.uleb128 0x8
+ 1253 0034 00       		.byte	0
+ 1254 0035 00       		.byte	0
+ 1255 0036 05       		.uleb128 0x5
+ 1256 0037 16       		.uleb128 0x16
+ 1257 0038 00       		.byte	0
+ 1258 0039 03       		.uleb128 0x3
+ 1259 003a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 39
 
 
- 1262 003a 0E       		.uleb128 0xe
- 1263 003b 3A       		.uleb128 0x3a
- 1264 003c 0B       		.uleb128 0xb
- 1265 003d 3B       		.uleb128 0x3b
- 1266 003e 05       		.uleb128 0x5
- 1267 003f 49       		.uleb128 0x49
- 1268 0040 13       		.uleb128 0x13
- 1269 0041 00       		.byte	0
- 1270 0042 00       		.byte	0
- 1271 0043 06       		.uleb128 0x6
- 1272 0044 35       		.uleb128 0x35
- 1273 0045 00       		.byte	0
- 1274 0046 49       		.uleb128 0x49
- 1275 0047 13       		.uleb128 0x13
- 1276 0048 00       		.byte	0
- 1277 0049 00       		.byte	0
- 1278 004a 07       		.uleb128 0x7
- 1279 004b 13       		.uleb128 0x13
- 1280 004c 01       		.byte	0x1
- 1281 004d 0B       		.uleb128 0xb
- 1282 004e 0B       		.uleb128 0xb
- 1283 004f 3A       		.uleb128 0x3a
- 1284 0050 0B       		.uleb128 0xb
- 1285 0051 3B       		.uleb128 0x3b
- 1286 0052 0B       		.uleb128 0xb
- 1287 0053 01       		.uleb128 0x1
- 1288 0054 13       		.uleb128 0x13
- 1289 0055 00       		.byte	0
- 1290 0056 00       		.byte	0
- 1291 0057 08       		.uleb128 0x8
- 1292 0058 0D       		.uleb128 0xd
- 1293 0059 00       		.byte	0
- 1294 005a 03       		.uleb128 0x3
- 1295 005b 0E       		.uleb128 0xe
- 1296 005c 3A       		.uleb128 0x3a
- 1297 005d 0B       		.uleb128 0xb
- 1298 005e 3B       		.uleb128 0x3b
- 1299 005f 0B       		.uleb128 0xb
- 1300 0060 49       		.uleb128 0x49
- 1301 0061 13       		.uleb128 0x13
- 1302 0062 38       		.uleb128 0x38
- 1303 0063 0B       		.uleb128 0xb
- 1304 0064 00       		.byte	0
- 1305 0065 00       		.byte	0
- 1306 0066 09       		.uleb128 0x9
- 1307 0067 01       		.uleb128 0x1
- 1308 0068 01       		.byte	0x1
- 1309 0069 49       		.uleb128 0x49
- 1310 006a 13       		.uleb128 0x13
- 1311 006b 01       		.uleb128 0x1
- 1312 006c 13       		.uleb128 0x13
- 1313 006d 00       		.byte	0
- 1314 006e 00       		.byte	0
- 1315 006f 0A       		.uleb128 0xa
- 1316 0070 21       		.uleb128 0x21
- 1317 0071 00       		.byte	0
- 1318 0072 49       		.uleb128 0x49
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 40
+ 1260 003b 3A       		.uleb128 0x3a
+ 1261 003c 0B       		.uleb128 0xb
+ 1262 003d 3B       		.uleb128 0x3b
+ 1263 003e 05       		.uleb128 0x5
+ 1264 003f 49       		.uleb128 0x49
+ 1265 0040 13       		.uleb128 0x13
+ 1266 0041 00       		.byte	0
+ 1267 0042 00       		.byte	0
+ 1268 0043 06       		.uleb128 0x6
+ 1269 0044 35       		.uleb128 0x35
+ 1270 0045 00       		.byte	0
+ 1271 0046 49       		.uleb128 0x49
+ 1272 0047 13       		.uleb128 0x13
+ 1273 0048 00       		.byte	0
+ 1274 0049 00       		.byte	0
+ 1275 004a 07       		.uleb128 0x7
+ 1276 004b 13       		.uleb128 0x13
+ 1277 004c 01       		.byte	0x1
+ 1278 004d 0B       		.uleb128 0xb
+ 1279 004e 0B       		.uleb128 0xb
+ 1280 004f 3A       		.uleb128 0x3a
+ 1281 0050 0B       		.uleb128 0xb
+ 1282 0051 3B       		.uleb128 0x3b
+ 1283 0052 0B       		.uleb128 0xb
+ 1284 0053 01       		.uleb128 0x1
+ 1285 0054 13       		.uleb128 0x13
+ 1286 0055 00       		.byte	0
+ 1287 0056 00       		.byte	0
+ 1288 0057 08       		.uleb128 0x8
+ 1289 0058 0D       		.uleb128 0xd
+ 1290 0059 00       		.byte	0
+ 1291 005a 03       		.uleb128 0x3
+ 1292 005b 0E       		.uleb128 0xe
+ 1293 005c 3A       		.uleb128 0x3a
+ 1294 005d 0B       		.uleb128 0xb
+ 1295 005e 3B       		.uleb128 0x3b
+ 1296 005f 0B       		.uleb128 0xb
+ 1297 0060 49       		.uleb128 0x49
+ 1298 0061 13       		.uleb128 0x13
+ 1299 0062 38       		.uleb128 0x38
+ 1300 0063 0B       		.uleb128 0xb
+ 1301 0064 00       		.byte	0
+ 1302 0065 00       		.byte	0
+ 1303 0066 09       		.uleb128 0x9
+ 1304 0067 01       		.uleb128 0x1
+ 1305 0068 01       		.byte	0x1
+ 1306 0069 49       		.uleb128 0x49
+ 1307 006a 13       		.uleb128 0x13
+ 1308 006b 01       		.uleb128 0x1
+ 1309 006c 13       		.uleb128 0x13
+ 1310 006d 00       		.byte	0
+ 1311 006e 00       		.byte	0
+ 1312 006f 0A       		.uleb128 0xa
+ 1313 0070 21       		.uleb128 0x21
+ 1314 0071 00       		.byte	0
+ 1315 0072 49       		.uleb128 0x49
+ 1316 0073 13       		.uleb128 0x13
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 40
 
 
- 1319 0073 13       		.uleb128 0x13
- 1320 0074 2F       		.uleb128 0x2f
- 1321 0075 0B       		.uleb128 0xb
- 1322 0076 00       		.byte	0
- 1323 0077 00       		.byte	0
- 1324 0078 0B       		.uleb128 0xb
- 1325 0079 0D       		.uleb128 0xd
- 1326 007a 00       		.byte	0
- 1327 007b 03       		.uleb128 0x3
- 1328 007c 08       		.uleb128 0x8
- 1329 007d 3A       		.uleb128 0x3a
- 1330 007e 0B       		.uleb128 0xb
- 1331 007f 3B       		.uleb128 0x3b
- 1332 0080 0B       		.uleb128 0xb
- 1333 0081 49       		.uleb128 0x49
- 1334 0082 13       		.uleb128 0x13
- 1335 0083 38       		.uleb128 0x38
- 1336 0084 0B       		.uleb128 0xb
- 1337 0085 00       		.byte	0
- 1338 0086 00       		.byte	0
- 1339 0087 0C       		.uleb128 0xc
- 1340 0088 0F       		.uleb128 0xf
- 1341 0089 00       		.byte	0
- 1342 008a 0B       		.uleb128 0xb
- 1343 008b 0B       		.uleb128 0xb
- 1344 008c 49       		.uleb128 0x49
- 1345 008d 13       		.uleb128 0x13
- 1346 008e 00       		.byte	0
- 1347 008f 00       		.byte	0
- 1348 0090 0D       		.uleb128 0xd
- 1349 0091 04       		.uleb128 0x4
- 1350 0092 01       		.byte	0x1
- 1351 0093 0B       		.uleb128 0xb
- 1352 0094 0B       		.uleb128 0xb
- 1353 0095 49       		.uleb128 0x49
- 1354 0096 13       		.uleb128 0x13
- 1355 0097 3A       		.uleb128 0x3a
- 1356 0098 0B       		.uleb128 0xb
- 1357 0099 3B       		.uleb128 0x3b
- 1358 009a 0B       		.uleb128 0xb
- 1359 009b 01       		.uleb128 0x1
- 1360 009c 13       		.uleb128 0x13
- 1361 009d 00       		.byte	0
- 1362 009e 00       		.byte	0
- 1363 009f 0E       		.uleb128 0xe
- 1364 00a0 28       		.uleb128 0x28
- 1365 00a1 00       		.byte	0
- 1366 00a2 03       		.uleb128 0x3
- 1367 00a3 08       		.uleb128 0x8
- 1368 00a4 1C       		.uleb128 0x1c
- 1369 00a5 0B       		.uleb128 0xb
- 1370 00a6 00       		.byte	0
- 1371 00a7 00       		.byte	0
- 1372 00a8 0F       		.uleb128 0xf
- 1373 00a9 28       		.uleb128 0x28
- 1374 00aa 00       		.byte	0
- 1375 00ab 03       		.uleb128 0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 41
+ 1317 0074 2F       		.uleb128 0x2f
+ 1318 0075 0B       		.uleb128 0xb
+ 1319 0076 00       		.byte	0
+ 1320 0077 00       		.byte	0
+ 1321 0078 0B       		.uleb128 0xb
+ 1322 0079 0D       		.uleb128 0xd
+ 1323 007a 00       		.byte	0
+ 1324 007b 03       		.uleb128 0x3
+ 1325 007c 08       		.uleb128 0x8
+ 1326 007d 3A       		.uleb128 0x3a
+ 1327 007e 0B       		.uleb128 0xb
+ 1328 007f 3B       		.uleb128 0x3b
+ 1329 0080 0B       		.uleb128 0xb
+ 1330 0081 49       		.uleb128 0x49
+ 1331 0082 13       		.uleb128 0x13
+ 1332 0083 38       		.uleb128 0x38
+ 1333 0084 0B       		.uleb128 0xb
+ 1334 0085 00       		.byte	0
+ 1335 0086 00       		.byte	0
+ 1336 0087 0C       		.uleb128 0xc
+ 1337 0088 0F       		.uleb128 0xf
+ 1338 0089 00       		.byte	0
+ 1339 008a 0B       		.uleb128 0xb
+ 1340 008b 0B       		.uleb128 0xb
+ 1341 008c 49       		.uleb128 0x49
+ 1342 008d 13       		.uleb128 0x13
+ 1343 008e 00       		.byte	0
+ 1344 008f 00       		.byte	0
+ 1345 0090 0D       		.uleb128 0xd
+ 1346 0091 04       		.uleb128 0x4
+ 1347 0092 01       		.byte	0x1
+ 1348 0093 0B       		.uleb128 0xb
+ 1349 0094 0B       		.uleb128 0xb
+ 1350 0095 49       		.uleb128 0x49
+ 1351 0096 13       		.uleb128 0x13
+ 1352 0097 3A       		.uleb128 0x3a
+ 1353 0098 0B       		.uleb128 0xb
+ 1354 0099 3B       		.uleb128 0x3b
+ 1355 009a 0B       		.uleb128 0xb
+ 1356 009b 01       		.uleb128 0x1
+ 1357 009c 13       		.uleb128 0x13
+ 1358 009d 00       		.byte	0
+ 1359 009e 00       		.byte	0
+ 1360 009f 0E       		.uleb128 0xe
+ 1361 00a0 28       		.uleb128 0x28
+ 1362 00a1 00       		.byte	0
+ 1363 00a2 03       		.uleb128 0x3
+ 1364 00a3 08       		.uleb128 0x8
+ 1365 00a4 1C       		.uleb128 0x1c
+ 1366 00a5 0B       		.uleb128 0xb
+ 1367 00a6 00       		.byte	0
+ 1368 00a7 00       		.byte	0
+ 1369 00a8 0F       		.uleb128 0xf
+ 1370 00a9 28       		.uleb128 0x28
+ 1371 00aa 00       		.byte	0
+ 1372 00ab 03       		.uleb128 0x3
+ 1373 00ac 0E       		.uleb128 0xe
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 41
 
 
- 1376 00ac 0E       		.uleb128 0xe
- 1377 00ad 1C       		.uleb128 0x1c
- 1378 00ae 0B       		.uleb128 0xb
- 1379 00af 00       		.byte	0
- 1380 00b0 00       		.byte	0
- 1381 00b1 10       		.uleb128 0x10
- 1382 00b2 28       		.uleb128 0x28
- 1383 00b3 00       		.byte	0
- 1384 00b4 03       		.uleb128 0x3
- 1385 00b5 0E       		.uleb128 0xe
- 1386 00b6 1C       		.uleb128 0x1c
- 1387 00b7 05       		.uleb128 0x5
- 1388 00b8 00       		.byte	0
- 1389 00b9 00       		.byte	0
- 1390 00ba 11       		.uleb128 0x11
- 1391 00bb 2E       		.uleb128 0x2e
- 1392 00bc 01       		.byte	0x1
- 1393 00bd 3F       		.uleb128 0x3f
- 1394 00be 19       		.uleb128 0x19
- 1395 00bf 03       		.uleb128 0x3
- 1396 00c0 0E       		.uleb128 0xe
- 1397 00c1 3A       		.uleb128 0x3a
- 1398 00c2 0B       		.uleb128 0xb
- 1399 00c3 3B       		.uleb128 0x3b
- 1400 00c4 0B       		.uleb128 0xb
- 1401 00c5 27       		.uleb128 0x27
- 1402 00c6 19       		.uleb128 0x19
- 1403 00c7 49       		.uleb128 0x49
- 1404 00c8 13       		.uleb128 0x13
- 1405 00c9 11       		.uleb128 0x11
- 1406 00ca 01       		.uleb128 0x1
- 1407 00cb 12       		.uleb128 0x12
- 1408 00cc 06       		.uleb128 0x6
- 1409 00cd 40       		.uleb128 0x40
- 1410 00ce 18       		.uleb128 0x18
- 1411 00cf 9742     		.uleb128 0x2117
- 1412 00d1 19       		.uleb128 0x19
- 1413 00d2 01       		.uleb128 0x1
- 1414 00d3 13       		.uleb128 0x13
- 1415 00d4 00       		.byte	0
- 1416 00d5 00       		.byte	0
- 1417 00d6 12       		.uleb128 0x12
- 1418 00d7 05       		.uleb128 0x5
- 1419 00d8 00       		.byte	0
- 1420 00d9 03       		.uleb128 0x3
- 1421 00da 0E       		.uleb128 0xe
- 1422 00db 3A       		.uleb128 0x3a
- 1423 00dc 0B       		.uleb128 0xb
- 1424 00dd 3B       		.uleb128 0x3b
- 1425 00de 0B       		.uleb128 0xb
- 1426 00df 49       		.uleb128 0x49
- 1427 00e0 13       		.uleb128 0x13
- 1428 00e1 02       		.uleb128 0x2
- 1429 00e2 17       		.uleb128 0x17
- 1430 00e3 00       		.byte	0
- 1431 00e4 00       		.byte	0
- 1432 00e5 13       		.uleb128 0x13
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 42
+ 1374 00ad 1C       		.uleb128 0x1c
+ 1375 00ae 0B       		.uleb128 0xb
+ 1376 00af 00       		.byte	0
+ 1377 00b0 00       		.byte	0
+ 1378 00b1 10       		.uleb128 0x10
+ 1379 00b2 28       		.uleb128 0x28
+ 1380 00b3 00       		.byte	0
+ 1381 00b4 03       		.uleb128 0x3
+ 1382 00b5 0E       		.uleb128 0xe
+ 1383 00b6 1C       		.uleb128 0x1c
+ 1384 00b7 05       		.uleb128 0x5
+ 1385 00b8 00       		.byte	0
+ 1386 00b9 00       		.byte	0
+ 1387 00ba 11       		.uleb128 0x11
+ 1388 00bb 2E       		.uleb128 0x2e
+ 1389 00bc 01       		.byte	0x1
+ 1390 00bd 3F       		.uleb128 0x3f
+ 1391 00be 19       		.uleb128 0x19
+ 1392 00bf 03       		.uleb128 0x3
+ 1393 00c0 0E       		.uleb128 0xe
+ 1394 00c1 3A       		.uleb128 0x3a
+ 1395 00c2 0B       		.uleb128 0xb
+ 1396 00c3 3B       		.uleb128 0x3b
+ 1397 00c4 0B       		.uleb128 0xb
+ 1398 00c5 27       		.uleb128 0x27
+ 1399 00c6 19       		.uleb128 0x19
+ 1400 00c7 49       		.uleb128 0x49
+ 1401 00c8 13       		.uleb128 0x13
+ 1402 00c9 11       		.uleb128 0x11
+ 1403 00ca 01       		.uleb128 0x1
+ 1404 00cb 12       		.uleb128 0x12
+ 1405 00cc 06       		.uleb128 0x6
+ 1406 00cd 40       		.uleb128 0x40
+ 1407 00ce 18       		.uleb128 0x18
+ 1408 00cf 9742     		.uleb128 0x2117
+ 1409 00d1 19       		.uleb128 0x19
+ 1410 00d2 01       		.uleb128 0x1
+ 1411 00d3 13       		.uleb128 0x13
+ 1412 00d4 00       		.byte	0
+ 1413 00d5 00       		.byte	0
+ 1414 00d6 12       		.uleb128 0x12
+ 1415 00d7 05       		.uleb128 0x5
+ 1416 00d8 00       		.byte	0
+ 1417 00d9 03       		.uleb128 0x3
+ 1418 00da 0E       		.uleb128 0xe
+ 1419 00db 3A       		.uleb128 0x3a
+ 1420 00dc 0B       		.uleb128 0xb
+ 1421 00dd 3B       		.uleb128 0x3b
+ 1422 00de 0B       		.uleb128 0xb
+ 1423 00df 49       		.uleb128 0x49
+ 1424 00e0 13       		.uleb128 0x13
+ 1425 00e1 02       		.uleb128 0x2
+ 1426 00e2 17       		.uleb128 0x17
+ 1427 00e3 00       		.byte	0
+ 1428 00e4 00       		.byte	0
+ 1429 00e5 13       		.uleb128 0x13
+ 1430 00e6 34       		.uleb128 0x34
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 42
 
 
- 1433 00e6 34       		.uleb128 0x34
- 1434 00e7 00       		.byte	0
- 1435 00e8 03       		.uleb128 0x3
- 1436 00e9 08       		.uleb128 0x8
- 1437 00ea 3A       		.uleb128 0x3a
- 1438 00eb 0B       		.uleb128 0xb
- 1439 00ec 3B       		.uleb128 0x3b
- 1440 00ed 0B       		.uleb128 0xb
- 1441 00ee 49       		.uleb128 0x49
- 1442 00ef 13       		.uleb128 0x13
- 1443 00f0 02       		.uleb128 0x2
- 1444 00f1 17       		.uleb128 0x17
- 1445 00f2 00       		.byte	0
- 1446 00f3 00       		.byte	0
- 1447 00f4 14       		.uleb128 0x14
- 1448 00f5 34       		.uleb128 0x34
- 1449 00f6 00       		.byte	0
- 1450 00f7 03       		.uleb128 0x3
- 1451 00f8 0E       		.uleb128 0xe
- 1452 00f9 3A       		.uleb128 0x3a
- 1453 00fa 0B       		.uleb128 0xb
- 1454 00fb 3B       		.uleb128 0x3b
- 1455 00fc 0B       		.uleb128 0xb
- 1456 00fd 49       		.uleb128 0x49
- 1457 00fe 13       		.uleb128 0x13
- 1458 00ff 02       		.uleb128 0x2
- 1459 0100 17       		.uleb128 0x17
- 1460 0101 00       		.byte	0
- 1461 0102 00       		.byte	0
- 1462 0103 15       		.uleb128 0x15
- 1463 0104 26       		.uleb128 0x26
- 1464 0105 00       		.byte	0
- 1465 0106 49       		.uleb128 0x49
- 1466 0107 13       		.uleb128 0x13
- 1467 0108 00       		.byte	0
- 1468 0109 00       		.byte	0
- 1469 010a 16       		.uleb128 0x16
- 1470 010b 2E       		.uleb128 0x2e
- 1471 010c 01       		.byte	0x1
- 1472 010d 3F       		.uleb128 0x3f
- 1473 010e 19       		.uleb128 0x19
- 1474 010f 03       		.uleb128 0x3
- 1475 0110 0E       		.uleb128 0xe
- 1476 0111 3A       		.uleb128 0x3a
- 1477 0112 0B       		.uleb128 0xb
- 1478 0113 3B       		.uleb128 0x3b
- 1479 0114 0B       		.uleb128 0xb
- 1480 0115 27       		.uleb128 0x27
- 1481 0116 19       		.uleb128 0x19
- 1482 0117 11       		.uleb128 0x11
- 1483 0118 01       		.uleb128 0x1
- 1484 0119 12       		.uleb128 0x12
- 1485 011a 06       		.uleb128 0x6
- 1486 011b 40       		.uleb128 0x40
- 1487 011c 18       		.uleb128 0x18
- 1488 011d 9742     		.uleb128 0x2117
- 1489 011f 19       		.uleb128 0x19
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 43
+ 1431 00e7 00       		.byte	0
+ 1432 00e8 03       		.uleb128 0x3
+ 1433 00e9 08       		.uleb128 0x8
+ 1434 00ea 3A       		.uleb128 0x3a
+ 1435 00eb 0B       		.uleb128 0xb
+ 1436 00ec 3B       		.uleb128 0x3b
+ 1437 00ed 0B       		.uleb128 0xb
+ 1438 00ee 49       		.uleb128 0x49
+ 1439 00ef 13       		.uleb128 0x13
+ 1440 00f0 02       		.uleb128 0x2
+ 1441 00f1 17       		.uleb128 0x17
+ 1442 00f2 00       		.byte	0
+ 1443 00f3 00       		.byte	0
+ 1444 00f4 14       		.uleb128 0x14
+ 1445 00f5 34       		.uleb128 0x34
+ 1446 00f6 00       		.byte	0
+ 1447 00f7 03       		.uleb128 0x3
+ 1448 00f8 0E       		.uleb128 0xe
+ 1449 00f9 3A       		.uleb128 0x3a
+ 1450 00fa 0B       		.uleb128 0xb
+ 1451 00fb 3B       		.uleb128 0x3b
+ 1452 00fc 0B       		.uleb128 0xb
+ 1453 00fd 49       		.uleb128 0x49
+ 1454 00fe 13       		.uleb128 0x13
+ 1455 00ff 02       		.uleb128 0x2
+ 1456 0100 17       		.uleb128 0x17
+ 1457 0101 00       		.byte	0
+ 1458 0102 00       		.byte	0
+ 1459 0103 15       		.uleb128 0x15
+ 1460 0104 26       		.uleb128 0x26
+ 1461 0105 00       		.byte	0
+ 1462 0106 49       		.uleb128 0x49
+ 1463 0107 13       		.uleb128 0x13
+ 1464 0108 00       		.byte	0
+ 1465 0109 00       		.byte	0
+ 1466 010a 16       		.uleb128 0x16
+ 1467 010b 2E       		.uleb128 0x2e
+ 1468 010c 01       		.byte	0x1
+ 1469 010d 3F       		.uleb128 0x3f
+ 1470 010e 19       		.uleb128 0x19
+ 1471 010f 03       		.uleb128 0x3
+ 1472 0110 0E       		.uleb128 0xe
+ 1473 0111 3A       		.uleb128 0x3a
+ 1474 0112 0B       		.uleb128 0xb
+ 1475 0113 3B       		.uleb128 0x3b
+ 1476 0114 0B       		.uleb128 0xb
+ 1477 0115 27       		.uleb128 0x27
+ 1478 0116 19       		.uleb128 0x19
+ 1479 0117 11       		.uleb128 0x11
+ 1480 0118 01       		.uleb128 0x1
+ 1481 0119 12       		.uleb128 0x12
+ 1482 011a 06       		.uleb128 0x6
+ 1483 011b 40       		.uleb128 0x40
+ 1484 011c 18       		.uleb128 0x18
+ 1485 011d 9742     		.uleb128 0x2117
+ 1486 011f 19       		.uleb128 0x19
+ 1487 0120 01       		.uleb128 0x1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 43
 
 
- 1490 0120 01       		.uleb128 0x1
- 1491 0121 13       		.uleb128 0x13
- 1492 0122 00       		.byte	0
- 1493 0123 00       		.byte	0
- 1494 0124 17       		.uleb128 0x17
- 1495 0125 2E       		.uleb128 0x2e
- 1496 0126 01       		.byte	0x1
- 1497 0127 3F       		.uleb128 0x3f
- 1498 0128 19       		.uleb128 0x19
- 1499 0129 03       		.uleb128 0x3
- 1500 012a 0E       		.uleb128 0xe
- 1501 012b 3A       		.uleb128 0x3a
- 1502 012c 0B       		.uleb128 0xb
- 1503 012d 3B       		.uleb128 0x3b
- 1504 012e 05       		.uleb128 0x5
- 1505 012f 27       		.uleb128 0x27
- 1506 0130 19       		.uleb128 0x19
- 1507 0131 11       		.uleb128 0x11
- 1508 0132 01       		.uleb128 0x1
- 1509 0133 12       		.uleb128 0x12
- 1510 0134 06       		.uleb128 0x6
- 1511 0135 40       		.uleb128 0x40
- 1512 0136 18       		.uleb128 0x18
- 1513 0137 9742     		.uleb128 0x2117
- 1514 0139 19       		.uleb128 0x19
- 1515 013a 01       		.uleb128 0x1
- 1516 013b 13       		.uleb128 0x13
- 1517 013c 00       		.byte	0
- 1518 013d 00       		.byte	0
- 1519 013e 18       		.uleb128 0x18
- 1520 013f 05       		.uleb128 0x5
- 1521 0140 00       		.byte	0
- 1522 0141 03       		.uleb128 0x3
- 1523 0142 0E       		.uleb128 0xe
- 1524 0143 3A       		.uleb128 0x3a
- 1525 0144 0B       		.uleb128 0xb
- 1526 0145 3B       		.uleb128 0x3b
- 1527 0146 05       		.uleb128 0x5
- 1528 0147 49       		.uleb128 0x49
- 1529 0148 13       		.uleb128 0x13
- 1530 0149 02       		.uleb128 0x2
- 1531 014a 17       		.uleb128 0x17
- 1532 014b 00       		.byte	0
- 1533 014c 00       		.byte	0
- 1534 014d 19       		.uleb128 0x19
- 1535 014e 2E       		.uleb128 0x2e
- 1536 014f 00       		.byte	0
- 1537 0150 3F       		.uleb128 0x3f
- 1538 0151 19       		.uleb128 0x19
- 1539 0152 03       		.uleb128 0x3
- 1540 0153 0E       		.uleb128 0xe
- 1541 0154 3A       		.uleb128 0x3a
- 1542 0155 0B       		.uleb128 0xb
- 1543 0156 3B       		.uleb128 0x3b
- 1544 0157 05       		.uleb128 0x5
- 1545 0158 27       		.uleb128 0x27
- 1546 0159 19       		.uleb128 0x19
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 44
+ 1488 0121 13       		.uleb128 0x13
+ 1489 0122 00       		.byte	0
+ 1490 0123 00       		.byte	0
+ 1491 0124 17       		.uleb128 0x17
+ 1492 0125 2E       		.uleb128 0x2e
+ 1493 0126 01       		.byte	0x1
+ 1494 0127 3F       		.uleb128 0x3f
+ 1495 0128 19       		.uleb128 0x19
+ 1496 0129 03       		.uleb128 0x3
+ 1497 012a 0E       		.uleb128 0xe
+ 1498 012b 3A       		.uleb128 0x3a
+ 1499 012c 0B       		.uleb128 0xb
+ 1500 012d 3B       		.uleb128 0x3b
+ 1501 012e 05       		.uleb128 0x5
+ 1502 012f 27       		.uleb128 0x27
+ 1503 0130 19       		.uleb128 0x19
+ 1504 0131 11       		.uleb128 0x11
+ 1505 0132 01       		.uleb128 0x1
+ 1506 0133 12       		.uleb128 0x12
+ 1507 0134 06       		.uleb128 0x6
+ 1508 0135 40       		.uleb128 0x40
+ 1509 0136 18       		.uleb128 0x18
+ 1510 0137 9742     		.uleb128 0x2117
+ 1511 0139 19       		.uleb128 0x19
+ 1512 013a 01       		.uleb128 0x1
+ 1513 013b 13       		.uleb128 0x13
+ 1514 013c 00       		.byte	0
+ 1515 013d 00       		.byte	0
+ 1516 013e 18       		.uleb128 0x18
+ 1517 013f 05       		.uleb128 0x5
+ 1518 0140 00       		.byte	0
+ 1519 0141 03       		.uleb128 0x3
+ 1520 0142 0E       		.uleb128 0xe
+ 1521 0143 3A       		.uleb128 0x3a
+ 1522 0144 0B       		.uleb128 0xb
+ 1523 0145 3B       		.uleb128 0x3b
+ 1524 0146 05       		.uleb128 0x5
+ 1525 0147 49       		.uleb128 0x49
+ 1526 0148 13       		.uleb128 0x13
+ 1527 0149 02       		.uleb128 0x2
+ 1528 014a 17       		.uleb128 0x17
+ 1529 014b 00       		.byte	0
+ 1530 014c 00       		.byte	0
+ 1531 014d 19       		.uleb128 0x19
+ 1532 014e 2E       		.uleb128 0x2e
+ 1533 014f 00       		.byte	0
+ 1534 0150 3F       		.uleb128 0x3f
+ 1535 0151 19       		.uleb128 0x19
+ 1536 0152 03       		.uleb128 0x3
+ 1537 0153 0E       		.uleb128 0xe
+ 1538 0154 3A       		.uleb128 0x3a
+ 1539 0155 0B       		.uleb128 0xb
+ 1540 0156 3B       		.uleb128 0x3b
+ 1541 0157 05       		.uleb128 0x5
+ 1542 0158 27       		.uleb128 0x27
+ 1543 0159 19       		.uleb128 0x19
+ 1544 015a 11       		.uleb128 0x11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 44
 
 
- 1547 015a 11       		.uleb128 0x11
- 1548 015b 01       		.uleb128 0x1
- 1549 015c 12       		.uleb128 0x12
- 1550 015d 06       		.uleb128 0x6
- 1551 015e 40       		.uleb128 0x40
- 1552 015f 18       		.uleb128 0x18
- 1553 0160 9742     		.uleb128 0x2117
- 1554 0162 19       		.uleb128 0x19
- 1555 0163 00       		.byte	0
- 1556 0164 00       		.byte	0
- 1557 0165 1A       		.uleb128 0x1a
- 1558 0166 34       		.uleb128 0x34
- 1559 0167 00       		.byte	0
- 1560 0168 03       		.uleb128 0x3
- 1561 0169 0E       		.uleb128 0xe
- 1562 016a 3A       		.uleb128 0x3a
- 1563 016b 0B       		.uleb128 0xb
- 1564 016c 3B       		.uleb128 0x3b
- 1565 016d 05       		.uleb128 0x5
- 1566 016e 49       		.uleb128 0x49
- 1567 016f 13       		.uleb128 0x13
- 1568 0170 3F       		.uleb128 0x3f
- 1569 0171 19       		.uleb128 0x19
- 1570 0172 3C       		.uleb128 0x3c
- 1571 0173 19       		.uleb128 0x19
- 1572 0174 00       		.byte	0
- 1573 0175 00       		.byte	0
- 1574 0176 1B       		.uleb128 0x1b
- 1575 0177 34       		.uleb128 0x34
- 1576 0178 00       		.byte	0
- 1577 0179 03       		.uleb128 0x3
- 1578 017a 0E       		.uleb128 0xe
- 1579 017b 3A       		.uleb128 0x3a
- 1580 017c 0B       		.uleb128 0xb
- 1581 017d 3B       		.uleb128 0x3b
- 1582 017e 0B       		.uleb128 0xb
- 1583 017f 49       		.uleb128 0x49
- 1584 0180 13       		.uleb128 0x13
- 1585 0181 3F       		.uleb128 0x3f
- 1586 0182 19       		.uleb128 0x19
- 1587 0183 3C       		.uleb128 0x3c
- 1588 0184 19       		.uleb128 0x19
- 1589 0185 00       		.byte	0
- 1590 0186 00       		.byte	0
- 1591 0187 1C       		.uleb128 0x1c
- 1592 0188 34       		.uleb128 0x34
- 1593 0189 00       		.byte	0
- 1594 018a 03       		.uleb128 0x3
- 1595 018b 08       		.uleb128 0x8
- 1596 018c 3A       		.uleb128 0x3a
- 1597 018d 0B       		.uleb128 0xb
- 1598 018e 3B       		.uleb128 0x3b
- 1599 018f 0B       		.uleb128 0xb
- 1600 0190 49       		.uleb128 0x49
- 1601 0191 13       		.uleb128 0x13
- 1602 0192 3F       		.uleb128 0x3f
- 1603 0193 19       		.uleb128 0x19
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 45
+ 1545 015b 01       		.uleb128 0x1
+ 1546 015c 12       		.uleb128 0x12
+ 1547 015d 06       		.uleb128 0x6
+ 1548 015e 40       		.uleb128 0x40
+ 1549 015f 18       		.uleb128 0x18
+ 1550 0160 9742     		.uleb128 0x2117
+ 1551 0162 19       		.uleb128 0x19
+ 1552 0163 00       		.byte	0
+ 1553 0164 00       		.byte	0
+ 1554 0165 1A       		.uleb128 0x1a
+ 1555 0166 34       		.uleb128 0x34
+ 1556 0167 00       		.byte	0
+ 1557 0168 03       		.uleb128 0x3
+ 1558 0169 0E       		.uleb128 0xe
+ 1559 016a 3A       		.uleb128 0x3a
+ 1560 016b 0B       		.uleb128 0xb
+ 1561 016c 3B       		.uleb128 0x3b
+ 1562 016d 05       		.uleb128 0x5
+ 1563 016e 49       		.uleb128 0x49
+ 1564 016f 13       		.uleb128 0x13
+ 1565 0170 3F       		.uleb128 0x3f
+ 1566 0171 19       		.uleb128 0x19
+ 1567 0172 3C       		.uleb128 0x3c
+ 1568 0173 19       		.uleb128 0x19
+ 1569 0174 00       		.byte	0
+ 1570 0175 00       		.byte	0
+ 1571 0176 1B       		.uleb128 0x1b
+ 1572 0177 34       		.uleb128 0x34
+ 1573 0178 00       		.byte	0
+ 1574 0179 03       		.uleb128 0x3
+ 1575 017a 0E       		.uleb128 0xe
+ 1576 017b 3A       		.uleb128 0x3a
+ 1577 017c 0B       		.uleb128 0xb
+ 1578 017d 3B       		.uleb128 0x3b
+ 1579 017e 0B       		.uleb128 0xb
+ 1580 017f 49       		.uleb128 0x49
+ 1581 0180 13       		.uleb128 0x13
+ 1582 0181 3F       		.uleb128 0x3f
+ 1583 0182 19       		.uleb128 0x19
+ 1584 0183 3C       		.uleb128 0x3c
+ 1585 0184 19       		.uleb128 0x19
+ 1586 0185 00       		.byte	0
+ 1587 0186 00       		.byte	0
+ 1588 0187 1C       		.uleb128 0x1c
+ 1589 0188 34       		.uleb128 0x34
+ 1590 0189 00       		.byte	0
+ 1591 018a 03       		.uleb128 0x3
+ 1592 018b 08       		.uleb128 0x8
+ 1593 018c 3A       		.uleb128 0x3a
+ 1594 018d 0B       		.uleb128 0xb
+ 1595 018e 3B       		.uleb128 0x3b
+ 1596 018f 0B       		.uleb128 0xb
+ 1597 0190 49       		.uleb128 0x49
+ 1598 0191 13       		.uleb128 0x13
+ 1599 0192 3F       		.uleb128 0x3f
+ 1600 0193 19       		.uleb128 0x19
+ 1601 0194 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 45
 
 
- 1604 0194 3C       		.uleb128 0x3c
- 1605 0195 19       		.uleb128 0x19
- 1606 0196 00       		.byte	0
- 1607 0197 00       		.byte	0
- 1608 0198 00       		.byte	0
- 1609              		.section	.debug_loc,"",%progbits
- 1610              	.Ldebug_loc0:
- 1611              	.LLST0:
- 1612 0000 00000000 		.4byte	.LVL0
- 1613 0004 CA000000 		.4byte	.LVL24
- 1614 0008 0100     		.2byte	0x1
- 1615 000a 50       		.byte	0x50
- 1616 000b CA000000 		.4byte	.LVL24
- 1617 000f DC000000 		.4byte	.LFE63
- 1618 0013 0400     		.2byte	0x4
- 1619 0015 F3       		.byte	0xf3
- 1620 0016 01       		.uleb128 0x1
- 1621 0017 50       		.byte	0x50
- 1622 0018 9F       		.byte	0x9f
- 1623 0019 00000000 		.4byte	0
- 1624 001d 00000000 		.4byte	0
- 1625              	.LLST1:
- 1626 0021 08000000 		.4byte	.LVL2
- 1627 0025 B2000000 		.4byte	.LVL18
- 1628 0029 0100     		.2byte	0x1
- 1629 002b 52       		.byte	0x52
- 1630 002c B4000000 		.4byte	.LVL19
- 1631 0030 B6000000 		.4byte	.LVL20
- 1632 0034 0100     		.2byte	0x1
- 1633 0036 52       		.byte	0x52
- 1634 0037 BA000000 		.4byte	.LVL21
- 1635 003b C4000000 		.4byte	.LVL23
- 1636 003f 0100     		.2byte	0x1
- 1637 0041 52       		.byte	0x52
- 1638 0042 00000000 		.4byte	0
- 1639 0046 00000000 		.4byte	0
- 1640              	.LLST2:
- 1641 004a 5C000000 		.4byte	.LVL10
- 1642 004e 60000000 		.4byte	.LVL11
- 1643 0052 0200     		.2byte	0x2
- 1644 0054 30       		.byte	0x30
- 1645 0055 9F       		.byte	0x9f
- 1646 0056 60000000 		.4byte	.LVL11
- 1647 005a 7E000000 		.4byte	.LVL12
- 1648 005e 0100     		.2byte	0x1
- 1649 0060 53       		.byte	0x53
- 1650 0061 80000000 		.4byte	.LVL13
- 1651 0065 90000000 		.4byte	.LVL14
- 1652 0069 0100     		.2byte	0x1
- 1653 006b 53       		.byte	0x53
- 1654 006c 00000000 		.4byte	0
- 1655 0070 00000000 		.4byte	0
- 1656              	.LLST3:
- 1657 0074 08000000 		.4byte	.LVL2
- 1658 0078 B6000000 		.4byte	.LVL20
- 1659 007c 0100     		.2byte	0x1
- 1660 007e 57       		.byte	0x57
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 46
+ 1602 0195 19       		.uleb128 0x19
+ 1603 0196 00       		.byte	0
+ 1604 0197 00       		.byte	0
+ 1605 0198 00       		.byte	0
+ 1606              		.section	.debug_loc,"",%progbits
+ 1607              	.Ldebug_loc0:
+ 1608              	.LLST0:
+ 1609 0000 00000000 		.4byte	.LVL0
+ 1610 0004 CA000000 		.4byte	.LVL24
+ 1611 0008 0100     		.2byte	0x1
+ 1612 000a 50       		.byte	0x50
+ 1613 000b CA000000 		.4byte	.LVL24
+ 1614 000f DC000000 		.4byte	.LFE63
+ 1615 0013 0400     		.2byte	0x4
+ 1616 0015 F3       		.byte	0xf3
+ 1617 0016 01       		.uleb128 0x1
+ 1618 0017 50       		.byte	0x50
+ 1619 0018 9F       		.byte	0x9f
+ 1620 0019 00000000 		.4byte	0
+ 1621 001d 00000000 		.4byte	0
+ 1622              	.LLST1:
+ 1623 0021 08000000 		.4byte	.LVL2
+ 1624 0025 B2000000 		.4byte	.LVL18
+ 1625 0029 0100     		.2byte	0x1
+ 1626 002b 52       		.byte	0x52
+ 1627 002c B4000000 		.4byte	.LVL19
+ 1628 0030 B6000000 		.4byte	.LVL20
+ 1629 0034 0100     		.2byte	0x1
+ 1630 0036 52       		.byte	0x52
+ 1631 0037 BA000000 		.4byte	.LVL21
+ 1632 003b C4000000 		.4byte	.LVL23
+ 1633 003f 0100     		.2byte	0x1
+ 1634 0041 52       		.byte	0x52
+ 1635 0042 00000000 		.4byte	0
+ 1636 0046 00000000 		.4byte	0
+ 1637              	.LLST2:
+ 1638 004a 5C000000 		.4byte	.LVL10
+ 1639 004e 60000000 		.4byte	.LVL11
+ 1640 0052 0200     		.2byte	0x2
+ 1641 0054 30       		.byte	0x30
+ 1642 0055 9F       		.byte	0x9f
+ 1643 0056 60000000 		.4byte	.LVL11
+ 1644 005a 7E000000 		.4byte	.LVL12
+ 1645 005e 0100     		.2byte	0x1
+ 1646 0060 53       		.byte	0x53
+ 1647 0061 80000000 		.4byte	.LVL13
+ 1648 0065 90000000 		.4byte	.LVL14
+ 1649 0069 0100     		.2byte	0x1
+ 1650 006b 53       		.byte	0x53
+ 1651 006c 00000000 		.4byte	0
+ 1652 0070 00000000 		.4byte	0
+ 1653              	.LLST3:
+ 1654 0074 08000000 		.4byte	.LVL2
+ 1655 0078 B6000000 		.4byte	.LVL20
+ 1656 007c 0100     		.2byte	0x1
+ 1657 007e 57       		.byte	0x57
+ 1658 007f BA000000 		.4byte	.LVL21
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 46
 
 
- 1661 007f BA000000 		.4byte	.LVL21
- 1662 0083 C4000000 		.4byte	.LVL23
- 1663 0087 0100     		.2byte	0x1
- 1664 0089 57       		.byte	0x57
- 1665 008a 00000000 		.4byte	0
- 1666 008e 00000000 		.4byte	0
- 1667              	.LLST4:
- 1668 0092 02000000 		.4byte	.LVL1
- 1669 0096 08000000 		.4byte	.LVL2
- 1670 009a 0200     		.2byte	0x2
- 1671 009c 30       		.byte	0x30
- 1672 009d 9F       		.byte	0x9f
- 1673 009e 08000000 		.4byte	.LVL2
- 1674 00a2 C2000000 		.4byte	.LVL22
- 1675 00a6 0100     		.2byte	0x1
- 1676 00a8 56       		.byte	0x56
- 1677 00a9 C4000000 		.4byte	.LVL23
- 1678 00ad CC000000 		.4byte	.LVL25
- 1679 00b1 0100     		.2byte	0x1
- 1680 00b3 56       		.byte	0x56
- 1681 00b4 00000000 		.4byte	0
- 1682 00b8 00000000 		.4byte	0
- 1683              	.LLST5:
- 1684 00bc 02000000 		.4byte	.LVL1
- 1685 00c0 08000000 		.4byte	.LVL2
- 1686 00c4 0200     		.2byte	0x2
- 1687 00c6 31       		.byte	0x31
- 1688 00c7 9F       		.byte	0x9f
- 1689 00c8 08000000 		.4byte	.LVL2
- 1690 00cc 20000000 		.4byte	.LVL5
- 1691 00d0 0100     		.2byte	0x1
- 1692 00d2 51       		.byte	0x51
- 1693 00d3 A8000000 		.4byte	.LVL15
- 1694 00d7 AA000000 		.4byte	.LVL16
- 1695 00db 0200     		.2byte	0x2
- 1696 00dd 30       		.byte	0x30
- 1697 00de 9F       		.byte	0x9f
- 1698 00df AA000000 		.4byte	.LVL16
- 1699 00e3 DC000000 		.4byte	.LFE63
- 1700 00e7 0100     		.2byte	0x1
- 1701 00e9 51       		.byte	0x51
- 1702 00ea 00000000 		.4byte	0
- 1703 00ee 00000000 		.4byte	0
- 1704              	.LLST6:
- 1705 00f2 16000000 		.4byte	.LVL3
- 1706 00f6 1E000000 		.4byte	.LVL4
- 1707 00fa 0200     		.2byte	0x2
- 1708 00fc 30       		.byte	0x30
- 1709 00fd 9F       		.byte	0x9f
- 1710 00fe 1E000000 		.4byte	.LVL4
- 1711 0102 4E000000 		.4byte	.LVL7
- 1712 0106 0100     		.2byte	0x1
- 1713 0108 53       		.byte	0x53
- 1714 0109 4E000000 		.4byte	.LVL7
- 1715 010d 50000000 		.4byte	.LVL8
- 1716 0111 0100     		.2byte	0x1
- 1717 0113 5E       		.byte	0x5e
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 47
+ 1659 0083 C4000000 		.4byte	.LVL23
+ 1660 0087 0100     		.2byte	0x1
+ 1661 0089 57       		.byte	0x57
+ 1662 008a 00000000 		.4byte	0
+ 1663 008e 00000000 		.4byte	0
+ 1664              	.LLST4:
+ 1665 0092 02000000 		.4byte	.LVL1
+ 1666 0096 08000000 		.4byte	.LVL2
+ 1667 009a 0200     		.2byte	0x2
+ 1668 009c 30       		.byte	0x30
+ 1669 009d 9F       		.byte	0x9f
+ 1670 009e 08000000 		.4byte	.LVL2
+ 1671 00a2 C2000000 		.4byte	.LVL22
+ 1672 00a6 0100     		.2byte	0x1
+ 1673 00a8 56       		.byte	0x56
+ 1674 00a9 C4000000 		.4byte	.LVL23
+ 1675 00ad CC000000 		.4byte	.LVL25
+ 1676 00b1 0100     		.2byte	0x1
+ 1677 00b3 56       		.byte	0x56
+ 1678 00b4 00000000 		.4byte	0
+ 1679 00b8 00000000 		.4byte	0
+ 1680              	.LLST5:
+ 1681 00bc 02000000 		.4byte	.LVL1
+ 1682 00c0 08000000 		.4byte	.LVL2
+ 1683 00c4 0200     		.2byte	0x2
+ 1684 00c6 31       		.byte	0x31
+ 1685 00c7 9F       		.byte	0x9f
+ 1686 00c8 08000000 		.4byte	.LVL2
+ 1687 00cc 20000000 		.4byte	.LVL5
+ 1688 00d0 0100     		.2byte	0x1
+ 1689 00d2 51       		.byte	0x51
+ 1690 00d3 A8000000 		.4byte	.LVL15
+ 1691 00d7 AA000000 		.4byte	.LVL16
+ 1692 00db 0200     		.2byte	0x2
+ 1693 00dd 30       		.byte	0x30
+ 1694 00de 9F       		.byte	0x9f
+ 1695 00df AA000000 		.4byte	.LVL16
+ 1696 00e3 DC000000 		.4byte	.LFE63
+ 1697 00e7 0100     		.2byte	0x1
+ 1698 00e9 51       		.byte	0x51
+ 1699 00ea 00000000 		.4byte	0
+ 1700 00ee 00000000 		.4byte	0
+ 1701              	.LLST6:
+ 1702 00f2 16000000 		.4byte	.LVL3
+ 1703 00f6 1E000000 		.4byte	.LVL4
+ 1704 00fa 0200     		.2byte	0x2
+ 1705 00fc 30       		.byte	0x30
+ 1706 00fd 9F       		.byte	0x9f
+ 1707 00fe 1E000000 		.4byte	.LVL4
+ 1708 0102 4E000000 		.4byte	.LVL7
+ 1709 0106 0100     		.2byte	0x1
+ 1710 0108 53       		.byte	0x53
+ 1711 0109 4E000000 		.4byte	.LVL7
+ 1712 010d 50000000 		.4byte	.LVL8
+ 1713 0111 0100     		.2byte	0x1
+ 1714 0113 5E       		.byte	0x5e
+ 1715 0114 50000000 		.4byte	.LVL8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 47
 
 
- 1718 0114 50000000 		.4byte	.LVL8
- 1719 0118 54000000 		.4byte	.LVL9
- 1720 011c 0100     		.2byte	0x1
- 1721 011e 53       		.byte	0x53
- 1722 011f 54000000 		.4byte	.LVL9
- 1723 0123 AA000000 		.4byte	.LVL16
- 1724 0127 0100     		.2byte	0x1
- 1725 0129 5E       		.byte	0x5e
- 1726 012a 00000000 		.4byte	0
- 1727 012e 00000000 		.4byte	0
- 1728              	.LLST7:
- 1729 0132 00000000 		.4byte	.LVL26
- 1730 0136 06000000 		.4byte	.LVL27
- 1731 013a 0100     		.2byte	0x1
- 1732 013c 50       		.byte	0x50
- 1733 013d 06000000 		.4byte	.LVL27
- 1734 0141 1C000000 		.4byte	.LFE64
- 1735 0145 0400     		.2byte	0x4
- 1736 0147 F3       		.byte	0xf3
- 1737 0148 01       		.uleb128 0x1
- 1738 0149 50       		.byte	0x50
- 1739 014a 9F       		.byte	0x9f
- 1740 014b 00000000 		.4byte	0
- 1741 014f 00000000 		.4byte	0
- 1742              	.LLST8:
- 1743 0153 00000000 		.4byte	.LVL28
- 1744 0157 1A000000 		.4byte	.LVL29
- 1745 015b 0200     		.2byte	0x2
- 1746 015d 30       		.byte	0x30
- 1747 015e 9F       		.byte	0x9f
- 1748 015f 1A000000 		.4byte	.LVL29
- 1749 0163 20000000 		.4byte	.LFE65
- 1750 0167 0100     		.2byte	0x1
- 1751 0169 50       		.byte	0x50
- 1752 016a 00000000 		.4byte	0
- 1753 016e 00000000 		.4byte	0
- 1754              	.LLST9:
- 1755 0172 00000000 		.4byte	.LVL30
- 1756 0176 02000000 		.4byte	.LVL31
- 1757 017a 0100     		.2byte	0x1
- 1758 017c 50       		.byte	0x50
- 1759 017d 02000000 		.4byte	.LVL31
- 1760 0181 1C000000 		.4byte	.LFE66
- 1761 0185 0400     		.2byte	0x4
- 1762 0187 F3       		.byte	0xf3
- 1763 0188 01       		.uleb128 0x1
- 1764 0189 50       		.byte	0x50
- 1765 018a 9F       		.byte	0x9f
- 1766 018b 00000000 		.4byte	0
- 1767 018f 00000000 		.4byte	0
- 1768              		.section	.debug_aranges,"",%progbits
- 1769 0000 64000000 		.4byte	0x64
- 1770 0004 0200     		.2byte	0x2
- 1771 0006 00000000 		.4byte	.Ldebug_info0
- 1772 000a 04       		.byte	0x4
- 1773 000b 00       		.byte	0
- 1774 000c 0000     		.2byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 48
+ 1716 0118 54000000 		.4byte	.LVL9
+ 1717 011c 0100     		.2byte	0x1
+ 1718 011e 53       		.byte	0x53
+ 1719 011f 54000000 		.4byte	.LVL9
+ 1720 0123 AA000000 		.4byte	.LVL16
+ 1721 0127 0100     		.2byte	0x1
+ 1722 0129 5E       		.byte	0x5e
+ 1723 012a 00000000 		.4byte	0
+ 1724 012e 00000000 		.4byte	0
+ 1725              	.LLST7:
+ 1726 0132 00000000 		.4byte	.LVL26
+ 1727 0136 06000000 		.4byte	.LVL27
+ 1728 013a 0100     		.2byte	0x1
+ 1729 013c 50       		.byte	0x50
+ 1730 013d 06000000 		.4byte	.LVL27
+ 1731 0141 1C000000 		.4byte	.LFE64
+ 1732 0145 0400     		.2byte	0x4
+ 1733 0147 F3       		.byte	0xf3
+ 1734 0148 01       		.uleb128 0x1
+ 1735 0149 50       		.byte	0x50
+ 1736 014a 9F       		.byte	0x9f
+ 1737 014b 00000000 		.4byte	0
+ 1738 014f 00000000 		.4byte	0
+ 1739              	.LLST8:
+ 1740 0153 00000000 		.4byte	.LVL28
+ 1741 0157 1A000000 		.4byte	.LVL29
+ 1742 015b 0200     		.2byte	0x2
+ 1743 015d 30       		.byte	0x30
+ 1744 015e 9F       		.byte	0x9f
+ 1745 015f 1A000000 		.4byte	.LVL29
+ 1746 0163 20000000 		.4byte	.LFE65
+ 1747 0167 0100     		.2byte	0x1
+ 1748 0169 50       		.byte	0x50
+ 1749 016a 00000000 		.4byte	0
+ 1750 016e 00000000 		.4byte	0
+ 1751              	.LLST9:
+ 1752 0172 00000000 		.4byte	.LVL30
+ 1753 0176 02000000 		.4byte	.LVL31
+ 1754 017a 0100     		.2byte	0x1
+ 1755 017c 50       		.byte	0x50
+ 1756 017d 02000000 		.4byte	.LVL31
+ 1757 0181 1C000000 		.4byte	.LFE66
+ 1758 0185 0400     		.2byte	0x4
+ 1759 0187 F3       		.byte	0xf3
+ 1760 0188 01       		.uleb128 0x1
+ 1761 0189 50       		.byte	0x50
+ 1762 018a 9F       		.byte	0x9f
+ 1763 018b 00000000 		.4byte	0
+ 1764 018f 00000000 		.4byte	0
+ 1765              		.section	.debug_aranges,"",%progbits
+ 1766 0000 64000000 		.4byte	0x64
+ 1767 0004 0200     		.2byte	0x2
+ 1768 0006 00000000 		.4byte	.Ldebug_info0
+ 1769 000a 04       		.byte	0x4
+ 1770 000b 00       		.byte	0
+ 1771 000c 0000     		.2byte	0
+ 1772 000e 0000     		.2byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 48
 
 
- 1775 000e 0000     		.2byte	0
- 1776 0010 00000000 		.4byte	.LFB63
- 1777 0014 DC000000 		.4byte	.LFE63-.LFB63
- 1778 0018 00000000 		.4byte	.LFB64
- 1779 001c 1C000000 		.4byte	.LFE64-.LFB64
- 1780 0020 00000000 		.4byte	.LFB65
- 1781 0024 20000000 		.4byte	.LFE65-.LFB65
- 1782 0028 00000000 		.4byte	.LFB66
- 1783 002c 1C000000 		.4byte	.LFE66-.LFB66
- 1784 0030 00000000 		.4byte	.LFB67
- 1785 0034 1C000000 		.4byte	.LFE67-.LFB67
- 1786 0038 00000000 		.4byte	.LFB68
- 1787 003c 34000000 		.4byte	.LFE68-.LFB68
- 1788 0040 00000000 		.4byte	.LFB69
- 1789 0044 1C000000 		.4byte	.LFE69-.LFB69
- 1790 0048 00000000 		.4byte	.LFB70
- 1791 004c 2C000000 		.4byte	.LFE70-.LFB70
- 1792 0050 00000000 		.4byte	.LFB71
- 1793 0054 28000000 		.4byte	.LFE71-.LFB71
- 1794 0058 00000000 		.4byte	.LFB72
- 1795 005c 34000000 		.4byte	.LFE72-.LFB72
- 1796 0060 00000000 		.4byte	0
- 1797 0064 00000000 		.4byte	0
- 1798              		.section	.debug_ranges,"",%progbits
- 1799              	.Ldebug_ranges0:
- 1800 0000 00000000 		.4byte	.LFB63
- 1801 0004 DC000000 		.4byte	.LFE63
- 1802 0008 00000000 		.4byte	.LFB64
- 1803 000c 1C000000 		.4byte	.LFE64
- 1804 0010 00000000 		.4byte	.LFB65
- 1805 0014 20000000 		.4byte	.LFE65
- 1806 0018 00000000 		.4byte	.LFB66
- 1807 001c 1C000000 		.4byte	.LFE66
- 1808 0020 00000000 		.4byte	.LFB67
- 1809 0024 1C000000 		.4byte	.LFE67
- 1810 0028 00000000 		.4byte	.LFB68
- 1811 002c 34000000 		.4byte	.LFE68
- 1812 0030 00000000 		.4byte	.LFB69
- 1813 0034 1C000000 		.4byte	.LFE69
- 1814 0038 00000000 		.4byte	.LFB70
- 1815 003c 2C000000 		.4byte	.LFE70
- 1816 0040 00000000 		.4byte	.LFB71
- 1817 0044 28000000 		.4byte	.LFE71
- 1818 0048 00000000 		.4byte	.LFB72
- 1819 004c 34000000 		.4byte	.LFE72
- 1820 0050 00000000 		.4byte	0
- 1821 0054 00000000 		.4byte	0
- 1822              		.section	.debug_line,"",%progbits
- 1823              	.Ldebug_line0:
- 1824 0000 91020000 		.section	.debug_str,"MS",%progbits,1
- 1824      02006B01 
- 1824      00000201 
- 1824      FB0E0D00 
- 1824      01010101 
- 1825              	.LASF47:
- 1826 0000 43484152 		.ascii	"CHARGEMODE\000"
- 1826      47454D4F 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 49
+ 1773 0010 00000000 		.4byte	.LFB63
+ 1774 0014 DC000000 		.4byte	.LFE63-.LFB63
+ 1775 0018 00000000 		.4byte	.LFB64
+ 1776 001c 1C000000 		.4byte	.LFE64-.LFB64
+ 1777 0020 00000000 		.4byte	.LFB65
+ 1778 0024 20000000 		.4byte	.LFE65-.LFB65
+ 1779 0028 00000000 		.4byte	.LFB66
+ 1780 002c 1C000000 		.4byte	.LFE66-.LFB66
+ 1781 0030 00000000 		.4byte	.LFB67
+ 1782 0034 1C000000 		.4byte	.LFE67-.LFB67
+ 1783 0038 00000000 		.4byte	.LFB68
+ 1784 003c 48000000 		.4byte	.LFE68-.LFB68
+ 1785 0040 00000000 		.4byte	.LFB69
+ 1786 0044 1C000000 		.4byte	.LFE69-.LFB69
+ 1787 0048 00000000 		.4byte	.LFB70
+ 1788 004c 10000000 		.4byte	.LFE70-.LFB70
+ 1789 0050 00000000 		.4byte	.LFB71
+ 1790 0054 28000000 		.4byte	.LFE71-.LFB71
+ 1791 0058 00000000 		.4byte	.LFB72
+ 1792 005c 34000000 		.4byte	.LFE72-.LFB72
+ 1793 0060 00000000 		.4byte	0
+ 1794 0064 00000000 		.4byte	0
+ 1795              		.section	.debug_ranges,"",%progbits
+ 1796              	.Ldebug_ranges0:
+ 1797 0000 00000000 		.4byte	.LFB63
+ 1798 0004 DC000000 		.4byte	.LFE63
+ 1799 0008 00000000 		.4byte	.LFB64
+ 1800 000c 1C000000 		.4byte	.LFE64
+ 1801 0010 00000000 		.4byte	.LFB65
+ 1802 0014 20000000 		.4byte	.LFE65
+ 1803 0018 00000000 		.4byte	.LFB66
+ 1804 001c 1C000000 		.4byte	.LFE66
+ 1805 0020 00000000 		.4byte	.LFB67
+ 1806 0024 1C000000 		.4byte	.LFE67
+ 1807 0028 00000000 		.4byte	.LFB68
+ 1808 002c 48000000 		.4byte	.LFE68
+ 1809 0030 00000000 		.4byte	.LFB69
+ 1810 0034 1C000000 		.4byte	.LFE69
+ 1811 0038 00000000 		.4byte	.LFB70
+ 1812 003c 10000000 		.4byte	.LFE70
+ 1813 0040 00000000 		.4byte	.LFB71
+ 1814 0044 28000000 		.4byte	.LFE71
+ 1815 0048 00000000 		.4byte	.LFB72
+ 1816 004c 34000000 		.4byte	.LFE72
+ 1817 0050 00000000 		.4byte	0
+ 1818 0054 00000000 		.4byte	0
+ 1819              		.section	.debug_line,"",%progbits
+ 1820              	.Ldebug_line0:
+ 1821 0000 93020000 		.section	.debug_str,"MS",%progbits,1
+ 1821      02006B01 
+ 1821      00000201 
+ 1821      FB0E0D00 
+ 1821      01010101 
+ 1822              	.LASF47:
+ 1823 0000 43484152 		.ascii	"CHARGEMODE\000"
+ 1823      47454D4F 
+ 1823      444500
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 49
 
 
- 1826      444500
- 1827              	.LASF67:
- 1828 000b 72657375 		.ascii	"result\000"
- 1828      6C7400
- 1829              	.LASF48:
- 1830 0012 5041434B 		.ascii	"PACK_TEMP_OVER\000"
- 1830      5F54454D 
- 1830      505F4F56 
- 1830      455200
- 1831              	.LASF40:
- 1832 0021 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
- 1832      54585F53 
- 1832      54525543 
- 1832      5400
- 1833              	.LASF50:
- 1834 002f 5041434B 		.ascii	"PACK_TEMP_UNDER\000"
- 1834      5F54454D 
- 1834      505F554E 
- 1834      44455200 
- 1835              	.LASF46:
- 1836 003f 4E4F5F45 		.ascii	"NO_ERROR\000"
- 1836      52524F52 
- 1836      00
- 1837              	.LASF83:
- 1838 0048 73746174 		.ascii	"state\000"
- 1838      6500
- 1839              	.LASF73:
- 1840 004e 43414E5F 		.ascii	"CAN_TxCancel\000"
- 1840      54784361 
- 1840      6E63656C 
- 1840      00
- 1841              	.LASF42:
- 1842 005b 48565F45 		.ascii	"HV_ENABLED\000"
- 1842      4E41424C 
- 1842      454400
- 1843              	.LASF74:
- 1844 0066 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
- 1844      52656365 
- 1844      6976654D 
- 1844      736700
- 1845              	.LASF23:
- 1846 0075 73697A65 		.ascii	"sizetype\000"
- 1846      74797065 
- 1846      00
- 1847              	.LASF39:
- 1848 007e 74786461 		.ascii	"txdata\000"
- 1848      746100
- 1849              	.LASF31:
- 1850 0085 72786461 		.ascii	"rxdata\000"
- 1850      746100
- 1851              	.LASF72:
- 1852 008c 43414E5F 		.ascii	"CAN_SendMsgDRIVER_SWITCHES\000"
- 1852      53656E64 
- 1852      4D736744 
- 1852      52495645 
- 1852      525F5357 
- 1853              	.LASF66:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 50
+ 1824              	.LASF67:
+ 1825 000b 72657375 		.ascii	"result\000"
+ 1825      6C7400
+ 1826              	.LASF48:
+ 1827 0012 5041434B 		.ascii	"PACK_TEMP_OVER\000"
+ 1827      5F54454D 
+ 1827      505F4F56 
+ 1827      455200
+ 1828              	.LASF40:
+ 1829 0021 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 1829      54585F53 
+ 1829      54525543 
+ 1829      5400
+ 1830              	.LASF50:
+ 1831 002f 5041434B 		.ascii	"PACK_TEMP_UNDER\000"
+ 1831      5F54454D 
+ 1831      505F554E 
+ 1831      44455200 
+ 1832              	.LASF46:
+ 1833 003f 4E4F5F45 		.ascii	"NO_ERROR\000"
+ 1833      52524F52 
+ 1833      00
+ 1834              	.LASF83:
+ 1835 0048 73746174 		.ascii	"state\000"
+ 1835      6500
+ 1836              	.LASF73:
+ 1837 004e 43414E5F 		.ascii	"CAN_TxCancel\000"
+ 1837      54784361 
+ 1837      6E63656C 
+ 1837      00
+ 1838              	.LASF42:
+ 1839 005b 48565F45 		.ascii	"HV_ENABLED\000"
+ 1839      4E41424C 
+ 1839      454400
+ 1840              	.LASF74:
+ 1841 0066 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 1841      52656365 
+ 1841      6976654D 
+ 1841      736700
+ 1842              	.LASF23:
+ 1843 0075 73697A65 		.ascii	"sizetype\000"
+ 1843      74797065 
+ 1843      00
+ 1844              	.LASF39:
+ 1845 007e 74786461 		.ascii	"txdata\000"
+ 1845      746100
+ 1846              	.LASF31:
+ 1847 0085 72786461 		.ascii	"rxdata\000"
+ 1847      746100
+ 1848              	.LASF72:
+ 1849 008c 43414E5F 		.ascii	"CAN_SendMsgDRIVER_SWITCHES\000"
+ 1849      53656E64 
+ 1849      4D736744 
+ 1849      52495645 
+ 1849      525F5357 
+ 1850              	.LASF66:
+ 1851 00a7 72657472 		.ascii	"retry\000"
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 50
 
 
- 1854 00a7 72657472 		.ascii	"retry\000"
- 1854      7900
- 1855              	.LASF4:
- 1856 00ad 5F5F7569 		.ascii	"__uint16_t\000"
- 1856      6E743136 
- 1856      5F7400
- 1857              	.LASF2:
- 1858 00b8 73686F72 		.ascii	"short int\000"
- 1858      7420696E 
- 1858      7400
- 1859              	.LASF88:
- 1860 00c2 6D635F74 		.ascii	"mc_temp\000"
- 1860      656D7000 
- 1861              	.LASF44:
- 1862 00ca 4641554C 		.ascii	"FAULT\000"
- 1862      5400
- 1863              	.LASF58:
- 1864 00d0 5350495F 		.ascii	"SPI_FAULT\000"
- 1864      4641554C 
- 1864      5400
- 1865              	.LASF12:
- 1866 00da 75696E74 		.ascii	"uint8_t\000"
- 1866      385F7400 
- 1867              	.LASF15:
- 1868 00e2 75696E74 		.ascii	"uint8\000"
- 1868      3800
- 1869              	.LASF30:
- 1870 00e8 72786964 		.ascii	"rxid\000"
- 1870      00
- 1871              	.LASF33:
- 1872 00ed 72786163 		.ascii	"rxacr\000"
- 1872      7200
- 1873              	.LASF77:
- 1874 00f3 43414E5F 		.ascii	"CAN_ReceiveMsgBMS_STATUS_MSG\000"
- 1874      52656365 
- 1874      6976654D 
- 1874      7367424D 
- 1874      535F5354 
- 1875              	.LASF56:
- 1876 0110 504F535F 		.ascii	"POS_CONT_CLOSED\000"
- 1876      434F4E54 
- 1876      5F434C4F 
- 1876      53454400 
- 1877              	.LASF41:
- 1878 0120 50524543 		.ascii	"PRECHARGING\000"
- 1878      48415247 
- 1878      494E4700 
- 1879              	.LASF80:
- 1880 012c 43414E5F 		.ascii	"CAN_ReceiveMsgMC_PDO_ACK\000"
- 1880      52656365 
- 1880      6976654D 
- 1880      73674D43 
- 1880      5F50444F 
- 1881              	.LASF76:
- 1882 0145 43414E5F 		.ascii	"CAN_ReceiveMsgTORQUE_REQUEST\000"
- 1882      52656365 
- 1882      6976654D 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 51
+ 1851      7900
+ 1852              	.LASF4:
+ 1853 00ad 5F5F7569 		.ascii	"__uint16_t\000"
+ 1853      6E743136 
+ 1853      5F7400
+ 1854              	.LASF2:
+ 1855 00b8 73686F72 		.ascii	"short int\000"
+ 1855      7420696E 
+ 1855      7400
+ 1856              	.LASF88:
+ 1857 00c2 6D635F74 		.ascii	"mc_temp\000"
+ 1857      656D7000 
+ 1858              	.LASF44:
+ 1859 00ca 4641554C 		.ascii	"FAULT\000"
+ 1859      5400
+ 1860              	.LASF58:
+ 1861 00d0 5350495F 		.ascii	"SPI_FAULT\000"
+ 1861      4641554C 
+ 1861      5400
+ 1862              	.LASF12:
+ 1863 00da 75696E74 		.ascii	"uint8_t\000"
+ 1863      385F7400 
+ 1864              	.LASF15:
+ 1865 00e2 75696E74 		.ascii	"uint8\000"
+ 1865      3800
+ 1866              	.LASF30:
+ 1867 00e8 72786964 		.ascii	"rxid\000"
+ 1867      00
+ 1868              	.LASF33:
+ 1869 00ed 72786163 		.ascii	"rxacr\000"
+ 1869      7200
+ 1870              	.LASF77:
+ 1871 00f3 43414E5F 		.ascii	"CAN_ReceiveMsgBMS_STATUS_MSG\000"
+ 1871      52656365 
+ 1871      6976654D 
+ 1871      7367424D 
+ 1871      535F5354 
+ 1872              	.LASF56:
+ 1873 0110 504F535F 		.ascii	"POS_CONT_CLOSED\000"
+ 1873      434F4E54 
+ 1873      5F434C4F 
+ 1873      53454400 
+ 1874              	.LASF41:
+ 1875 0120 50524543 		.ascii	"PRECHARGING\000"
+ 1875      48415247 
+ 1875      494E4700 
+ 1876              	.LASF80:
+ 1877 012c 43414E5F 		.ascii	"CAN_ReceiveMsgMC_PDO_ACK\000"
+ 1877      52656365 
+ 1877      6976654D 
+ 1877      73674D43 
+ 1877      5F50444F 
+ 1878              	.LASF76:
+ 1879 0145 43414E5F 		.ascii	"CAN_ReceiveMsgTORQUE_REQUEST\000"
+ 1879      52656365 
+ 1879      6976654D 
+ 1879      7367544F 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 51
 
 
- 1882      7367544F 
- 1882      52515545 
- 1883              	.LASF17:
- 1884 0162 666C6F61 		.ascii	"float\000"
- 1884      7400
- 1885              	.LASF9:
- 1886 0168 6C6F6E67 		.ascii	"long long int\000"
- 1886      206C6F6E 
- 1886      6720696E 
- 1886      7400
- 1887              	.LASF27:
- 1888 0176 43414E5F 		.ascii	"CAN_REG_32\000"
- 1888      5245475F 
- 1888      333200
- 1889              	.LASF19:
- 1890 0181 63686172 		.ascii	"char\000"
- 1890      00
- 1891              	.LASF37:
- 1892 0186 7478636D 		.ascii	"txcmd\000"
- 1892      6400
- 1893              	.LASF7:
- 1894 018c 6C6F6E67 		.ascii	"long int\000"
- 1894      20696E74 
- 1894      00
- 1895              	.LASF65:
- 1896 0195 73686966 		.ascii	"shift\000"
- 1896      7400
- 1897              	.LASF52:
- 1898 019b 43524954 		.ascii	"CRITICAL_SOC\000"
- 1898      4943414C 
- 1898      5F534F43 
- 1898      00
- 1899              	.LASF8:
- 1900 01a8 6C6F6E67 		.ascii	"long unsigned int\000"
- 1900      20756E73 
- 1900      69676E65 
- 1900      6420696E 
- 1900      7400
- 1901              	.LASF3:
- 1902 01ba 5F5F7569 		.ascii	"__uint8_t\000"
- 1902      6E74385F 
- 1902      7400
- 1903              	.LASF78:
- 1904 01c4 43414E5F 		.ascii	"CAN_ReceiveMsgBMS_TEMPERATURES\000"
- 1904      52656365 
- 1904      6976654D 
- 1904      7367424D 
- 1904      535F5445 
- 1905              	.LASF25:
- 1906 01e3 62797465 		.ascii	"byte\000"
- 1906      00
- 1907              	.LASF87:
- 1908 01e8 73687574 		.ascii	"shutdown_flags\000"
- 1908      646F776E 
- 1908      5F666C61 
- 1908      677300
- 1909              	.LASF22:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 52
+ 1879      52515545 
+ 1880              	.LASF17:
+ 1881 0162 666C6F61 		.ascii	"float\000"
+ 1881      7400
+ 1882              	.LASF9:
+ 1883 0168 6C6F6E67 		.ascii	"long long int\000"
+ 1883      206C6F6E 
+ 1883      6720696E 
+ 1883      7400
+ 1884              	.LASF27:
+ 1885 0176 43414E5F 		.ascii	"CAN_REG_32\000"
+ 1885      5245475F 
+ 1885      333200
+ 1886              	.LASF19:
+ 1887 0181 63686172 		.ascii	"char\000"
+ 1887      00
+ 1888              	.LASF37:
+ 1889 0186 7478636D 		.ascii	"txcmd\000"
+ 1889      6400
+ 1890              	.LASF7:
+ 1891 018c 6C6F6E67 		.ascii	"long int\000"
+ 1891      20696E74 
+ 1891      00
+ 1892              	.LASF65:
+ 1893 0195 73686966 		.ascii	"shift\000"
+ 1893      7400
+ 1894              	.LASF52:
+ 1895 019b 43524954 		.ascii	"CRITICAL_SOC\000"
+ 1895      4943414C 
+ 1895      5F534F43 
+ 1895      00
+ 1896              	.LASF8:
+ 1897 01a8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1897      20756E73 
+ 1897      69676E65 
+ 1897      6420696E 
+ 1897      7400
+ 1898              	.LASF3:
+ 1899 01ba 5F5F7569 		.ascii	"__uint8_t\000"
+ 1899      6E74385F 
+ 1899      7400
+ 1900              	.LASF78:
+ 1901 01c4 43414E5F 		.ascii	"CAN_ReceiveMsgBMS_TEMPERATURES\000"
+ 1901      52656365 
+ 1901      6976654D 
+ 1901      7367424D 
+ 1901      535F5445 
+ 1902              	.LASF25:
+ 1903 01e3 62797465 		.ascii	"byte\000"
+ 1903      00
+ 1904              	.LASF87:
+ 1905 01e8 73687574 		.ascii	"shutdown_flags\000"
+ 1905      646F776E 
+ 1905      5F666C61 
+ 1905      677300
+ 1906              	.LASF22:
+ 1907 01f7 6C6F6E67 		.ascii	"long double\000"
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 52
 
 
- 1910 01f7 6C6F6E67 		.ascii	"long double\000"
- 1910      20646F75 
- 1910      626C6500 
- 1911              	.LASF34:
- 1912 0203 7278616D 		.ascii	"rxamrd\000"
- 1912      726400
- 1913              	.LASF54:
- 1914 020a 434F4D5F 		.ascii	"COM_FAILURE\000"
- 1914      4641494C 
- 1914      55524500 
- 1915              	.LASF1:
- 1916 0216 756E7369 		.ascii	"unsigned char\000"
- 1916      676E6564 
- 1916      20636861 
- 1916      7200
- 1917              	.LASF29:
- 1918 0224 7278636D 		.ascii	"rxcmd\000"
- 1918      6400
- 1919              	.LASF0:
- 1920 022a 7369676E 		.ascii	"signed char\000"
- 1920      65642063 
- 1920      68617200 
- 1921              	.LASF26:
- 1922 0236 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
- 1922      44415441 
- 1922      5F425954 
- 1922      455300
- 1923              	.LASF10:
- 1924 0245 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1924      206C6F6E 
- 1924      6720756E 
- 1924      7369676E 
- 1924      65642069 
- 1925              	.LASF89:
- 1926 025c 6D6F746F 		.ascii	"motor_temp\000"
- 1926      725F7465 
- 1926      6D7000
- 1927              	.LASF55:
- 1928 0267 4E45475F 		.ascii	"NEG_CONT_CLOSED\000"
- 1928      434F4E54 
- 1928      5F434C4F 
- 1928      53454400 
- 1929              	.LASF11:
- 1930 0277 756E7369 		.ascii	"unsigned int\000"
- 1930      676E6564 
- 1930      20696E74 
- 1930      00
- 1931              	.LASF13:
- 1932 0284 75696E74 		.ascii	"uint16_t\000"
- 1932      31365F74 
- 1932      00
- 1933              	.LASF62:
- 1934 028d 46554C4C 		.ascii	"FULL\000"
- 1934      00
- 1935              	.LASF24:
- 1936 0292 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
- 1936      44415441 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 53
+ 1907      20646F75 
+ 1907      626C6500 
+ 1908              	.LASF34:
+ 1909 0203 7278616D 		.ascii	"rxamrd\000"
+ 1909      726400
+ 1910              	.LASF54:
+ 1911 020a 434F4D5F 		.ascii	"COM_FAILURE\000"
+ 1911      4641494C 
+ 1911      55524500 
+ 1912              	.LASF1:
+ 1913 0216 756E7369 		.ascii	"unsigned char\000"
+ 1913      676E6564 
+ 1913      20636861 
+ 1913      7200
+ 1914              	.LASF29:
+ 1915 0224 7278636D 		.ascii	"rxcmd\000"
+ 1915      6400
+ 1916              	.LASF0:
+ 1917 022a 7369676E 		.ascii	"signed char\000"
+ 1917      65642063 
+ 1917      68617200 
+ 1918              	.LASF26:
+ 1919 0236 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 1919      44415441 
+ 1919      5F425954 
+ 1919      455300
+ 1920              	.LASF10:
+ 1921 0245 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1921      206C6F6E 
+ 1921      6720756E 
+ 1921      7369676E 
+ 1921      65642069 
+ 1922              	.LASF89:
+ 1923 025c 6D6F746F 		.ascii	"motor_temp\000"
+ 1923      725F7465 
+ 1923      6D7000
+ 1924              	.LASF55:
+ 1925 0267 4E45475F 		.ascii	"NEG_CONT_CLOSED\000"
+ 1925      434F4E54 
+ 1925      5F434C4F 
+ 1925      53454400 
+ 1926              	.LASF11:
+ 1927 0277 756E7369 		.ascii	"unsigned int\000"
+ 1927      676E6564 
+ 1927      20696E74 
+ 1927      00
+ 1928              	.LASF13:
+ 1929 0284 75696E74 		.ascii	"uint16_t\000"
+ 1929      31365F74 
+ 1929      00
+ 1930              	.LASF62:
+ 1931 028d 46554C4C 		.ascii	"FULL\000"
+ 1931      00
+ 1932              	.LASF24:
+ 1933 0292 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
+ 1933      44415441 
+ 1933      5F425954 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 53
 
 
- 1936      5F425954 
- 1936      45535F4D 
- 1936      534700
- 1937              	.LASF51:
- 1938 02a5 4C4F575F 		.ascii	"LOW_SOC\000"
- 1938      534F4300 
- 1939              	.LASF21:
- 1940 02ad 72656733 		.ascii	"reg32\000"
- 1940      3200
- 1941              	.LASF5:
- 1942 02b3 73686F72 		.ascii	"short unsigned int\000"
- 1942      7420756E 
- 1942      7369676E 
- 1942      65642069 
- 1942      6E7400
- 1943              	.LASF64:
- 1944 02c6 424D535F 		.ascii	"BMS_STATUS\000"
- 1944      53544154 
- 1944      555300
- 1945              	.LASF35:
- 1946 02d1 72786163 		.ascii	"rxacrd\000"
- 1946      726400
- 1947              	.LASF84:
- 1948 02d8 5041434B 		.ascii	"PACK_TEMP\000"
- 1948      5F54454D 
- 1948      5000
- 1949              	.LASF36:
- 1950 02e2 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 1950      52585F53 
- 1950      54525543 
- 1950      5400
- 1951              	.LASF75:
- 1952 02f0 72784D61 		.ascii	"rxMailbox\000"
- 1952      696C626F 
- 1952      7800
- 1953              	.LASF59:
- 1954 02fa 43454C4C 		.ascii	"CELL_VOLT_OVER\000"
- 1954      5F564F4C 
- 1954      545F4F56 
- 1954      455200
- 1955              	.LASF14:
- 1956 0309 696E7433 		.ascii	"int32_t\000"
- 1956      325F7400 
- 1957              	.LASF57:
- 1958 0311 49534F5F 		.ascii	"ISO_FAULT\000"
- 1958      4641554C 
- 1958      5400
- 1959              	.LASF53:
- 1960 031b 494D4241 		.ascii	"IMBALANCE\000"
- 1960      4C414E43 
- 1960      4500
- 1961              	.LASF71:
- 1962 0325 43414E5F 		.ascii	"CAN_SendMsg\000"
- 1962      53656E64 
- 1962      4D736700 
- 1963              	.LASF63:
- 1964 0331 50524543 		.ascii	"PRECHARGE_CLOSED\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 54
+ 1933      45535F4D 
+ 1933      534700
+ 1934              	.LASF51:
+ 1935 02a5 4C4F575F 		.ascii	"LOW_SOC\000"
+ 1935      534F4300 
+ 1936              	.LASF21:
+ 1937 02ad 72656733 		.ascii	"reg32\000"
+ 1937      3200
+ 1938              	.LASF5:
+ 1939 02b3 73686F72 		.ascii	"short unsigned int\000"
+ 1939      7420756E 
+ 1939      7369676E 
+ 1939      65642069 
+ 1939      6E7400
+ 1940              	.LASF64:
+ 1941 02c6 424D535F 		.ascii	"BMS_STATUS\000"
+ 1941      53544154 
+ 1941      555300
+ 1942              	.LASF35:
+ 1943 02d1 72786163 		.ascii	"rxacrd\000"
+ 1943      726400
+ 1944              	.LASF84:
+ 1945 02d8 5041434B 		.ascii	"PACK_TEMP\000"
+ 1945      5F54454D 
+ 1945      5000
+ 1946              	.LASF36:
+ 1947 02e2 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 1947      52585F53 
+ 1947      54525543 
+ 1947      5400
+ 1948              	.LASF75:
+ 1949 02f0 72784D61 		.ascii	"rxMailbox\000"
+ 1949      696C626F 
+ 1949      7800
+ 1950              	.LASF59:
+ 1951 02fa 43454C4C 		.ascii	"CELL_VOLT_OVER\000"
+ 1951      5F564F4C 
+ 1951      545F4F56 
+ 1951      455200
+ 1952              	.LASF14:
+ 1953 0309 696E7433 		.ascii	"int32_t\000"
+ 1953      325F7400 
+ 1954              	.LASF57:
+ 1955 0311 49534F5F 		.ascii	"ISO_FAULT\000"
+ 1955      4641554C 
+ 1955      5400
+ 1956              	.LASF53:
+ 1957 031b 494D4241 		.ascii	"IMBALANCE\000"
+ 1957      4C414E43 
+ 1957      4500
+ 1958              	.LASF71:
+ 1959 0325 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 1959      53656E64 
+ 1959      4D736700 
+ 1960              	.LASF63:
+ 1961 0331 50524543 		.ascii	"PRECHARGE_CLOSED\000"
+ 1961      48415247 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 54
 
 
- 1964      48415247 
- 1964      455F434C 
- 1964      4F534544 
- 1964      00
- 1965              	.LASF45:
- 1966 0342 7663755F 		.ascii	"vcu_state\000"
- 1966      73746174 
- 1966      6500
- 1967              	.LASF16:
- 1968 034c 75696E74 		.ascii	"uint32\000"
- 1968      333200
- 1969              	.LASF20:
- 1970 0353 72656738 		.ascii	"reg8\000"
- 1970      00
- 1971              	.LASF69:
- 1972 0358 6D657373 		.ascii	"message\000"
- 1972      61676500 
- 1973              	.LASF28:
- 1974 0360 43414E5F 		.ascii	"CAN_TX_MSG\000"
- 1974      54585F4D 
- 1974      534700
- 1975              	.LASF61:
- 1976 036b 43484152 		.ascii	"CHARGE_HAULT\000"
- 1976      47455F48 
- 1976      41554C54 
- 1976      00
- 1977              	.LASF70:
- 1978 0378 62756666 		.ascii	"bufferId\000"
- 1978      65724964 
- 1978      00
- 1979              	.LASF38:
- 1980 0381 74786964 		.ascii	"txid\000"
- 1980      00
- 1981              	.LASF79:
- 1982 0386 43414E5F 		.ascii	"CAN_ReceiveMsgMC_PDO_SEND\000"
- 1982      52656365 
- 1982      6976654D 
- 1982      73674D43 
- 1982      5F50444F 
- 1983              	.LASF6:
- 1984 03a0 5F5F696E 		.ascii	"__int32_t\000"
- 1984      7433325F 
- 1984      7400
- 1985              	.LASF91:
- 1986 03aa 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
- 1986      72617465 
- 1986      645F536F 
- 1986      75726365 
- 1986      5C50536F 
- 1987              	.LASF60:
- 1988 03d2 43454C4C 		.ascii	"CELL_VOLT_UNDER\000"
- 1988      5F564F4C 
- 1988      545F554E 
- 1988      44455200 
- 1989              	.LASF81:
- 1990 03e2 43414E5F 		.ascii	"CAN_ReceiveMsgPEI_CURRENT\000"
- 1990      52656365 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 55
+ 1961      455F434C 
+ 1961      4F534544 
+ 1961      00
+ 1962              	.LASF45:
+ 1963 0342 7663755F 		.ascii	"vcu_state\000"
+ 1963      73746174 
+ 1963      6500
+ 1964              	.LASF16:
+ 1965 034c 75696E74 		.ascii	"uint32\000"
+ 1965      333200
+ 1966              	.LASF20:
+ 1967 0353 72656738 		.ascii	"reg8\000"
+ 1967      00
+ 1968              	.LASF69:
+ 1969 0358 6D657373 		.ascii	"message\000"
+ 1969      61676500 
+ 1970              	.LASF28:
+ 1971 0360 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 1971      54585F4D 
+ 1971      534700
+ 1972              	.LASF61:
+ 1973 036b 43484152 		.ascii	"CHARGE_HAULT\000"
+ 1973      47455F48 
+ 1973      41554C54 
+ 1973      00
+ 1974              	.LASF70:
+ 1975 0378 62756666 		.ascii	"bufferId\000"
+ 1975      65724964 
+ 1975      00
+ 1976              	.LASF38:
+ 1977 0381 74786964 		.ascii	"txid\000"
+ 1977      00
+ 1978              	.LASF79:
+ 1979 0386 43414E5F 		.ascii	"CAN_ReceiveMsgMC_PDO_SEND\000"
+ 1979      52656365 
+ 1979      6976654D 
+ 1979      73674D43 
+ 1979      5F50444F 
+ 1980              	.LASF6:
+ 1981 03a0 5F5F696E 		.ascii	"__int32_t\000"
+ 1981      7433325F 
+ 1981      7400
+ 1982              	.LASF91:
+ 1983 03aa 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
+ 1983      72617465 
+ 1983      645F536F 
+ 1983      75726365 
+ 1983      5C50536F 
+ 1984              	.LASF60:
+ 1985 03d2 43454C4C 		.ascii	"CELL_VOLT_UNDER\000"
+ 1985      5F564F4C 
+ 1985      545F554E 
+ 1985      44455200 
+ 1986              	.LASF81:
+ 1987 03e2 43414E5F 		.ascii	"CAN_ReceiveMsgPEI_CURRENT\000"
+ 1987      52656365 
+ 1987      6976654D 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 55
 
 
- 1990      6976654D 
- 1990      73675045 
- 1990      495F4355 
- 1991              	.LASF92:
- 1992 03fc 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
- 1992      73657273 
- 1992      5C6C656F 
- 1992      6A615C44 
- 1992      6F63756D 
- 1993 042a 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
- 1993      2D464539 
- 1993      2D464537 
- 1993      2D426F61 
- 1993      72645C44 
- 1994              	.LASF86:
- 1995 044d 626D735F 		.ascii	"bms_status\000"
- 1995      73746174 
- 1995      757300
- 1996              	.LASF18:
- 1997 0458 646F7562 		.ascii	"double\000"
- 1997      6C6500
- 1998              	.LASF68:
- 1999 045f 72656754 		.ascii	"regTemp\000"
- 1999      656D7000 
- 2000              	.LASF43:
- 2001 0467 44524956 		.ascii	"DRIVE\000"
- 2001      4500
- 2002              	.LASF82:
- 2003 046d 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2003      52784275 
- 2003      66666572 
- 2003      00
- 2004              	.LASF90:
- 2005 047a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2005      43313120 
- 2005      352E342E 
- 2005      31203230 
- 2005      31363036 
- 2006 04ad 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2006      20726576 
- 2006      6973696F 
- 2006      6E203233 
- 2006      37373135 
- 2007 04e0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2007      66756E63 
- 2007      74696F6E 
- 2007      2D736563 
- 2007      74696F6E 
- 2008              	.LASF32:
- 2009 0508 7278616D 		.ascii	"rxamr\000"
- 2009      7200
- 2010              	.LASF49:
- 2011 050e 46555345 		.ascii	"FUSE_BLOWN\000"
- 2011      5F424C4F 
- 2011      574E00
- 2012              	.LASF85:
- 2013 0519 43555252 		.ascii	"CURRENT\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccBUJsjw.s 			page 56
+ 1987      73675045 
+ 1987      495F4355 
+ 1988              	.LASF92:
+ 1989 03fc 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
+ 1989      73657273 
+ 1989      5C6C656F 
+ 1989      6A615C44 
+ 1989      6F63756D 
+ 1990 042a 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
+ 1990      2D464539 
+ 1990      2D464537 
+ 1990      2D426F61 
+ 1990      72645C44 
+ 1991              	.LASF86:
+ 1992 044d 626D735F 		.ascii	"bms_status\000"
+ 1992      73746174 
+ 1992      757300
+ 1993              	.LASF18:
+ 1994 0458 646F7562 		.ascii	"double\000"
+ 1994      6C6500
+ 1995              	.LASF68:
+ 1996 045f 72656754 		.ascii	"regTemp\000"
+ 1996      656D7000 
+ 1997              	.LASF43:
+ 1998 0467 44524956 		.ascii	"DRIVE\000"
+ 1998      4500
+ 1999              	.LASF82:
+ 2000 046d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2000      52784275 
+ 2000      66666572 
+ 2000      00
+ 2001              	.LASF90:
+ 2002 047a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2002      43313120 
+ 2002      352E342E 
+ 2002      31203230 
+ 2002      31363036 
+ 2003 04ad 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2003      20726576 
+ 2003      6973696F 
+ 2003      6E203233 
+ 2003      37373135 
+ 2004 04e0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2004      66756E63 
+ 2004      74696F6E 
+ 2004      2D736563 
+ 2004      74696F6E 
+ 2005              	.LASF32:
+ 2006 0508 7278616D 		.ascii	"rxamr\000"
+ 2006      7200
+ 2007              	.LASF49:
+ 2008 050e 46555345 		.ascii	"FUSE_BLOWN\000"
+ 2008      5F424C4F 
+ 2008      574E00
+ 2009              	.LASF85:
+ 2010 0519 43555252 		.ascii	"CURRENT\000"
+ 2010      454E5400 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cckLPnCv.s 			page 56
 
 
- 2013      454E5400 
- 2014              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2011              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

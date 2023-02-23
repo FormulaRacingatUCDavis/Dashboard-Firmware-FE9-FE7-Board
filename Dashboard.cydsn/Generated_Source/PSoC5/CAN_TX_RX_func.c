@@ -735,9 +735,11 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgBMS_STATUS_MSG(void) 
     {
         /* `#START MESSAGE_BMS_STATUS_MSG_RECEIVED` */
+        PACK_TEMP = CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_BMS_STATUS_MSG);
         soc = CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_BMS_STATUS_MSG);
         bms_status = CAN_RX_DATA_BYTE3(CAN_RX_MAILBOX_BMS_STATUS_MSG) << 8;    // bms error flags
         bms_status |= CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_BMS_STATUS_MSG);        // bms error flags
+        motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_BMS_STATUS_MSG);
         
         /* `#END` */
 
@@ -809,8 +811,8 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgMC_PDO_SEND(void) 
     {
         /* `#START MESSAGE_MC_PDO_SEND_RECEIVED` */
-        motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
-        motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
+        //motor_temp = CAN_RX_DATA_BYTE5(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        //motor_temp |= CAN_RX_DATA_BYTE6(CAN_RX_MAILBOX_MC_PDO_ACK);
         
         /* `#END` */
 

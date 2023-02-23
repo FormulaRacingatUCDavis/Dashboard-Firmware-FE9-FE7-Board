@@ -28,6 +28,7 @@
 #if !defined(PSOC_UGUI_SSD1963_H)
 #define PSOC_UGUI_SSD1963_H
 
+#include "project.h"
 #include "ugui.h"
     
 /* *** Configuration. *** */

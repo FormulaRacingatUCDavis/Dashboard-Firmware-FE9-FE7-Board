@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 1
 
 
    1              		.syntax unified
@@ -28,7 +28,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
   25              	getCapacitorVoltage:
   26              	.LFB64:
   27              		.file 1 "can_manga.c"
-   1:can_manga.c   **** /* ========================================
+   1:can_manga.c   ****  /* ========================================
    2:can_manga.c   ****  * Can API for FRUCD
    3:can_manga.c   ****  * Schuyler Alschuler 2016 - 2017
    4:can_manga.c   ****  * ========================================
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
   28:can_manga.c   **** //extern volatile int ERROR_NODE;
   29:can_manga.c   **** //extern volatile int ERROR_IDX;
   30:can_manga.c   **** extern volatile uint8_t soc;
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 2
 
 
   31:can_manga.c   **** extern volatile uint32_t voltage;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
   60:can_manga.c   **** uint8_t getCurtisFaultCheck()
   61:can_manga.c   **** {
   53              		.loc 1 61 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 3
 
 
   54              		.cfi_startproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
   99              		.thumb_func
  100              		.type	getAckRx, %function
  101              	getAckRx:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 4
 
 
  102              	.LFB67:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  143              	.LFE68:
  144              		.size	getErrorTolerance, .-getErrorTolerance
  145              		.section	.text.getABSMotorRPM,"ax",%progbits
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 5
 
 
  146              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  186              		.cfi_endproc
  187              	.LFE70:
  188              		.size	getEStop, .-getEStop
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 6
 
 
  189              		.section	.text.can_test_send,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  144:can_manga.c   ****             shutdown_flags = msg[CAN_DATA_BYTE_3];
  145:can_manga.c   ****             break;
  146:can_manga.c   ****         case 0x366: //Tehya test
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 7
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 7
 
 
  147:can_manga.c   ****             //ESTOP = msg[CAN_DATA_BYTE_1];
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  228              		.loc 1 169 0
  229 002a 039A     		ldr	r2, [sp, #12]
  230 002c D370     		strb	r3, [r2, #3]
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 8
 
 
  170:can_manga.c   ****     HeartB.msg->byte[4] = (uint8) 1;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  182:can_manga.c   **** 	CAN_DATA_BYTES_MSG payload;
  183:can_manga.c   **** 	message.id = ID; 
  273              		.loc 1 183 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 9
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 9
 
 
  274 0004 0391     		str	r1, [sp, #12]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  317              		.cfi_endproc
  318              	.LFE72:
  319              		.size	can_send, .-can_send
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 10
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 10
 
 
  320 003e 00BF     		.section	.text.can_send_switches,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  208:can_manga.c   ****         
  209:can_manga.c   ****         data[4] = 0;
  210:can_manga.c   ****         data[5] = 0;
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 11
 
 
  211:can_manga.c   ****         data[6] = 0;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  384 001e 8DF80620 		strb	r2, [sp, #6]
  240:can_manga.c   ****         data[7] = 0;
  385              		.loc 1 240 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 12
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 12
 
 
  386 0022 8DF80720 		strb	r2, [sp, #7]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  430              		.loc 1 250 0
  431 000e 8DF80110 		strb	r1, [sp, #1]
  251:can_manga.c   ****     
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 13
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 13
 
 
  252:can_manga.c   ****     can_send(data, 0x389);
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  484              	ERROR_TOLERANCE:
  485 0004 00       		.space	1
  486              		.type	ABS_MOTOR_RPM, %object
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 14
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 14
 
 
  487              		.size	ABS_MOTOR_RPM, 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  541 003c 02       		.byte	0x2
  542 003d 1D       		.byte	0x1d
  543 003e 42000000 		.4byte	0x42
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 15
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 15
 
 
  544 0042 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  598 00a8 07       		.byte	0x7
  599 00a9 64000000 		.4byte	.LASF14
  600 00ad 02       		.uleb128 0x2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 16
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 16
 
 
  601 00ae 4E010000 		.4byte	.LASF15
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  655 0122 E201     		.2byte	0x1e2
  656 0124 28010000 		.4byte	0x128
  657 0128 06       		.uleb128 0x6
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 17
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 17
 
 
  658 0129 EF000000 		.4byte	0xef
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  712 018f 1C010000 		.4byte	0x11c
  713 0193 9E010000 		.4byte	0x19e
  714 0197 0C       		.uleb128 0xc
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 18
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 18
 
 
  715 0198 34010000 		.4byte	0x134
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  769 0203 69646500 		.ascii	"ide\000"
  770 0207 05       		.byte	0x5
  771 0208 85       		.byte	0x85
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 19
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 19
 
 
  772 0209 EF000000 		.4byte	0xef
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  826 0272 C9060000 		.4byte	.LASF37
  827 0276 05       		.byte	0x5
  828 0277 B1       		.byte	0xb1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 20
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 20
 
 
  829 0278 44020000 		.4byte	0x244
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  883 02ea 28       		.byte	0x28
  884 02eb CE000000 		.4byte	0xce
  885 02ef 02       		.uleb128 0x2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 21
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 21
 
 
  886 02f0 4A020000 		.4byte	.LASF49
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  940 035a EF020000 		.4byte	0x2ef
  941 035e 08       		.byte	0x8
  942 035f 0A       		.uleb128 0xa
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 22
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 22
 
 
  943 0360 BA040000 		.4byte	.LASF57
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  997 03cf 04       		.byte	0x4
  998 03d0 0A       		.uleb128 0xa
  999 03d1 6B070000 		.4byte	.LASF65
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 23
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 23
 
 
  1000 03d5 08       		.byte	0x8
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1054 0444 08       		.byte	0x8
  1055 0445 4401     		.2byte	0x144
  1056 0447 B9050000 		.4byte	0x5b9
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 24
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 24
 
 
  1057 044b 04       		.byte	0x4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1111 04ba 20       		.byte	0x20
  1112 04bb 13       		.uleb128 0x13
  1113 04bc 636200   		.ascii	"cb\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 25
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 25
 
 
  1114 04bf 08       		.byte	0x8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1168 0522 62050000 		.4byte	0x562
  1169 0526 0A       		.uleb128 0xa
  1170 0527 41060000 		.4byte	.LASF67
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 26
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 26
 
 
  1171 052b 08       		.byte	0x8
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1225 0591 EC       		.byte	0xec
  1226 0592 EF020000 		.4byte	0x2ef
  1227 0596 04       		.byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 27
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 27
 
 
  1228 0597 00       		.byte	0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1282 0608 3801     		.2byte	0x138
  1283 060a CE020000 		.4byte	0x2ce
  1284 060e 0A       		.byte	0xa
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 28
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 28
 
 
  1285 060f 13       		.uleb128 0x13
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1339 0680 08       		.byte	0x8
  1340 0681 2202     		.2byte	0x222
  1341 0683 3B010000 		.4byte	0x13b
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 29
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 29
 
 
  1342 0687 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1396 06f9 11       		.uleb128 0x11
  1397 06fa 69020000 		.4byte	.LASF96
  1398 06fe 08       		.byte	0x8
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 30
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 30
 
 
  1399 06ff 4402     		.2byte	0x244
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1453 0771 3B02     		.2byte	0x23b
  1454 0773 B3050000 		.4byte	0x5b3
  1455 0777 18       		.byte	0x18
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 31
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 31
 
 
  1456 0778 11       		.uleb128 0x11
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1510 07ed 00       		.byte	0
  1511 07ee 15       		.uleb128 0x15
  1512 07ef 03080000 		.4byte	0x803
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 32
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 32
 
 
  1513 07f3 16       		.uleb128 0x16
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1567 086f 00000000 		.4byte	.LFB67
  1568 0873 0C000000 		.4byte	.LFE67-.LFB67
  1569 0877 01       		.uleb128 0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 33
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 33
 
 
  1570 0878 9C       		.byte	0x9c
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1624 08ea 00       		.byte	0
  1625 08eb 00       		.byte	0
  1626 08ec 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 34
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 34
 
 
  1627 08ed 7A050000 		.4byte	.LASF120
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1681 0959 04       		.byte	0x4
  1682 095a B8000000 		.4byte	0xb8
  1683 095e 1D       		.uleb128 0x1d
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 35
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 35
 
 
  1684 095f 4E070000 		.4byte	.LASF121
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1738 09e3 E4       		.byte	0xe4
  1739 09e4 BE020000 		.4byte	0x2be
  1740 09e8 02       		.uleb128 0x2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 36
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 36
 
 
  1741 09e9 91       		.byte	0x91
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1795 0a50 BE020000 		.4byte	0x2be
  1796 0a54 02       		.uleb128 0x2
  1797 0a55 91       		.byte	0x91
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 37
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 37
 
 
  1798 0a56 70       		.sleb128 -16
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1852 0abe 05       		.uleb128 0x5
  1853 0abf 03       		.byte	0x3
  1854 0ac0 00000000 		.4byte	last_state_color
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 38
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 38
 
 
  1855 0ac4 24       		.uleb128 0x24
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1909 0b36 03       		.byte	0x3
  1910 0b37 00000000 		.4byte	ACK_RX
  1911 0b3b 24       		.uleb128 0x24
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 39
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 39
 
 
  1912 0b3c 1A020000 		.4byte	.LASF143
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  1966 0bb5 05       		.byte	0x5
  1967 0bb6 1D01     		.2byte	0x11d
  1968 0bb8 26       		.uleb128 0x26
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 40
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 40
 
 
  1969 0bb9 00000000 		.4byte	.LASF150
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2023 002f 0B       		.uleb128 0xb
  2024 0030 3E       		.uleb128 0x3e
  2025 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 41
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 41
 
 
  2026 0032 03       		.uleb128 0x3
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2080 0068 0D       		.uleb128 0xd
  2081 0069 00       		.byte	0
  2082 006a 03       		.uleb128 0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 42
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 42
 
 
  2083 006b 0E       		.uleb128 0xe
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2137 00a1 0B       		.uleb128 0xb
  2138 00a2 01       		.uleb128 0x1
  2139 00a3 13       		.uleb128 0x13
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 43
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 43
 
 
  2140 00a4 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2194 00da 00       		.byte	0
  2195 00db 00       		.byte	0
  2196 00dc 13       		.uleb128 0x13
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 44
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 44
 
 
  2197 00dd 0D       		.uleb128 0xd
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2251 0113 19       		.uleb128 0x19
  2252 0114 03       		.uleb128 0x3
  2253 0115 0E       		.uleb128 0xe
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 45
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 45
 
 
  2254 0116 3A       		.uleb128 0x3a
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2308 014e 1B       		.uleb128 0x1b
  2309 014f 898201   		.uleb128 0x4109
  2310 0152 01       		.byte	0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 46
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 46
 
 
  2311 0153 11       		.uleb128 0x11
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2365 018d 00       		.byte	0
  2366 018e 1F       		.uleb128 0x1f
  2367 018f 05       		.uleb128 0x5
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 47
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 47
 
 
  2368 0190 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2422 01ca 0B       		.uleb128 0xb
  2423 01cb 3B       		.uleb128 0x3b
  2424 01cc 05       		.uleb128 0x5
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 48
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 48
 
 
  2425 01cd 49       		.uleb128 0x49
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2479 0203 0B       		.uleb128 0xb
  2480 0204 3B       		.uleb128 0x3b
  2481 0205 0B       		.uleb128 0xb
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 49
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 49
 
 
  2482 0206 00       		.byte	0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2536 0075 37000000 		.4byte	.LVL7-1
  2537 0079 0100     		.2byte	0x1
  2538 007b 53       		.byte	0x53
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 50
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 50
 
 
  2539 007c 00000000 		.4byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2593 00fe 12000000 		.4byte	.LVL11
  2594 0102 3C000000 		.4byte	.LFE74
  2595 0106 0400     		.2byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 51
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 51
 
 
  2596 0108 F3       		.byte	0xf3
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2650 0185 51       		.byte	0x51
  2651 0186 9F       		.byte	0x9f
  2652 0187 00000000 		.4byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 52
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 52
 
 
  2653 018b 00000000 		.4byte	0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2707 0044 3E000000 		.4byte	.LFE72
  2708 0048 00000000 		.4byte	.LFB73
  2709 004c 10000000 		.4byte	.LFE73
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 53
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 53
 
 
  2710 0050 00000000 		.4byte	.LFB74
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2738      70616365 
  2738      00
  2739              	.LASF38:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 54
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 54
 
 
  2740 007e 4E4F4E45 		.ascii	"NONE\000"
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2767              	.LASF125:
  2768 0109 56434C5F 		.ascii	"VCL_Throttle_High\000"
  2768      5468726F 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 55
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 55
 
 
  2768      74746C65 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2794              	.LASF140:
  2795 01d0 43555254 		.ascii	"CURTIS_FAULT_CHECK\000"
  2795      49535F46 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 56
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 56
 
 
  2795      41554C54 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2820              	.LASF151:
  2821 027a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  2821      43313120 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 57
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 57
 
 
  2821      352E342E 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2841      636F6C6F 
  2842              	.LASF144:
  2843 0388 4142535F 		.ascii	"ABS_MOTOR_RPM\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 58
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 58
 
 
  2843      4D4F544F 
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2869      6800
  2870              	.LASF88:
  2871 042a 64726976 		.ascii	"driver\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 59
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 59
 
 
  2871      657200
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2899      745F6368 
  2899      617200
  2900              	.LASF46:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 60
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 60
 
 
  2901 04c5 55475F55 		.ascii	"UG_U8\000"
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2927      7400
  2928              	.LASF135:
  2929 0556 6C617374 		.ascii	"last_state_color\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 61
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 61
 
 
  2929      5F737461 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2955      69676E65 
  2955      6420696E 
  2955      7400
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 62
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 62
 
 
  2956              	.LASF23:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  2983      7300
  2984              	.LASF95:
  2985 0679 795F656E 		.ascii	"y_end\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 63
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 63
 
 
  2985      6400
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 1
  3012              	.LASF24:
  3013 0709 646F7562 		.ascii	"double\000"
  3013      6C6500
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDgPBCI.s 			page 64
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccvAlBaW.s 			page 64
 
 
  3014              	.LASF141:
