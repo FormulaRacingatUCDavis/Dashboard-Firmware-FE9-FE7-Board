@@ -40,7 +40,6 @@ void GraphicLCDIntf_Start(void) ;
 void GraphicLCDIntf_Stop(void) ;
 void GraphicLCDIntf_Write8(uint8 d_c, uint8 wrData) ;
 void GraphicLCDIntf_WriteM8(uint8 d_c, uint8 wrData[], uint16 num) ;
-void GraphicLCDIntf_WriteM8_Compressed(uint8 d_c, uint8 wrData[], uint16 num) ;
 uint8 GraphicLCDIntf_Read8(uint8 d_c) ;
 void GraphicLCDIntf_ReadM8(uint8 d_c, uint8 rdData[], uint16 num) ;  
                                                 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
   28:Generated_Source\PSoC5/D_RST.c **** *
   29:Generated_Source\PSoC5/D_RST.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/D_RST.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 2
 
 
   31:Generated_Source\PSoC5/D_RST.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
   52              		.section	.text.D_RST_SetDriveMode,"ax",%progbits
   53              		.align	2
   54              		.global	D_RST_SetDriveMode
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 3
 
 
   55              		.thumb
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
   77              	.L5:
   78 0014 60500040 		.word	1073762400
   79              		.cfi_endproc
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 4
 
 
   80              	.LFE1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  110              		.global	D_RST_ReadDataReg
  111              		.thumb
  112              		.thumb_func
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 5
 
 
  113              		.type	D_RST_ReadDataReg, %function
@@ -298,15 +298,15 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  139 0000 1B010000 		.4byte	0x11b
  140 0004 0400     		.2byte	0x4
  141 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 6
 
 
  142 000a 04       		.byte	0x4
  143 000b 01       		.uleb128 0x1
- 144 000c 25000000 		.4byte	.LASF20
+ 144 000c 76000000 		.4byte	.LASF20
  145 0010 0C       		.byte	0xc
  146 0011 98010000 		.4byte	.LASF21
- 147 0015 F0000000 		.4byte	.LASF22
+ 147 0015 11000000 		.4byte	.LASF22
  148 0019 00000000 		.4byte	.Ldebug_ranges0+0
  149 001d 00000000 		.4byte	0
  150 0021 00000000 		.4byte	.Ldebug_line0
@@ -317,7 +317,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  155 002c 02       		.uleb128 0x2
  156 002d 01       		.byte	0x1
  157 002e 08       		.byte	0x8
- 158 002f 17000000 		.4byte	.LASF1
+ 158 002f 68000000 		.4byte	.LASF1
  159 0033 02       		.uleb128 0x2
  160 0034 02       		.byte	0x2
  161 0035 05       		.byte	0x5
@@ -325,7 +325,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  163 003a 02       		.uleb128 0x2
  164 003b 02       		.byte	0x2
  165 003c 07       		.byte	0x7
- 166 003d CA000000 		.4byte	.LASF3
+ 166 003d 1B010000 		.4byte	.LASF3
  167 0041 02       		.uleb128 0x2
  168 0042 04       		.byte	0x4
  169 0043 05       		.byte	0x5
@@ -333,7 +333,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  171 0048 02       		.uleb128 0x2
  172 0049 04       		.byte	0x4
  173 004a 07       		.byte	0x7
- 174 004b B8000000 		.4byte	.LASF5
+ 174 004b 09010000 		.4byte	.LASF5
  175 004f 02       		.uleb128 0x2
  176 0050 08       		.byte	0x8
  177 0051 05       		.byte	0x5
@@ -358,27 +358,27 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  196 0077 02       		.uleb128 0x2
  197 0078 04       		.byte	0x4
  198 0079 04       		.byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 7
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 7
 
 
- 199 007a 11000000 		.4byte	.LASF9
+ 199 007a 62000000 		.4byte	.LASF9
  200 007e 02       		.uleb128 0x2
  201 007f 08       		.byte	0x8
  202 0080 04       		.byte	0x4
- 203 0081 DD000000 		.4byte	.LASF10
+ 203 0081 2E010000 		.4byte	.LASF10
  204 0085 02       		.uleb128 0x2
  205 0086 01       		.byte	0x1
  206 0087 08       		.byte	0x8
  207 0088 78010000 		.4byte	.LASF11
  208 008c 04       		.uleb128 0x4
- 209 008d B3000000 		.4byte	.LASF13
+ 209 008d 04010000 		.4byte	.LASF13
  210 0091 02       		.byte	0x2
  211 0092 E201     		.2byte	0x1e2
  212 0094 98000000 		.4byte	0x98
  213 0098 05       		.uleb128 0x5
  214 0099 6B000000 		.4byte	0x6b
  215 009d 06       		.uleb128 0x6
- 216 009e E4000000 		.4byte	.LASF14
+ 216 009e 35010000 		.4byte	.LASF14
  217 00a2 01       		.byte	0x1
  218 00a3 39       		.byte	0x39
  219 00a4 00000000 		.4byte	.LFB0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  253 00f3 00       		.byte	0
  254 00f4 09       		.uleb128 0x9
  255 00f5 7D010000 		.4byte	.LASF18
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 8
 
 
  256 00f9 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  310 0023 3E       		.uleb128 0x3e
  311 0024 0B       		.uleb128 0xb
  312 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 9
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 9
 
 
  313 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  367 005d 0B       		.uleb128 0xb
  368 005e 3B       		.uleb128 0x3b
  369 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 10
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 10
 
 
  370 0060 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  424 000b 0C000000 		.4byte	.LVL2
  425 000f 18000000 		.4byte	.LFE0
  426 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 11
 
 
  427 0015 F3       		.byte	0xf3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  479      00000201 
  479      FB0E0D00 
  479      01010101 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 12
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 12
 
 
  480              	.LASF16:
@@ -668,66 +668,66 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  483 0006 73746174 		.ascii	"staticBits\000"
  483      69634269 
  483      747300
- 484              	.LASF9:
- 485 0011 666C6F61 		.ascii	"float\000"
- 485      7400
- 486              	.LASF1:
- 487 0017 756E7369 		.ascii	"unsigned char\000"
- 487      676E6564 
- 487      20636861 
- 487      7200
- 488              	.LASF20:
- 489 0025 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 489      43313120 
- 489      352E342E 
- 489      31203230 
- 489      31363036 
- 490 0058 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 490      20726576 
- 490      6973696F 
- 490      6E203233 
- 490      37373135 
- 491 008b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 491      66756E63 
- 491      74696F6E 
- 491      2D736563 
- 491      74696F6E 
- 492              	.LASF13:
- 493 00b3 72656738 		.ascii	"reg8\000"
- 493      00
- 494              	.LASF5:
- 495 00b8 6C6F6E67 		.ascii	"long unsigned int\000"
- 495      20756E73 
- 495      69676E65 
- 495      6420696E 
- 495      7400
- 496              	.LASF3:
- 497 00ca 73686F72 		.ascii	"short unsigned int\000"
- 497      7420756E 
- 497      7369676E 
- 497      65642069 
- 497      6E7400
- 498              	.LASF10:
- 499 00dd 646F7562 		.ascii	"double\000"
- 499      6C6500
- 500              	.LASF14:
- 501 00e4 445F5253 		.ascii	"D_RST_Write\000"
- 501      545F5772 
- 501      69746500 
- 502              	.LASF22:
- 503 00f0 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
- 503      73657273 
- 503      5C6C656F 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 13
+ 484              	.LASF22:
+ 485 0011 443A5C55 		.ascii	"D:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
+ 485      73657273 
+ 485      5C6C656F 
+ 485      6A615C44 
+ 485      6F63756D 
+ 486 003f 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
+ 486      2D464539 
+ 486      2D464537 
+ 486      2D426F61 
+ 486      72645C44 
+ 487              	.LASF9:
+ 488 0062 666C6F61 		.ascii	"float\000"
+ 488      7400
+ 489              	.LASF1:
+ 490 0068 756E7369 		.ascii	"unsigned char\000"
+ 490      676E6564 
+ 490      20636861 
+ 490      7200
+ 491              	.LASF20:
+ 492 0076 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 492      43313120 
+ 492      352E342E 
+ 492      31203230 
+ 492      31363036 
+ 493 00a9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 493      20726576 
+ 493      6973696F 
+ 493      6E203233 
+ 493      37373135 
+ 494 00dc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 494      66756E63 
+ 494      74696F6E 
+ 494      2D736563 
+ 494      74696F6E 
+ 495              	.LASF13:
+ 496 0104 72656738 		.ascii	"reg8\000"
+ 496      00
+ 497              	.LASF5:
+ 498 0109 6C6F6E67 		.ascii	"long unsigned int\000"
+ 498      20756E73 
+ 498      69676E65 
+ 498      6420696E 
+ 498      7400
+ 499              	.LASF3:
+ 500 011b 73686F72 		.ascii	"short unsigned int\000"
+ 500      7420756E 
+ 500      7369676E 
+ 500      65642069 
+ 500      6E7400
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 13
 
 
- 503      6A615C44 
- 503      6F63756D 
- 504 011e 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
- 504      2D464539 
- 504      2D464537 
- 504      2D426F61 
- 504      72645C44 
+ 501              	.LASF10:
+ 502 012e 646F7562 		.ascii	"double\000"
+ 502      6C6500
+ 503              	.LASF14:
+ 504 0135 445F5253 		.ascii	"D_RST_Write\000"
+ 504      545F5772 
+ 504      69746500 
  505              	.LASF8:
  506 0141 756E7369 		.ascii	"unsigned int\000"
  506      676E6564 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 1
  526      20696E74 
  526      00
  527              	.LASF15:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\cc09V1XC.s 			page 14
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccwgy2zV.s 			page 14
 
 
  528 01d2 445F5253 		.ascii	"D_RST_SetDriveMode\000"

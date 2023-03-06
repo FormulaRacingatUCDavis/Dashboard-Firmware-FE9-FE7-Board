@@ -31,9 +31,10 @@ void initDashTemplate();
  */
 void disp_SOC(uint8_t data);
 void disp_max_pack_temp(uint8_t data);
-void disp_state(uint8_t state); // TODO
+void disp_state(uint8_t state, BMS_STATUS bms_status); 
 void disp_glv_v(uint32_t data); // TODO
 void disp_mc_temp(uint16_t data);
 void disp_motor_temp(uint16_t data);
+void state_rect(UG_COLOR color);
 
 /* [] END OF FILE */

@@ -114,111 +114,124 @@ void disp_max_pack_temp(uint8_t data) {
     UG_FontSelect(&FONT_12X16);
 }
 
-void disp_state(uint8_t state) { // TODO
+void disp_state(uint8_t state, BMS_STATUS bms_status) { // TODO
     UG_COLOR color;
-    // check fault bit
-    if (state & 0x80) {
-        // *************** FAULTS ***************
-        uint8 fault = state & 0x7f; // mask off fault bit
-        switch(fault) {
-            case NONE: // STARTUP (effectively)
-                // not obtainable via CAN
-                // would only show when hardcoded on startup
-                color = C_YELLOW;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
+    
+    switch(bms_status){        //BMS faults more important than VCU faults
+        case PACK_TEMP_OVER: 
+        case PACK_TEMP_UNDER:
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "BMS TEMP", C_BLACK, color);
+            break;
+        case LOW_SOC: 
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "LOW SOC", C_BLACK, color);
+            break;
+        case IMBALANCE:
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "IMBALANCE", C_BLACK, color);
+            break;
+        case SPI_FAULT:
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "SPI FAULT", C_BLACK, color);
+            break;
+        case CELL_VOLT_OVER:
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "OVERVOLT", C_BLACK, color);
+            break;
+        case CELL_VOLT_UNDER:
+            color = C_RED;
+            state_rect(color);
+            UG_PutColorString(100, 195, "UNDERVOLT", C_BLACK, color);
+            break;
+        default:
+            // check fault bit
+            if (state & 0x80) {
+                // *************** FAULTS ***************
+                uint8 fault = state & 0x7f; // mask off fault bit
+                switch(fault) {
+                    case NONE: // STARTUP (effectively)
+                        // not obtainable via CAN
+                        // would only show when hardcoded on startup
+                        color = C_YELLOW;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, " STARTUP  ", C_BLACK, color);
+                        break;
+                    case DRIVE_REQUEST_FROM_LV:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "DRV FRM LV", C_BLACK, color);
+                        break;
+                    case CONSERVATIVE_TIMER_MAXED:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "PRE TM OUT", C_BLACK, color);
+                        break;
+                    case BRAKE_NOT_PRESSED:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "BR NOT PRS", C_BLACK, color);
+                        break;
+                    case HV_DISABLED_WHILE_DRIVING:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "HV OFF DRV", C_BLACK, color);
+                        break;
+                    case SENSOR_DISCREPANCY:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "SNSR DSCRP", C_BLACK, color);
+                        break;
+                    case BRAKE_IMPLAUSIBLE:
+                        color = C_YELLOW;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "BSPD TRIPD", C_BLACK, color); //whitespace to clear
+                        break;
+                    case SHUTDOWN_CIRCUIT_OPEN:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "SHTDWN OPN", C_BLACK, color); //whitespace to clear
+                        break;
+                    case UNCALIBRATED:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "UNCALIBRATED", C_BLACK, color); //whitespace to clear
+                        break;
                 }
-                UG_PutColorString(100, 195, " STARTUP  ", C_BLACK, color);
-                break;
-            case DRIVE_REQUEST_FROM_LV:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
+                
+            } else {
+                // *************** NO FAULTS ***************
+                color = C_GREEN;
+                state_rect(color);
+                switch(state) {
+                    case LV:
+                        UG_PutColorString(100, 195, "    LV    ", C_BLACK, color);
+                        break;
+                    case PRECHARGING:
+                        UG_PutColorString(100, 195, "PRECHARGE ", C_BLACK, color);
+                        break;
+                    case HV_ENABLED:
+                        UG_PutColorString(100, 195, "HV ENABLED", C_BLACK, color);
+                        break;
+                    case DRIVE:
+                        UG_PutColorString(100, 195, "  DRIVE   ", C_BLACK, color);
+                        break;
                 }
-                UG_PutColorString(100, 195, "DRV FRM LV", C_BLACK, color);
-                break;
-            case CONSERVATIVE_TIMER_MAXED:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "PRE TM OUT", C_BLACK, color);
-                break;
-            case BRAKE_NOT_PRESSED:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "BR NOT PRS", C_BLACK, color);
-                break;
-            case HV_DISABLED_WHILE_DRIVING:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "HV OFF DRV", C_BLACK, color);
-                break;
-            case SENSOR_DISCREPANCY:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "SNSR DSCRP", C_BLACK, color);
-                break;
-            case BRAKE_IMPLAUSIBLE:
-                color = C_YELLOW;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "BSPD TRIPD", C_BLACK, color); //whitespace to clear
-                break;
-            case ESTOP:
-                color = C_RED;
-                if (color != last_state_color) {
-                    // only draw rectangle if color changed
-                    UG_FillFrame(95, 185, 240, 215, color);
-                    last_state_color = color;
-                }
-                UG_PutColorString(100, 195, "SHTDWN OPN", C_BLACK, color); //whitespace to clear
-                break;
-        }
-        
-    } else {
-        // *************** NO FAULTS ***************
-        color = C_GREEN;
-        if (color != last_state_color) {
-            // only draw rectangle if color changed
-            UG_FillFrame(95, 185, 240, 215, color);
-            last_state_color = color;
-        }
-        switch(state) {
-            case LV:
-                UG_PutColorString(100, 195, "    LV    ", C_BLACK, color);
-                break;
-            case PRECHARGING:
-                UG_PutColorString(100, 195, "PRECHARGE ", C_BLACK, color);
-                break;
-            case HV_ENABLED:
-                UG_PutColorString(100, 195, "HV ENABLED", C_BLACK, color);
-                break;
-            case DRIVE:
-                UG_PutColorString(100, 195, "  DRIVE   ", C_BLACK, color);
-                break;
-        }
+            }
+            break; 
+    }
+}
+
+void state_rect(UG_COLOR color){
+    if (color != last_state_color) {
+        // only draw rectangle if color changed
+        UG_FillFrame(95, 185, 240, 215, color);
+        last_state_color = color;
     }
 }
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
   29:Generated_Source\PSoC5/CyFlash.c **** * Holds the die temperature, updated by CySetTemp(). Used for flash writing.
   30:Generated_Source\PSoC5/CyFlash.c **** * The first byte is the sign of the temperature (0 = negative, 1 = positive).
   31:Generated_Source\PSoC5/CyFlash.c **** * The second byte is the magnitude.
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 2
 
 
   32:Generated_Source\PSoC5/CyFlash.c **** *******************************************************************************/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
   86:Generated_Source\PSoC5/CyFlash.c ****     /***************************************************************************
   87:Generated_Source\PSoC5/CyFlash.c ****     * Enable flash. Active flash macros consume current, but re-enabling a
   88:Generated_Source\PSoC5/CyFlash.c ****     * disabled flash macro takes 5us. If the CPU attempts to fetch out of the
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 3
 
 
   89:Generated_Source\PSoC5/CyFlash.c ****     * macro during that time, it will be stalled. This bit allows the flash to
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  143:Generated_Source\PSoC5/CyFlash.c **** *  executing a series of Flash writing functions.
  144:Generated_Source\PSoC5/CyFlash.c **** *
  145:Generated_Source\PSoC5/CyFlash.c **** * Parameters:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 4
 
 
  146:Generated_Source\PSoC5/CyFlash.c **** *  None
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  200:Generated_Source\PSoC5/CyFlash.c **** ********************************************************************************
  201:Generated_Source\PSoC5/CyFlash.c **** *
  202:Generated_Source\PSoC5/CyFlash.c **** * Summary:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 5
 
 
  203:Generated_Source\PSoC5/CyFlash.c **** *  Sends a command to the SPC to download code into RAM.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  231:Generated_Source\PSoC5/CyFlash.c ****                 CyDelayUs(1u);
   53              		.loc 1 231 0
   54 0018 0120     		movs	r0, #1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 6
 
 
   55 001a FFF7FEFF 		bl	CyDelayUs
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
   92              		.align	2
   93              	.L9:
   94 0048 22470040 		.word	1073760034
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 7
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 7
 
 
   95              		.cfi_endproc
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  142 002a 0C4B     		ldr	r3, .L22+4
  143 002c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  144 002e 13F0020F 		tst	r3, #2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 8
 
 
  145 0032 F7D0     		beq	.L16
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  192              		.loc 1 59 0
  193              		.cfi_startproc
  194              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 9
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 9
 
 
  195              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  241 0048 01470040 		.word	1073760001
  242 004c AC430040 		.word	1073759148
  243 0050 00470040 		.word	1073760000
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 10
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 10
 
 
  244              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  293              	CySetTemp:
  294              	.LFB4:
  248:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 11
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 11
 
 
  249:Generated_Source\PSoC5/CyFlash.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  283:Generated_Source\PSoC5/CyFlash.c **** }
  315              		.loc 1 283 0
  316 0010 1846     		mov	r0, r3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 12
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 12
 
 
  317 0012 08BD     		pop	{r3, pc}
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  312:Generated_Source\PSoC5/CyFlash.c ****     #if(CYDEV_ECC_ENABLE == 0)
  313:Generated_Source\PSoC5/CyFlash.c **** 
  314:Generated_Source\PSoC5/CyFlash.c ****         if(NULL == buffer)
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 13
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 13
 
 
  343              		.loc 1 314 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  370              		.section	.text.CyWriteRowFull,"ax",%progbits
  371              		.align	2
  372              		.global	CyWriteRowFull
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 14
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 14
 
 
  373              		.thumb
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  388:Generated_Source\PSoC5/CyFlash.c ****     *
  389:Generated_Source\PSoC5/CyFlash.c ****     * Summary:
  390:Generated_Source\PSoC5/CyFlash.c ****     *  Sends a command to the SPC to load and program a row of config data in the
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 15
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 15
 
 
  391:Generated_Source\PSoC5/CyFlash.c ****     *  Flash. This function is only valid for Flash array IDs (not for EEPROM).
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  445:Generated_Source\PSoC5/CyFlash.c **** {
  378              		.loc 1 445 0
  379              		.cfi_startproc
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 16
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 16
 
 
  380              		@ args = 0, pretend = 0, frame = 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  418              	.L44:
  461:Generated_Source\PSoC5/CyFlash.c ****     }
  462:Generated_Source\PSoC5/CyFlash.c **** 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 17
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 17
 
 
  463:Generated_Source\PSoC5/CyFlash.c ****     if(arrayId <=  CY_SPC_LAST_FLASH_ARRAYID)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  449              		.loc 1 485 0
  450 003e 02B9     		cbnz	r2, .L48
  486:Generated_Source\PSoC5/CyFlash.c ****     {
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 18
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 18
 
 
  487:Generated_Source\PSoC5/CyFlash.c ****         status = CYRET_BAD_PARAM;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  487              		.loc 1 500 0
  488 0070 1F4B     		ldr	r3, .L68
  489 0072 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 19
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 19
 
 
  490 0074 13F0020F 		tst	r3, #2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  520:Generated_Source\PSoC5/CyFlash.c **** 
  521:Generated_Source\PSoC5/CyFlash.c ****                     if(CYRET_STARTED == status)
  527              		.loc 1 521 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 20
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 20
 
 
  528 00aa 0728     		cmp	r0, #7
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  540:Generated_Source\PSoC5/CyFlash.c ****             }
  541:Generated_Source\PSoC5/CyFlash.c ****             CySpcUnlock();
  562              		.loc 1 541 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 21
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 21
 
 
  563 00de FFF7FEFF 		bl	CySpcUnlock
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  606 0008 01E0     		b	.L71
  607              	.L72:
  608 000a 4FF48073 		mov	r3, #256
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 22
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 22
 
 
  609              	.L71:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  573:Generated_Source\PSoC5/CyFlash.c ****     uint8 interruptState;
  574:Generated_Source\PSoC5/CyFlash.c **** 
  575:Generated_Source\PSoC5/CyFlash.c ****     /* Save current global interrupt enable and disable it */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 23
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 23
 
 
  576:Generated_Source\PSoC5/CyFlash.c ****     interruptState = CyEnterCriticalSection();
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  672 003a 03F01F03 		and	r3, r3, #31
  673 003e 43F0C003 		orr	r3, r3, #192
  674 0042 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 24
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 24
 
 
  675 0044 14E0     		b	.L76
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  707 0076 38BD     		pop	{r3, r4, r5, pc}
  708              	.LVL72:
  709              	.L83:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 25
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 25
 
 
  710              		.align	2
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  735              		.loc 1 647 0
  736 0006 0F4A     		ldr	r2, .L87
  737 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 26
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 26
 
 
  738 000a 43F00803 		orr	r3, r3, #8
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  675:Generated_Source\PSoC5/CyFlash.c **** 
  676:Generated_Source\PSoC5/CyFlash.c ****     CyExitCriticalSection(interruptState);
  765              		.loc 1 676 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 27
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 27
 
 
  766 003e FFF7FEFF 		bl	CyExitCriticalSection
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  699:Generated_Source\PSoC5/CyFlash.c **** 
  700:Generated_Source\PSoC5/CyFlash.c ****     CY_FLASH_PM_ACT_CFG12_REG    &= ((uint8)(~CY_FLASH_PM_ACT_CFG12_EN_EE));
  798              		.loc 1 700 0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 28
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 28
 
 
  799 0006 064A     		ldr	r2, .L91
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  831              		@ link register save eliminated.
  723:Generated_Source\PSoC5/CyFlash.c ****     /* Make request for PHUB to have access */
  724:Generated_Source\PSoC5/CyFlash.c ****     CY_FLASH_EE_SCR_REG |= CY_FLASH_EE_SCR_AHB_EE_REQ;
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 29
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 29
 
 
  832              		.loc 1 724 0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  862              		@ args = 0, pretend = 0, frame = 0
  863              		@ frame_needed = 0, uses_anonymous_args = 0
  864              		@ link register save eliminated.
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 30
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 30
 
 
  749:Generated_Source\PSoC5/CyFlash.c ****     CY_FLASH_EE_SCR_REG &= (uint8)(~CY_FLASH_EE_SCR_AHB_EE_REQ);
@@ -1768,10 +1768,10 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  888 0006 00000000 		.4byte	.Ldebug_abbrev0
  889 000a 04       		.byte	0x4
  890 000b 01       		.uleb128 0x1
- 891 000c DA000000 		.4byte	.LASF52
+ 891 000c 2B010000 		.4byte	.LASF52
  892 0010 0C       		.byte	0xc
  893 0011 52000000 		.4byte	.LASF53
- 894 0015 2E020000 		.4byte	.LASF54
+ 894 0015 88000000 		.4byte	.LASF54
  895 0019 00000000 		.4byte	.Ldebug_ranges0+0
  896 001d 00000000 		.4byte	0
  897 0021 00000000 		.4byte	.Ldebug_line0
@@ -1782,11 +1782,11 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  902 002c 02       		.uleb128 0x2
  903 002d 01       		.byte	0x1
  904 002e 08       		.byte	0x8
- 905 002f BD010000 		.4byte	.LASF1
+ 905 002f 0E020000 		.4byte	.LASF1
  906 0033 02       		.uleb128 0x2
  907 0034 02       		.byte	0x2
  908 0035 05       		.byte	0x5
- 909 0036 DA010000 		.4byte	.LASF2
+ 909 0036 2B020000 		.4byte	.LASF2
  910 003a 02       		.uleb128 0x2
  911 003b 02       		.byte	0x2
  912 003c 07       		.byte	0x7
@@ -1798,10 +1798,10 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  918 0048 02       		.uleb128 0x2
  919 0049 04       		.byte	0x4
  920 004a 07       		.byte	0x7
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 31
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 31
 
 
- 921 004b 8E010000 		.4byte	.LASF5
+ 921 004b DF010000 		.4byte	.LASF5
  922 004f 02       		.uleb128 0x2
  923 0050 08       		.byte	0x8
  924 0051 05       		.byte	0x5
@@ -1809,7 +1809,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  926 0056 02       		.uleb128 0x2
  927 0057 08       		.byte	0x8
  928 0058 07       		.byte	0x7
- 929 0059 A4000000 		.4byte	.LASF7
+ 929 0059 F5000000 		.4byte	.LASF7
  930 005d 03       		.uleb128 0x3
  931 005e 04       		.byte	0x4
  932 005f 05       		.byte	0x5
@@ -1819,23 +1819,23 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  936 0066 07       		.byte	0x7
  937 0067 7F020000 		.4byte	.LASF8
  938 006b 04       		.uleb128 0x4
- 939 006c A0010000 		.4byte	.LASF9
+ 939 006c F1010000 		.4byte	.LASF9
  940 0070 02       		.byte	0x2
  941 0071 3801     		.2byte	0x138
  942 0073 2C000000 		.4byte	0x2c
  943 0077 04       		.uleb128 0x4
- 944 0078 06020000 		.4byte	.LASF10
+ 944 0078 57020000 		.4byte	.LASF10
  945 007c 02       		.byte	0x2
  946 007d 3901     		.2byte	0x139
  947 007f 3A000000 		.4byte	0x3a
  948 0083 02       		.uleb128 0x2
  949 0084 04       		.byte	0x4
  950 0085 04       		.byte	0x4
- 951 0086 88000000 		.4byte	.LASF11
+ 951 0086 D9000000 		.4byte	.LASF11
  952 008a 02       		.uleb128 0x2
  953 008b 08       		.byte	0x8
  954 008c 04       		.byte	0x4
- 955 008d CB010000 		.4byte	.LASF12
+ 955 008d 1C020000 		.4byte	.LASF12
  956 0091 02       		.uleb128 0x2
  957 0092 01       		.byte	0x1
  958 0093 08       		.byte	0x8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  975 00b8 69030000 		.4byte	.LASF16
  976 00bc 02       		.uleb128 0x2
  977 00bd 04       		.byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 32
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 32
 
 
  978 00be 07       		.byte	0x7
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1032 0142 9D       		.byte	0x9d
  1033 0143 98000000 		.4byte	0x98
  1034 0147 34000000 		.4byte	.LLST1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 33
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 33
 
 
  1035 014b 08       		.uleb128 0x8
@@ -1977,8 +1977,8 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1088 01b9 9C       		.byte	0x9c
  1089 01ba E0010000 		.4byte	0x1e0
  1090 01be 07       		.uleb128 0x7
- 1091 01bf 7F010000 		.4byte	.LASF21
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 34
+ 1091 01bf D0010000 		.4byte	.LASF21
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 34
 
 
  1092 01c3 01       		.byte	0x1
@@ -2002,7 +2002,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1110 01f0 9C       		.byte	0x9c
  1111 01f1 17020000 		.4byte	0x217
  1112 01f5 07       		.uleb128 0x7
- 1113 01f6 7F010000 		.4byte	.LASF21
+ 1113 01f6 D0010000 		.4byte	.LASF21
  1114 01fa 01       		.byte	0x1
  1115 01fb 7D       		.byte	0x7d
  1116 01fc 6B000000 		.4byte	0x6b
@@ -2038,10 +2038,10 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1146 024f 23010000 		.4byte	0x123
  1147 0253 00       		.byte	0
  1148 0254 0C       		.uleb128 0xc
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 35
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 35
 
 
- 1149 0255 BB000000 		.4byte	.LASF25
+ 1149 0255 0C010000 		.4byte	.LASF25
  1150 0259 01       		.byte	0x1
  1151 025a 3201     		.2byte	0x132
  1152 025c 98000000 		.4byte	0x98
@@ -2086,7 +2086,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1191 02c5 9C       		.byte	0x9c
  1192 02c6 93030000 		.4byte	0x393
  1193 02ca 0E       		.uleb128 0xe
- 1194 02cb A6010000 		.4byte	.LASF28
+ 1194 02cb F7010000 		.4byte	.LASF28
  1195 02cf 01       		.byte	0x1
  1196 02d0 BB01     		.2byte	0x1bb
  1197 02d2 6B000000 		.4byte	0x6b
@@ -2098,16 +2098,16 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1203 02e2 77000000 		.4byte	0x77
  1204 02e6 19010000 		.4byte	.LLST8
  1205 02ea 0E       		.uleb128 0xe
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 36
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 36
 
 
- 1206 02eb 68010000 		.4byte	.LASF30
+ 1206 02eb B9010000 		.4byte	.LASF30
  1207 02ef 01       		.byte	0x1
  1208 02f0 BB01     		.2byte	0x1bb
  1209 02f2 93030000 		.4byte	0x393
  1210 02f6 3A010000 		.4byte	.LLST9
  1211 02fa 0E       		.uleb128 0xe
- 1212 02fb D2010000 		.4byte	.LASF31
+ 1212 02fb 23020000 		.4byte	.LASF31
  1213 02ff 01       		.byte	0x1
  1214 0300 BB01     		.2byte	0x1bb
  1215 0302 77000000 		.4byte	0x77
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1260 0357 01       		.uleb128 0x1
  1261 0358 50       		.byte	0x50
  1262 0359 01       		.uleb128 0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 37
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 37
 
 
  1263 035a 31       		.byte	0x31
@@ -2210,7 +2210,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1309 03b3 9C       		.byte	0x9c
  1310 03b4 10040000 		.4byte	0x410
  1311 03b8 0E       		.uleb128 0xe
- 1312 03b9 A6010000 		.4byte	.LASF28
+ 1312 03b9 F7010000 		.4byte	.LASF28
  1313 03bd 01       		.byte	0x1
  1314 03be 6E01     		.2byte	0x16e
  1315 03c0 6B000000 		.4byte	0x6b
@@ -2218,20 +2218,20 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1317 03c8 0E       		.uleb128 0xe
  1318 03c9 3E030000 		.4byte	.LASF33
  1319 03cd 01       		.byte	0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 38
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 38
 
 
  1320 03ce 6E01     		.2byte	0x16e
  1321 03d0 77000000 		.4byte	0x77
  1322 03d4 43020000 		.4byte	.LLST13
  1323 03d8 0E       		.uleb128 0xe
- 1324 03d9 68010000 		.4byte	.LASF30
+ 1324 03d9 B9010000 		.4byte	.LASF30
  1325 03dd 01       		.byte	0x1
  1326 03de 6E01     		.2byte	0x16e
  1327 03e0 93030000 		.4byte	0x393
  1328 03e4 64020000 		.4byte	.LLST14
  1329 03e8 0D       		.uleb128 0xd
- 1330 03e9 D2010000 		.4byte	.LASF31
+ 1330 03e9 23020000 		.4byte	.LASF31
  1331 03ed 01       		.byte	0x1
  1332 03ee 7001     		.2byte	0x170
  1333 03f0 77000000 		.4byte	0x77
@@ -2248,7 +2248,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1344 040b B0020000 		.4byte	0x2b0
  1345 040f 00       		.byte	0
  1346 0410 12       		.uleb128 0x12
- 1347 0411 8E000000 		.4byte	.LASF34
+ 1347 0411 DF000000 		.4byte	.LASF34
  1348 0415 01       		.byte	0x1
  1349 0416 3B02     		.2byte	0x23b
  1350 0418 00000000 		.4byte	.LFB8
@@ -2263,7 +2263,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1359 042e 6B000000 		.4byte	0x6b
  1360 0432 98020000 		.4byte	.LLST16
  1361 0436 0D       		.uleb128 0xd
- 1362 0437 7F010000 		.4byte	.LASF21
+ 1362 0437 D0010000 		.4byte	.LASF21
  1363 043b 01       		.byte	0x1
  1364 043c 3D02     		.2byte	0x23d
  1365 043e 6B000000 		.4byte	0x6b
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1374 045c 0A       		.uleb128 0xa
  1375 045d 01       		.uleb128 0x1
  1376 045e 50       		.byte	0x50
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 39
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 39
 
 
  1377 045f 01       		.uleb128 0x1
@@ -2296,7 +2296,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1389 0471 00       		.byte	0
  1390 0472 00       		.byte	0
  1391 0473 12       		.uleb128 0x12
- 1392 0474 70010000 		.4byte	.LASF36
+ 1392 0474 C1010000 		.4byte	.LASF36
  1393 0478 01       		.byte	0x1
  1394 0479 7C02     		.2byte	0x27c
  1395 047b 00000000 		.4byte	.LFB9
@@ -2305,7 +2305,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1398 0484 9C       		.byte	0x9c
  1399 0485 AC040000 		.4byte	0x4ac
  1400 0489 0D       		.uleb128 0xd
- 1401 048a 7F010000 		.4byte	.LASF21
+ 1401 048a D0010000 		.4byte	.LASF21
  1402 048e 01       		.byte	0x1
  1403 048f 7E02     		.2byte	0x27e
  1404 0491 6B000000 		.4byte	0x6b
@@ -2327,7 +2327,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1420 04bd 9C       		.byte	0x9c
  1421 04be E5040000 		.4byte	0x4e5
  1422 04c2 0D       		.uleb128 0xd
- 1423 04c3 7F010000 		.4byte	.LASF21
+ 1423 04c3 D0010000 		.4byte	.LASF21
  1424 04c7 01       		.byte	0x1
  1425 04c8 B802     		.2byte	0x2b8
  1426 04ca 6B000000 		.4byte	0x6b
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1431 04db 08       		.uleb128 0x8
  1432 04dc 1E000000 		.4byte	.LVL76
  1433 04e0 8D050000 		.4byte	0x58d
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 40
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 40
 
 
  1434 04e4 00       		.byte	0
@@ -2351,7 +2351,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1441 04f5 01       		.uleb128 0x1
  1442 04f6 9C       		.byte	0x9c
  1443 04f7 14       		.uleb128 0x14
- 1444 04f8 E4010000 		.4byte	.LASF39
+ 1444 04f8 35020000 		.4byte	.LASF39
  1445 04fc 01       		.byte	0x1
  1446 04fd EB02     		.2byte	0x2eb
  1447 04ff 00000000 		.4byte	.LFB12
@@ -2371,7 +2371,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1461 0522 01       		.byte	0x1
  1462 0523 00       		.byte	0
  1463 0524 18       		.uleb128 0x18
- 1464 0525 AE010000 		.4byte	.LASF56
+ 1464 0525 FF010000 		.4byte	.LASF56
  1465 0529 01       		.byte	0x1
  1466 052a 21       		.byte	0x21
  1467 052b 14050000 		.4byte	0x514
@@ -2384,8 +2384,8 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1474 053e 03       		.byte	0x3
  1475 053f 22       		.byte	0x22
  1476 0540 19       		.uleb128 0x19
- 1477 0541 0D020000 		.4byte	.LASF41
- 1478 0545 0D020000 		.4byte	.LASF41
+ 1477 0541 5E020000 		.4byte	.LASF41
+ 1478 0545 5E020000 		.4byte	.LASF41
  1479 0549 03       		.byte	0x3
  1480 054a 2F       		.byte	0x2f
  1481 054b 19       		.uleb128 0x19
@@ -2398,17 +2398,17 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1488 055b 04030000 		.4byte	.LASF43
  1489 055f 04       		.byte	0x4
  1490 0560 78       		.byte	0x78
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 41
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 41
 
 
  1491 0561 19       		.uleb128 0x19
- 1492 0562 CE000000 		.4byte	.LASF44
- 1493 0566 CE000000 		.4byte	.LASF44
+ 1492 0562 1F010000 		.4byte	.LASF44
+ 1493 0566 1F010000 		.4byte	.LASF44
  1494 056a 03       		.byte	0x3
  1495 056b 30       		.byte	0x30
  1496 056c 19       		.uleb128 0x19
- 1497 056d F9010000 		.4byte	.LASF45
- 1498 0571 F9010000 		.4byte	.LASF45
+ 1497 056d 4A020000 		.4byte	.LASF45
+ 1498 0571 4A020000 		.4byte	.LASF45
  1499 0575 03       		.byte	0x3
  1500 0576 2D       		.byte	0x2d
  1501 0577 19       		.uleb128 0x19
@@ -2417,8 +2417,8 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1504 0580 03       		.byte	0x3
  1505 0581 24       		.byte	0x24
  1506 0582 19       		.uleb128 0x19
- 1507 0583 17020000 		.4byte	.LASF47
- 1508 0587 17020000 		.4byte	.LASF47
+ 1507 0583 68020000 		.4byte	.LASF47
+ 1508 0587 68020000 		.4byte	.LASF47
  1509 058b 04       		.byte	0x4
  1510 058c 7E       		.byte	0x7e
  1511 058d 19       		.uleb128 0x19
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1545 000b 55       		.uleb128 0x55
  1546 000c 17       		.uleb128 0x17
  1547 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 42
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 42
 
 
  1548 000e 01       		.uleb128 0x1
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1602 0044 3B       		.uleb128 0x3b
  1603 0045 0B       		.uleb128 0xb
  1604 0046 27       		.uleb128 0x27
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 43
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 43
 
 
  1605 0047 19       		.uleb128 0x19
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1659 0084 18       		.uleb128 0x18
  1660 0085 9142     		.uleb128 0x2111
  1661 0087 18       		.uleb128 0x18
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 44
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 44
 
 
  1662 0088 00       		.byte	0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1716 00c0 0D       		.uleb128 0xd
  1717 00c1 34       		.uleb128 0x34
  1718 00c2 00       		.byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 45
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 45
 
 
  1719 00c3 03       		.uleb128 0x3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1773 00f9 02       		.uleb128 0x2
  1774 00fa 18       		.uleb128 0x18
  1775 00fb 00       		.byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 46
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 46
 
 
  1776 00fc 00       		.byte	0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1830 0135 9742     		.uleb128 0x2117
  1831 0137 19       		.uleb128 0x19
  1832 0138 00       		.byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 47
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 47
 
 
  1833 0139 00       		.byte	0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1887 016f 3C       		.uleb128 0x3c
  1888 0170 19       		.uleb128 0x19
  1889 0171 6E       		.uleb128 0x6e
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 48
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 48
 
 
  1890 0172 0E       		.uleb128 0xe
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  1944 006c 0100     		.2byte	0x1
  1945 006e 50       		.byte	0x50
  1946 006f 00000000 		.4byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 49
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 49
 
 
  1947 0073 00000000 		.4byte	0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2001 0103 51000000 		.4byte	.LVL46-1
  2002 0107 F8000000 		.4byte	.LFE7
  2003 010b 0400     		.2byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 50
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 50
 
 
  2004 010d F3       		.byte	0xf3
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2058 018a 51000000 		.4byte	.LVL46-1
  2059 018e F8000000 		.4byte	.LFE7
  2060 0192 0400     		.2byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 51
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 51
 
 
  2061 0194 F3       		.byte	0xf3
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2115              	.LLST12:
  2116 0222 00000000 		.4byte	.LVL64
  2117 0226 11000000 		.4byte	.LVL66-1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 52
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 52
 
 
  2118 022a 0100     		.2byte	0x1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2172 02ad F3       		.byte	0xf3
  2173 02ae 01       		.uleb128 0x1
  2174 02af 50       		.byte	0x50
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 53
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 53
 
 
  2175 02b0 9F       		.byte	0x9f
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2229 0068 00000000 		.4byte	.LFB11
  2230 006c 1C000000 		.4byte	.LFE11-.LFB11
  2231 0070 00000000 		.4byte	.LFB12
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 54
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 54
 
 
  2232 0074 10000000 		.4byte	.LFE12-.LFB12
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2275      5F53746F 
  2275      7000
  2276              	.LASF40:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 55
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 55
 
 
  2277 0026 43795370 		.ascii	"CySpcStart\000"
@@ -3269,133 +3269,133 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2286              	.LASF20:
  2287 0081 73746174 		.ascii	"status\000"
  2287      757300
- 2288              	.LASF11:
- 2289 0088 666C6F61 		.ascii	"float\000"
- 2289      7400
- 2290              	.LASF34:
- 2291 008e 4379466C 		.ascii	"CyFlash_SetWaitCycles\000"
- 2291      6173685F 
- 2291      53657457 
- 2291      61697443 
- 2291      79636C65 
- 2292              	.LASF7:
- 2293 00a4 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2293      206C6F6E 
- 2293      6720756E 
- 2293      7369676E 
- 2293      65642069 
- 2294              	.LASF25:
- 2295 00bb 43795365 		.ascii	"CySetFlashEEBuffer\000"
- 2295      74466C61 
- 2295      73684545 
- 2295      42756666 
- 2295      657200
- 2296              	.LASF44:
- 2297 00ce 43795370 		.ascii	"CySpcUnlock\000"
- 2297      63556E6C 
- 2297      6F636B00 
- 2298              	.LASF52:
- 2299 00da 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2299      43313120 
- 2299      352E342E 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 56
+ 2288              	.LASF54:
+ 2289 0088 443A5C55 		.ascii	"D:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
+ 2289      73657273 
+ 2289      5C6C656F 
+ 2289      6A615C44 
+ 2289      6F63756D 
+ 2290 00b6 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
+ 2290      2D464539 
+ 2290      2D464537 
+ 2290      2D426F61 
+ 2290      72645C44 
+ 2291              	.LASF11:
+ 2292 00d9 666C6F61 		.ascii	"float\000"
+ 2292      7400
+ 2293              	.LASF34:
+ 2294 00df 4379466C 		.ascii	"CyFlash_SetWaitCycles\000"
+ 2294      6173685F 
+ 2294      53657457 
+ 2294      61697443 
+ 2294      79636C65 
+ 2295              	.LASF7:
+ 2296 00f5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2296      206C6F6E 
+ 2296      6720756E 
+ 2296      7369676E 
+ 2296      65642069 
+ 2297              	.LASF25:
+ 2298 010c 43795365 		.ascii	"CySetFlashEEBuffer\000"
+ 2298      74466C61 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 56
 
 
- 2299      31203230 
- 2299      31363036 
- 2300 010d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2300      20726576 
- 2300      6973696F 
- 2300      6E203233 
- 2300      37373135 
- 2301 0140 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2301      66756E63 
- 2301      74696F6E 
- 2301      2D736563 
- 2301      74696F6E 
- 2302              	.LASF30:
- 2303 0168 726F7744 		.ascii	"rowData\000"
- 2303      61746100 
- 2304              	.LASF36:
- 2305 0170 43794545 		.ascii	"CyEEPROM_Start\000"
- 2305      50524F4D 
- 2305      5F537461 
- 2305      727400
- 2306              	.LASF21:
- 2307 017f 696E7465 		.ascii	"interruptState\000"
- 2307      72727570 
- 2307      74537461 
- 2307      746500
- 2308              	.LASF5:
- 2309 018e 6C6F6E67 		.ascii	"long unsigned int\000"
- 2309      20756E73 
- 2309      69676E65 
- 2309      6420696E 
- 2309      7400
- 2310              	.LASF9:
- 2311 01a0 75696E74 		.ascii	"uint8\000"
- 2311      3800
- 2312              	.LASF28:
- 2313 01a6 61727261 		.ascii	"arrayId\000"
- 2313      79496400 
- 2314              	.LASF56:
- 2315 01ae 64696554 		.ascii	"dieTemperature\000"
- 2315      656D7065 
- 2315      72617475 
- 2315      726500
- 2316              	.LASF1:
- 2317 01bd 756E7369 		.ascii	"unsigned char\000"
- 2317      676E6564 
- 2317      20636861 
- 2317      7200
- 2318              	.LASF12:
- 2319 01cb 646F7562 		.ascii	"double\000"
- 2319      6C6500
- 2320              	.LASF31:
- 2321 01d2 726F7753 		.ascii	"rowSize\000"
- 2321      697A6500 
- 2322              	.LASF2:
- 2323 01da 73686F72 		.ascii	"short int\000"
- 2323      7420696E 
- 2323      7400
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 57
+ 2298      73684545 
+ 2298      42756666 
+ 2298      657200
+ 2299              	.LASF44:
+ 2300 011f 43795370 		.ascii	"CySpcUnlock\000"
+ 2300      63556E6C 
+ 2300      6F636B00 
+ 2301              	.LASF52:
+ 2302 012b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2302      43313120 
+ 2302      352E342E 
+ 2302      31203230 
+ 2302      31363036 
+ 2303 015e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2303      20726576 
+ 2303      6973696F 
+ 2303      6E203233 
+ 2303      37373135 
+ 2304 0191 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2304      66756E63 
+ 2304      74696F6E 
+ 2304      2D736563 
+ 2304      74696F6E 
+ 2305              	.LASF30:
+ 2306 01b9 726F7744 		.ascii	"rowData\000"
+ 2306      61746100 
+ 2307              	.LASF36:
+ 2308 01c1 43794545 		.ascii	"CyEEPROM_Start\000"
+ 2308      50524F4D 
+ 2308      5F537461 
+ 2308      727400
+ 2309              	.LASF21:
+ 2310 01d0 696E7465 		.ascii	"interruptState\000"
+ 2310      72727570 
+ 2310      74537461 
+ 2310      746500
+ 2311              	.LASF5:
+ 2312 01df 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2312      20756E73 
+ 2312      69676E65 
+ 2312      6420696E 
+ 2312      7400
+ 2313              	.LASF9:
+ 2314 01f1 75696E74 		.ascii	"uint8\000"
+ 2314      3800
+ 2315              	.LASF28:
+ 2316 01f7 61727261 		.ascii	"arrayId\000"
+ 2316      79496400 
+ 2317              	.LASF56:
+ 2318 01ff 64696554 		.ascii	"dieTemperature\000"
+ 2318      656D7065 
+ 2318      72617475 
+ 2318      726500
+ 2319              	.LASF1:
+ 2320 020e 756E7369 		.ascii	"unsigned char\000"
+ 2320      676E6564 
+ 2320      20636861 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 57
 
 
- 2324              	.LASF39:
- 2325 01e4 43794545 		.ascii	"CyEEPROM_ReadRelease\000"
- 2325      50524F4D 
- 2325      5F526561 
- 2325      6452656C 
- 2325      65617365 
- 2326              	.LASF45:
- 2327 01f9 43795370 		.ascii	"CySpcGetTemp\000"
- 2327      63476574 
- 2327      54656D70 
- 2327      00
- 2328              	.LASF10:
- 2329 0206 75696E74 		.ascii	"uint16\000"
- 2329      313600
- 2330              	.LASF41:
- 2331 020d 43795370 		.ascii	"CySpcLock\000"
- 2331      634C6F63 
- 2331      6B00
- 2332              	.LASF47:
- 2333 0217 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 2333      74657243 
- 2333      72697469 
- 2333      63616C53 
- 2333      65637469 
- 2334              	.LASF54:
- 2335 022e 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
- 2335      73657273 
- 2335      5C6C656F 
- 2335      6A615C44 
- 2335      6F63756D 
- 2336 025c 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
- 2336      2D464539 
- 2336      2D464537 
- 2336      2D426F61 
- 2336      72645C44 
+ 2320      7200
+ 2321              	.LASF12:
+ 2322 021c 646F7562 		.ascii	"double\000"
+ 2322      6C6500
+ 2323              	.LASF31:
+ 2324 0223 726F7753 		.ascii	"rowSize\000"
+ 2324      697A6500 
+ 2325              	.LASF2:
+ 2326 022b 73686F72 		.ascii	"short int\000"
+ 2326      7420696E 
+ 2326      7400
+ 2327              	.LASF39:
+ 2328 0235 43794545 		.ascii	"CyEEPROM_ReadRelease\000"
+ 2328      50524F4D 
+ 2328      5F526561 
+ 2328      6452656C 
+ 2328      65617365 
+ 2329              	.LASF45:
+ 2330 024a 43795370 		.ascii	"CySpcGetTemp\000"
+ 2330      63476574 
+ 2330      54656D70 
+ 2330      00
+ 2331              	.LASF10:
+ 2332 0257 75696E74 		.ascii	"uint16\000"
+ 2332      313600
+ 2333              	.LASF41:
+ 2334 025e 43795370 		.ascii	"CySpcLock\000"
+ 2334      634C6F63 
+ 2334      6B00
+ 2335              	.LASF47:
+ 2336 0268 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 2336      74657243 
+ 2336      72697469 
+ 2336      63616C53 
+ 2336      65637469 
  2337              	.LASF8:
  2338 027f 756E7369 		.ascii	"unsigned int\000"
  2338      676E6564 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2344      65745370 
  2344      63416C67 
  2344      6F726974 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 58
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 58
 
 
  2345              	.LASF51:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 1
  2371              	.LASF23:
  2372 0352 4379466C 		.ascii	"CyFlash_Stop\000"
  2372      6173685F 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccRw626J.s 			page 59
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\cch8Kh4h.s 			page 59
 
 
  2372      53746F70 

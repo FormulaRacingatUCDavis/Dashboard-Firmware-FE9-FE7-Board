@@ -147,7 +147,7 @@ int main()
     
     // initialize display layout
     initDashTemplate();
-    disp_state(FAULT); // effectively STARTUP
+    disp_state(FAULT, 0); // effectively STARTUP
     
     for(;;)
     {
@@ -191,7 +191,7 @@ int main()
         if(PACK_TEMP > 99) PACK_TEMP = 99;  //make sure temp is no more than 2 digits```
         disp_max_pack_temp(PACK_TEMP);
         
-        disp_state(state);
+        disp_state(state, bms_status);
         uint32_t glv_v = (int32_t)ADC_GLV_V_CountsTo_mVolts(ADC_GLV_V_Read16());
         disp_glv_v(glv_v);
         

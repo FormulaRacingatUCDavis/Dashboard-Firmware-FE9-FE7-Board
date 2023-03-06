@@ -166,7 +166,6 @@ void GraphicLCDIntf_WriteM8(uint8 d_c, uint8 wrData[], uint16 num)
     }
 }
 
-
 void GraphicLCDIntf_WriteM8_Compressed(uint8 d_c, uint8 wrData[], uint16 num) 
 {
     uint32 i;

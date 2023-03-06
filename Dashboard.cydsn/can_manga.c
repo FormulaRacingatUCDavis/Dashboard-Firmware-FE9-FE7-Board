@@ -93,7 +93,7 @@ uint8_t getABSMotorRPM()
 //will be a 1 if the estop was pressed (I'm making it a special case because I want to test rn)
 uint8_t getEStop()
 {
-    return ESTOP;
+    return SHUTDOWN_CIRCUIT_OPEN;
 }
 
 // called from CAN_TX_RX_func.c in the generic RX func
