@@ -848,8 +848,8 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgMC_PDO_ACK(void) 
     {
         /* `#START MESSAGE_MC_PDO_ACK_RECEIVED` */
-        mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
-        mc_temp += CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
+        //mc_temp = CAN_RX_DATA_BYTE7(CAN_RX_MAILBOX_MC_PDO_ACK) << 8;
+        mc_temp = CAN_RX_DATA_BYTE8(CAN_RX_MAILBOX_MC_PDO_ACK);
 
         /* `#END` */
 

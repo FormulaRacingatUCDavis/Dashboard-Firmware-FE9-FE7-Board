@@ -167,6 +167,53 @@ void GraphicLCDIntf_WriteM8(uint8 d_c, uint8 wrData[], uint16 num)
 }
 
 
+void GraphicLCDIntf_WriteM8_Compressed(uint8 d_c, uint8 wrData[], uint16 num) 
+{
+    uint32 i;
+    uint8 j;
+    uint8 k;
+    uint8 l;
+
+    uint8_t* color;
+    
+    uint8_t BLUE[] = {0x02, 0x28, 0x51};
+    uint8_t GOLD[] = {0xFF, 0xBF, 0x00};
+    uint8_t WHITE[] = {0xFF, 0xFF, 0xFF};
+    
+    for(i = 0u; i < num; i++)
+    {
+        
+        if(wrData[i]&0x80){
+            color = WHITE;
+            k = wrData[i]&0x7F;
+        } else {
+            if(wrData[i]&0x40)
+                color = BLUE;
+            else 
+                color = GOLD;
+            
+            k = wrData[i]&0x3F;
+        }
+            
+        for(l=0; l<=k; l++){
+            for(j = 0; j<3; j++){
+                while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+                {
+                    /* The command queue is full */
+                }   
+                GraphicLCDIntf_CMD_FIFO_REG = d_c;  
+         
+                #if (GraphicLCDIntf_BUS_WIDTH == 16u)
+                    CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData[i]);
+                #else /* 8-bit interface */
+                    GraphicLCDIntf_DATA_FIFO_REG = color[j];
+                #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
+            }
+        }
+    }
+}
+
+
 /*******************************************************************************
 * Function Name: GraphicLCDIntf_Read8
 ********************************************************************************

@@ -247,4 +247,19 @@ UG_RESULT HW_DrawImage(UG_S16 x1, UG_S16 y1, UG_S16 x2, UG_S16 y2, uint8_t *imag
     return UG_RESULT_OK;
 }
 
+UG_RESULT HW_DrawImage_Special(UG_S16 x1, UG_S16 y1, UG_S16 x2, UG_S16 y2, uint8_t *image, uint16_t pSize)
+{
+        
+    if((x1 < 0) ||(x1 >= DISPLAY_WIDTH) || (y1 < 0) || (y1 >= DISPLAY_HEIGHT)) return UG_RESULT_FAIL;
+    if((x2 < 0) ||(x2 >= DISPLAY_WIDTH) || (y2 < 0) || (y2 >= DISPLAY_HEIGHT)) return UG_RESULT_FAIL;
+
+    Display_WindowSet(x1,x2,y1,y2);
+
+    Display_WriteCommand(0x2c); 
+    
+    GraphicLCDIntf_WriteM8_Compressed(1, image, pSize);
+    
+    return UG_RESULT_OK;
+}
+
 /* [] END OF FILE */

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
   28:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function and after a request is made that request will always complete in 
   29:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  finite time as long as a clock is provided. The only thing provided
   30:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  by this API is setting the Command FIFO to drive at least the half-empty status
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 2
 
 
   31:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  from the FIFO.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
   60 000e 00BF     		.align	2
   61              	.L3:
   62 0010 22640040 		.word	1073767458
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 3
 
 
   63              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
   96              		.align	2
   97              	.L8:
   98 0014 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 4
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 4
 
 
   99              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
  100:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface.
  101:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The write is a posted write, so this function will return before the write 
  102:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  has actually completed on the interface. If the command queue is full, this 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 5
 
 
  103:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function will not return until space is available to queue this write request.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
  160              	GraphicLCDIntf_WriteM8:
  161              	.LFB5:
  124:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 6
 
 
  125:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
  158:Generated_Source\PSoC5/GraphicLCDIntf.c ****         }   
  159:Generated_Source\PSoC5/GraphicLCDIntf.c ****         GraphicLCDIntf_CMD_FIFO_REG = d_c;  
  183              		.loc 1 159 0 discriminator 2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 7
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 7
 
 
  184 0010 054B     		ldr	r3, .L19+4
@@ -399,1873 +399,2382 @@ ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 1
  209              		.cfi_endproc
  210              	.LFE5:
  211              		.size	GraphicLCDIntf_WriteM8, .-GraphicLCDIntf_WriteM8
- 212              		.section	.text.GraphicLCDIntf_Read8,"ax",%progbits
+ 212              		.section	.text.GraphicLCDIntf_WriteM8_Compressed,"ax",%progbits
  213              		.align	2
- 214              		.global	GraphicLCDIntf_Read8
+ 214              		.global	GraphicLCDIntf_WriteM8_Compressed
  215              		.thumb
  216              		.thumb_func
- 217              		.type	GraphicLCDIntf_Read8, %function
- 218              	GraphicLCDIntf_Read8:
+ 217              		.type	GraphicLCDIntf_WriteM8_Compressed, %function
+ 218              	GraphicLCDIntf_WriteM8_Compressed:
  219              	.LFB6:
  168:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
  169:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 170:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 171:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Read8
- 172:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 173:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 174:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 175:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a read transaction on the 8-bit parallel interface.
- 176:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The read will execute after all currently posted writes have completed. This 
- 177:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function will wait until the read completes and then returns the read value.
- 178:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 8
-
-
- 179:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 180:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  d_c: Data(1) or Command(0) indication. Passed to the d_c pin.
- 181:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 182:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Return:
- 183:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The 16-bit read value from the di_msb[7:0] (most significant byte) and 
- 184:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  di_lsb[7:0] (least significant byte) pins for the 16-bit interface or the 
- 185:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  8-bit read value from the di_lsb[7:0] for 8-bit interface.
- 186:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 187:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 188:Generated_Source\PSoC5/GraphicLCDIntf.c **** uint8 GraphicLCDIntf_Read8(uint8 d_c) 
- 189:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 220              		.loc 1 189 0
+ 170:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_WriteM8_Compressed(uint8 d_c, uint8 wrData[], uint16 num) 
+ 171:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 220              		.loc 1 171 0
  221              		.cfi_startproc
- 222              		@ args = 0, pretend = 0, frame = 0
+ 222              		@ args = 0, pretend = 0, frame = 16
  223              		@ frame_needed = 0, uses_anonymous_args = 0
- 224              		@ link register save eliminated.
- 225              	.LVL7:
- 226              	.L22:
- 190:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
- 227              		.loc 1 190 0 discriminator 1
- 228 0000 084B     		ldr	r3, .L24
- 229 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 230 0004 13F0010F 		tst	r3, #1
- 231 0008 FAD1     		bne	.L22
- 191:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 192:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* The command queue is full */
- 193:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
- 194:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = d_c | GraphicLCDIntf_READ_COMMAND;
- 232              		.loc 1 194 0
- 233 000a 40F00200 		orr	r0, r0, #2
- 234              	.LVL8:
- 235 000e 064B     		ldr	r3, .L24+4
- 236 0010 1870     		strb	r0, [r3]
- 237              	.L23:
- 195:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
- 196:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_DATA_VALID) != GraphicLCDIntf_DATA_VALID)
- 238              		.loc 1 196 0 discriminator 1
- 239 0012 044B     		ldr	r3, .L24
- 240 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 241 0016 13F0020F 		tst	r3, #2
- 242 001a FAD0     		beq	.L23
- 197:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 198:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Wait until input data is valid */
- 199:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }
- 200:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
- 201:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 8u)  /* 8-bit interface */
- 202:Generated_Source\PSoC5/GraphicLCDIntf.c ****         return (GraphicLCDIntf_DIN_LSB_DATA_REG);
- 243              		.loc 1 202 0
- 244 001c 034B     		ldr	r3, .L24+8
- 245 001e 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 203:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else   /* 16-bit interface */
- 204:Generated_Source\PSoC5/GraphicLCDIntf.c ****         return (uint16)((uint16)GraphicLCDIntf_DIN_MSB_DATA_REG << 8u) | GraphicLCDIntf_DIN_LSB_DAT
- 205:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 8u */
- 206:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 246              		.loc 1 206 0
- 247 0020 7047     		bx	lr
- 248              	.L25:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 9
+ 224              	.LVL7:
+ 225 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 226              		.cfi_def_cfa_offset 20
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 8
 
 
- 249 0022 00BF     		.align	2
- 250              	.L24:
- 251 0024 63640040 		.word	1073767523
- 252 0028 42640040 		.word	1073767490
- 253 002c 62640040 		.word	1073767522
- 254              		.cfi_endproc
- 255              	.LFE6:
- 256              		.size	GraphicLCDIntf_Read8, .-GraphicLCDIntf_Read8
- 257              		.section	.text.GraphicLCDIntf_ReadM8,"ax",%progbits
- 258              		.align	2
- 259              		.global	GraphicLCDIntf_ReadM8
- 260              		.thumb
- 261              		.thumb_func
- 262              		.type	GraphicLCDIntf_ReadM8, %function
- 263              	GraphicLCDIntf_ReadM8:
- 264              	.LFB7:
- 207:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 208:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 209:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 210:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_ReadM8
- 211:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 212:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 213:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 214:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple read transactions on the 8-bit 
- 215:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface. The read will execute after all currently posted writes 
- 216:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  have completed. This function will wait until the read completes and then 
- 217:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  returns the read value.
- 218:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 219:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 220:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  d_c:    The Data(1) or Command(0) indication. Passed to the d_c pin.
- 221:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 222:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  rdData: The pointer to the the first element of a data buffer read from the do_msb[7:0]
- 223:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          (most significant byte) and do_lsb[7:0] (least significant byte) pins. 
- 224:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] presents only for the 16-bit interface.
+ 227              		.cfi_offset 4, -20
+ 228              		.cfi_offset 5, -16
+ 229              		.cfi_offset 6, -12
+ 230              		.cfi_offset 7, -8
+ 231              		.cfi_offset 14, -4
+ 232 0002 85B0     		sub	sp, sp, #20
+ 233              		.cfi_def_cfa_offset 40
+ 172:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint32 i;
+ 173:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8 j;
+ 174:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8 k;
+ 175:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8 l;
+ 176:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 177:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8_t* color;
+ 178:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
+ 179:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8_t BLUE[] = {0x02, 0x28, 0x51};
+ 234              		.loc 1 179 0
+ 235 0004 224B     		ldr	r3, .L33
+ 236 0006 1D88     		ldrh	r5, [r3]	@ unaligned
+ 237 0008 9C78     		ldrb	r4, [r3, #2]	@ zero_extendqisi2
+ 238 000a ADF80C50 		strh	r5, [sp, #12]	@ unaligned
+ 239 000e 8DF80E40 		strb	r4, [sp, #14]
+ 180:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8_t GOLD[] = {0xFF, 0xBF, 0x00};
+ 240              		.loc 1 180 0
+ 241 0012 1C46     		mov	r4, r3
+ 242 0014 34F8045F 		ldrh	r5, [r4, #4]!	@ unaligned
+ 243 0018 A478     		ldrb	r4, [r4, #2]	@ zero_extendqisi2
+ 244 001a ADF80850 		strh	r5, [sp, #8]	@ unaligned
+ 245 001e 8DF80A40 		strb	r4, [sp, #10]
+ 181:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint8_t WHITE[] = {0xFF, 0xFF, 0xFF};
+ 246              		.loc 1 181 0
+ 247 0022 33F8084F 		ldrh	r4, [r3, #8]!	@ unaligned
+ 248 0026 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 249 0028 ADF80440 		strh	r4, [sp, #4]	@ unaligned
+ 250 002c 8DF80630 		strb	r3, [sp, #6]
+ 251              	.LVL8:
+ 182:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
+ 183:Generated_Source\PSoC5/GraphicLCDIntf.c ****     for(i = 0u; i < num; i++)
+ 252              		.loc 1 183 0
+ 253 0030 4FF0000C 		mov	ip, #0
+ 254 0034 28E0     		b	.L22
+ 255              	.LVL9:
+ 256              	.L29:
+ 184:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 185:Generated_Source\PSoC5/GraphicLCDIntf.c ****         
+ 186:Generated_Source\PSoC5/GraphicLCDIntf.c ****         if(wrData[i]&0x80){
+ 257              		.loc 1 186 0
+ 258 0036 11F80CE0 		ldrb	lr, [r1, ip]	@ zero_extendqisi2
+ 259 003a 1EF0800F 		tst	lr, #128
+ 260 003e 03D0     		beq	.L23
+ 261              	.LVL10:
+ 187:Generated_Source\PSoC5/GraphicLCDIntf.c ****             color = WHITE;
+ 188:Generated_Source\PSoC5/GraphicLCDIntf.c ****             k = wrData[i]&0x7F;
+ 262              		.loc 1 188 0
+ 263 0040 0EF07F0E 		and	lr, lr, #127
+ 264              	.LVL11:
+ 187:Generated_Source\PSoC5/GraphicLCDIntf.c ****             color = WHITE;
+ 265              		.loc 1 187 0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 9
+
+
+ 266 0044 01AF     		add	r7, sp, #4
+ 267              	.LVL12:
+ 268 0046 07E0     		b	.L24
+ 269              	.LVL13:
+ 270              	.L23:
+ 189:Generated_Source\PSoC5/GraphicLCDIntf.c ****         } else {
+ 190:Generated_Source\PSoC5/GraphicLCDIntf.c ****             if(wrData[i]&0x40)
+ 271              		.loc 1 190 0
+ 272 0048 1EF0400F 		tst	lr, #64
+ 273 004c 01D0     		beq	.L30
+ 191:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 color = BLUE;
+ 274              		.loc 1 191 0
+ 275 004e 03AF     		add	r7, sp, #12
+ 276 0050 00E0     		b	.L25
+ 277              	.L30:
+ 192:Generated_Source\PSoC5/GraphicLCDIntf.c ****             else 
+ 193:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 color = GOLD;
+ 278              		.loc 1 193 0
+ 279 0052 02AF     		add	r7, sp, #8
+ 280              	.L25:
+ 281              	.LVL14:
+ 194:Generated_Source\PSoC5/GraphicLCDIntf.c ****             
+ 195:Generated_Source\PSoC5/GraphicLCDIntf.c ****             k = wrData[i]&0x3F;
+ 282              		.loc 1 195 0
+ 283 0054 0EF03F0E 		and	lr, lr, #63
+ 284              	.LVL15:
+ 285              	.L24:
+ 196:Generated_Source\PSoC5/GraphicLCDIntf.c ****         }
+ 197:Generated_Source\PSoC5/GraphicLCDIntf.c ****             
+ 198:Generated_Source\PSoC5/GraphicLCDIntf.c ****         for(l=0; l<=k; l++){
+ 286              		.loc 1 198 0
+ 287 0058 0026     		movs	r6, #0
+ 288 005a 11E0     		b	.L26
+ 289              	.LVL16:
+ 290              	.L27:
+ 199:Generated_Source\PSoC5/GraphicLCDIntf.c ****             for(j = 0; j<3; j++){
+ 200:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 291              		.loc 1 200 0 discriminator 1
+ 292 005c 0D4B     		ldr	r3, .L33+4
+ 293 005e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 294 0060 13F0010F 		tst	r3, #1
+ 295 0064 FAD1     		bne	.L27
+ 201:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 {
+ 202:Generated_Source\PSoC5/GraphicLCDIntf.c ****                     /* The command queue is full */
+ 203:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 }   
+ 204:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 GraphicLCDIntf_CMD_FIFO_REG = d_c;  
+ 296              		.loc 1 204 0 discriminator 2
+ 297 0066 0C4B     		ldr	r3, .L33+8
+ 298 0068 1870     		strb	r0, [r3]
+ 205:Generated_Source\PSoC5/GraphicLCDIntf.c ****          
+ 206:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 #if (GraphicLCDIntf_BUS_WIDTH == 16u)
+ 207:Generated_Source\PSoC5/GraphicLCDIntf.c ****                     CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData[i]);
+ 208:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 #else /* 8-bit interface */
+ 209:Generated_Source\PSoC5/GraphicLCDIntf.c ****                     GraphicLCDIntf_DATA_FIFO_REG = color[j];
+ 299              		.loc 1 209 0 discriminator 2
+ 300 006a 3D5D     		ldrb	r5, [r7, r4]	@ zero_extendqisi2
+ 301 006c 1033     		adds	r3, r3, #16
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 10
+
+
+ 302 006e 1D70     		strb	r5, [r3]
+ 199:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 303              		.loc 1 199 0 discriminator 2
+ 304 0070 0134     		adds	r4, r4, #1
+ 305              	.LVL17:
+ 306 0072 E4B2     		uxtb	r4, r4
+ 307              	.LVL18:
+ 308 0074 00E0     		b	.L28
+ 309              	.LVL19:
+ 310              	.L31:
+ 311 0076 0024     		movs	r4, #0
+ 312              	.L28:
+ 313              	.LVL20:
+ 199:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 314              		.loc 1 199 0 is_stmt 0 discriminator 1
+ 315 0078 022C     		cmp	r4, #2
+ 316 007a EFD9     		bls	.L27
+ 198:Generated_Source\PSoC5/GraphicLCDIntf.c ****             for(j = 0; j<3; j++){
+ 317              		.loc 1 198 0 is_stmt 1 discriminator 2
+ 318 007c 0136     		adds	r6, r6, #1
+ 319              	.LVL21:
+ 320 007e F6B2     		uxtb	r6, r6
+ 321              	.LVL22:
+ 322              	.L26:
+ 198:Generated_Source\PSoC5/GraphicLCDIntf.c ****             for(j = 0; j<3; j++){
+ 323              		.loc 1 198 0 is_stmt 0 discriminator 1
+ 324 0080 B645     		cmp	lr, r6
+ 325 0082 F8D2     		bcs	.L31
+ 183:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 326              		.loc 1 183 0 is_stmt 1 discriminator 2
+ 327 0084 0CF1010C 		add	ip, ip, #1
+ 328              	.LVL23:
+ 329              	.L22:
+ 183:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 330              		.loc 1 183 0 is_stmt 0 discriminator 1
+ 331 0088 9445     		cmp	ip, r2
+ 332 008a D4D3     		bcc	.L29
+ 210:Generated_Source\PSoC5/GraphicLCDIntf.c ****                 #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
+ 211:Generated_Source\PSoC5/GraphicLCDIntf.c ****             }
+ 212:Generated_Source\PSoC5/GraphicLCDIntf.c ****         }
+ 213:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }
+ 214:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 333              		.loc 1 214 0 is_stmt 1
+ 334 008c 05B0     		add	sp, sp, #20
+ 335              		.cfi_def_cfa_offset 20
+ 336              		@ sp needed
+ 337 008e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 338              	.L34:
+ 339              		.align	2
+ 340              	.L33:
+ 341 0090 00000000 		.word	.LANCHOR1
+ 342 0094 63640040 		.word	1073767523
+ 343 0098 42640040 		.word	1073767490
+ 344              		.cfi_endproc
+ 345              	.LFE6:
+ 346              		.size	GraphicLCDIntf_WriteM8_Compressed, .-GraphicLCDIntf_WriteM8_Compressed
+ 347              		.section	.text.GraphicLCDIntf_Read8,"ax",%progbits
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 11
+
+
+ 348              		.align	2
+ 349              		.global	GraphicLCDIntf_Read8
+ 350              		.thumb
+ 351              		.thumb_func
+ 352              		.type	GraphicLCDIntf_Read8, %function
+ 353              	GraphicLCDIntf_Read8:
+ 354              	.LFB7:
+ 215:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 216:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 217:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 218:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Read8
+ 219:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 220:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 221:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 222:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a read transaction on the 8-bit parallel interface.
+ 223:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The read will execute after all currently posted writes have completed. This 
+ 224:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function will wait until the read completes and then returns the read value.
  225:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 226:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:    The number of words/bytes to read.
- 227:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 228:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 229:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_ReadM8(uint8 d_c, uint8 rdData[], uint16 num) 
- 230:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 265              		.loc 1 230 0
- 266              		.cfi_startproc
- 267              		@ args = 0, pretend = 0, frame = 0
- 268              		@ frame_needed = 0, uses_anonymous_args = 0
- 269              	.LVL9:
- 270 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 271              		.cfi_def_cfa_offset 24
- 272              		.cfi_offset 3, -24
- 273              		.cfi_offset 4, -20
- 274              		.cfi_offset 5, -16
- 275              		.cfi_offset 6, -12
- 276              		.cfi_offset 7, -8
- 277              		.cfi_offset 14, -4
- 278 0002 0746     		mov	r7, r0
- 279 0004 0E46     		mov	r6, r1
- 280 0006 1546     		mov	r5, r2
- 281              	.LVL10:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 10
+ 226:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 227:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  d_c: Data(1) or Command(0) indication. Passed to the d_c pin.
+ 228:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 229:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Return:
+ 230:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The 16-bit read value from the di_msb[7:0] (most significant byte) and 
+ 231:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  di_lsb[7:0] (least significant byte) pins for the 16-bit interface or the 
+ 232:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  8-bit read value from the di_lsb[7:0] for 8-bit interface.
+ 233:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 234:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 235:Generated_Source\PSoC5/GraphicLCDIntf.c **** uint8 GraphicLCDIntf_Read8(uint8 d_c) 
+ 236:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 355              		.loc 1 236 0
+ 356              		.cfi_startproc
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359              		@ link register save eliminated.
+ 360              	.LVL24:
+ 361              	.L36:
+ 237:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 362              		.loc 1 237 0 discriminator 1
+ 363 0000 084B     		ldr	r3, .L38
+ 364 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 365 0004 13F0010F 		tst	r3, #1
+ 366 0008 FAD1     		bne	.L36
+ 238:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 239:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* The command queue is full */
+ 240:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
+ 241:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = d_c | GraphicLCDIntf_READ_COMMAND;
+ 367              		.loc 1 241 0
+ 368 000a 40F00200 		orr	r0, r0, #2
+ 369              	.LVL25:
+ 370 000e 064B     		ldr	r3, .L38+4
+ 371 0010 1870     		strb	r0, [r3]
+ 372              	.L37:
+ 242:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
+ 243:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_DATA_VALID) != GraphicLCDIntf_DATA_VALID)
+ 373              		.loc 1 243 0 discriminator 1
+ 374 0012 044B     		ldr	r3, .L38
+ 375 0014 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 12
 
 
- 231:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint32 i;
- 232:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
- 233:Generated_Source\PSoC5/GraphicLCDIntf.c ****     for(i = 0u; i < num; i++)
- 282              		.loc 1 233 0
- 283 0008 0024     		movs	r4, #0
- 284 000a 04E0     		b	.L27
- 285              	.LVL11:
- 286              	.L28:
- 234:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 235:Generated_Source\PSoC5/GraphicLCDIntf.c ****         rdData[i] = GraphicLCDIntf_Read8(d_c);
- 287              		.loc 1 235 0 discriminator 3
- 288 000c 3846     		mov	r0, r7
- 289 000e FFF7FEFF 		bl	GraphicLCDIntf_Read8
- 290              	.LVL12:
- 291 0012 3055     		strb	r0, [r6, r4]
- 233:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 292              		.loc 1 233 0 discriminator 3
- 293 0014 0134     		adds	r4, r4, #1
- 294              	.LVL13:
- 295              	.L27:
- 233:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 296              		.loc 1 233 0 is_stmt 0 discriminator 1
- 297 0016 AC42     		cmp	r4, r5
- 298 0018 F8D3     		bcc	.L28
- 236:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }
- 237:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 299              		.loc 1 237 0 is_stmt 1
- 300 001a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 301              		.cfi_endproc
- 302              	.LFE7:
- 303              		.size	GraphicLCDIntf_ReadM8, .-GraphicLCDIntf_ReadM8
- 304              		.section	.text.GraphicLCDIntf_Write8_A0,"ax",%progbits
- 305              		.align	2
- 306              		.global	GraphicLCDIntf_Write8_A0
- 307              		.thumb
- 308              		.thumb_func
- 309              		.type	GraphicLCDIntf_Write8_A0, %function
- 310              	GraphicLCDIntf_Write8_A0:
- 311              	.LFB8:
- 238:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 239:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 240:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 241:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Write8_A0
- 242:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 243:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 244:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 245:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a write transaction on the 8-bit parallel
- 246:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface with the d_c pin set to 0.
- 247:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The write is a posted write, so this function will return before the write 
- 248:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  has actually completed on the interface. If the command queue is full, this 
- 249:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function will not return until space is availale to queue this write request.
- 250:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 251:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 252:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Data sent on the do_msb[7:0] (most significant byte) 
- 253:Generated_Source\PSoC5/GraphicLCDIntf.c **** *         and do_lsb[7:0] (least significant byte) pins. do_msb[7:0]
- 254:Generated_Source\PSoC5/GraphicLCDIntf.c **** *         presents only for 16-bit interface.
- 255:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 11
+ 376 0016 13F0020F 		tst	r3, #2
+ 377 001a FAD0     		beq	.L37
+ 244:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 245:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Wait until input data is valid */
+ 246:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }
+ 247:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
+ 248:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 8u)  /* 8-bit interface */
+ 249:Generated_Source\PSoC5/GraphicLCDIntf.c ****         return (GraphicLCDIntf_DIN_LSB_DATA_REG);
+ 378              		.loc 1 249 0
+ 379 001c 034B     		ldr	r3, .L38+8
+ 380 001e 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 250:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else   /* 16-bit interface */
+ 251:Generated_Source\PSoC5/GraphicLCDIntf.c ****         return (uint16)((uint16)GraphicLCDIntf_DIN_MSB_DATA_REG << 8u) | GraphicLCDIntf_DIN_LSB_DAT
+ 252:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 8u */
+ 253:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 381              		.loc 1 253 0
+ 382 0020 7047     		bx	lr
+ 383              	.L39:
+ 384 0022 00BF     		.align	2
+ 385              	.L38:
+ 386 0024 63640040 		.word	1073767523
+ 387 0028 42640040 		.word	1073767490
+ 388 002c 62640040 		.word	1073767522
+ 389              		.cfi_endproc
+ 390              	.LFE7:
+ 391              		.size	GraphicLCDIntf_Read8, .-GraphicLCDIntf_Read8
+ 392              		.section	.text.GraphicLCDIntf_ReadM8,"ax",%progbits
+ 393              		.align	2
+ 394              		.global	GraphicLCDIntf_ReadM8
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.type	GraphicLCDIntf_ReadM8, %function
+ 398              	GraphicLCDIntf_ReadM8:
+ 399              	.LFB8:
+ 254:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 255:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 256:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 257:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_ReadM8
+ 258:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 259:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 260:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 261:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple read transactions on the 8-bit 
+ 262:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface. The read will execute after all currently posted writes 
+ 263:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  have completed. This function will wait until the read completes and then 
+ 264:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  returns the read value.
+ 265:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 266:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 267:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  d_c:    The Data(1) or Command(0) indication. Passed to the d_c pin.
+ 268:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 269:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  rdData: The pointer to the the first element of a data buffer read from the do_msb[7:0]
+ 270:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          (most significant byte) and do_lsb[7:0] (least significant byte) pins. 
+ 271:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] presents only for the 16-bit interface.
+ 272:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 273:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:    The number of words/bytes to read.
+ 274:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 275:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 276:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_ReadM8(uint8 d_c, uint8 rdData[], uint16 num) 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 13
 
 
- 256:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 257:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_Write8_A0(uint8 wrData) 
- 258:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 312              		.loc 1 258 0
- 313              		.cfi_startproc
- 314              		@ args = 0, pretend = 0, frame = 0
- 315              		@ frame_needed = 0, uses_anonymous_args = 0
- 316              		@ link register save eliminated.
- 317              	.LVL14:
- 318              	.L31:
- 259:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
- 319              		.loc 1 259 0 discriminator 1
- 320 0000 054B     		ldr	r3, .L32
- 321 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 322 0004 13F0010F 		tst	r3, #1
- 323 0008 FAD1     		bne	.L31
- 260:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 261:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Command queue is full */
- 262:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
- 263:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = 0u;
- 324              		.loc 1 263 0
- 325 000a 0022     		movs	r2, #0
- 326 000c 034B     		ldr	r3, .L32+4
- 327 000e 1A70     		strb	r2, [r3]
- 264:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 16u)
- 265:Generated_Source\PSoC5/GraphicLCDIntf.c ****         CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData);
- 266:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else /* 8-bit interface */
- 267:Generated_Source\PSoC5/GraphicLCDIntf.c ****         GraphicLCDIntf_DATA_FIFO_REG = wrData;
- 328              		.loc 1 267 0
- 329 0010 1033     		adds	r3, r3, #16
- 330 0012 1870     		strb	r0, [r3]
- 331 0014 7047     		bx	lr
- 332              	.L33:
- 333 0016 00BF     		.align	2
- 334              	.L32:
- 335 0018 63640040 		.word	1073767523
- 336 001c 42640040 		.word	1073767490
- 337              		.cfi_endproc
- 338              	.LFE8:
- 339              		.size	GraphicLCDIntf_Write8_A0, .-GraphicLCDIntf_Write8_A0
- 340              		.section	.text.GraphicLCDIntf_Write8_A1,"ax",%progbits
- 341              		.align	2
- 342              		.global	GraphicLCDIntf_Write8_A1
- 343              		.thumb
- 344              		.thumb_func
- 345              		.type	GraphicLCDIntf_Write8_A1, %function
- 346              	GraphicLCDIntf_Write8_A1:
- 347              	.LFB9:
- 268:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
- 269:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 270:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 271:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 272:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 273:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Write8_A1
- 274:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 275:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 276:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 12
+ 277:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 400              		.loc 1 277 0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 0, uses_anonymous_args = 0
+ 404              	.LVL26:
+ 405 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 406              		.cfi_def_cfa_offset 24
+ 407              		.cfi_offset 3, -24
+ 408              		.cfi_offset 4, -20
+ 409              		.cfi_offset 5, -16
+ 410              		.cfi_offset 6, -12
+ 411              		.cfi_offset 7, -8
+ 412              		.cfi_offset 14, -4
+ 413 0002 0746     		mov	r7, r0
+ 414 0004 0E46     		mov	r6, r1
+ 415 0006 1546     		mov	r5, r2
+ 416              	.LVL27:
+ 278:Generated_Source\PSoC5/GraphicLCDIntf.c ****     uint32 i;
+ 279:Generated_Source\PSoC5/GraphicLCDIntf.c ****     
+ 280:Generated_Source\PSoC5/GraphicLCDIntf.c ****     for(i = 0u; i < num; i++)
+ 417              		.loc 1 280 0
+ 418 0008 0024     		movs	r4, #0
+ 419 000a 04E0     		b	.L41
+ 420              	.LVL28:
+ 421              	.L42:
+ 281:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 282:Generated_Source\PSoC5/GraphicLCDIntf.c ****         rdData[i] = GraphicLCDIntf_Read8(d_c);
+ 422              		.loc 1 282 0 discriminator 3
+ 423 000c 3846     		mov	r0, r7
+ 424 000e FFF7FEFF 		bl	GraphicLCDIntf_Read8
+ 425              	.LVL29:
+ 426 0012 3055     		strb	r0, [r6, r4]
+ 280:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 427              		.loc 1 280 0 discriminator 3
+ 428 0014 0134     		adds	r4, r4, #1
+ 429              	.LVL30:
+ 430              	.L41:
+ 280:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 431              		.loc 1 280 0 is_stmt 0 discriminator 1
+ 432 0016 AC42     		cmp	r4, r5
+ 433 0018 F8D3     		bcc	.L42
+ 283:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }
+ 284:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 434              		.loc 1 284 0 is_stmt 1
+ 435 001a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 436              		.cfi_endproc
+ 437              	.LFE8:
+ 438              		.size	GraphicLCDIntf_ReadM8, .-GraphicLCDIntf_ReadM8
+ 439              		.section	.text.GraphicLCDIntf_Write8_A0,"ax",%progbits
+ 440              		.align	2
+ 441              		.global	GraphicLCDIntf_Write8_A0
+ 442              		.thumb
+ 443              		.thumb_func
+ 444              		.type	GraphicLCDIntf_Write8_A0, %function
+ 445              	GraphicLCDIntf_Write8_A0:
+ 446              	.LFB9:
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 14
 
 
- 277:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a write transaction on the 8-bit 
- 278:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The write is a posted write, 
- 279:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
- 280:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
- 281:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
- 282:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 283:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 284:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Data sent on the do_msb[7:0] (most significant byte) 
- 285:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          and do_lsb[7:0] (least significant byte) pins. do_msb[7:0]
- 286:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          presents only for 16-bit interface.
- 287:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 288:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 289:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_Write8_A1(uint8 wrData) 
- 290:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 348              		.loc 1 290 0
- 349              		.cfi_startproc
- 350              		@ args = 0, pretend = 0, frame = 0
- 351              		@ frame_needed = 0, uses_anonymous_args = 0
- 352              		@ link register save eliminated.
- 353              	.LVL15:
- 354              	.L35:
- 291:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
- 355              		.loc 1 291 0 discriminator 1
- 356 0000 054B     		ldr	r3, .L36
- 357 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 358 0004 13F0010F 		tst	r3, #1
- 359 0008 FAD1     		bne	.L35
- 292:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
- 293:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Command queue is full */
- 294:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
- 295:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = 1u;
- 360              		.loc 1 295 0
- 361 000a 0122     		movs	r2, #1
- 362 000c 034B     		ldr	r3, .L36+4
- 363 000e 1A70     		strb	r2, [r3]
- 296:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 16u)
- 297:Generated_Source\PSoC5/GraphicLCDIntf.c ****         CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData);
- 298:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else /* 8-bit interface */
- 299:Generated_Source\PSoC5/GraphicLCDIntf.c ****         GraphicLCDIntf_DATA_FIFO_REG = wrData;
- 364              		.loc 1 299 0
- 365 0010 1033     		adds	r3, r3, #16
- 366 0012 1870     		strb	r0, [r3]
- 367 0014 7047     		bx	lr
- 368              	.L37:
- 369 0016 00BF     		.align	2
- 370              	.L36:
- 371 0018 63640040 		.word	1073767523
- 372 001c 42640040 		.word	1073767490
- 373              		.cfi_endproc
- 374              	.LFE9:
- 375              		.size	GraphicLCDIntf_Write8_A1, .-GraphicLCDIntf_Write8_A1
- 376              		.section	.text.GraphicLCDIntf_WriteM8_A0,"ax",%progbits
- 377              		.align	2
- 378              		.global	GraphicLCDIntf_WriteM8_A0
- 379              		.thumb
- 380              		.thumb_func
- 381              		.type	GraphicLCDIntf_WriteM8_A0, %function
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 13
+ 285:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 286:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 287:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 288:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Write8_A0
+ 289:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 290:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 291:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 292:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a write transaction on the 8-bit parallel
+ 293:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface with the d_c pin set to 0.
+ 294:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The write is a posted write, so this function will return before the write 
+ 295:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  has actually completed on the interface. If the command queue is full, this 
+ 296:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  function will not return until space is availale to queue this write request.
+ 297:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 298:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 299:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Data sent on the do_msb[7:0] (most significant byte) 
+ 300:Generated_Source\PSoC5/GraphicLCDIntf.c **** *         and do_lsb[7:0] (least significant byte) pins. do_msb[7:0]
+ 301:Generated_Source\PSoC5/GraphicLCDIntf.c **** *         presents only for 16-bit interface.
+ 302:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 303:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 304:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_Write8_A0(uint8 wrData) 
+ 305:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 447              		.loc 1 305 0
+ 448              		.cfi_startproc
+ 449              		@ args = 0, pretend = 0, frame = 0
+ 450              		@ frame_needed = 0, uses_anonymous_args = 0
+ 451              		@ link register save eliminated.
+ 452              	.LVL31:
+ 453              	.L45:
+ 306:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 454              		.loc 1 306 0 discriminator 1
+ 455 0000 054B     		ldr	r3, .L46
+ 456 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 457 0004 13F0010F 		tst	r3, #1
+ 458 0008 FAD1     		bne	.L45
+ 307:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 308:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Command queue is full */
+ 309:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
+ 310:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = 0u;
+ 459              		.loc 1 310 0
+ 460 000a 0022     		movs	r2, #0
+ 461 000c 034B     		ldr	r3, .L46+4
+ 462 000e 1A70     		strb	r2, [r3]
+ 311:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 16u)
+ 312:Generated_Source\PSoC5/GraphicLCDIntf.c ****         CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData);
+ 313:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else /* 8-bit interface */
+ 314:Generated_Source\PSoC5/GraphicLCDIntf.c ****         GraphicLCDIntf_DATA_FIFO_REG = wrData;
+ 463              		.loc 1 314 0
+ 464 0010 1033     		adds	r3, r3, #16
+ 465 0012 1870     		strb	r0, [r3]
+ 466 0014 7047     		bx	lr
+ 467              	.L47:
+ 468 0016 00BF     		.align	2
+ 469              	.L46:
+ 470 0018 63640040 		.word	1073767523
+ 471 001c 42640040 		.word	1073767490
+ 472              		.cfi_endproc
+ 473              	.LFE9:
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 15
 
 
- 382              	GraphicLCDIntf_WriteM8_A0:
- 383              	.LFB10:
- 300:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
- 301:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 302:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 303:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 304:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 305:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_WriteM8_A0
- 306:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 307:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 308:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 309:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple write transactions on the 8-bit 
- 310:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 0. The write is a posted write, 
- 311:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
- 312:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
- 313:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
- 314:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 315:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 316:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Pointer to the the first element of a data buffer sent on the 
- 317:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] (most significant byte) and do_lsb[7:0] (least significant
- 318:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          byte) pins. do_msb[7:0] presents only for 16-bit interface.
- 319:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 320:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to write.
- 321:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 322:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 323:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_WriteM8_A0(uint8 wrData[], int num) 
- 324:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 384              		.loc 1 324 0
- 385              		.cfi_startproc
- 386              		@ args = 0, pretend = 0, frame = 0
- 387              		@ frame_needed = 0, uses_anonymous_args = 0
- 388              	.LVL16:
- 389 0000 08B5     		push	{r3, lr}
- 390              		.cfi_def_cfa_offset 8
- 391              		.cfi_offset 3, -8
- 392              		.cfi_offset 14, -4
- 325:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_WriteM8(0u, wrData, (uint16)num);
- 393              		.loc 1 325 0
- 394 0002 8AB2     		uxth	r2, r1
- 395 0004 0146     		mov	r1, r0
- 396              	.LVL17:
- 397 0006 0020     		movs	r0, #0
- 398              	.LVL18:
- 399 0008 FFF7FEFF 		bl	GraphicLCDIntf_WriteM8
- 400              	.LVL19:
- 401 000c 08BD     		pop	{r3, pc}
- 402              		.cfi_endproc
- 403              	.LFE10:
- 404              		.size	GraphicLCDIntf_WriteM8_A0, .-GraphicLCDIntf_WriteM8_A0
- 405 000e 00BF     		.section	.text.GraphicLCDIntf_WriteM8_A1,"ax",%progbits
- 406              		.align	2
- 407              		.global	GraphicLCDIntf_WriteM8_A1
- 408              		.thumb
- 409              		.thumb_func
- 410              		.type	GraphicLCDIntf_WriteM8_A1, %function
- 411              	GraphicLCDIntf_WriteM8_A1:
- 412              	.LFB11:
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 14
+ 474              		.size	GraphicLCDIntf_Write8_A0, .-GraphicLCDIntf_Write8_A0
+ 475              		.section	.text.GraphicLCDIntf_Write8_A1,"ax",%progbits
+ 476              		.align	2
+ 477              		.global	GraphicLCDIntf_Write8_A1
+ 478              		.thumb
+ 479              		.thumb_func
+ 480              		.type	GraphicLCDIntf_Write8_A1, %function
+ 481              	GraphicLCDIntf_Write8_A1:
+ 482              	.LFB10:
+ 315:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
+ 316:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 317:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 318:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 319:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 320:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Write8_A1
+ 321:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 322:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 323:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 324:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates a write transaction on the 8-bit 
+ 325:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The write is a posted write, 
+ 326:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
+ 327:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
+ 328:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
+ 329:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 330:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 331:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Data sent on the do_msb[7:0] (most significant byte) 
+ 332:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          and do_lsb[7:0] (least significant byte) pins. do_msb[7:0]
+ 333:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          presents only for 16-bit interface.
+ 334:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 335:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 336:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_Write8_A1(uint8 wrData) 
+ 337:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 483              		.loc 1 337 0
+ 484              		.cfi_startproc
+ 485              		@ args = 0, pretend = 0, frame = 0
+ 486              		@ frame_needed = 0, uses_anonymous_args = 0
+ 487              		@ link register save eliminated.
+ 488              	.LVL32:
+ 489              	.L49:
+ 338:Generated_Source\PSoC5/GraphicLCDIntf.c ****     while((GraphicLCDIntf_STATUS_REG & GraphicLCDIntf_CMD_QUEUE_FULL) != 0u)
+ 490              		.loc 1 338 0 discriminator 1
+ 491 0000 054B     		ldr	r3, .L50
+ 492 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 493 0004 13F0010F 		tst	r3, #1
+ 494 0008 FAD1     		bne	.L49
+ 339:Generated_Source\PSoC5/GraphicLCDIntf.c ****     {
+ 340:Generated_Source\PSoC5/GraphicLCDIntf.c ****         /* Command queue is full */
+ 341:Generated_Source\PSoC5/GraphicLCDIntf.c ****     }   
+ 342:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_CMD_FIFO_REG = 1u;
+ 495              		.loc 1 342 0
+ 496 000a 0122     		movs	r2, #1
+ 497 000c 034B     		ldr	r3, .L50+4
+ 498 000e 1A70     		strb	r2, [r3]
+ 343:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #if (GraphicLCDIntf_BUS_WIDTH == 16u)
+ 344:Generated_Source\PSoC5/GraphicLCDIntf.c ****         CY_SET_REG16(GraphicLCDIntf_DATA_FIFO_PTR, wrData);
+ 345:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #else /* 8-bit interface */
+ 346:Generated_Source\PSoC5/GraphicLCDIntf.c ****         GraphicLCDIntf_DATA_FIFO_REG = wrData;
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 16
 
 
- 326:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 327:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 328:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 329:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 330:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_WriteM8_A1
- 331:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 332:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 333:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 334:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple data write transactions on the 8-bit 
- 335:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The write is a posted write, 
- 336:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
- 337:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
- 338:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
- 339:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 340:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 341:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Pointer to the the first element of a data buffer sent on the 
- 342:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] (most significant byte) and do_lsb[7:0] (least significant
- 343:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          byte) pins. do_msb[7:0] presents only for 16-bit interface.
- 344:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 345:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to write.
- 346:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 347:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 348:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_WriteM8_A1(uint8 wrData[], int num) 
- 349:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 413              		.loc 1 349 0
- 414              		.cfi_startproc
- 415              		@ args = 0, pretend = 0, frame = 0
- 416              		@ frame_needed = 0, uses_anonymous_args = 0
- 417              	.LVL20:
- 418 0000 08B5     		push	{r3, lr}
- 419              		.cfi_def_cfa_offset 8
- 420              		.cfi_offset 3, -8
- 421              		.cfi_offset 14, -4
- 350:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_WriteM8(1u, wrData, (uint16)num);
- 422              		.loc 1 350 0
- 423 0002 8AB2     		uxth	r2, r1
- 424 0004 0146     		mov	r1, r0
- 425              	.LVL21:
- 426 0006 0120     		movs	r0, #1
- 427              	.LVL22:
- 428 0008 FFF7FEFF 		bl	GraphicLCDIntf_WriteM8
- 429              	.LVL23:
- 430 000c 08BD     		pop	{r3, pc}
- 431              		.cfi_endproc
- 432              	.LFE11:
- 433              		.size	GraphicLCDIntf_WriteM8_A1, .-GraphicLCDIntf_WriteM8_A1
- 434 000e 00BF     		.section	.text.GraphicLCDIntf_Read8_A1,"ax",%progbits
- 435              		.align	2
- 436              		.global	GraphicLCDIntf_Read8_A1
- 437              		.thumb
- 438              		.thumb_func
- 439              		.type	GraphicLCDIntf_Read8_A1, %function
- 440              	GraphicLCDIntf_Read8_A1:
- 441              	.LFB12:
- 351:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 352:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
- 353:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 15
-
-
- 354:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 355:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Read8_A1
- 356:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
- 357:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 358:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 359:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates data read transaction on the 8-bit 
- 360:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The read will execute after 
- 361:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  all currently posted writes have completed. This function will wait until 
- 362:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  the read completes and then returns the read value.
- 363:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 364:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Return:
- 365:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The 16-bit read value from the di_msb[7:0] (most significant byte) and 
- 366:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  di_lsb[7:0] (least significant byte) pins for the 16-bit interface or the 
- 367:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  8-bit read value from the di_lsb[7:0] for 8-bit interface.
+ 499              		.loc 1 346 0
+ 500 0010 1033     		adds	r3, r3, #16
+ 501 0012 1870     		strb	r0, [r3]
+ 502 0014 7047     		bx	lr
+ 503              	.L51:
+ 504 0016 00BF     		.align	2
+ 505              	.L50:
+ 506 0018 63640040 		.word	1073767523
+ 507 001c 42640040 		.word	1073767490
+ 508              		.cfi_endproc
+ 509              	.LFE10:
+ 510              		.size	GraphicLCDIntf_Write8_A1, .-GraphicLCDIntf_Write8_A1
+ 511              		.section	.text.GraphicLCDIntf_WriteM8_A0,"ax",%progbits
+ 512              		.align	2
+ 513              		.global	GraphicLCDIntf_WriteM8_A0
+ 514              		.thumb
+ 515              		.thumb_func
+ 516              		.type	GraphicLCDIntf_WriteM8_A0, %function
+ 517              	GraphicLCDIntf_WriteM8_A0:
+ 518              	.LFB11:
+ 347:Generated_Source\PSoC5/GraphicLCDIntf.c ****     #endif /* GraphicLCDIntf_BUS_WIDTH == 16u */
+ 348:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 349:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 350:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 351:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 352:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_WriteM8_A0
+ 353:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 354:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 355:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 356:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple write transactions on the 8-bit 
+ 357:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 0. The write is a posted write, 
+ 358:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
+ 359:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
+ 360:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
+ 361:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 362:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 363:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Pointer to the the first element of a data buffer sent on the 
+ 364:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] (most significant byte) and do_lsb[7:0] (least significant
+ 365:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          byte) pins. do_msb[7:0] presents only for 16-bit interface.
+ 366:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 367:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to write.
  368:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
  369:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 370:Generated_Source\PSoC5/GraphicLCDIntf.c **** uint8 GraphicLCDIntf_Read8_A1(void) 
+ 370:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_WriteM8_A0(uint8 wrData[], int num) 
  371:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 442              		.loc 1 371 0
- 443              		.cfi_startproc
- 444              		@ args = 0, pretend = 0, frame = 0
- 445              		@ frame_needed = 0, uses_anonymous_args = 0
- 446 0000 08B5     		push	{r3, lr}
- 447              		.cfi_def_cfa_offset 8
- 448              		.cfi_offset 3, -8
- 449              		.cfi_offset 14, -4
- 372:Generated_Source\PSoC5/GraphicLCDIntf.c ****     return GraphicLCDIntf_Read8(1u);
- 450              		.loc 1 372 0
- 451 0002 0120     		movs	r0, #1
- 452 0004 FFF7FEFF 		bl	GraphicLCDIntf_Read8
- 453              	.LVL24:
+ 519              		.loc 1 371 0
+ 520              		.cfi_startproc
+ 521              		@ args = 0, pretend = 0, frame = 0
+ 522              		@ frame_needed = 0, uses_anonymous_args = 0
+ 523              	.LVL33:
+ 524 0000 08B5     		push	{r3, lr}
+ 525              		.cfi_def_cfa_offset 8
+ 526              		.cfi_offset 3, -8
+ 527              		.cfi_offset 14, -4
+ 372:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_WriteM8(0u, wrData, (uint16)num);
+ 528              		.loc 1 372 0
+ 529 0002 8AB2     		uxth	r2, r1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 17
+
+
+ 530 0004 0146     		mov	r1, r0
+ 531              	.LVL34:
+ 532 0006 0020     		movs	r0, #0
+ 533              	.LVL35:
+ 534 0008 FFF7FEFF 		bl	GraphicLCDIntf_WriteM8
+ 535              	.LVL36:
+ 536 000c 08BD     		pop	{r3, pc}
+ 537              		.cfi_endproc
+ 538              	.LFE11:
+ 539              		.size	GraphicLCDIntf_WriteM8_A0, .-GraphicLCDIntf_WriteM8_A0
+ 540 000e 00BF     		.section	.text.GraphicLCDIntf_WriteM8_A1,"ax",%progbits
+ 541              		.align	2
+ 542              		.global	GraphicLCDIntf_WriteM8_A1
+ 543              		.thumb
+ 544              		.thumb_func
+ 545              		.type	GraphicLCDIntf_WriteM8_A1, %function
+ 546              	GraphicLCDIntf_WriteM8_A1:
+ 547              	.LFB12:
  373:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
- 454              		.loc 1 373 0
- 455 0008 08BD     		pop	{r3, pc}
- 456              		.cfi_endproc
- 457              	.LFE12:
- 458              		.size	GraphicLCDIntf_Read8_A1, .-GraphicLCDIntf_Read8_A1
- 459 000a 00BF     		.section	.text.GraphicLCDIntf_ReadM8_A1,"ax",%progbits
- 460              		.align	2
- 461              		.global	GraphicLCDIntf_ReadM8_A1
- 462              		.thumb
- 463              		.thumb_func
- 464              		.type	GraphicLCDIntf_ReadM8_A1, %function
- 465              	GraphicLCDIntf_ReadM8_A1:
- 466              	.LFB13:
  374:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
  375:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
  376:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
- 377:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_ReadM8_A1
+ 377:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_WriteM8_A1
  378:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
  379:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
  380:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
- 381:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple data read transactions on the 8-bit 
- 382:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The read will execute after all 
- 383:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  currently posted writes have completed. This function will wait until the 
- 384:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  read completes and then returns the read value.
- 385:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 16
+ 381:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple data write transactions on the 8-bit 
+ 382:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The write is a posted write, 
+ 383:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  so this function will return before the write has actually completed on the 
+ 384:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  interface. If the command queue is full, this function will not return until
+ 385:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  space is availale to queue this write request.
+ 386:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 387:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 388:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  wrData: Pointer to the the first element of a data buffer sent on the 
+ 389:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          do_msb[7:0] (most significant byte) and do_lsb[7:0] (least significant
+ 390:Generated_Source\PSoC5/GraphicLCDIntf.c **** *          byte) pins. do_msb[7:0] presents only for 16-bit interface.
+ 391:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 392:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to write.
+ 393:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 394:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 395:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_WriteM8_A1(uint8 wrData[], int num) 
+ 396:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 548              		.loc 1 396 0
+ 549              		.cfi_startproc
+ 550              		@ args = 0, pretend = 0, frame = 0
+ 551              		@ frame_needed = 0, uses_anonymous_args = 0
+ 552              	.LVL37:
+ 553 0000 08B5     		push	{r3, lr}
+ 554              		.cfi_def_cfa_offset 8
+ 555              		.cfi_offset 3, -8
+ 556              		.cfi_offset 14, -4
+ 397:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_WriteM8(1u, wrData, (uint16)num);
+ 557              		.loc 1 397 0
+ 558 0002 8AB2     		uxth	r2, r1
+ 559 0004 0146     		mov	r1, r0
+ 560              	.LVL38:
+ 561 0006 0120     		movs	r0, #1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 18
 
 
- 386:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
- 387:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  rdData: Pointer to the the first element of a data buffer read from the do_msb[7:0]
- 388:Generated_Source\PSoC5/GraphicLCDIntf.c **** *        (most significant byte) and do_lsb[7:0] (least significant byte) pins. 
- 389:Generated_Source\PSoC5/GraphicLCDIntf.c **** *        do_msb[7:0] presents only for 16-bit interface.
- 390:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 391:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to read.
- 392:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
- 393:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
- 394:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_ReadM8_A1(uint8 rdData[], int num) 
- 395:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
- 467              		.loc 1 395 0
- 468              		.cfi_startproc
- 469              		@ args = 0, pretend = 0, frame = 0
- 470              		@ frame_needed = 0, uses_anonymous_args = 0
- 471              	.LVL25:
- 472 0000 08B5     		push	{r3, lr}
- 473              		.cfi_def_cfa_offset 8
- 474              		.cfi_offset 3, -8
- 475              		.cfi_offset 14, -4
- 396:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_ReadM8(1u, rdData, (uint16)num);
- 476              		.loc 1 396 0
- 477 0002 8AB2     		uxth	r2, r1
- 478 0004 0146     		mov	r1, r0
- 479              	.LVL26:
- 480 0006 0120     		movs	r0, #1
- 481              	.LVL27:
- 482 0008 FFF7FEFF 		bl	GraphicLCDIntf_ReadM8
- 483              	.LVL28:
- 484 000c 08BD     		pop	{r3, pc}
- 485              		.cfi_endproc
- 486              	.LFE13:
- 487              		.size	GraphicLCDIntf_ReadM8_A1, .-GraphicLCDIntf_ReadM8_A1
- 488              		.global	GraphicLCDIntf_initVar
- 489 000e 00BF     		.bss
- 490              		.set	.LANCHOR0,. + 0
- 491              		.type	GraphicLCDIntf_initVar, %object
- 492              		.size	GraphicLCDIntf_initVar, 1
- 493              	GraphicLCDIntf_initVar:
- 494 0000 00       		.space	1
- 495              		.text
- 496              	.Letext0:
- 497              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 498              		.section	.debug_info,"",%progbits
- 499              	.Ldebug_info0:
- 500 0000 8E030000 		.4byte	0x38e
- 501 0004 0400     		.2byte	0x4
- 502 0006 00000000 		.4byte	.Ldebug_abbrev0
- 503 000a 04       		.byte	0x4
- 504 000b 01       		.uleb128 0x1
- 505 000c 8F020000 		.4byte	.LASF32
- 506 0010 0C       		.byte	0xc
- 507 0011 89010000 		.4byte	.LASF33
- 508 0015 2F010000 		.4byte	.LASF34
- 509 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 510 001d 00000000 		.4byte	0
- 511 0021 00000000 		.4byte	.Ldebug_line0
- 512 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 17
+ 562              	.LVL39:
+ 563 0008 FFF7FEFF 		bl	GraphicLCDIntf_WriteM8
+ 564              	.LVL40:
+ 565 000c 08BD     		pop	{r3, pc}
+ 566              		.cfi_endproc
+ 567              	.LFE12:
+ 568              		.size	GraphicLCDIntf_WriteM8_A1, .-GraphicLCDIntf_WriteM8_A1
+ 569 000e 00BF     		.section	.text.GraphicLCDIntf_Read8_A1,"ax",%progbits
+ 570              		.align	2
+ 571              		.global	GraphicLCDIntf_Read8_A1
+ 572              		.thumb
+ 573              		.thumb_func
+ 574              		.type	GraphicLCDIntf_Read8_A1, %function
+ 575              	GraphicLCDIntf_Read8_A1:
+ 576              	.LFB13:
+ 398:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 399:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 400:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 401:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 402:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_Read8_A1
+ 403:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 404:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 405:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 406:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates data read transaction on the 8-bit 
+ 407:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The read will execute after 
+ 408:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  all currently posted writes have completed. This function will wait until 
+ 409:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  the read completes and then returns the read value.
+ 410:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 411:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Return:
+ 412:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  The 16-bit read value from the di_msb[7:0] (most significant byte) and 
+ 413:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  di_lsb[7:0] (least significant byte) pins for the 16-bit interface or the 
+ 414:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  8-bit read value from the di_lsb[7:0] for 8-bit interface.
+ 415:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 416:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 417:Generated_Source\PSoC5/GraphicLCDIntf.c **** uint8 GraphicLCDIntf_Read8_A1(void) 
+ 418:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 577              		.loc 1 418 0
+ 578              		.cfi_startproc
+ 579              		@ args = 0, pretend = 0, frame = 0
+ 580              		@ frame_needed = 0, uses_anonymous_args = 0
+ 581 0000 08B5     		push	{r3, lr}
+ 582              		.cfi_def_cfa_offset 8
+ 583              		.cfi_offset 3, -8
+ 584              		.cfi_offset 14, -4
+ 419:Generated_Source\PSoC5/GraphicLCDIntf.c ****     return GraphicLCDIntf_Read8(1u);
+ 585              		.loc 1 419 0
+ 586 0002 0120     		movs	r0, #1
+ 587 0004 FFF7FEFF 		bl	GraphicLCDIntf_Read8
+ 588              	.LVL41:
+ 420:Generated_Source\PSoC5/GraphicLCDIntf.c **** }
+ 589              		.loc 1 420 0
+ 590 0008 08BD     		pop	{r3, pc}
+ 591              		.cfi_endproc
+ 592              	.LFE13:
+ 593              		.size	GraphicLCDIntf_Read8_A1, .-GraphicLCDIntf_Read8_A1
+ 594 000a 00BF     		.section	.text.GraphicLCDIntf_ReadM8_A1,"ax",%progbits
+ 595              		.align	2
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 19
 
 
- 513 0026 01       		.byte	0x1
- 514 0027 06       		.byte	0x6
- 515 0028 D4010000 		.4byte	.LASF0
- 516 002c 02       		.uleb128 0x2
- 517 002d 01       		.byte	0x1
- 518 002e 08       		.byte	0x8
- 519 002f B1010000 		.4byte	.LASF1
- 520 0033 02       		.uleb128 0x2
- 521 0034 02       		.byte	0x2
- 522 0035 05       		.byte	0x5
- 523 0036 2D000000 		.4byte	.LASF2
- 524 003a 02       		.uleb128 0x2
- 525 003b 02       		.byte	0x2
- 526 003c 07       		.byte	0x7
- 527 003d 1A020000 		.4byte	.LASF3
- 528 0041 02       		.uleb128 0x2
- 529 0042 04       		.byte	0x4
- 530 0043 05       		.byte	0x5
- 531 0044 80010000 		.4byte	.LASF4
- 532 0048 02       		.uleb128 0x2
- 533 0049 04       		.byte	0x4
- 534 004a 07       		.byte	0x7
- 535 004b 45020000 		.4byte	.LASF5
- 536 004f 02       		.uleb128 0x2
- 537 0050 08       		.byte	0x8
- 538 0051 05       		.byte	0x5
- 539 0052 0C010000 		.4byte	.LASF6
- 540 0056 02       		.uleb128 0x2
- 541 0057 08       		.byte	0x8
- 542 0058 07       		.byte	0x7
- 543 0059 E0010000 		.4byte	.LASF7
- 544 005d 03       		.uleb128 0x3
- 545 005e 04       		.byte	0x4
- 546 005f 05       		.byte	0x5
- 547 0060 696E7400 		.ascii	"int\000"
- 548 0064 02       		.uleb128 0x2
- 549 0065 04       		.byte	0x4
- 550 0066 07       		.byte	0x7
- 551 0067 F7010000 		.4byte	.LASF8
- 552 006b 04       		.uleb128 0x4
- 553 006c B7000000 		.4byte	.LASF9
- 554 0070 02       		.byte	0x2
- 555 0071 3801     		.2byte	0x138
- 556 0073 2C000000 		.4byte	0x2c
- 557 0077 04       		.uleb128 0x4
- 558 0078 B0000000 		.4byte	.LASF10
- 559 007c 02       		.byte	0x2
- 560 007d 3901     		.2byte	0x139
- 561 007f 3A000000 		.4byte	0x3a
- 562 0083 04       		.uleb128 0x4
- 563 0084 39020000 		.4byte	.LASF11
- 564 0088 02       		.byte	0x2
- 565 0089 3A01     		.2byte	0x13a
- 566 008b 48000000 		.4byte	0x48
- 567 008f 02       		.uleb128 0x2
- 568 0090 04       		.byte	0x4
- 569 0091 04       		.byte	0x4
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 18
+ 596              		.global	GraphicLCDIntf_ReadM8_A1
+ 597              		.thumb
+ 598              		.thumb_func
+ 599              		.type	GraphicLCDIntf_ReadM8_A1, %function
+ 600              	GraphicLCDIntf_ReadM8_A1:
+ 601              	.LFB14:
+ 421:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 422:Generated_Source\PSoC5/GraphicLCDIntf.c **** 
+ 423:Generated_Source\PSoC5/GraphicLCDIntf.c **** /*******************************************************************************
+ 424:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Function Name: GraphicLCDIntf_ReadM8_A1
+ 425:Generated_Source\PSoC5/GraphicLCDIntf.c **** ********************************************************************************
+ 426:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 427:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Summary:
+ 428:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  Initiates multiple data read transactions on the 8-bit 
+ 429:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  parallel interface with the d_c pin set to 1. The read will execute after all 
+ 430:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  currently posted writes have completed. This function will wait until the 
+ 431:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  read completes and then returns the read value.
+ 432:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 433:Generated_Source\PSoC5/GraphicLCDIntf.c **** * Parameters:
+ 434:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  rdData: Pointer to the the first element of a data buffer read from the do_msb[7:0]
+ 435:Generated_Source\PSoC5/GraphicLCDIntf.c **** *        (most significant byte) and do_lsb[7:0] (least significant byte) pins. 
+ 436:Generated_Source\PSoC5/GraphicLCDIntf.c **** *        do_msb[7:0] presents only for 16-bit interface.
+ 437:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 438:Generated_Source\PSoC5/GraphicLCDIntf.c **** *  num:  Number of words/bytes to read.
+ 439:Generated_Source\PSoC5/GraphicLCDIntf.c **** *
+ 440:Generated_Source\PSoC5/GraphicLCDIntf.c **** *******************************************************************************/
+ 441:Generated_Source\PSoC5/GraphicLCDIntf.c **** void GraphicLCDIntf_ReadM8_A1(uint8 rdData[], int num) 
+ 442:Generated_Source\PSoC5/GraphicLCDIntf.c **** {
+ 602              		.loc 1 442 0
+ 603              		.cfi_startproc
+ 604              		@ args = 0, pretend = 0, frame = 0
+ 605              		@ frame_needed = 0, uses_anonymous_args = 0
+ 606              	.LVL42:
+ 607 0000 08B5     		push	{r3, lr}
+ 608              		.cfi_def_cfa_offset 8
+ 609              		.cfi_offset 3, -8
+ 610              		.cfi_offset 14, -4
+ 443:Generated_Source\PSoC5/GraphicLCDIntf.c ****     GraphicLCDIntf_ReadM8(1u, rdData, (uint16)num);
+ 611              		.loc 1 443 0
+ 612 0002 8AB2     		uxth	r2, r1
+ 613 0004 0146     		mov	r1, r0
+ 614              	.LVL43:
+ 615 0006 0120     		movs	r0, #1
+ 616              	.LVL44:
+ 617 0008 FFF7FEFF 		bl	GraphicLCDIntf_ReadM8
+ 618              	.LVL45:
+ 619 000c 08BD     		pop	{r3, pc}
+ 620              		.cfi_endproc
+ 621              	.LFE14:
+ 622              		.size	GraphicLCDIntf_ReadM8_A1, .-GraphicLCDIntf_ReadM8_A1
+ 623              		.global	GraphicLCDIntf_initVar
+ 624 000e 00BF     		.section	.rodata
+ 625              		.align	2
+ 626              		.set	.LANCHOR1,. + 0
+ 627              	.LC0:
+ 628 0000 02       		.byte	2
+ 629 0001 28       		.byte	40
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 20
 
 
- 570 0092 D4000000 		.4byte	.LASF12
- 571 0096 02       		.uleb128 0x2
- 572 0097 08       		.byte	0x8
- 573 0098 04       		.byte	0x4
- 574 0099 57020000 		.4byte	.LASF13
- 575 009d 02       		.uleb128 0x2
- 576 009e 01       		.byte	0x1
- 577 009f 08       		.byte	0x8
- 578 00a0 2D020000 		.4byte	.LASF14
- 579 00a4 04       		.uleb128 0x4
- 580 00a5 40020000 		.4byte	.LASF15
- 581 00a9 02       		.byte	0x2
- 582 00aa E201     		.2byte	0x1e2
- 583 00ac B0000000 		.4byte	0xb0
- 584 00b0 05       		.uleb128 0x5
- 585 00b1 6B000000 		.4byte	0x6b
- 586 00b5 06       		.uleb128 0x6
- 587 00b6 04020000 		.4byte	.LASF16
- 588 00ba 01       		.byte	0x1
- 589 00bb 22       		.byte	0x22
- 590 00bc 00000000 		.4byte	.LFB0
- 591 00c0 02000000 		.4byte	.LFE0-.LFB0
- 592 00c4 01       		.uleb128 0x1
- 593 00c5 9C       		.byte	0x9c
- 594 00c6 06       		.uleb128 0x6
- 595 00c7 19000000 		.4byte	.LASF17
- 596 00cb 01       		.byte	0x1
- 597 00cc 30       		.byte	0x30
- 598 00cd 00000000 		.4byte	.LFB1
- 599 00d1 14000000 		.4byte	.LFE1-.LFB1
- 600 00d5 01       		.uleb128 0x1
- 601 00d6 9C       		.byte	0x9c
- 602 00d7 07       		.uleb128 0x7
- 603 00d8 BF010000 		.4byte	.LASF19
- 604 00dc 01       		.byte	0x1
- 605 00dd 44       		.byte	0x44
- 606 00de 00000000 		.4byte	.LFB2
- 607 00e2 18000000 		.4byte	.LFE2-.LFB2
- 608 00e6 01       		.uleb128 0x1
- 609 00e7 9C       		.byte	0x9c
- 610 00e8 F6000000 		.4byte	0xf6
- 611 00ec 08       		.uleb128 0x8
- 612 00ed 0C000000 		.4byte	.LVL0
- 613 00f1 C6000000 		.4byte	0xc6
- 614 00f5 00       		.byte	0
- 615 00f6 06       		.uleb128 0x6
- 616 00f7 74020000 		.4byte	.LASF18
- 617 00fb 01       		.byte	0x1
- 618 00fc 58       		.byte	0x58
- 619 00fd 00000000 		.4byte	.LFB3
- 620 0101 02000000 		.4byte	.LFE3-.LFB3
- 621 0105 01       		.uleb128 0x1
- 622 0106 9C       		.byte	0x9c
- 623 0107 07       		.uleb128 0x7
- 624 0108 5E020000 		.4byte	.LASF20
- 625 010c 01       		.byte	0x1
- 626 010d 71       		.byte	0x71
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 19
+ 630 0002 51       		.byte	81
+ 631 0003 00       		.space	1
+ 632              	.LC1:
+ 633 0004 FF       		.byte	-1
+ 634 0005 BF       		.byte	-65
+ 635 0006 00       		.byte	0
+ 636 0007 00       		.space	1
+ 637              	.LC2:
+ 638 0008 FF       		.byte	-1
+ 639 0009 FF       		.byte	-1
+ 640 000a FF       		.byte	-1
+ 641              		.bss
+ 642              		.set	.LANCHOR0,. + 0
+ 643              		.type	GraphicLCDIntf_initVar, %object
+ 644              		.size	GraphicLCDIntf_initVar, 1
+ 645              	GraphicLCDIntf_initVar:
+ 646 0000 00       		.space	1
+ 647              		.text
+ 648              	.Letext0:
+ 649              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 650              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 651              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
+ 652              		.section	.debug_info,"",%progbits
+ 653              	.Ldebug_info0:
+ 654 0000 70040000 		.4byte	0x470
+ 655 0004 0400     		.2byte	0x4
+ 656 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 657 000a 04       		.byte	0x4
+ 658 000b 01       		.uleb128 0x1
+ 659 000c BB020000 		.4byte	.LASF40
+ 660 0010 0C       		.byte	0xc
+ 661 0011 A1010000 		.4byte	.LASF41
+ 662 0015 3D010000 		.4byte	.LASF42
+ 663 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 664 001d 00000000 		.4byte	0
+ 665 0021 00000000 		.4byte	.Ldebug_line0
+ 666 0025 02       		.uleb128 0x2
+ 667 0026 01       		.byte	0x1
+ 668 0027 06       		.byte	0x6
+ 669 0028 EC010000 		.4byte	.LASF0
+ 670 002c 03       		.uleb128 0x3
+ 671 002d 97010000 		.4byte	.LASF9
+ 672 0031 02       		.byte	0x2
+ 673 0032 1D       		.byte	0x1d
+ 674 0033 37000000 		.4byte	0x37
+ 675 0037 02       		.uleb128 0x2
+ 676 0038 01       		.byte	0x1
+ 677 0039 08       		.byte	0x8
+ 678 003a C9010000 		.4byte	.LASF1
+ 679 003e 02       		.uleb128 0x2
+ 680 003f 02       		.byte	0x2
+ 681 0040 05       		.byte	0x5
+ 682 0041 2D000000 		.4byte	.LASF2
+ 683 0045 02       		.uleb128 0x2
+ 684 0046 02       		.byte	0x2
+ 685 0047 07       		.byte	0x7
+ 686 0048 32020000 		.4byte	.LASF3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 21
 
 
- 627 010e 00000000 		.4byte	.LFB4
- 628 0112 1C000000 		.4byte	.LFE4-.LFB4
- 629 0116 01       		.uleb128 0x1
- 630 0117 9C       		.byte	0x9c
- 631 0118 37010000 		.4byte	0x137
- 632 011c 09       		.uleb128 0x9
- 633 011d 645F6300 		.ascii	"d_c\000"
- 634 0121 01       		.byte	0x1
- 635 0122 71       		.byte	0x71
- 636 0123 6B000000 		.4byte	0x6b
- 637 0127 01       		.uleb128 0x1
- 638 0128 50       		.byte	0x50
- 639 0129 0A       		.uleb128 0xa
- 640 012a 32020000 		.4byte	.LASF21
- 641 012e 01       		.byte	0x1
- 642 012f 71       		.byte	0x71
- 643 0130 6B000000 		.4byte	0x6b
- 644 0134 01       		.uleb128 0x1
- 645 0135 51       		.byte	0x51
- 646 0136 00       		.byte	0
- 647 0137 07       		.uleb128 0x7
- 648 0138 4F000000 		.4byte	.LASF22
- 649 013c 01       		.byte	0x1
- 650 013d 95       		.byte	0x95
- 651 013e 00000000 		.4byte	.LFB5
- 652 0142 2C000000 		.4byte	.LFE5-.LFB5
- 653 0146 01       		.uleb128 0x1
- 654 0147 9C       		.byte	0x9c
- 655 0148 81010000 		.4byte	0x181
- 656 014c 09       		.uleb128 0x9
- 657 014d 645F6300 		.ascii	"d_c\000"
- 658 0151 01       		.byte	0x1
- 659 0152 95       		.byte	0x95
- 660 0153 6B000000 		.4byte	0x6b
- 661 0157 01       		.uleb128 0x1
- 662 0158 50       		.byte	0x50
- 663 0159 0A       		.uleb128 0xa
- 664 015a 32020000 		.4byte	.LASF21
- 665 015e 01       		.byte	0x1
- 666 015f 95       		.byte	0x95
- 667 0160 81010000 		.4byte	0x181
- 668 0164 01       		.uleb128 0x1
- 669 0165 51       		.byte	0x51
- 670 0166 09       		.uleb128 0x9
- 671 0167 6E756D00 		.ascii	"num\000"
- 672 016b 01       		.byte	0x1
- 673 016c 95       		.byte	0x95
- 674 016d 77000000 		.4byte	0x77
- 675 0171 01       		.uleb128 0x1
- 676 0172 52       		.byte	0x52
- 677 0173 0B       		.uleb128 0xb
- 678 0174 6900     		.ascii	"i\000"
- 679 0176 01       		.byte	0x1
- 680 0177 97       		.byte	0x97
- 681 0178 83000000 		.4byte	0x83
- 682 017c 00000000 		.4byte	.LLST0
- 683 0180 00       		.byte	0
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 20
+ 687 004c 02       		.uleb128 0x2
+ 688 004d 04       		.byte	0x4
+ 689 004e 05       		.byte	0x5
+ 690 004f 8E010000 		.4byte	.LASF4
+ 691 0053 02       		.uleb128 0x2
+ 692 0054 04       		.byte	0x4
+ 693 0055 07       		.byte	0x7
+ 694 0056 63020000 		.4byte	.LASF5
+ 695 005a 02       		.uleb128 0x2
+ 696 005b 08       		.byte	0x8
+ 697 005c 05       		.byte	0x5
+ 698 005d 1A010000 		.4byte	.LASF6
+ 699 0061 02       		.uleb128 0x2
+ 700 0062 08       		.byte	0x8
+ 701 0063 07       		.byte	0x7
+ 702 0064 F8010000 		.4byte	.LASF7
+ 703 0068 04       		.uleb128 0x4
+ 704 0069 04       		.byte	0x4
+ 705 006a 05       		.byte	0x5
+ 706 006b 696E7400 		.ascii	"int\000"
+ 707 006f 02       		.uleb128 0x2
+ 708 0070 04       		.byte	0x4
+ 709 0071 07       		.byte	0x7
+ 710 0072 0F020000 		.4byte	.LASF8
+ 711 0076 03       		.uleb128 0x3
+ 712 0077 BD000000 		.4byte	.LASF10
+ 713 007b 03       		.byte	0x3
+ 714 007c 18       		.byte	0x18
+ 715 007d 2C000000 		.4byte	0x2c
+ 716 0081 05       		.uleb128 0x5
+ 717 0082 C5000000 		.4byte	.LASF11
+ 718 0086 04       		.byte	0x4
+ 719 0087 3801     		.2byte	0x138
+ 720 0089 37000000 		.4byte	0x37
+ 721 008d 05       		.uleb128 0x5
+ 722 008e B6000000 		.4byte	.LASF12
+ 723 0092 04       		.byte	0x4
+ 724 0093 3901     		.2byte	0x139
+ 725 0095 45000000 		.4byte	0x45
+ 726 0099 05       		.uleb128 0x5
+ 727 009a 57020000 		.4byte	.LASF13
+ 728 009e 04       		.byte	0x4
+ 729 009f 3A01     		.2byte	0x13a
+ 730 00a1 53000000 		.4byte	0x53
+ 731 00a5 02       		.uleb128 0x2
+ 732 00a6 04       		.byte	0x4
+ 733 00a7 04       		.byte	0x4
+ 734 00a8 E2000000 		.4byte	.LASF14
+ 735 00ac 02       		.uleb128 0x2
+ 736 00ad 08       		.byte	0x8
+ 737 00ae 04       		.byte	0x4
+ 738 00af 75020000 		.4byte	.LASF15
+ 739 00b3 02       		.uleb128 0x2
+ 740 00b4 01       		.byte	0x1
+ 741 00b5 08       		.byte	0x8
+ 742 00b6 45020000 		.4byte	.LASF16
+ 743 00ba 05       		.uleb128 0x5
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 22
 
 
- 684 0181 0C       		.uleb128 0xc
- 685 0182 04       		.byte	0x4
- 686 0183 6B000000 		.4byte	0x6b
- 687 0187 0D       		.uleb128 0xd
- 688 0188 1A010000 		.4byte	.LASF29
- 689 018c 01       		.byte	0x1
- 690 018d BC       		.byte	0xbc
- 691 018e 6B000000 		.4byte	0x6b
- 692 0192 00000000 		.4byte	.LFB6
- 693 0196 30000000 		.4byte	.LFE6-.LFB6
- 694 019a 01       		.uleb128 0x1
- 695 019b 9C       		.byte	0x9c
- 696 019c B0010000 		.4byte	0x1b0
- 697 01a0 0E       		.uleb128 0xe
- 698 01a1 645F6300 		.ascii	"d_c\000"
- 699 01a5 01       		.byte	0x1
- 700 01a6 BC       		.byte	0xbc
- 701 01a7 6B000000 		.4byte	0x6b
- 702 01ab 1F000000 		.4byte	.LLST1
- 703 01af 00       		.byte	0
- 704 01b0 07       		.uleb128 0x7
- 705 01b1 66000000 		.4byte	.LASF23
- 706 01b5 01       		.byte	0x1
- 707 01b6 E5       		.byte	0xe5
- 708 01b7 00000000 		.4byte	.LFB7
- 709 01bb 1C000000 		.4byte	.LFE7-.LFB7
- 710 01bf 01       		.uleb128 0x1
- 711 01c0 9C       		.byte	0x9c
- 712 01c1 10020000 		.4byte	0x210
- 713 01c5 0E       		.uleb128 0xe
- 714 01c6 645F6300 		.ascii	"d_c\000"
- 715 01ca 01       		.byte	0x1
- 716 01cb E5       		.byte	0xe5
- 717 01cc 6B000000 		.4byte	0x6b
- 718 01d0 40000000 		.4byte	.LLST2
- 719 01d4 0F       		.uleb128 0xf
- 720 01d5 88020000 		.4byte	.LASF24
- 721 01d9 01       		.byte	0x1
- 722 01da E5       		.byte	0xe5
- 723 01db 81010000 		.4byte	0x181
- 724 01df 61000000 		.4byte	.LLST3
- 725 01e3 0E       		.uleb128 0xe
- 726 01e4 6E756D00 		.ascii	"num\000"
- 727 01e8 01       		.byte	0x1
- 728 01e9 E5       		.byte	0xe5
- 729 01ea 77000000 		.4byte	0x77
- 730 01ee 7F000000 		.4byte	.LLST4
- 731 01f2 0B       		.uleb128 0xb
- 732 01f3 6900     		.ascii	"i\000"
- 733 01f5 01       		.byte	0x1
- 734 01f6 E7       		.byte	0xe7
- 735 01f7 83000000 		.4byte	0x83
- 736 01fb A0000000 		.4byte	.LLST5
- 737 01ff 10       		.uleb128 0x10
- 738 0200 12000000 		.4byte	.LVL12
- 739 0204 87010000 		.4byte	0x187
- 740 0208 11       		.uleb128 0x11
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 21
+ 744 00bb 5E020000 		.4byte	.LASF17
+ 745 00bf 04       		.byte	0x4
+ 746 00c0 E201     		.2byte	0x1e2
+ 747 00c2 C6000000 		.4byte	0xc6
+ 748 00c6 06       		.uleb128 0x6
+ 749 00c7 81000000 		.4byte	0x81
+ 750 00cb 07       		.uleb128 0x7
+ 751 00cc 1C020000 		.4byte	.LASF18
+ 752 00d0 01       		.byte	0x1
+ 753 00d1 22       		.byte	0x22
+ 754 00d2 00000000 		.4byte	.LFB0
+ 755 00d6 02000000 		.4byte	.LFE0-.LFB0
+ 756 00da 01       		.uleb128 0x1
+ 757 00db 9C       		.byte	0x9c
+ 758 00dc 07       		.uleb128 0x7
+ 759 00dd 19000000 		.4byte	.LASF19
+ 760 00e1 01       		.byte	0x1
+ 761 00e2 30       		.byte	0x30
+ 762 00e3 00000000 		.4byte	.LFB1
+ 763 00e7 14000000 		.4byte	.LFE1-.LFB1
+ 764 00eb 01       		.uleb128 0x1
+ 765 00ec 9C       		.byte	0x9c
+ 766 00ed 08       		.uleb128 0x8
+ 767 00ee D7010000 		.4byte	.LASF21
+ 768 00f2 01       		.byte	0x1
+ 769 00f3 44       		.byte	0x44
+ 770 00f4 00000000 		.4byte	.LFB2
+ 771 00f8 18000000 		.4byte	.LFE2-.LFB2
+ 772 00fc 01       		.uleb128 0x1
+ 773 00fd 9C       		.byte	0x9c
+ 774 00fe 0C010000 		.4byte	0x10c
+ 775 0102 09       		.uleb128 0x9
+ 776 0103 0C000000 		.4byte	.LVL0
+ 777 0107 DC000000 		.4byte	0xdc
+ 778 010b 00       		.byte	0
+ 779 010c 07       		.uleb128 0x7
+ 780 010d 92020000 		.4byte	.LASF20
+ 781 0111 01       		.byte	0x1
+ 782 0112 58       		.byte	0x58
+ 783 0113 00000000 		.4byte	.LFB3
+ 784 0117 02000000 		.4byte	.LFE3-.LFB3
+ 785 011b 01       		.uleb128 0x1
+ 786 011c 9C       		.byte	0x9c
+ 787 011d 08       		.uleb128 0x8
+ 788 011e 7C020000 		.4byte	.LASF22
+ 789 0122 01       		.byte	0x1
+ 790 0123 71       		.byte	0x71
+ 791 0124 00000000 		.4byte	.LFB4
+ 792 0128 1C000000 		.4byte	.LFE4-.LFB4
+ 793 012c 01       		.uleb128 0x1
+ 794 012d 9C       		.byte	0x9c
+ 795 012e 4D010000 		.4byte	0x14d
+ 796 0132 0A       		.uleb128 0xa
+ 797 0133 645F6300 		.ascii	"d_c\000"
+ 798 0137 01       		.byte	0x1
+ 799 0138 71       		.byte	0x71
+ 800 0139 81000000 		.4byte	0x81
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 23
 
 
- 741 0209 01       		.uleb128 0x1
- 742 020a 50       		.byte	0x50
- 743 020b 02       		.uleb128 0x2
- 744 020c 77       		.byte	0x77
- 745 020d 00       		.sleb128 0
- 746 020e 00       		.byte	0
- 747 020f 00       		.byte	0
- 748 0210 12       		.uleb128 0x12
- 749 0211 DA000000 		.4byte	.LASF25
- 750 0215 01       		.byte	0x1
- 751 0216 0101     		.2byte	0x101
- 752 0218 00000000 		.4byte	.LFB8
- 753 021c 20000000 		.4byte	.LFE8-.LFB8
- 754 0220 01       		.uleb128 0x1
- 755 0221 9C       		.byte	0x9c
- 756 0222 35020000 		.4byte	0x235
- 757 0226 13       		.uleb128 0x13
- 758 0227 32020000 		.4byte	.LASF21
- 759 022b 01       		.byte	0x1
- 760 022c 0101     		.2byte	0x101
- 761 022e 6B000000 		.4byte	0x6b
- 762 0232 01       		.uleb128 0x1
- 763 0233 50       		.byte	0x50
- 764 0234 00       		.byte	0
- 765 0235 12       		.uleb128 0x12
- 766 0236 F3000000 		.4byte	.LASF26
- 767 023a 01       		.byte	0x1
- 768 023b 2101     		.2byte	0x121
- 769 023d 00000000 		.4byte	.LFB9
- 770 0241 20000000 		.4byte	.LFE9-.LFB9
- 771 0245 01       		.uleb128 0x1
- 772 0246 9C       		.byte	0x9c
- 773 0247 5A020000 		.4byte	0x25a
- 774 024b 13       		.uleb128 0x13
- 775 024c 32020000 		.4byte	.LASF21
- 776 0250 01       		.byte	0x1
- 777 0251 2101     		.2byte	0x121
- 778 0253 6B000000 		.4byte	0x6b
- 779 0257 01       		.uleb128 0x1
- 780 0258 50       		.byte	0x50
- 781 0259 00       		.byte	0
- 782 025a 12       		.uleb128 0x12
- 783 025b 7C000000 		.4byte	.LASF27
- 784 025f 01       		.byte	0x1
- 785 0260 4301     		.2byte	0x143
- 786 0262 00000000 		.4byte	.LFB10
- 787 0266 0E000000 		.4byte	.LFE10-.LFB10
- 788 026a 01       		.uleb128 0x1
- 789 026b 9C       		.byte	0x9c
- 790 026c AE020000 		.4byte	0x2ae
- 791 0270 14       		.uleb128 0x14
- 792 0271 32020000 		.4byte	.LASF21
- 793 0275 01       		.byte	0x1
- 794 0276 4301     		.2byte	0x143
- 795 0278 81010000 		.4byte	0x181
- 796 027c BF000000 		.4byte	.LLST6
- 797 0280 15       		.uleb128 0x15
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 22
+ 801 013d 01       		.uleb128 0x1
+ 802 013e 50       		.byte	0x50
+ 803 013f 0B       		.uleb128 0xb
+ 804 0140 50020000 		.4byte	.LASF23
+ 805 0144 01       		.byte	0x1
+ 806 0145 71       		.byte	0x71
+ 807 0146 81000000 		.4byte	0x81
+ 808 014a 01       		.uleb128 0x1
+ 809 014b 51       		.byte	0x51
+ 810 014c 00       		.byte	0
+ 811 014d 08       		.uleb128 0x8
+ 812 014e 55000000 		.4byte	.LASF24
+ 813 0152 01       		.byte	0x1
+ 814 0153 95       		.byte	0x95
+ 815 0154 00000000 		.4byte	.LFB5
+ 816 0158 2C000000 		.4byte	.LFE5-.LFB5
+ 817 015c 01       		.uleb128 0x1
+ 818 015d 9C       		.byte	0x9c
+ 819 015e 97010000 		.4byte	0x197
+ 820 0162 0A       		.uleb128 0xa
+ 821 0163 645F6300 		.ascii	"d_c\000"
+ 822 0167 01       		.byte	0x1
+ 823 0168 95       		.byte	0x95
+ 824 0169 81000000 		.4byte	0x81
+ 825 016d 01       		.uleb128 0x1
+ 826 016e 50       		.byte	0x50
+ 827 016f 0B       		.uleb128 0xb
+ 828 0170 50020000 		.4byte	.LASF23
+ 829 0174 01       		.byte	0x1
+ 830 0175 95       		.byte	0x95
+ 831 0176 97010000 		.4byte	0x197
+ 832 017a 01       		.uleb128 0x1
+ 833 017b 51       		.byte	0x51
+ 834 017c 0A       		.uleb128 0xa
+ 835 017d 6E756D00 		.ascii	"num\000"
+ 836 0181 01       		.byte	0x1
+ 837 0182 95       		.byte	0x95
+ 838 0183 8D000000 		.4byte	0x8d
+ 839 0187 01       		.uleb128 0x1
+ 840 0188 52       		.byte	0x52
+ 841 0189 0C       		.uleb128 0xc
+ 842 018a 6900     		.ascii	"i\000"
+ 843 018c 01       		.byte	0x1
+ 844 018d 97       		.byte	0x97
+ 845 018e 99000000 		.4byte	0x99
+ 846 0192 00000000 		.4byte	.LLST0
+ 847 0196 00       		.byte	0
+ 848 0197 0D       		.uleb128 0xd
+ 849 0198 04       		.byte	0x4
+ 850 0199 81000000 		.4byte	0x81
+ 851 019d 08       		.uleb128 0x8
+ 852 019e 49030000 		.4byte	.LASF25
+ 853 01a2 01       		.byte	0x1
+ 854 01a3 AA       		.byte	0xaa
+ 855 01a4 00000000 		.4byte	.LFB6
+ 856 01a8 9C000000 		.4byte	.LFE6-.LFB6
+ 857 01ac 01       		.uleb128 0x1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 24
 
 
- 798 0281 6E756D00 		.ascii	"num\000"
- 799 0285 01       		.byte	0x1
- 800 0286 4301     		.2byte	0x143
- 801 0288 5D000000 		.4byte	0x5d
- 802 028c EB000000 		.4byte	.LLST7
- 803 0290 10       		.uleb128 0x10
- 804 0291 0C000000 		.4byte	.LVL19
- 805 0295 37010000 		.4byte	0x137
- 806 0299 11       		.uleb128 0x11
- 807 029a 01       		.uleb128 0x1
- 808 029b 50       		.byte	0x50
- 809 029c 01       		.uleb128 0x1
- 810 029d 30       		.byte	0x30
- 811 029e 11       		.uleb128 0x11
- 812 029f 01       		.uleb128 0x1
- 813 02a0 51       		.byte	0x51
- 814 02a1 03       		.uleb128 0x3
- 815 02a2 F3       		.byte	0xf3
- 816 02a3 01       		.uleb128 0x1
- 817 02a4 50       		.byte	0x50
- 818 02a5 11       		.uleb128 0x11
- 819 02a6 01       		.uleb128 0x1
- 820 02a7 52       		.byte	0x52
- 821 02a8 03       		.uleb128 0x3
- 822 02a9 F3       		.byte	0xf3
- 823 02aa 01       		.uleb128 0x1
- 824 02ab 51       		.byte	0x51
- 825 02ac 00       		.byte	0
- 826 02ad 00       		.byte	0
- 827 02ae 12       		.uleb128 0x12
- 828 02af 96000000 		.4byte	.LASF28
- 829 02b3 01       		.byte	0x1
- 830 02b4 5C01     		.2byte	0x15c
- 831 02b6 00000000 		.4byte	.LFB11
- 832 02ba 0E000000 		.4byte	.LFE11-.LFB11
- 833 02be 01       		.uleb128 0x1
- 834 02bf 9C       		.byte	0x9c
- 835 02c0 02030000 		.4byte	0x302
- 836 02c4 14       		.uleb128 0x14
- 837 02c5 32020000 		.4byte	.LASF21
- 838 02c9 01       		.byte	0x1
- 839 02ca 5C01     		.2byte	0x15c
- 840 02cc 81010000 		.4byte	0x181
- 841 02d0 0C010000 		.4byte	.LLST8
- 842 02d4 15       		.uleb128 0x15
- 843 02d5 6E756D00 		.ascii	"num\000"
- 844 02d9 01       		.byte	0x1
- 845 02da 5C01     		.2byte	0x15c
- 846 02dc 5D000000 		.4byte	0x5d
- 847 02e0 38010000 		.4byte	.LLST9
- 848 02e4 10       		.uleb128 0x10
- 849 02e5 0C000000 		.4byte	.LVL23
- 850 02e9 37010000 		.4byte	0x137
- 851 02ed 11       		.uleb128 0x11
- 852 02ee 01       		.uleb128 0x1
- 853 02ef 50       		.byte	0x50
- 854 02f0 01       		.uleb128 0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 23
+ 858 01ad 9C       		.byte	0x9c
+ 859 01ae 47020000 		.4byte	0x247
+ 860 01b2 0A       		.uleb128 0xa
+ 861 01b3 645F6300 		.ascii	"d_c\000"
+ 862 01b7 01       		.byte	0x1
+ 863 01b8 AA       		.byte	0xaa
+ 864 01b9 81000000 		.4byte	0x81
+ 865 01bd 01       		.uleb128 0x1
+ 866 01be 50       		.byte	0x50
+ 867 01bf 0B       		.uleb128 0xb
+ 868 01c0 50020000 		.4byte	.LASF23
+ 869 01c4 01       		.byte	0x1
+ 870 01c5 AA       		.byte	0xaa
+ 871 01c6 97010000 		.4byte	0x197
+ 872 01ca 01       		.uleb128 0x1
+ 873 01cb 51       		.byte	0x51
+ 874 01cc 0A       		.uleb128 0xa
+ 875 01cd 6E756D00 		.ascii	"num\000"
+ 876 01d1 01       		.byte	0x1
+ 877 01d2 AA       		.byte	0xaa
+ 878 01d3 8D000000 		.4byte	0x8d
+ 879 01d7 01       		.uleb128 0x1
+ 880 01d8 52       		.byte	0x52
+ 881 01d9 0C       		.uleb128 0xc
+ 882 01da 6900     		.ascii	"i\000"
+ 883 01dc 01       		.byte	0x1
+ 884 01dd AC       		.byte	0xac
+ 885 01de 99000000 		.4byte	0x99
+ 886 01e2 1F000000 		.4byte	.LLST1
+ 887 01e6 0C       		.uleb128 0xc
+ 888 01e7 6A00     		.ascii	"j\000"
+ 889 01e9 01       		.byte	0x1
+ 890 01ea AD       		.byte	0xad
+ 891 01eb 81000000 		.4byte	0x81
+ 892 01ef 3E000000 		.4byte	.LLST2
+ 893 01f3 0C       		.uleb128 0xc
+ 894 01f4 6B00     		.ascii	"k\000"
+ 895 01f6 01       		.byte	0x1
+ 896 01f7 AE       		.byte	0xae
+ 897 01f8 81000000 		.4byte	0x81
+ 898 01fc 67000000 		.4byte	.LLST3
+ 899 0200 0C       		.uleb128 0xc
+ 900 0201 6C00     		.ascii	"l\000"
+ 901 0203 01       		.byte	0x1
+ 902 0204 AF       		.byte	0xaf
+ 903 0205 81000000 		.4byte	0x81
+ 904 0209 85000000 		.4byte	.LLST4
+ 905 020d 0E       		.uleb128 0xe
+ 906 020e 37000000 		.4byte	.LASF26
+ 907 0212 01       		.byte	0x1
+ 908 0213 B1       		.byte	0xb1
+ 909 0214 47020000 		.4byte	0x247
+ 910 0218 AF000000 		.4byte	.LLST5
+ 911 021c 0F       		.uleb128 0xf
+ 912 021d 6B030000 		.4byte	.LASF27
+ 913 0221 01       		.byte	0x1
+ 914 0222 B3       		.byte	0xb3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 25
 
 
- 855 02f1 31       		.byte	0x31
- 856 02f2 11       		.uleb128 0x11
- 857 02f3 01       		.uleb128 0x1
- 858 02f4 51       		.byte	0x51
- 859 02f5 03       		.uleb128 0x3
- 860 02f6 F3       		.byte	0xf3
- 861 02f7 01       		.uleb128 0x1
- 862 02f8 50       		.byte	0x50
- 863 02f9 11       		.uleb128 0x11
- 864 02fa 01       		.uleb128 0x1
- 865 02fb 52       		.byte	0x52
- 866 02fc 03       		.uleb128 0x3
- 867 02fd F3       		.byte	0xf3
- 868 02fe 01       		.uleb128 0x1
- 869 02ff 51       		.byte	0x51
- 870 0300 00       		.byte	0
- 871 0301 00       		.byte	0
- 872 0302 16       		.uleb128 0x16
- 873 0303 37000000 		.4byte	.LASF30
- 874 0307 01       		.byte	0x1
- 875 0308 7201     		.2byte	0x172
- 876 030a 6B000000 		.4byte	0x6b
- 877 030e 00000000 		.4byte	.LFB12
- 878 0312 0A000000 		.4byte	.LFE12-.LFB12
- 879 0316 01       		.uleb128 0x1
- 880 0317 9C       		.byte	0x9c
- 881 0318 2C030000 		.4byte	0x32c
- 882 031c 10       		.uleb128 0x10
- 883 031d 08000000 		.4byte	.LVL24
- 884 0321 87010000 		.4byte	0x187
- 885 0325 11       		.uleb128 0x11
- 886 0326 01       		.uleb128 0x1
- 887 0327 50       		.byte	0x50
- 888 0328 01       		.uleb128 0x1
- 889 0329 31       		.byte	0x31
- 890 032a 00       		.byte	0
- 891 032b 00       		.byte	0
- 892 032c 12       		.uleb128 0x12
- 893 032d 00000000 		.4byte	.LASF31
- 894 0331 01       		.byte	0x1
- 895 0332 8A01     		.2byte	0x18a
- 896 0334 00000000 		.4byte	.LFB13
- 897 0338 0E000000 		.4byte	.LFE13-.LFB13
- 898 033c 01       		.uleb128 0x1
- 899 033d 9C       		.byte	0x9c
- 900 033e 80030000 		.4byte	0x380
- 901 0342 14       		.uleb128 0x14
- 902 0343 88020000 		.4byte	.LASF24
- 903 0347 01       		.byte	0x1
- 904 0348 8A01     		.2byte	0x18a
- 905 034a 81010000 		.4byte	0x181
- 906 034e 59010000 		.4byte	.LLST10
- 907 0352 15       		.uleb128 0x15
- 908 0353 6E756D00 		.ascii	"num\000"
- 909 0357 01       		.byte	0x1
- 910 0358 8A01     		.2byte	0x18a
- 911 035a 5D000000 		.4byte	0x5d
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 24
+ 915 0223 4D020000 		.4byte	0x24d
+ 916 0227 02       		.uleb128 0x2
+ 917 0228 91       		.byte	0x91
+ 918 0229 64       		.sleb128 -28
+ 919 022a 0F       		.uleb128 0xf
+ 920 022b B6020000 		.4byte	.LASF28
+ 921 022f 01       		.byte	0x1
+ 922 0230 B4       		.byte	0xb4
+ 923 0231 4D020000 		.4byte	0x24d
+ 924 0235 02       		.uleb128 0x2
+ 925 0236 91       		.byte	0x91
+ 926 0237 60       		.sleb128 -32
+ 927 0238 0F       		.uleb128 0xf
+ 928 0239 4A020000 		.4byte	.LASF29
+ 929 023d 01       		.byte	0x1
+ 930 023e B5       		.byte	0xb5
+ 931 023f 4D020000 		.4byte	0x24d
+ 932 0243 02       		.uleb128 0x2
+ 933 0244 91       		.byte	0x91
+ 934 0245 5C       		.sleb128 -36
+ 935 0246 00       		.byte	0
+ 936 0247 0D       		.uleb128 0xd
+ 937 0248 04       		.byte	0x4
+ 938 0249 76000000 		.4byte	0x76
+ 939 024d 10       		.uleb128 0x10
+ 940 024e 76000000 		.4byte	0x76
+ 941 0252 5D020000 		.4byte	0x25d
+ 942 0256 11       		.uleb128 0x11
+ 943 0257 5D020000 		.4byte	0x25d
+ 944 025b 02       		.byte	0x2
+ 945 025c 00       		.byte	0
+ 946 025d 02       		.uleb128 0x2
+ 947 025e 04       		.byte	0x4
+ 948 025f 07       		.byte	0x7
+ 949 0260 AD020000 		.4byte	.LASF30
+ 950 0264 12       		.uleb128 0x12
+ 951 0265 28010000 		.4byte	.LASF37
+ 952 0269 01       		.byte	0x1
+ 953 026a EB       		.byte	0xeb
+ 954 026b 81000000 		.4byte	0x81
+ 955 026f 00000000 		.4byte	.LFB7
+ 956 0273 30000000 		.4byte	.LFE7-.LFB7
+ 957 0277 01       		.uleb128 0x1
+ 958 0278 9C       		.byte	0x9c
+ 959 0279 8D020000 		.4byte	0x28d
+ 960 027d 13       		.uleb128 0x13
+ 961 027e 645F6300 		.ascii	"d_c\000"
+ 962 0282 01       		.byte	0x1
+ 963 0283 EB       		.byte	0xeb
+ 964 0284 81000000 		.4byte	0x81
+ 965 0288 DA000000 		.4byte	.LLST6
+ 966 028c 00       		.byte	0
+ 967 028d 14       		.uleb128 0x14
+ 968 028e 6C000000 		.4byte	.LASF31
+ 969 0292 01       		.byte	0x1
+ 970 0293 1401     		.2byte	0x114
+ 971 0295 00000000 		.4byte	.LFB8
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 26
 
 
- 912 035e 85010000 		.4byte	.LLST11
- 913 0362 10       		.uleb128 0x10
- 914 0363 0C000000 		.4byte	.LVL28
- 915 0367 B0010000 		.4byte	0x1b0
- 916 036b 11       		.uleb128 0x11
- 917 036c 01       		.uleb128 0x1
- 918 036d 50       		.byte	0x50
- 919 036e 01       		.uleb128 0x1
- 920 036f 31       		.byte	0x31
- 921 0370 11       		.uleb128 0x11
- 922 0371 01       		.uleb128 0x1
- 923 0372 51       		.byte	0x51
- 924 0373 03       		.uleb128 0x3
- 925 0374 F3       		.byte	0xf3
- 926 0375 01       		.uleb128 0x1
- 927 0376 50       		.byte	0x50
- 928 0377 11       		.uleb128 0x11
- 929 0378 01       		.uleb128 0x1
- 930 0379 52       		.byte	0x52
- 931 037a 03       		.uleb128 0x3
- 932 037b F3       		.byte	0xf3
- 933 037c 01       		.uleb128 0x1
- 934 037d 51       		.byte	0x51
- 935 037e 00       		.byte	0
- 936 037f 00       		.byte	0
- 937 0380 17       		.uleb128 0x17
- 938 0381 BD000000 		.4byte	.LASF35
- 939 0385 01       		.byte	0x1
- 940 0386 12       		.byte	0x12
- 941 0387 6B000000 		.4byte	0x6b
- 942 038b 05       		.uleb128 0x5
- 943 038c 03       		.byte	0x3
- 944 038d 00000000 		.4byte	GraphicLCDIntf_initVar
- 945 0391 00       		.byte	0
- 946              		.section	.debug_abbrev,"",%progbits
- 947              	.Ldebug_abbrev0:
- 948 0000 01       		.uleb128 0x1
- 949 0001 11       		.uleb128 0x11
- 950 0002 01       		.byte	0x1
- 951 0003 25       		.uleb128 0x25
- 952 0004 0E       		.uleb128 0xe
- 953 0005 13       		.uleb128 0x13
- 954 0006 0B       		.uleb128 0xb
- 955 0007 03       		.uleb128 0x3
- 956 0008 0E       		.uleb128 0xe
- 957 0009 1B       		.uleb128 0x1b
- 958 000a 0E       		.uleb128 0xe
- 959 000b 55       		.uleb128 0x55
- 960 000c 17       		.uleb128 0x17
- 961 000d 11       		.uleb128 0x11
- 962 000e 01       		.uleb128 0x1
- 963 000f 10       		.uleb128 0x10
- 964 0010 17       		.uleb128 0x17
- 965 0011 00       		.byte	0
- 966 0012 00       		.byte	0
- 967 0013 02       		.uleb128 0x2
- 968 0014 24       		.uleb128 0x24
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 25
+ 972 0299 1C000000 		.4byte	.LFE8-.LFB8
+ 973 029d 01       		.uleb128 0x1
+ 974 029e 9C       		.byte	0x9c
+ 975 029f F2020000 		.4byte	0x2f2
+ 976 02a3 15       		.uleb128 0x15
+ 977 02a4 645F6300 		.ascii	"d_c\000"
+ 978 02a8 01       		.byte	0x1
+ 979 02a9 1401     		.2byte	0x114
+ 980 02ab 81000000 		.4byte	0x81
+ 981 02af FB000000 		.4byte	.LLST7
+ 982 02b3 16       		.uleb128 0x16
+ 983 02b4 A6020000 		.4byte	.LASF32
+ 984 02b8 01       		.byte	0x1
+ 985 02b9 1401     		.2byte	0x114
+ 986 02bb 97010000 		.4byte	0x197
+ 987 02bf 1C010000 		.4byte	.LLST8
+ 988 02c3 15       		.uleb128 0x15
+ 989 02c4 6E756D00 		.ascii	"num\000"
+ 990 02c8 01       		.byte	0x1
+ 991 02c9 1401     		.2byte	0x114
+ 992 02cb 8D000000 		.4byte	0x8d
+ 993 02cf 3A010000 		.4byte	.LLST9
+ 994 02d3 17       		.uleb128 0x17
+ 995 02d4 6900     		.ascii	"i\000"
+ 996 02d6 01       		.byte	0x1
+ 997 02d7 1601     		.2byte	0x116
+ 998 02d9 99000000 		.4byte	0x99
+ 999 02dd 5B010000 		.4byte	.LLST10
+ 1000 02e1 18       		.uleb128 0x18
+ 1001 02e2 12000000 		.4byte	.LVL29
+ 1002 02e6 64020000 		.4byte	0x264
+ 1003 02ea 19       		.uleb128 0x19
+ 1004 02eb 01       		.uleb128 0x1
+ 1005 02ec 50       		.byte	0x50
+ 1006 02ed 02       		.uleb128 0x2
+ 1007 02ee 77       		.byte	0x77
+ 1008 02ef 00       		.sleb128 0
+ 1009 02f0 00       		.byte	0
+ 1010 02f1 00       		.byte	0
+ 1011 02f2 14       		.uleb128 0x14
+ 1012 02f3 E8000000 		.4byte	.LASF33
+ 1013 02f7 01       		.byte	0x1
+ 1014 02f8 3001     		.2byte	0x130
+ 1015 02fa 00000000 		.4byte	.LFB9
+ 1016 02fe 20000000 		.4byte	.LFE9-.LFB9
+ 1017 0302 01       		.uleb128 0x1
+ 1018 0303 9C       		.byte	0x9c
+ 1019 0304 17030000 		.4byte	0x317
+ 1020 0308 1A       		.uleb128 0x1a
+ 1021 0309 50020000 		.4byte	.LASF23
+ 1022 030d 01       		.byte	0x1
+ 1023 030e 3001     		.2byte	0x130
+ 1024 0310 81000000 		.4byte	0x81
+ 1025 0314 01       		.uleb128 0x1
+ 1026 0315 50       		.byte	0x50
+ 1027 0316 00       		.byte	0
+ 1028 0317 14       		.uleb128 0x14
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 27
 
 
- 969 0015 00       		.byte	0
- 970 0016 0B       		.uleb128 0xb
- 971 0017 0B       		.uleb128 0xb
- 972 0018 3E       		.uleb128 0x3e
- 973 0019 0B       		.uleb128 0xb
- 974 001a 03       		.uleb128 0x3
- 975 001b 0E       		.uleb128 0xe
- 976 001c 00       		.byte	0
- 977 001d 00       		.byte	0
- 978 001e 03       		.uleb128 0x3
- 979 001f 24       		.uleb128 0x24
- 980 0020 00       		.byte	0
- 981 0021 0B       		.uleb128 0xb
- 982 0022 0B       		.uleb128 0xb
- 983 0023 3E       		.uleb128 0x3e
- 984 0024 0B       		.uleb128 0xb
- 985 0025 03       		.uleb128 0x3
- 986 0026 08       		.uleb128 0x8
- 987 0027 00       		.byte	0
- 988 0028 00       		.byte	0
- 989 0029 04       		.uleb128 0x4
- 990 002a 16       		.uleb128 0x16
- 991 002b 00       		.byte	0
- 992 002c 03       		.uleb128 0x3
- 993 002d 0E       		.uleb128 0xe
- 994 002e 3A       		.uleb128 0x3a
- 995 002f 0B       		.uleb128 0xb
- 996 0030 3B       		.uleb128 0x3b
- 997 0031 05       		.uleb128 0x5
- 998 0032 49       		.uleb128 0x49
- 999 0033 13       		.uleb128 0x13
- 1000 0034 00       		.byte	0
- 1001 0035 00       		.byte	0
- 1002 0036 05       		.uleb128 0x5
- 1003 0037 35       		.uleb128 0x35
- 1004 0038 00       		.byte	0
- 1005 0039 49       		.uleb128 0x49
- 1006 003a 13       		.uleb128 0x13
- 1007 003b 00       		.byte	0
- 1008 003c 00       		.byte	0
- 1009 003d 06       		.uleb128 0x6
- 1010 003e 2E       		.uleb128 0x2e
- 1011 003f 00       		.byte	0
- 1012 0040 3F       		.uleb128 0x3f
- 1013 0041 19       		.uleb128 0x19
- 1014 0042 03       		.uleb128 0x3
- 1015 0043 0E       		.uleb128 0xe
- 1016 0044 3A       		.uleb128 0x3a
- 1017 0045 0B       		.uleb128 0xb
- 1018 0046 3B       		.uleb128 0x3b
- 1019 0047 0B       		.uleb128 0xb
- 1020 0048 27       		.uleb128 0x27
- 1021 0049 19       		.uleb128 0x19
- 1022 004a 11       		.uleb128 0x11
- 1023 004b 01       		.uleb128 0x1
- 1024 004c 12       		.uleb128 0x12
- 1025 004d 06       		.uleb128 0x6
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 26
+ 1029 0318 01010000 		.4byte	.LASF34
+ 1030 031c 01       		.byte	0x1
+ 1031 031d 5001     		.2byte	0x150
+ 1032 031f 00000000 		.4byte	.LFB10
+ 1033 0323 20000000 		.4byte	.LFE10-.LFB10
+ 1034 0327 01       		.uleb128 0x1
+ 1035 0328 9C       		.byte	0x9c
+ 1036 0329 3C030000 		.4byte	0x33c
+ 1037 032d 1A       		.uleb128 0x1a
+ 1038 032e 50020000 		.4byte	.LASF23
+ 1039 0332 01       		.byte	0x1
+ 1040 0333 5001     		.2byte	0x150
+ 1041 0335 81000000 		.4byte	0x81
+ 1042 0339 01       		.uleb128 0x1
+ 1043 033a 50       		.byte	0x50
+ 1044 033b 00       		.byte	0
+ 1045 033c 14       		.uleb128 0x14
+ 1046 033d 82000000 		.4byte	.LASF35
+ 1047 0341 01       		.byte	0x1
+ 1048 0342 7201     		.2byte	0x172
+ 1049 0344 00000000 		.4byte	.LFB11
+ 1050 0348 0E000000 		.4byte	.LFE11-.LFB11
+ 1051 034c 01       		.uleb128 0x1
+ 1052 034d 9C       		.byte	0x9c
+ 1053 034e 90030000 		.4byte	0x390
+ 1054 0352 16       		.uleb128 0x16
+ 1055 0353 50020000 		.4byte	.LASF23
+ 1056 0357 01       		.byte	0x1
+ 1057 0358 7201     		.2byte	0x172
+ 1058 035a 97010000 		.4byte	0x197
+ 1059 035e 7A010000 		.4byte	.LLST11
+ 1060 0362 15       		.uleb128 0x15
+ 1061 0363 6E756D00 		.ascii	"num\000"
+ 1062 0367 01       		.byte	0x1
+ 1063 0368 7201     		.2byte	0x172
+ 1064 036a 68000000 		.4byte	0x68
+ 1065 036e A6010000 		.4byte	.LLST12
+ 1066 0372 18       		.uleb128 0x18
+ 1067 0373 0C000000 		.4byte	.LVL36
+ 1068 0377 4D010000 		.4byte	0x14d
+ 1069 037b 19       		.uleb128 0x19
+ 1070 037c 01       		.uleb128 0x1
+ 1071 037d 50       		.byte	0x50
+ 1072 037e 01       		.uleb128 0x1
+ 1073 037f 30       		.byte	0x30
+ 1074 0380 19       		.uleb128 0x19
+ 1075 0381 01       		.uleb128 0x1
+ 1076 0382 51       		.byte	0x51
+ 1077 0383 03       		.uleb128 0x3
+ 1078 0384 F3       		.byte	0xf3
+ 1079 0385 01       		.uleb128 0x1
+ 1080 0386 50       		.byte	0x50
+ 1081 0387 19       		.uleb128 0x19
+ 1082 0388 01       		.uleb128 0x1
+ 1083 0389 52       		.byte	0x52
+ 1084 038a 03       		.uleb128 0x3
+ 1085 038b F3       		.byte	0xf3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 28
 
 
- 1026 004e 40       		.uleb128 0x40
- 1027 004f 18       		.uleb128 0x18
- 1028 0050 9742     		.uleb128 0x2117
- 1029 0052 19       		.uleb128 0x19
- 1030 0053 00       		.byte	0
- 1031 0054 00       		.byte	0
- 1032 0055 07       		.uleb128 0x7
- 1033 0056 2E       		.uleb128 0x2e
- 1034 0057 01       		.byte	0x1
- 1035 0058 3F       		.uleb128 0x3f
- 1036 0059 19       		.uleb128 0x19
- 1037 005a 03       		.uleb128 0x3
- 1038 005b 0E       		.uleb128 0xe
- 1039 005c 3A       		.uleb128 0x3a
- 1040 005d 0B       		.uleb128 0xb
- 1041 005e 3B       		.uleb128 0x3b
- 1042 005f 0B       		.uleb128 0xb
- 1043 0060 27       		.uleb128 0x27
- 1044 0061 19       		.uleb128 0x19
- 1045 0062 11       		.uleb128 0x11
- 1046 0063 01       		.uleb128 0x1
- 1047 0064 12       		.uleb128 0x12
- 1048 0065 06       		.uleb128 0x6
- 1049 0066 40       		.uleb128 0x40
- 1050 0067 18       		.uleb128 0x18
- 1051 0068 9742     		.uleb128 0x2117
- 1052 006a 19       		.uleb128 0x19
- 1053 006b 01       		.uleb128 0x1
- 1054 006c 13       		.uleb128 0x13
- 1055 006d 00       		.byte	0
- 1056 006e 00       		.byte	0
- 1057 006f 08       		.uleb128 0x8
- 1058 0070 898201   		.uleb128 0x4109
- 1059 0073 00       		.byte	0
- 1060 0074 11       		.uleb128 0x11
- 1061 0075 01       		.uleb128 0x1
- 1062 0076 31       		.uleb128 0x31
- 1063 0077 13       		.uleb128 0x13
- 1064 0078 00       		.byte	0
- 1065 0079 00       		.byte	0
- 1066 007a 09       		.uleb128 0x9
- 1067 007b 05       		.uleb128 0x5
- 1068 007c 00       		.byte	0
- 1069 007d 03       		.uleb128 0x3
- 1070 007e 08       		.uleb128 0x8
- 1071 007f 3A       		.uleb128 0x3a
- 1072 0080 0B       		.uleb128 0xb
- 1073 0081 3B       		.uleb128 0x3b
- 1074 0082 0B       		.uleb128 0xb
- 1075 0083 49       		.uleb128 0x49
- 1076 0084 13       		.uleb128 0x13
- 1077 0085 02       		.uleb128 0x2
- 1078 0086 18       		.uleb128 0x18
- 1079 0087 00       		.byte	0
- 1080 0088 00       		.byte	0
- 1081 0089 0A       		.uleb128 0xa
- 1082 008a 05       		.uleb128 0x5
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 27
+ 1086 038c 01       		.uleb128 0x1
+ 1087 038d 51       		.byte	0x51
+ 1088 038e 00       		.byte	0
+ 1089 038f 00       		.byte	0
+ 1090 0390 14       		.uleb128 0x14
+ 1091 0391 9C000000 		.4byte	.LASF36
+ 1092 0395 01       		.byte	0x1
+ 1093 0396 8B01     		.2byte	0x18b
+ 1094 0398 00000000 		.4byte	.LFB12
+ 1095 039c 0E000000 		.4byte	.LFE12-.LFB12
+ 1096 03a0 01       		.uleb128 0x1
+ 1097 03a1 9C       		.byte	0x9c
+ 1098 03a2 E4030000 		.4byte	0x3e4
+ 1099 03a6 16       		.uleb128 0x16
+ 1100 03a7 50020000 		.4byte	.LASF23
+ 1101 03ab 01       		.byte	0x1
+ 1102 03ac 8B01     		.2byte	0x18b
+ 1103 03ae 97010000 		.4byte	0x197
+ 1104 03b2 C7010000 		.4byte	.LLST13
+ 1105 03b6 15       		.uleb128 0x15
+ 1106 03b7 6E756D00 		.ascii	"num\000"
+ 1107 03bb 01       		.byte	0x1
+ 1108 03bc 8B01     		.2byte	0x18b
+ 1109 03be 68000000 		.4byte	0x68
+ 1110 03c2 F3010000 		.4byte	.LLST14
+ 1111 03c6 18       		.uleb128 0x18
+ 1112 03c7 0C000000 		.4byte	.LVL40
+ 1113 03cb 4D010000 		.4byte	0x14d
+ 1114 03cf 19       		.uleb128 0x19
+ 1115 03d0 01       		.uleb128 0x1
+ 1116 03d1 50       		.byte	0x50
+ 1117 03d2 01       		.uleb128 0x1
+ 1118 03d3 31       		.byte	0x31
+ 1119 03d4 19       		.uleb128 0x19
+ 1120 03d5 01       		.uleb128 0x1
+ 1121 03d6 51       		.byte	0x51
+ 1122 03d7 03       		.uleb128 0x3
+ 1123 03d8 F3       		.byte	0xf3
+ 1124 03d9 01       		.uleb128 0x1
+ 1125 03da 50       		.byte	0x50
+ 1126 03db 19       		.uleb128 0x19
+ 1127 03dc 01       		.uleb128 0x1
+ 1128 03dd 52       		.byte	0x52
+ 1129 03de 03       		.uleb128 0x3
+ 1130 03df F3       		.byte	0xf3
+ 1131 03e0 01       		.uleb128 0x1
+ 1132 03e1 51       		.byte	0x51
+ 1133 03e2 00       		.byte	0
+ 1134 03e3 00       		.byte	0
+ 1135 03e4 1B       		.uleb128 0x1b
+ 1136 03e5 3D000000 		.4byte	.LASF38
+ 1137 03e9 01       		.byte	0x1
+ 1138 03ea A101     		.2byte	0x1a1
+ 1139 03ec 81000000 		.4byte	0x81
+ 1140 03f0 00000000 		.4byte	.LFB13
+ 1141 03f4 0A000000 		.4byte	.LFE13-.LFB13
+ 1142 03f8 01       		.uleb128 0x1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 29
 
 
- 1083 008b 00       		.byte	0
- 1084 008c 03       		.uleb128 0x3
- 1085 008d 0E       		.uleb128 0xe
- 1086 008e 3A       		.uleb128 0x3a
- 1087 008f 0B       		.uleb128 0xb
- 1088 0090 3B       		.uleb128 0x3b
- 1089 0091 0B       		.uleb128 0xb
- 1090 0092 49       		.uleb128 0x49
- 1091 0093 13       		.uleb128 0x13
- 1092 0094 02       		.uleb128 0x2
- 1093 0095 18       		.uleb128 0x18
- 1094 0096 00       		.byte	0
- 1095 0097 00       		.byte	0
- 1096 0098 0B       		.uleb128 0xb
- 1097 0099 34       		.uleb128 0x34
- 1098 009a 00       		.byte	0
- 1099 009b 03       		.uleb128 0x3
- 1100 009c 08       		.uleb128 0x8
- 1101 009d 3A       		.uleb128 0x3a
- 1102 009e 0B       		.uleb128 0xb
- 1103 009f 3B       		.uleb128 0x3b
- 1104 00a0 0B       		.uleb128 0xb
- 1105 00a1 49       		.uleb128 0x49
- 1106 00a2 13       		.uleb128 0x13
- 1107 00a3 02       		.uleb128 0x2
- 1108 00a4 17       		.uleb128 0x17
- 1109 00a5 00       		.byte	0
- 1110 00a6 00       		.byte	0
- 1111 00a7 0C       		.uleb128 0xc
- 1112 00a8 0F       		.uleb128 0xf
- 1113 00a9 00       		.byte	0
- 1114 00aa 0B       		.uleb128 0xb
- 1115 00ab 0B       		.uleb128 0xb
- 1116 00ac 49       		.uleb128 0x49
- 1117 00ad 13       		.uleb128 0x13
- 1118 00ae 00       		.byte	0
- 1119 00af 00       		.byte	0
- 1120 00b0 0D       		.uleb128 0xd
- 1121 00b1 2E       		.uleb128 0x2e
- 1122 00b2 01       		.byte	0x1
- 1123 00b3 3F       		.uleb128 0x3f
- 1124 00b4 19       		.uleb128 0x19
- 1125 00b5 03       		.uleb128 0x3
- 1126 00b6 0E       		.uleb128 0xe
- 1127 00b7 3A       		.uleb128 0x3a
- 1128 00b8 0B       		.uleb128 0xb
- 1129 00b9 3B       		.uleb128 0x3b
- 1130 00ba 0B       		.uleb128 0xb
- 1131 00bb 27       		.uleb128 0x27
- 1132 00bc 19       		.uleb128 0x19
- 1133 00bd 49       		.uleb128 0x49
- 1134 00be 13       		.uleb128 0x13
- 1135 00bf 11       		.uleb128 0x11
- 1136 00c0 01       		.uleb128 0x1
- 1137 00c1 12       		.uleb128 0x12
- 1138 00c2 06       		.uleb128 0x6
- 1139 00c3 40       		.uleb128 0x40
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 28
+ 1143 03f9 9C       		.byte	0x9c
+ 1144 03fa 0E040000 		.4byte	0x40e
+ 1145 03fe 18       		.uleb128 0x18
+ 1146 03ff 08000000 		.4byte	.LVL41
+ 1147 0403 64020000 		.4byte	0x264
+ 1148 0407 19       		.uleb128 0x19
+ 1149 0408 01       		.uleb128 0x1
+ 1150 0409 50       		.byte	0x50
+ 1151 040a 01       		.uleb128 0x1
+ 1152 040b 31       		.byte	0x31
+ 1153 040c 00       		.byte	0
+ 1154 040d 00       		.byte	0
+ 1155 040e 14       		.uleb128 0x14
+ 1156 040f 00000000 		.4byte	.LASF39
+ 1157 0413 01       		.byte	0x1
+ 1158 0414 B901     		.2byte	0x1b9
+ 1159 0416 00000000 		.4byte	.LFB14
+ 1160 041a 0E000000 		.4byte	.LFE14-.LFB14
+ 1161 041e 01       		.uleb128 0x1
+ 1162 041f 9C       		.byte	0x9c
+ 1163 0420 62040000 		.4byte	0x462
+ 1164 0424 16       		.uleb128 0x16
+ 1165 0425 A6020000 		.4byte	.LASF32
+ 1166 0429 01       		.byte	0x1
+ 1167 042a B901     		.2byte	0x1b9
+ 1168 042c 97010000 		.4byte	0x197
+ 1169 0430 14020000 		.4byte	.LLST15
+ 1170 0434 15       		.uleb128 0x15
+ 1171 0435 6E756D00 		.ascii	"num\000"
+ 1172 0439 01       		.byte	0x1
+ 1173 043a B901     		.2byte	0x1b9
+ 1174 043c 68000000 		.4byte	0x68
+ 1175 0440 40020000 		.4byte	.LLST16
+ 1176 0444 18       		.uleb128 0x18
+ 1177 0445 0C000000 		.4byte	.LVL45
+ 1178 0449 8D020000 		.4byte	0x28d
+ 1179 044d 19       		.uleb128 0x19
+ 1180 044e 01       		.uleb128 0x1
+ 1181 044f 50       		.byte	0x50
+ 1182 0450 01       		.uleb128 0x1
+ 1183 0451 31       		.byte	0x31
+ 1184 0452 19       		.uleb128 0x19
+ 1185 0453 01       		.uleb128 0x1
+ 1186 0454 51       		.byte	0x51
+ 1187 0455 03       		.uleb128 0x3
+ 1188 0456 F3       		.byte	0xf3
+ 1189 0457 01       		.uleb128 0x1
+ 1190 0458 50       		.byte	0x50
+ 1191 0459 19       		.uleb128 0x19
+ 1192 045a 01       		.uleb128 0x1
+ 1193 045b 52       		.byte	0x52
+ 1194 045c 03       		.uleb128 0x3
+ 1195 045d F3       		.byte	0xf3
+ 1196 045e 01       		.uleb128 0x1
+ 1197 045f 51       		.byte	0x51
+ 1198 0460 00       		.byte	0
+ 1199 0461 00       		.byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 30
 
 
- 1140 00c4 18       		.uleb128 0x18
- 1141 00c5 9742     		.uleb128 0x2117
- 1142 00c7 19       		.uleb128 0x19
- 1143 00c8 01       		.uleb128 0x1
- 1144 00c9 13       		.uleb128 0x13
- 1145 00ca 00       		.byte	0
- 1146 00cb 00       		.byte	0
- 1147 00cc 0E       		.uleb128 0xe
- 1148 00cd 05       		.uleb128 0x5
- 1149 00ce 00       		.byte	0
- 1150 00cf 03       		.uleb128 0x3
- 1151 00d0 08       		.uleb128 0x8
- 1152 00d1 3A       		.uleb128 0x3a
- 1153 00d2 0B       		.uleb128 0xb
- 1154 00d3 3B       		.uleb128 0x3b
- 1155 00d4 0B       		.uleb128 0xb
- 1156 00d5 49       		.uleb128 0x49
- 1157 00d6 13       		.uleb128 0x13
- 1158 00d7 02       		.uleb128 0x2
- 1159 00d8 17       		.uleb128 0x17
- 1160 00d9 00       		.byte	0
- 1161 00da 00       		.byte	0
- 1162 00db 0F       		.uleb128 0xf
- 1163 00dc 05       		.uleb128 0x5
- 1164 00dd 00       		.byte	0
- 1165 00de 03       		.uleb128 0x3
- 1166 00df 0E       		.uleb128 0xe
- 1167 00e0 3A       		.uleb128 0x3a
- 1168 00e1 0B       		.uleb128 0xb
- 1169 00e2 3B       		.uleb128 0x3b
- 1170 00e3 0B       		.uleb128 0xb
- 1171 00e4 49       		.uleb128 0x49
- 1172 00e5 13       		.uleb128 0x13
- 1173 00e6 02       		.uleb128 0x2
- 1174 00e7 17       		.uleb128 0x17
- 1175 00e8 00       		.byte	0
- 1176 00e9 00       		.byte	0
- 1177 00ea 10       		.uleb128 0x10
- 1178 00eb 898201   		.uleb128 0x4109
- 1179 00ee 01       		.byte	0x1
- 1180 00ef 11       		.uleb128 0x11
- 1181 00f0 01       		.uleb128 0x1
- 1182 00f1 31       		.uleb128 0x31
- 1183 00f2 13       		.uleb128 0x13
- 1184 00f3 00       		.byte	0
- 1185 00f4 00       		.byte	0
- 1186 00f5 11       		.uleb128 0x11
- 1187 00f6 8A8201   		.uleb128 0x410a
- 1188 00f9 00       		.byte	0
- 1189 00fa 02       		.uleb128 0x2
- 1190 00fb 18       		.uleb128 0x18
- 1191 00fc 9142     		.uleb128 0x2111
- 1192 00fe 18       		.uleb128 0x18
- 1193 00ff 00       		.byte	0
- 1194 0100 00       		.byte	0
- 1195 0101 12       		.uleb128 0x12
- 1196 0102 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 29
+ 1200 0462 1C       		.uleb128 0x1c
+ 1201 0463 CB000000 		.4byte	.LASF43
+ 1202 0467 01       		.byte	0x1
+ 1203 0468 12       		.byte	0x12
+ 1204 0469 81000000 		.4byte	0x81
+ 1205 046d 05       		.uleb128 0x5
+ 1206 046e 03       		.byte	0x3
+ 1207 046f 00000000 		.4byte	GraphicLCDIntf_initVar
+ 1208 0473 00       		.byte	0
+ 1209              		.section	.debug_abbrev,"",%progbits
+ 1210              	.Ldebug_abbrev0:
+ 1211 0000 01       		.uleb128 0x1
+ 1212 0001 11       		.uleb128 0x11
+ 1213 0002 01       		.byte	0x1
+ 1214 0003 25       		.uleb128 0x25
+ 1215 0004 0E       		.uleb128 0xe
+ 1216 0005 13       		.uleb128 0x13
+ 1217 0006 0B       		.uleb128 0xb
+ 1218 0007 03       		.uleb128 0x3
+ 1219 0008 0E       		.uleb128 0xe
+ 1220 0009 1B       		.uleb128 0x1b
+ 1221 000a 0E       		.uleb128 0xe
+ 1222 000b 55       		.uleb128 0x55
+ 1223 000c 17       		.uleb128 0x17
+ 1224 000d 11       		.uleb128 0x11
+ 1225 000e 01       		.uleb128 0x1
+ 1226 000f 10       		.uleb128 0x10
+ 1227 0010 17       		.uleb128 0x17
+ 1228 0011 00       		.byte	0
+ 1229 0012 00       		.byte	0
+ 1230 0013 02       		.uleb128 0x2
+ 1231 0014 24       		.uleb128 0x24
+ 1232 0015 00       		.byte	0
+ 1233 0016 0B       		.uleb128 0xb
+ 1234 0017 0B       		.uleb128 0xb
+ 1235 0018 3E       		.uleb128 0x3e
+ 1236 0019 0B       		.uleb128 0xb
+ 1237 001a 03       		.uleb128 0x3
+ 1238 001b 0E       		.uleb128 0xe
+ 1239 001c 00       		.byte	0
+ 1240 001d 00       		.byte	0
+ 1241 001e 03       		.uleb128 0x3
+ 1242 001f 16       		.uleb128 0x16
+ 1243 0020 00       		.byte	0
+ 1244 0021 03       		.uleb128 0x3
+ 1245 0022 0E       		.uleb128 0xe
+ 1246 0023 3A       		.uleb128 0x3a
+ 1247 0024 0B       		.uleb128 0xb
+ 1248 0025 3B       		.uleb128 0x3b
+ 1249 0026 0B       		.uleb128 0xb
+ 1250 0027 49       		.uleb128 0x49
+ 1251 0028 13       		.uleb128 0x13
+ 1252 0029 00       		.byte	0
+ 1253 002a 00       		.byte	0
+ 1254 002b 04       		.uleb128 0x4
+ 1255 002c 24       		.uleb128 0x24
+ 1256 002d 00       		.byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 31
 
 
- 1197 0103 01       		.byte	0x1
- 1198 0104 3F       		.uleb128 0x3f
- 1199 0105 19       		.uleb128 0x19
- 1200 0106 03       		.uleb128 0x3
- 1201 0107 0E       		.uleb128 0xe
- 1202 0108 3A       		.uleb128 0x3a
- 1203 0109 0B       		.uleb128 0xb
- 1204 010a 3B       		.uleb128 0x3b
- 1205 010b 05       		.uleb128 0x5
- 1206 010c 27       		.uleb128 0x27
- 1207 010d 19       		.uleb128 0x19
- 1208 010e 11       		.uleb128 0x11
- 1209 010f 01       		.uleb128 0x1
- 1210 0110 12       		.uleb128 0x12
- 1211 0111 06       		.uleb128 0x6
- 1212 0112 40       		.uleb128 0x40
- 1213 0113 18       		.uleb128 0x18
- 1214 0114 9742     		.uleb128 0x2117
- 1215 0116 19       		.uleb128 0x19
- 1216 0117 01       		.uleb128 0x1
- 1217 0118 13       		.uleb128 0x13
- 1218 0119 00       		.byte	0
- 1219 011a 00       		.byte	0
- 1220 011b 13       		.uleb128 0x13
- 1221 011c 05       		.uleb128 0x5
- 1222 011d 00       		.byte	0
- 1223 011e 03       		.uleb128 0x3
- 1224 011f 0E       		.uleb128 0xe
- 1225 0120 3A       		.uleb128 0x3a
- 1226 0121 0B       		.uleb128 0xb
- 1227 0122 3B       		.uleb128 0x3b
- 1228 0123 05       		.uleb128 0x5
- 1229 0124 49       		.uleb128 0x49
- 1230 0125 13       		.uleb128 0x13
- 1231 0126 02       		.uleb128 0x2
- 1232 0127 18       		.uleb128 0x18
- 1233 0128 00       		.byte	0
- 1234 0129 00       		.byte	0
- 1235 012a 14       		.uleb128 0x14
- 1236 012b 05       		.uleb128 0x5
- 1237 012c 00       		.byte	0
- 1238 012d 03       		.uleb128 0x3
- 1239 012e 0E       		.uleb128 0xe
- 1240 012f 3A       		.uleb128 0x3a
- 1241 0130 0B       		.uleb128 0xb
- 1242 0131 3B       		.uleb128 0x3b
- 1243 0132 05       		.uleb128 0x5
- 1244 0133 49       		.uleb128 0x49
- 1245 0134 13       		.uleb128 0x13
- 1246 0135 02       		.uleb128 0x2
- 1247 0136 17       		.uleb128 0x17
- 1248 0137 00       		.byte	0
- 1249 0138 00       		.byte	0
- 1250 0139 15       		.uleb128 0x15
- 1251 013a 05       		.uleb128 0x5
- 1252 013b 00       		.byte	0
- 1253 013c 03       		.uleb128 0x3
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 30
+ 1257 002e 0B       		.uleb128 0xb
+ 1258 002f 0B       		.uleb128 0xb
+ 1259 0030 3E       		.uleb128 0x3e
+ 1260 0031 0B       		.uleb128 0xb
+ 1261 0032 03       		.uleb128 0x3
+ 1262 0033 08       		.uleb128 0x8
+ 1263 0034 00       		.byte	0
+ 1264 0035 00       		.byte	0
+ 1265 0036 05       		.uleb128 0x5
+ 1266 0037 16       		.uleb128 0x16
+ 1267 0038 00       		.byte	0
+ 1268 0039 03       		.uleb128 0x3
+ 1269 003a 0E       		.uleb128 0xe
+ 1270 003b 3A       		.uleb128 0x3a
+ 1271 003c 0B       		.uleb128 0xb
+ 1272 003d 3B       		.uleb128 0x3b
+ 1273 003e 05       		.uleb128 0x5
+ 1274 003f 49       		.uleb128 0x49
+ 1275 0040 13       		.uleb128 0x13
+ 1276 0041 00       		.byte	0
+ 1277 0042 00       		.byte	0
+ 1278 0043 06       		.uleb128 0x6
+ 1279 0044 35       		.uleb128 0x35
+ 1280 0045 00       		.byte	0
+ 1281 0046 49       		.uleb128 0x49
+ 1282 0047 13       		.uleb128 0x13
+ 1283 0048 00       		.byte	0
+ 1284 0049 00       		.byte	0
+ 1285 004a 07       		.uleb128 0x7
+ 1286 004b 2E       		.uleb128 0x2e
+ 1287 004c 00       		.byte	0
+ 1288 004d 3F       		.uleb128 0x3f
+ 1289 004e 19       		.uleb128 0x19
+ 1290 004f 03       		.uleb128 0x3
+ 1291 0050 0E       		.uleb128 0xe
+ 1292 0051 3A       		.uleb128 0x3a
+ 1293 0052 0B       		.uleb128 0xb
+ 1294 0053 3B       		.uleb128 0x3b
+ 1295 0054 0B       		.uleb128 0xb
+ 1296 0055 27       		.uleb128 0x27
+ 1297 0056 19       		.uleb128 0x19
+ 1298 0057 11       		.uleb128 0x11
+ 1299 0058 01       		.uleb128 0x1
+ 1300 0059 12       		.uleb128 0x12
+ 1301 005a 06       		.uleb128 0x6
+ 1302 005b 40       		.uleb128 0x40
+ 1303 005c 18       		.uleb128 0x18
+ 1304 005d 9742     		.uleb128 0x2117
+ 1305 005f 19       		.uleb128 0x19
+ 1306 0060 00       		.byte	0
+ 1307 0061 00       		.byte	0
+ 1308 0062 08       		.uleb128 0x8
+ 1309 0063 2E       		.uleb128 0x2e
+ 1310 0064 01       		.byte	0x1
+ 1311 0065 3F       		.uleb128 0x3f
+ 1312 0066 19       		.uleb128 0x19
+ 1313 0067 03       		.uleb128 0x3
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 32
 
 
- 1254 013d 08       		.uleb128 0x8
- 1255 013e 3A       		.uleb128 0x3a
- 1256 013f 0B       		.uleb128 0xb
- 1257 0140 3B       		.uleb128 0x3b
- 1258 0141 05       		.uleb128 0x5
- 1259 0142 49       		.uleb128 0x49
- 1260 0143 13       		.uleb128 0x13
- 1261 0144 02       		.uleb128 0x2
- 1262 0145 17       		.uleb128 0x17
- 1263 0146 00       		.byte	0
- 1264 0147 00       		.byte	0
- 1265 0148 16       		.uleb128 0x16
- 1266 0149 2E       		.uleb128 0x2e
- 1267 014a 01       		.byte	0x1
- 1268 014b 3F       		.uleb128 0x3f
- 1269 014c 19       		.uleb128 0x19
- 1270 014d 03       		.uleb128 0x3
- 1271 014e 0E       		.uleb128 0xe
- 1272 014f 3A       		.uleb128 0x3a
- 1273 0150 0B       		.uleb128 0xb
- 1274 0151 3B       		.uleb128 0x3b
- 1275 0152 05       		.uleb128 0x5
- 1276 0153 27       		.uleb128 0x27
- 1277 0154 19       		.uleb128 0x19
- 1278 0155 49       		.uleb128 0x49
- 1279 0156 13       		.uleb128 0x13
- 1280 0157 11       		.uleb128 0x11
- 1281 0158 01       		.uleb128 0x1
- 1282 0159 12       		.uleb128 0x12
- 1283 015a 06       		.uleb128 0x6
- 1284 015b 40       		.uleb128 0x40
- 1285 015c 18       		.uleb128 0x18
- 1286 015d 9742     		.uleb128 0x2117
- 1287 015f 19       		.uleb128 0x19
- 1288 0160 01       		.uleb128 0x1
- 1289 0161 13       		.uleb128 0x13
- 1290 0162 00       		.byte	0
- 1291 0163 00       		.byte	0
- 1292 0164 17       		.uleb128 0x17
- 1293 0165 34       		.uleb128 0x34
- 1294 0166 00       		.byte	0
- 1295 0167 03       		.uleb128 0x3
- 1296 0168 0E       		.uleb128 0xe
- 1297 0169 3A       		.uleb128 0x3a
- 1298 016a 0B       		.uleb128 0xb
- 1299 016b 3B       		.uleb128 0x3b
- 1300 016c 0B       		.uleb128 0xb
- 1301 016d 49       		.uleb128 0x49
- 1302 016e 13       		.uleb128 0x13
- 1303 016f 3F       		.uleb128 0x3f
- 1304 0170 19       		.uleb128 0x19
- 1305 0171 02       		.uleb128 0x2
- 1306 0172 18       		.uleb128 0x18
- 1307 0173 00       		.byte	0
- 1308 0174 00       		.byte	0
- 1309 0175 00       		.byte	0
- 1310              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 31
+ 1314 0068 0E       		.uleb128 0xe
+ 1315 0069 3A       		.uleb128 0x3a
+ 1316 006a 0B       		.uleb128 0xb
+ 1317 006b 3B       		.uleb128 0x3b
+ 1318 006c 0B       		.uleb128 0xb
+ 1319 006d 27       		.uleb128 0x27
+ 1320 006e 19       		.uleb128 0x19
+ 1321 006f 11       		.uleb128 0x11
+ 1322 0070 01       		.uleb128 0x1
+ 1323 0071 12       		.uleb128 0x12
+ 1324 0072 06       		.uleb128 0x6
+ 1325 0073 40       		.uleb128 0x40
+ 1326 0074 18       		.uleb128 0x18
+ 1327 0075 9742     		.uleb128 0x2117
+ 1328 0077 19       		.uleb128 0x19
+ 1329 0078 01       		.uleb128 0x1
+ 1330 0079 13       		.uleb128 0x13
+ 1331 007a 00       		.byte	0
+ 1332 007b 00       		.byte	0
+ 1333 007c 09       		.uleb128 0x9
+ 1334 007d 898201   		.uleb128 0x4109
+ 1335 0080 00       		.byte	0
+ 1336 0081 11       		.uleb128 0x11
+ 1337 0082 01       		.uleb128 0x1
+ 1338 0083 31       		.uleb128 0x31
+ 1339 0084 13       		.uleb128 0x13
+ 1340 0085 00       		.byte	0
+ 1341 0086 00       		.byte	0
+ 1342 0087 0A       		.uleb128 0xa
+ 1343 0088 05       		.uleb128 0x5
+ 1344 0089 00       		.byte	0
+ 1345 008a 03       		.uleb128 0x3
+ 1346 008b 08       		.uleb128 0x8
+ 1347 008c 3A       		.uleb128 0x3a
+ 1348 008d 0B       		.uleb128 0xb
+ 1349 008e 3B       		.uleb128 0x3b
+ 1350 008f 0B       		.uleb128 0xb
+ 1351 0090 49       		.uleb128 0x49
+ 1352 0091 13       		.uleb128 0x13
+ 1353 0092 02       		.uleb128 0x2
+ 1354 0093 18       		.uleb128 0x18
+ 1355 0094 00       		.byte	0
+ 1356 0095 00       		.byte	0
+ 1357 0096 0B       		.uleb128 0xb
+ 1358 0097 05       		.uleb128 0x5
+ 1359 0098 00       		.byte	0
+ 1360 0099 03       		.uleb128 0x3
+ 1361 009a 0E       		.uleb128 0xe
+ 1362 009b 3A       		.uleb128 0x3a
+ 1363 009c 0B       		.uleb128 0xb
+ 1364 009d 3B       		.uleb128 0x3b
+ 1365 009e 0B       		.uleb128 0xb
+ 1366 009f 49       		.uleb128 0x49
+ 1367 00a0 13       		.uleb128 0x13
+ 1368 00a1 02       		.uleb128 0x2
+ 1369 00a2 18       		.uleb128 0x18
+ 1370 00a3 00       		.byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 33
 
 
- 1311              	.Ldebug_loc0:
- 1312              	.LLST0:
- 1313 0000 02000000 		.4byte	.LVL3
- 1314 0004 06000000 		.4byte	.LVL4
- 1315 0008 0200     		.2byte	0x2
- 1316 000a 30       		.byte	0x30
- 1317 000b 9F       		.byte	0x9f
- 1318 000c 06000000 		.4byte	.LVL4
- 1319 0010 22000000 		.4byte	.LVL6
- 1320 0014 0100     		.2byte	0x1
- 1321 0016 54       		.byte	0x54
- 1322 0017 00000000 		.4byte	0
- 1323 001b 00000000 		.4byte	0
- 1324              	.LLST1:
- 1325 001f 00000000 		.4byte	.LVL7
- 1326 0023 0E000000 		.4byte	.LVL8
- 1327 0027 0100     		.2byte	0x1
- 1328 0029 50       		.byte	0x50
- 1329 002a 0E000000 		.4byte	.LVL8
- 1330 002e 30000000 		.4byte	.LFE6
- 1331 0032 0400     		.2byte	0x4
- 1332 0034 F3       		.byte	0xf3
- 1333 0035 01       		.uleb128 0x1
- 1334 0036 50       		.byte	0x50
- 1335 0037 9F       		.byte	0x9f
- 1336 0038 00000000 		.4byte	0
- 1337 003c 00000000 		.4byte	0
- 1338              	.LLST2:
- 1339 0040 00000000 		.4byte	.LVL9
- 1340 0044 0C000000 		.4byte	.LVL11
- 1341 0048 0100     		.2byte	0x1
- 1342 004a 50       		.byte	0x50
- 1343 004b 0C000000 		.4byte	.LVL11
- 1344 004f 1C000000 		.4byte	.LFE7
- 1345 0053 0400     		.2byte	0x4
- 1346 0055 F3       		.byte	0xf3
- 1347 0056 01       		.uleb128 0x1
- 1348 0057 50       		.byte	0x50
- 1349 0058 9F       		.byte	0x9f
- 1350 0059 00000000 		.4byte	0
- 1351 005d 00000000 		.4byte	0
- 1352              	.LLST3:
- 1353 0061 00000000 		.4byte	.LVL9
- 1354 0065 0C000000 		.4byte	.LVL11
- 1355 0069 0100     		.2byte	0x1
- 1356 006b 51       		.byte	0x51
- 1357 006c 0C000000 		.4byte	.LVL11
- 1358 0070 1C000000 		.4byte	.LFE7
- 1359 0074 0100     		.2byte	0x1
- 1360 0076 56       		.byte	0x56
- 1361 0077 00000000 		.4byte	0
- 1362 007b 00000000 		.4byte	0
- 1363              	.LLST4:
- 1364 007f 00000000 		.4byte	.LVL9
- 1365 0083 0C000000 		.4byte	.LVL11
- 1366 0087 0100     		.2byte	0x1
- 1367 0089 52       		.byte	0x52
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 32
+ 1371 00a4 00       		.byte	0
+ 1372 00a5 0C       		.uleb128 0xc
+ 1373 00a6 34       		.uleb128 0x34
+ 1374 00a7 00       		.byte	0
+ 1375 00a8 03       		.uleb128 0x3
+ 1376 00a9 08       		.uleb128 0x8
+ 1377 00aa 3A       		.uleb128 0x3a
+ 1378 00ab 0B       		.uleb128 0xb
+ 1379 00ac 3B       		.uleb128 0x3b
+ 1380 00ad 0B       		.uleb128 0xb
+ 1381 00ae 49       		.uleb128 0x49
+ 1382 00af 13       		.uleb128 0x13
+ 1383 00b0 02       		.uleb128 0x2
+ 1384 00b1 17       		.uleb128 0x17
+ 1385 00b2 00       		.byte	0
+ 1386 00b3 00       		.byte	0
+ 1387 00b4 0D       		.uleb128 0xd
+ 1388 00b5 0F       		.uleb128 0xf
+ 1389 00b6 00       		.byte	0
+ 1390 00b7 0B       		.uleb128 0xb
+ 1391 00b8 0B       		.uleb128 0xb
+ 1392 00b9 49       		.uleb128 0x49
+ 1393 00ba 13       		.uleb128 0x13
+ 1394 00bb 00       		.byte	0
+ 1395 00bc 00       		.byte	0
+ 1396 00bd 0E       		.uleb128 0xe
+ 1397 00be 34       		.uleb128 0x34
+ 1398 00bf 00       		.byte	0
+ 1399 00c0 03       		.uleb128 0x3
+ 1400 00c1 0E       		.uleb128 0xe
+ 1401 00c2 3A       		.uleb128 0x3a
+ 1402 00c3 0B       		.uleb128 0xb
+ 1403 00c4 3B       		.uleb128 0x3b
+ 1404 00c5 0B       		.uleb128 0xb
+ 1405 00c6 49       		.uleb128 0x49
+ 1406 00c7 13       		.uleb128 0x13
+ 1407 00c8 02       		.uleb128 0x2
+ 1408 00c9 17       		.uleb128 0x17
+ 1409 00ca 00       		.byte	0
+ 1410 00cb 00       		.byte	0
+ 1411 00cc 0F       		.uleb128 0xf
+ 1412 00cd 34       		.uleb128 0x34
+ 1413 00ce 00       		.byte	0
+ 1414 00cf 03       		.uleb128 0x3
+ 1415 00d0 0E       		.uleb128 0xe
+ 1416 00d1 3A       		.uleb128 0x3a
+ 1417 00d2 0B       		.uleb128 0xb
+ 1418 00d3 3B       		.uleb128 0x3b
+ 1419 00d4 0B       		.uleb128 0xb
+ 1420 00d5 49       		.uleb128 0x49
+ 1421 00d6 13       		.uleb128 0x13
+ 1422 00d7 02       		.uleb128 0x2
+ 1423 00d8 18       		.uleb128 0x18
+ 1424 00d9 00       		.byte	0
+ 1425 00da 00       		.byte	0
+ 1426 00db 10       		.uleb128 0x10
+ 1427 00dc 01       		.uleb128 0x1
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 34
 
 
- 1368 008a 0C000000 		.4byte	.LVL11
- 1369 008e 1C000000 		.4byte	.LFE7
- 1370 0092 0400     		.2byte	0x4
- 1371 0094 F3       		.byte	0xf3
- 1372 0095 01       		.uleb128 0x1
- 1373 0096 52       		.byte	0x52
- 1374 0097 9F       		.byte	0x9f
- 1375 0098 00000000 		.4byte	0
- 1376 009c 00000000 		.4byte	0
- 1377              	.LLST5:
- 1378 00a0 08000000 		.4byte	.LVL10
- 1379 00a4 0C000000 		.4byte	.LVL11
- 1380 00a8 0200     		.2byte	0x2
- 1381 00aa 30       		.byte	0x30
- 1382 00ab 9F       		.byte	0x9f
- 1383 00ac 0C000000 		.4byte	.LVL11
- 1384 00b0 1C000000 		.4byte	.LFE7
- 1385 00b4 0100     		.2byte	0x1
- 1386 00b6 54       		.byte	0x54
- 1387 00b7 00000000 		.4byte	0
- 1388 00bb 00000000 		.4byte	0
- 1389              	.LLST6:
- 1390 00bf 00000000 		.4byte	.LVL16
- 1391 00c3 08000000 		.4byte	.LVL18
- 1392 00c7 0100     		.2byte	0x1
- 1393 00c9 50       		.byte	0x50
- 1394 00ca 08000000 		.4byte	.LVL18
- 1395 00ce 0B000000 		.4byte	.LVL19-1
- 1396 00d2 0100     		.2byte	0x1
- 1397 00d4 51       		.byte	0x51
- 1398 00d5 0B000000 		.4byte	.LVL19-1
- 1399 00d9 0E000000 		.4byte	.LFE10
- 1400 00dd 0400     		.2byte	0x4
- 1401 00df F3       		.byte	0xf3
- 1402 00e0 01       		.uleb128 0x1
- 1403 00e1 50       		.byte	0x50
- 1404 00e2 9F       		.byte	0x9f
- 1405 00e3 00000000 		.4byte	0
- 1406 00e7 00000000 		.4byte	0
- 1407              	.LLST7:
- 1408 00eb 00000000 		.4byte	.LVL16
- 1409 00ef 06000000 		.4byte	.LVL17
- 1410 00f3 0100     		.2byte	0x1
- 1411 00f5 51       		.byte	0x51
- 1412 00f6 06000000 		.4byte	.LVL17
- 1413 00fa 0E000000 		.4byte	.LFE10
- 1414 00fe 0400     		.2byte	0x4
- 1415 0100 F3       		.byte	0xf3
- 1416 0101 01       		.uleb128 0x1
- 1417 0102 51       		.byte	0x51
- 1418 0103 9F       		.byte	0x9f
- 1419 0104 00000000 		.4byte	0
- 1420 0108 00000000 		.4byte	0
- 1421              	.LLST8:
- 1422 010c 00000000 		.4byte	.LVL20
- 1423 0110 08000000 		.4byte	.LVL22
- 1424 0114 0100     		.2byte	0x1
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 33
+ 1428 00dd 01       		.byte	0x1
+ 1429 00de 49       		.uleb128 0x49
+ 1430 00df 13       		.uleb128 0x13
+ 1431 00e0 01       		.uleb128 0x1
+ 1432 00e1 13       		.uleb128 0x13
+ 1433 00e2 00       		.byte	0
+ 1434 00e3 00       		.byte	0
+ 1435 00e4 11       		.uleb128 0x11
+ 1436 00e5 21       		.uleb128 0x21
+ 1437 00e6 00       		.byte	0
+ 1438 00e7 49       		.uleb128 0x49
+ 1439 00e8 13       		.uleb128 0x13
+ 1440 00e9 2F       		.uleb128 0x2f
+ 1441 00ea 0B       		.uleb128 0xb
+ 1442 00eb 00       		.byte	0
+ 1443 00ec 00       		.byte	0
+ 1444 00ed 12       		.uleb128 0x12
+ 1445 00ee 2E       		.uleb128 0x2e
+ 1446 00ef 01       		.byte	0x1
+ 1447 00f0 3F       		.uleb128 0x3f
+ 1448 00f1 19       		.uleb128 0x19
+ 1449 00f2 03       		.uleb128 0x3
+ 1450 00f3 0E       		.uleb128 0xe
+ 1451 00f4 3A       		.uleb128 0x3a
+ 1452 00f5 0B       		.uleb128 0xb
+ 1453 00f6 3B       		.uleb128 0x3b
+ 1454 00f7 0B       		.uleb128 0xb
+ 1455 00f8 27       		.uleb128 0x27
+ 1456 00f9 19       		.uleb128 0x19
+ 1457 00fa 49       		.uleb128 0x49
+ 1458 00fb 13       		.uleb128 0x13
+ 1459 00fc 11       		.uleb128 0x11
+ 1460 00fd 01       		.uleb128 0x1
+ 1461 00fe 12       		.uleb128 0x12
+ 1462 00ff 06       		.uleb128 0x6
+ 1463 0100 40       		.uleb128 0x40
+ 1464 0101 18       		.uleb128 0x18
+ 1465 0102 9742     		.uleb128 0x2117
+ 1466 0104 19       		.uleb128 0x19
+ 1467 0105 01       		.uleb128 0x1
+ 1468 0106 13       		.uleb128 0x13
+ 1469 0107 00       		.byte	0
+ 1470 0108 00       		.byte	0
+ 1471 0109 13       		.uleb128 0x13
+ 1472 010a 05       		.uleb128 0x5
+ 1473 010b 00       		.byte	0
+ 1474 010c 03       		.uleb128 0x3
+ 1475 010d 08       		.uleb128 0x8
+ 1476 010e 3A       		.uleb128 0x3a
+ 1477 010f 0B       		.uleb128 0xb
+ 1478 0110 3B       		.uleb128 0x3b
+ 1479 0111 0B       		.uleb128 0xb
+ 1480 0112 49       		.uleb128 0x49
+ 1481 0113 13       		.uleb128 0x13
+ 1482 0114 02       		.uleb128 0x2
+ 1483 0115 17       		.uleb128 0x17
+ 1484 0116 00       		.byte	0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 35
 
 
- 1425 0116 50       		.byte	0x50
- 1426 0117 08000000 		.4byte	.LVL22
- 1427 011b 0B000000 		.4byte	.LVL23-1
- 1428 011f 0100     		.2byte	0x1
- 1429 0121 51       		.byte	0x51
- 1430 0122 0B000000 		.4byte	.LVL23-1
- 1431 0126 0E000000 		.4byte	.LFE11
- 1432 012a 0400     		.2byte	0x4
- 1433 012c F3       		.byte	0xf3
- 1434 012d 01       		.uleb128 0x1
- 1435 012e 50       		.byte	0x50
- 1436 012f 9F       		.byte	0x9f
- 1437 0130 00000000 		.4byte	0
- 1438 0134 00000000 		.4byte	0
- 1439              	.LLST9:
- 1440 0138 00000000 		.4byte	.LVL20
- 1441 013c 06000000 		.4byte	.LVL21
- 1442 0140 0100     		.2byte	0x1
- 1443 0142 51       		.byte	0x51
- 1444 0143 06000000 		.4byte	.LVL21
- 1445 0147 0E000000 		.4byte	.LFE11
- 1446 014b 0400     		.2byte	0x4
- 1447 014d F3       		.byte	0xf3
- 1448 014e 01       		.uleb128 0x1
- 1449 014f 51       		.byte	0x51
- 1450 0150 9F       		.byte	0x9f
- 1451 0151 00000000 		.4byte	0
- 1452 0155 00000000 		.4byte	0
- 1453              	.LLST10:
- 1454 0159 00000000 		.4byte	.LVL25
- 1455 015d 08000000 		.4byte	.LVL27
- 1456 0161 0100     		.2byte	0x1
- 1457 0163 50       		.byte	0x50
- 1458 0164 08000000 		.4byte	.LVL27
- 1459 0168 0B000000 		.4byte	.LVL28-1
- 1460 016c 0100     		.2byte	0x1
- 1461 016e 51       		.byte	0x51
- 1462 016f 0B000000 		.4byte	.LVL28-1
- 1463 0173 0E000000 		.4byte	.LFE13
- 1464 0177 0400     		.2byte	0x4
- 1465 0179 F3       		.byte	0xf3
- 1466 017a 01       		.uleb128 0x1
- 1467 017b 50       		.byte	0x50
- 1468 017c 9F       		.byte	0x9f
- 1469 017d 00000000 		.4byte	0
- 1470 0181 00000000 		.4byte	0
- 1471              	.LLST11:
- 1472 0185 00000000 		.4byte	.LVL25
- 1473 0189 06000000 		.4byte	.LVL26
- 1474 018d 0100     		.2byte	0x1
- 1475 018f 51       		.byte	0x51
- 1476 0190 06000000 		.4byte	.LVL26
- 1477 0194 0E000000 		.4byte	.LFE13
- 1478 0198 0400     		.2byte	0x4
- 1479 019a F3       		.byte	0xf3
- 1480 019b 01       		.uleb128 0x1
- 1481 019c 51       		.byte	0x51
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 34
+ 1485 0117 00       		.byte	0
+ 1486 0118 14       		.uleb128 0x14
+ 1487 0119 2E       		.uleb128 0x2e
+ 1488 011a 01       		.byte	0x1
+ 1489 011b 3F       		.uleb128 0x3f
+ 1490 011c 19       		.uleb128 0x19
+ 1491 011d 03       		.uleb128 0x3
+ 1492 011e 0E       		.uleb128 0xe
+ 1493 011f 3A       		.uleb128 0x3a
+ 1494 0120 0B       		.uleb128 0xb
+ 1495 0121 3B       		.uleb128 0x3b
+ 1496 0122 05       		.uleb128 0x5
+ 1497 0123 27       		.uleb128 0x27
+ 1498 0124 19       		.uleb128 0x19
+ 1499 0125 11       		.uleb128 0x11
+ 1500 0126 01       		.uleb128 0x1
+ 1501 0127 12       		.uleb128 0x12
+ 1502 0128 06       		.uleb128 0x6
+ 1503 0129 40       		.uleb128 0x40
+ 1504 012a 18       		.uleb128 0x18
+ 1505 012b 9742     		.uleb128 0x2117
+ 1506 012d 19       		.uleb128 0x19
+ 1507 012e 01       		.uleb128 0x1
+ 1508 012f 13       		.uleb128 0x13
+ 1509 0130 00       		.byte	0
+ 1510 0131 00       		.byte	0
+ 1511 0132 15       		.uleb128 0x15
+ 1512 0133 05       		.uleb128 0x5
+ 1513 0134 00       		.byte	0
+ 1514 0135 03       		.uleb128 0x3
+ 1515 0136 08       		.uleb128 0x8
+ 1516 0137 3A       		.uleb128 0x3a
+ 1517 0138 0B       		.uleb128 0xb
+ 1518 0139 3B       		.uleb128 0x3b
+ 1519 013a 05       		.uleb128 0x5
+ 1520 013b 49       		.uleb128 0x49
+ 1521 013c 13       		.uleb128 0x13
+ 1522 013d 02       		.uleb128 0x2
+ 1523 013e 17       		.uleb128 0x17
+ 1524 013f 00       		.byte	0
+ 1525 0140 00       		.byte	0
+ 1526 0141 16       		.uleb128 0x16
+ 1527 0142 05       		.uleb128 0x5
+ 1528 0143 00       		.byte	0
+ 1529 0144 03       		.uleb128 0x3
+ 1530 0145 0E       		.uleb128 0xe
+ 1531 0146 3A       		.uleb128 0x3a
+ 1532 0147 0B       		.uleb128 0xb
+ 1533 0148 3B       		.uleb128 0x3b
+ 1534 0149 05       		.uleb128 0x5
+ 1535 014a 49       		.uleb128 0x49
+ 1536 014b 13       		.uleb128 0x13
+ 1537 014c 02       		.uleb128 0x2
+ 1538 014d 17       		.uleb128 0x17
+ 1539 014e 00       		.byte	0
+ 1540 014f 00       		.byte	0
+ 1541 0150 17       		.uleb128 0x17
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 36
 
 
- 1482 019d 9F       		.byte	0x9f
- 1483 019e 00000000 		.4byte	0
- 1484 01a2 00000000 		.4byte	0
- 1485              		.section	.debug_aranges,"",%progbits
- 1486 0000 84000000 		.4byte	0x84
- 1487 0004 0200     		.2byte	0x2
- 1488 0006 00000000 		.4byte	.Ldebug_info0
- 1489 000a 04       		.byte	0x4
- 1490 000b 00       		.byte	0
- 1491 000c 0000     		.2byte	0
- 1492 000e 0000     		.2byte	0
- 1493 0010 00000000 		.4byte	.LFB0
- 1494 0014 02000000 		.4byte	.LFE0-.LFB0
- 1495 0018 00000000 		.4byte	.LFB1
- 1496 001c 14000000 		.4byte	.LFE1-.LFB1
- 1497 0020 00000000 		.4byte	.LFB2
- 1498 0024 18000000 		.4byte	.LFE2-.LFB2
- 1499 0028 00000000 		.4byte	.LFB3
- 1500 002c 02000000 		.4byte	.LFE3-.LFB3
- 1501 0030 00000000 		.4byte	.LFB4
- 1502 0034 1C000000 		.4byte	.LFE4-.LFB4
- 1503 0038 00000000 		.4byte	.LFB5
- 1504 003c 2C000000 		.4byte	.LFE5-.LFB5
- 1505 0040 00000000 		.4byte	.LFB6
- 1506 0044 30000000 		.4byte	.LFE6-.LFB6
- 1507 0048 00000000 		.4byte	.LFB7
- 1508 004c 1C000000 		.4byte	.LFE7-.LFB7
- 1509 0050 00000000 		.4byte	.LFB8
- 1510 0054 20000000 		.4byte	.LFE8-.LFB8
- 1511 0058 00000000 		.4byte	.LFB9
- 1512 005c 20000000 		.4byte	.LFE9-.LFB9
- 1513 0060 00000000 		.4byte	.LFB10
- 1514 0064 0E000000 		.4byte	.LFE10-.LFB10
- 1515 0068 00000000 		.4byte	.LFB11
- 1516 006c 0E000000 		.4byte	.LFE11-.LFB11
- 1517 0070 00000000 		.4byte	.LFB12
- 1518 0074 0A000000 		.4byte	.LFE12-.LFB12
- 1519 0078 00000000 		.4byte	.LFB13
- 1520 007c 0E000000 		.4byte	.LFE13-.LFB13
- 1521 0080 00000000 		.4byte	0
- 1522 0084 00000000 		.4byte	0
- 1523              		.section	.debug_ranges,"",%progbits
- 1524              	.Ldebug_ranges0:
- 1525 0000 00000000 		.4byte	.LFB0
- 1526 0004 02000000 		.4byte	.LFE0
- 1527 0008 00000000 		.4byte	.LFB1
- 1528 000c 14000000 		.4byte	.LFE1
- 1529 0010 00000000 		.4byte	.LFB2
- 1530 0014 18000000 		.4byte	.LFE2
- 1531 0018 00000000 		.4byte	.LFB3
- 1532 001c 02000000 		.4byte	.LFE3
- 1533 0020 00000000 		.4byte	.LFB4
- 1534 0024 1C000000 		.4byte	.LFE4
- 1535 0028 00000000 		.4byte	.LFB5
- 1536 002c 2C000000 		.4byte	.LFE5
- 1537 0030 00000000 		.4byte	.LFB6
- 1538 0034 30000000 		.4byte	.LFE6
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 35
+ 1542 0151 34       		.uleb128 0x34
+ 1543 0152 00       		.byte	0
+ 1544 0153 03       		.uleb128 0x3
+ 1545 0154 08       		.uleb128 0x8
+ 1546 0155 3A       		.uleb128 0x3a
+ 1547 0156 0B       		.uleb128 0xb
+ 1548 0157 3B       		.uleb128 0x3b
+ 1549 0158 05       		.uleb128 0x5
+ 1550 0159 49       		.uleb128 0x49
+ 1551 015a 13       		.uleb128 0x13
+ 1552 015b 02       		.uleb128 0x2
+ 1553 015c 17       		.uleb128 0x17
+ 1554 015d 00       		.byte	0
+ 1555 015e 00       		.byte	0
+ 1556 015f 18       		.uleb128 0x18
+ 1557 0160 898201   		.uleb128 0x4109
+ 1558 0163 01       		.byte	0x1
+ 1559 0164 11       		.uleb128 0x11
+ 1560 0165 01       		.uleb128 0x1
+ 1561 0166 31       		.uleb128 0x31
+ 1562 0167 13       		.uleb128 0x13
+ 1563 0168 00       		.byte	0
+ 1564 0169 00       		.byte	0
+ 1565 016a 19       		.uleb128 0x19
+ 1566 016b 8A8201   		.uleb128 0x410a
+ 1567 016e 00       		.byte	0
+ 1568 016f 02       		.uleb128 0x2
+ 1569 0170 18       		.uleb128 0x18
+ 1570 0171 9142     		.uleb128 0x2111
+ 1571 0173 18       		.uleb128 0x18
+ 1572 0174 00       		.byte	0
+ 1573 0175 00       		.byte	0
+ 1574 0176 1A       		.uleb128 0x1a
+ 1575 0177 05       		.uleb128 0x5
+ 1576 0178 00       		.byte	0
+ 1577 0179 03       		.uleb128 0x3
+ 1578 017a 0E       		.uleb128 0xe
+ 1579 017b 3A       		.uleb128 0x3a
+ 1580 017c 0B       		.uleb128 0xb
+ 1581 017d 3B       		.uleb128 0x3b
+ 1582 017e 05       		.uleb128 0x5
+ 1583 017f 49       		.uleb128 0x49
+ 1584 0180 13       		.uleb128 0x13
+ 1585 0181 02       		.uleb128 0x2
+ 1586 0182 18       		.uleb128 0x18
+ 1587 0183 00       		.byte	0
+ 1588 0184 00       		.byte	0
+ 1589 0185 1B       		.uleb128 0x1b
+ 1590 0186 2E       		.uleb128 0x2e
+ 1591 0187 01       		.byte	0x1
+ 1592 0188 3F       		.uleb128 0x3f
+ 1593 0189 19       		.uleb128 0x19
+ 1594 018a 03       		.uleb128 0x3
+ 1595 018b 0E       		.uleb128 0xe
+ 1596 018c 3A       		.uleb128 0x3a
+ 1597 018d 0B       		.uleb128 0xb
+ 1598 018e 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 37
 
 
- 1539 0038 00000000 		.4byte	.LFB7
- 1540 003c 1C000000 		.4byte	.LFE7
- 1541 0040 00000000 		.4byte	.LFB8
- 1542 0044 20000000 		.4byte	.LFE8
- 1543 0048 00000000 		.4byte	.LFB9
- 1544 004c 20000000 		.4byte	.LFE9
- 1545 0050 00000000 		.4byte	.LFB10
- 1546 0054 0E000000 		.4byte	.LFE10
- 1547 0058 00000000 		.4byte	.LFB11
- 1548 005c 0E000000 		.4byte	.LFE11
- 1549 0060 00000000 		.4byte	.LFB12
- 1550 0064 0A000000 		.4byte	.LFE12
- 1551 0068 00000000 		.4byte	.LFB13
- 1552 006c 0E000000 		.4byte	.LFE13
- 1553 0070 00000000 		.4byte	0
- 1554 0074 00000000 		.4byte	0
- 1555              		.section	.debug_line,"",%progbits
- 1556              	.Ldebug_line0:
- 1557 0000 8F010000 		.section	.debug_str,"MS",%progbits,1
- 1557      02004B00 
- 1557      00000201 
- 1557      FB0E0D00 
- 1557      01010101 
- 1558              	.LASF31:
- 1559 0000 47726170 		.ascii	"GraphicLCDIntf_ReadM8_A1\000"
- 1559      6869634C 
- 1559      4344496E 
- 1559      74665F52 
- 1559      6561644D 
- 1560              	.LASF17:
- 1561 0019 47726170 		.ascii	"GraphicLCDIntf_Init\000"
- 1561      6869634C 
- 1561      4344496E 
- 1561      74665F49 
- 1561      6E697400 
- 1562              	.LASF2:
- 1563 002d 73686F72 		.ascii	"short int\000"
- 1563      7420696E 
- 1563      7400
- 1564              	.LASF30:
- 1565 0037 47726170 		.ascii	"GraphicLCDIntf_Read8_A1\000"
- 1565      6869634C 
- 1565      4344496E 
- 1565      74665F52 
- 1565      65616438 
- 1566              	.LASF22:
- 1567 004f 47726170 		.ascii	"GraphicLCDIntf_WriteM8\000"
- 1567      6869634C 
- 1567      4344496E 
- 1567      74665F57 
- 1567      72697465 
- 1568              	.LASF23:
- 1569 0066 47726170 		.ascii	"GraphicLCDIntf_ReadM8\000"
- 1569      6869634C 
- 1569      4344496E 
- 1569      74665F52 
- 1569      6561644D 
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 36
+ 1599 018f 05       		.uleb128 0x5
+ 1600 0190 27       		.uleb128 0x27
+ 1601 0191 19       		.uleb128 0x19
+ 1602 0192 49       		.uleb128 0x49
+ 1603 0193 13       		.uleb128 0x13
+ 1604 0194 11       		.uleb128 0x11
+ 1605 0195 01       		.uleb128 0x1
+ 1606 0196 12       		.uleb128 0x12
+ 1607 0197 06       		.uleb128 0x6
+ 1608 0198 40       		.uleb128 0x40
+ 1609 0199 18       		.uleb128 0x18
+ 1610 019a 9742     		.uleb128 0x2117
+ 1611 019c 19       		.uleb128 0x19
+ 1612 019d 01       		.uleb128 0x1
+ 1613 019e 13       		.uleb128 0x13
+ 1614 019f 00       		.byte	0
+ 1615 01a0 00       		.byte	0
+ 1616 01a1 1C       		.uleb128 0x1c
+ 1617 01a2 34       		.uleb128 0x34
+ 1618 01a3 00       		.byte	0
+ 1619 01a4 03       		.uleb128 0x3
+ 1620 01a5 0E       		.uleb128 0xe
+ 1621 01a6 3A       		.uleb128 0x3a
+ 1622 01a7 0B       		.uleb128 0xb
+ 1623 01a8 3B       		.uleb128 0x3b
+ 1624 01a9 0B       		.uleb128 0xb
+ 1625 01aa 49       		.uleb128 0x49
+ 1626 01ab 13       		.uleb128 0x13
+ 1627 01ac 3F       		.uleb128 0x3f
+ 1628 01ad 19       		.uleb128 0x19
+ 1629 01ae 02       		.uleb128 0x2
+ 1630 01af 18       		.uleb128 0x18
+ 1631 01b0 00       		.byte	0
+ 1632 01b1 00       		.byte	0
+ 1633 01b2 00       		.byte	0
+ 1634              		.section	.debug_loc,"",%progbits
+ 1635              	.Ldebug_loc0:
+ 1636              	.LLST0:
+ 1637 0000 02000000 		.4byte	.LVL3
+ 1638 0004 06000000 		.4byte	.LVL4
+ 1639 0008 0200     		.2byte	0x2
+ 1640 000a 30       		.byte	0x30
+ 1641 000b 9F       		.byte	0x9f
+ 1642 000c 06000000 		.4byte	.LVL4
+ 1643 0010 22000000 		.4byte	.LVL6
+ 1644 0014 0100     		.2byte	0x1
+ 1645 0016 54       		.byte	0x54
+ 1646 0017 00000000 		.4byte	0
+ 1647 001b 00000000 		.4byte	0
+ 1648              	.LLST1:
+ 1649 001f 30000000 		.4byte	.LVL8
+ 1650 0023 36000000 		.4byte	.LVL9
+ 1651 0027 0200     		.2byte	0x2
+ 1652 0029 30       		.byte	0x30
+ 1653 002a 9F       		.byte	0x9f
+ 1654 002b 36000000 		.4byte	.LVL9
+ 1655 002f 9C000000 		.4byte	.LFE6
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 38
 
 
- 1570              	.LASF27:
- 1571 007c 47726170 		.ascii	"GraphicLCDIntf_WriteM8_A0\000"
- 1571      6869634C 
- 1571      4344496E 
- 1571      74665F57 
- 1571      72697465 
- 1572              	.LASF28:
- 1573 0096 47726170 		.ascii	"GraphicLCDIntf_WriteM8_A1\000"
- 1573      6869634C 
- 1573      4344496E 
- 1573      74665F57 
- 1573      72697465 
- 1574              	.LASF10:
- 1575 00b0 75696E74 		.ascii	"uint16\000"
- 1575      313600
- 1576              	.LASF9:
- 1577 00b7 75696E74 		.ascii	"uint8\000"
- 1577      3800
- 1578              	.LASF35:
- 1579 00bd 47726170 		.ascii	"GraphicLCDIntf_initVar\000"
- 1579      6869634C 
- 1579      4344496E 
- 1579      74665F69 
- 1579      6E697456 
- 1580              	.LASF12:
- 1581 00d4 666C6F61 		.ascii	"float\000"
- 1581      7400
- 1582              	.LASF25:
- 1583 00da 47726170 		.ascii	"GraphicLCDIntf_Write8_A0\000"
- 1583      6869634C 
- 1583      4344496E 
- 1583      74665F57 
- 1583      72697465 
- 1584              	.LASF26:
- 1585 00f3 47726170 		.ascii	"GraphicLCDIntf_Write8_A1\000"
- 1585      6869634C 
- 1585      4344496E 
- 1585      74665F57 
- 1585      72697465 
- 1586              	.LASF6:
- 1587 010c 6C6F6E67 		.ascii	"long long int\000"
- 1587      206C6F6E 
- 1587      6720696E 
- 1587      7400
- 1588              	.LASF29:
- 1589 011a 47726170 		.ascii	"GraphicLCDIntf_Read8\000"
- 1589      6869634C 
- 1589      4344496E 
- 1589      74665F52 
- 1589      65616438 
- 1590              	.LASF34:
- 1591 012f 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
- 1591      73657273 
- 1591      5C6C656F 
- 1591      6A615C44 
- 1591      6F63756D 
- 1592 015d 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 37
+ 1656 0033 0100     		.2byte	0x1
+ 1657 0035 5C       		.byte	0x5c
+ 1658 0036 00000000 		.4byte	0
+ 1659 003a 00000000 		.4byte	0
+ 1660              	.LLST2:
+ 1661 003e 5C000000 		.4byte	.LVL16
+ 1662 0042 72000000 		.4byte	.LVL17
+ 1663 0046 0100     		.2byte	0x1
+ 1664 0048 54       		.byte	0x54
+ 1665 0049 74000000 		.4byte	.LVL18
+ 1666 004d 76000000 		.4byte	.LVL19
+ 1667 0051 0100     		.2byte	0x1
+ 1668 0053 54       		.byte	0x54
+ 1669 0054 78000000 		.4byte	.LVL20
+ 1670 0058 80000000 		.4byte	.LVL22
+ 1671 005c 0100     		.2byte	0x1
+ 1672 005e 54       		.byte	0x54
+ 1673 005f 00000000 		.4byte	0
+ 1674 0063 00000000 		.4byte	0
+ 1675              	.LLST3:
+ 1676 0067 44000000 		.4byte	.LVL11
+ 1677 006b 48000000 		.4byte	.LVL13
+ 1678 006f 0100     		.2byte	0x1
+ 1679 0071 5E       		.byte	0x5e
+ 1680 0072 58000000 		.4byte	.LVL15
+ 1681 0076 88000000 		.4byte	.LVL23
+ 1682 007a 0100     		.2byte	0x1
+ 1683 007c 5E       		.byte	0x5e
+ 1684 007d 00000000 		.4byte	0
+ 1685 0081 00000000 		.4byte	0
+ 1686              	.LLST4:
+ 1687 0085 58000000 		.4byte	.LVL15
+ 1688 0089 5C000000 		.4byte	.LVL16
+ 1689 008d 0200     		.2byte	0x2
+ 1690 008f 30       		.byte	0x30
+ 1691 0090 9F       		.byte	0x9f
+ 1692 0091 5C000000 		.4byte	.LVL16
+ 1693 0095 7E000000 		.4byte	.LVL21
+ 1694 0099 0100     		.2byte	0x1
+ 1695 009b 56       		.byte	0x56
+ 1696 009c 80000000 		.4byte	.LVL22
+ 1697 00a0 88000000 		.4byte	.LVL23
+ 1698 00a4 0100     		.2byte	0x1
+ 1699 00a6 56       		.byte	0x56
+ 1700 00a7 00000000 		.4byte	0
+ 1701 00ab 00000000 		.4byte	0
+ 1702              	.LLST5:
+ 1703 00af 40000000 		.4byte	.LVL10
+ 1704 00b3 46000000 		.4byte	.LVL12
+ 1705 00b7 0300     		.2byte	0x3
+ 1706 00b9 91       		.byte	0x91
+ 1707 00ba 5C       		.sleb128 -36
+ 1708 00bb 9F       		.byte	0x9f
+ 1709 00bc 46000000 		.4byte	.LVL12
+ 1710 00c0 48000000 		.4byte	.LVL13
+ 1711 00c4 0100     		.2byte	0x1
+ 1712 00c6 57       		.byte	0x57
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 39
 
 
- 1592      2D464539 
- 1592      2D464537 
- 1592      2D426F61 
- 1592      72645C44 
- 1593              	.LASF4:
- 1594 0180 6C6F6E67 		.ascii	"long int\000"
- 1594      20696E74 
- 1594      00
- 1595              	.LASF33:
- 1596 0189 47656E65 		.ascii	"Generated_Source\\PSoC5\\GraphicLCDIntf.c\000"
- 1596      72617465 
- 1596      645F536F 
- 1596      75726365 
- 1596      5C50536F 
- 1597              	.LASF1:
- 1598 01b1 756E7369 		.ascii	"unsigned char\000"
- 1598      676E6564 
- 1598      20636861 
- 1598      7200
- 1599              	.LASF19:
- 1600 01bf 47726170 		.ascii	"GraphicLCDIntf_Start\000"
- 1600      6869634C 
- 1600      4344496E 
- 1600      74665F53 
- 1600      74617274 
- 1601              	.LASF0:
- 1602 01d4 7369676E 		.ascii	"signed char\000"
- 1602      65642063 
- 1602      68617200 
- 1603              	.LASF7:
- 1604 01e0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1604      206C6F6E 
- 1604      6720756E 
- 1604      7369676E 
- 1604      65642069 
- 1605              	.LASF8:
- 1606 01f7 756E7369 		.ascii	"unsigned int\000"
- 1606      676E6564 
- 1606      20696E74 
- 1606      00
- 1607              	.LASF16:
- 1608 0204 47726170 		.ascii	"GraphicLCDIntf_Enable\000"
- 1608      6869634C 
- 1608      4344496E 
- 1608      74665F45 
- 1608      6E61626C 
- 1609              	.LASF3:
- 1610 021a 73686F72 		.ascii	"short unsigned int\000"
- 1610      7420756E 
- 1610      7369676E 
- 1610      65642069 
- 1610      6E7400
- 1611              	.LASF14:
- 1612 022d 63686172 		.ascii	"char\000"
- 1612      00
- 1613              	.LASF21:
- 1614 0232 77724461 		.ascii	"wrData\000"
-ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccDSFpig.s 			page 38
+ 1713 00c7 54000000 		.4byte	.LVL14
+ 1714 00cb 88000000 		.4byte	.LVL23
+ 1715 00cf 0100     		.2byte	0x1
+ 1716 00d1 57       		.byte	0x57
+ 1717 00d2 00000000 		.4byte	0
+ 1718 00d6 00000000 		.4byte	0
+ 1719              	.LLST6:
+ 1720 00da 00000000 		.4byte	.LVL24
+ 1721 00de 0E000000 		.4byte	.LVL25
+ 1722 00e2 0100     		.2byte	0x1
+ 1723 00e4 50       		.byte	0x50
+ 1724 00e5 0E000000 		.4byte	.LVL25
+ 1725 00e9 30000000 		.4byte	.LFE7
+ 1726 00ed 0400     		.2byte	0x4
+ 1727 00ef F3       		.byte	0xf3
+ 1728 00f0 01       		.uleb128 0x1
+ 1729 00f1 50       		.byte	0x50
+ 1730 00f2 9F       		.byte	0x9f
+ 1731 00f3 00000000 		.4byte	0
+ 1732 00f7 00000000 		.4byte	0
+ 1733              	.LLST7:
+ 1734 00fb 00000000 		.4byte	.LVL26
+ 1735 00ff 0C000000 		.4byte	.LVL28
+ 1736 0103 0100     		.2byte	0x1
+ 1737 0105 50       		.byte	0x50
+ 1738 0106 0C000000 		.4byte	.LVL28
+ 1739 010a 1C000000 		.4byte	.LFE8
+ 1740 010e 0400     		.2byte	0x4
+ 1741 0110 F3       		.byte	0xf3
+ 1742 0111 01       		.uleb128 0x1
+ 1743 0112 50       		.byte	0x50
+ 1744 0113 9F       		.byte	0x9f
+ 1745 0114 00000000 		.4byte	0
+ 1746 0118 00000000 		.4byte	0
+ 1747              	.LLST8:
+ 1748 011c 00000000 		.4byte	.LVL26
+ 1749 0120 0C000000 		.4byte	.LVL28
+ 1750 0124 0100     		.2byte	0x1
+ 1751 0126 51       		.byte	0x51
+ 1752 0127 0C000000 		.4byte	.LVL28
+ 1753 012b 1C000000 		.4byte	.LFE8
+ 1754 012f 0100     		.2byte	0x1
+ 1755 0131 56       		.byte	0x56
+ 1756 0132 00000000 		.4byte	0
+ 1757 0136 00000000 		.4byte	0
+ 1758              	.LLST9:
+ 1759 013a 00000000 		.4byte	.LVL26
+ 1760 013e 0C000000 		.4byte	.LVL28
+ 1761 0142 0100     		.2byte	0x1
+ 1762 0144 52       		.byte	0x52
+ 1763 0145 0C000000 		.4byte	.LVL28
+ 1764 0149 1C000000 		.4byte	.LFE8
+ 1765 014d 0400     		.2byte	0x4
+ 1766 014f F3       		.byte	0xf3
+ 1767 0150 01       		.uleb128 0x1
+ 1768 0151 52       		.byte	0x52
+ 1769 0152 9F       		.byte	0x9f
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 40
 
 
- 1614      746100
- 1615              	.LASF11:
- 1616 0239 75696E74 		.ascii	"uint32\000"
- 1616      333200
- 1617              	.LASF15:
- 1618 0240 72656738 		.ascii	"reg8\000"
- 1618      00
- 1619              	.LASF5:
- 1620 0245 6C6F6E67 		.ascii	"long unsigned int\000"
- 1620      20756E73 
- 1620      69676E65 
- 1620      6420696E 
- 1620      7400
- 1621              	.LASF13:
- 1622 0257 646F7562 		.ascii	"double\000"
- 1622      6C6500
- 1623              	.LASF20:
- 1624 025e 47726170 		.ascii	"GraphicLCDIntf_Write8\000"
- 1624      6869634C 
- 1624      4344496E 
- 1624      74665F57 
- 1624      72697465 
- 1625              	.LASF18:
- 1626 0274 47726170 		.ascii	"GraphicLCDIntf_Stop\000"
- 1626      6869634C 
- 1626      4344496E 
- 1626      74665F53 
- 1626      746F7000 
- 1627              	.LASF24:
- 1628 0288 72644461 		.ascii	"rdData\000"
- 1628      746100
- 1629              	.LASF32:
- 1630 028f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1630      43313120 
- 1630      352E342E 
- 1630      31203230 
- 1630      31363036 
- 1631 02c2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1631      20726576 
- 1631      6973696F 
- 1631      6E203233 
- 1631      37373135 
- 1632 02f5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1632      66756E63 
- 1632      74696F6E 
- 1632      2D736563 
- 1632      74696F6E 
- 1633              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1770 0153 00000000 		.4byte	0
+ 1771 0157 00000000 		.4byte	0
+ 1772              	.LLST10:
+ 1773 015b 08000000 		.4byte	.LVL27
+ 1774 015f 0C000000 		.4byte	.LVL28
+ 1775 0163 0200     		.2byte	0x2
+ 1776 0165 30       		.byte	0x30
+ 1777 0166 9F       		.byte	0x9f
+ 1778 0167 0C000000 		.4byte	.LVL28
+ 1779 016b 1C000000 		.4byte	.LFE8
+ 1780 016f 0100     		.2byte	0x1
+ 1781 0171 54       		.byte	0x54
+ 1782 0172 00000000 		.4byte	0
+ 1783 0176 00000000 		.4byte	0
+ 1784              	.LLST11:
+ 1785 017a 00000000 		.4byte	.LVL33
+ 1786 017e 08000000 		.4byte	.LVL35
+ 1787 0182 0100     		.2byte	0x1
+ 1788 0184 50       		.byte	0x50
+ 1789 0185 08000000 		.4byte	.LVL35
+ 1790 0189 0B000000 		.4byte	.LVL36-1
+ 1791 018d 0100     		.2byte	0x1
+ 1792 018f 51       		.byte	0x51
+ 1793 0190 0B000000 		.4byte	.LVL36-1
+ 1794 0194 0E000000 		.4byte	.LFE11
+ 1795 0198 0400     		.2byte	0x4
+ 1796 019a F3       		.byte	0xf3
+ 1797 019b 01       		.uleb128 0x1
+ 1798 019c 50       		.byte	0x50
+ 1799 019d 9F       		.byte	0x9f
+ 1800 019e 00000000 		.4byte	0
+ 1801 01a2 00000000 		.4byte	0
+ 1802              	.LLST12:
+ 1803 01a6 00000000 		.4byte	.LVL33
+ 1804 01aa 06000000 		.4byte	.LVL34
+ 1805 01ae 0100     		.2byte	0x1
+ 1806 01b0 51       		.byte	0x51
+ 1807 01b1 06000000 		.4byte	.LVL34
+ 1808 01b5 0E000000 		.4byte	.LFE11
+ 1809 01b9 0400     		.2byte	0x4
+ 1810 01bb F3       		.byte	0xf3
+ 1811 01bc 01       		.uleb128 0x1
+ 1812 01bd 51       		.byte	0x51
+ 1813 01be 9F       		.byte	0x9f
+ 1814 01bf 00000000 		.4byte	0
+ 1815 01c3 00000000 		.4byte	0
+ 1816              	.LLST13:
+ 1817 01c7 00000000 		.4byte	.LVL37
+ 1818 01cb 08000000 		.4byte	.LVL39
+ 1819 01cf 0100     		.2byte	0x1
+ 1820 01d1 50       		.byte	0x50
+ 1821 01d2 08000000 		.4byte	.LVL39
+ 1822 01d6 0B000000 		.4byte	.LVL40-1
+ 1823 01da 0100     		.2byte	0x1
+ 1824 01dc 51       		.byte	0x51
+ 1825 01dd 0B000000 		.4byte	.LVL40-1
+ 1826 01e1 0E000000 		.4byte	.LFE12
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 41
+
+
+ 1827 01e5 0400     		.2byte	0x4
+ 1828 01e7 F3       		.byte	0xf3
+ 1829 01e8 01       		.uleb128 0x1
+ 1830 01e9 50       		.byte	0x50
+ 1831 01ea 9F       		.byte	0x9f
+ 1832 01eb 00000000 		.4byte	0
+ 1833 01ef 00000000 		.4byte	0
+ 1834              	.LLST14:
+ 1835 01f3 00000000 		.4byte	.LVL37
+ 1836 01f7 06000000 		.4byte	.LVL38
+ 1837 01fb 0100     		.2byte	0x1
+ 1838 01fd 51       		.byte	0x51
+ 1839 01fe 06000000 		.4byte	.LVL38
+ 1840 0202 0E000000 		.4byte	.LFE12
+ 1841 0206 0400     		.2byte	0x4
+ 1842 0208 F3       		.byte	0xf3
+ 1843 0209 01       		.uleb128 0x1
+ 1844 020a 51       		.byte	0x51
+ 1845 020b 9F       		.byte	0x9f
+ 1846 020c 00000000 		.4byte	0
+ 1847 0210 00000000 		.4byte	0
+ 1848              	.LLST15:
+ 1849 0214 00000000 		.4byte	.LVL42
+ 1850 0218 08000000 		.4byte	.LVL44
+ 1851 021c 0100     		.2byte	0x1
+ 1852 021e 50       		.byte	0x50
+ 1853 021f 08000000 		.4byte	.LVL44
+ 1854 0223 0B000000 		.4byte	.LVL45-1
+ 1855 0227 0100     		.2byte	0x1
+ 1856 0229 51       		.byte	0x51
+ 1857 022a 0B000000 		.4byte	.LVL45-1
+ 1858 022e 0E000000 		.4byte	.LFE14
+ 1859 0232 0400     		.2byte	0x4
+ 1860 0234 F3       		.byte	0xf3
+ 1861 0235 01       		.uleb128 0x1
+ 1862 0236 50       		.byte	0x50
+ 1863 0237 9F       		.byte	0x9f
+ 1864 0238 00000000 		.4byte	0
+ 1865 023c 00000000 		.4byte	0
+ 1866              	.LLST16:
+ 1867 0240 00000000 		.4byte	.LVL42
+ 1868 0244 06000000 		.4byte	.LVL43
+ 1869 0248 0100     		.2byte	0x1
+ 1870 024a 51       		.byte	0x51
+ 1871 024b 06000000 		.4byte	.LVL43
+ 1872 024f 0E000000 		.4byte	.LFE14
+ 1873 0253 0400     		.2byte	0x4
+ 1874 0255 F3       		.byte	0xf3
+ 1875 0256 01       		.uleb128 0x1
+ 1876 0257 51       		.byte	0x51
+ 1877 0258 9F       		.byte	0x9f
+ 1878 0259 00000000 		.4byte	0
+ 1879 025d 00000000 		.4byte	0
+ 1880              		.section	.debug_aranges,"",%progbits
+ 1881 0000 8C000000 		.4byte	0x8c
+ 1882 0004 0200     		.2byte	0x2
+ 1883 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 42
+
+
+ 1884 000a 04       		.byte	0x4
+ 1885 000b 00       		.byte	0
+ 1886 000c 0000     		.2byte	0
+ 1887 000e 0000     		.2byte	0
+ 1888 0010 00000000 		.4byte	.LFB0
+ 1889 0014 02000000 		.4byte	.LFE0-.LFB0
+ 1890 0018 00000000 		.4byte	.LFB1
+ 1891 001c 14000000 		.4byte	.LFE1-.LFB1
+ 1892 0020 00000000 		.4byte	.LFB2
+ 1893 0024 18000000 		.4byte	.LFE2-.LFB2
+ 1894 0028 00000000 		.4byte	.LFB3
+ 1895 002c 02000000 		.4byte	.LFE3-.LFB3
+ 1896 0030 00000000 		.4byte	.LFB4
+ 1897 0034 1C000000 		.4byte	.LFE4-.LFB4
+ 1898 0038 00000000 		.4byte	.LFB5
+ 1899 003c 2C000000 		.4byte	.LFE5-.LFB5
+ 1900 0040 00000000 		.4byte	.LFB6
+ 1901 0044 9C000000 		.4byte	.LFE6-.LFB6
+ 1902 0048 00000000 		.4byte	.LFB7
+ 1903 004c 30000000 		.4byte	.LFE7-.LFB7
+ 1904 0050 00000000 		.4byte	.LFB8
+ 1905 0054 1C000000 		.4byte	.LFE8-.LFB8
+ 1906 0058 00000000 		.4byte	.LFB9
+ 1907 005c 20000000 		.4byte	.LFE9-.LFB9
+ 1908 0060 00000000 		.4byte	.LFB10
+ 1909 0064 20000000 		.4byte	.LFE10-.LFB10
+ 1910 0068 00000000 		.4byte	.LFB11
+ 1911 006c 0E000000 		.4byte	.LFE11-.LFB11
+ 1912 0070 00000000 		.4byte	.LFB12
+ 1913 0074 0E000000 		.4byte	.LFE12-.LFB12
+ 1914 0078 00000000 		.4byte	.LFB13
+ 1915 007c 0A000000 		.4byte	.LFE13-.LFB13
+ 1916 0080 00000000 		.4byte	.LFB14
+ 1917 0084 0E000000 		.4byte	.LFE14-.LFB14
+ 1918 0088 00000000 		.4byte	0
+ 1919 008c 00000000 		.4byte	0
+ 1920              		.section	.debug_ranges,"",%progbits
+ 1921              	.Ldebug_ranges0:
+ 1922 0000 00000000 		.4byte	.LFB0
+ 1923 0004 02000000 		.4byte	.LFE0
+ 1924 0008 00000000 		.4byte	.LFB1
+ 1925 000c 14000000 		.4byte	.LFE1
+ 1926 0010 00000000 		.4byte	.LFB2
+ 1927 0014 18000000 		.4byte	.LFE2
+ 1928 0018 00000000 		.4byte	.LFB3
+ 1929 001c 02000000 		.4byte	.LFE3
+ 1930 0020 00000000 		.4byte	.LFB4
+ 1931 0024 1C000000 		.4byte	.LFE4
+ 1932 0028 00000000 		.4byte	.LFB5
+ 1933 002c 2C000000 		.4byte	.LFE5
+ 1934 0030 00000000 		.4byte	.LFB6
+ 1935 0034 9C000000 		.4byte	.LFE6
+ 1936 0038 00000000 		.4byte	.LFB7
+ 1937 003c 30000000 		.4byte	.LFE7
+ 1938 0040 00000000 		.4byte	.LFB8
+ 1939 0044 1C000000 		.4byte	.LFE8
+ 1940 0048 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 43
+
+
+ 1941 004c 20000000 		.4byte	.LFE9
+ 1942 0050 00000000 		.4byte	.LFB10
+ 1943 0054 20000000 		.4byte	.LFE10
+ 1944 0058 00000000 		.4byte	.LFB11
+ 1945 005c 0E000000 		.4byte	.LFE11
+ 1946 0060 00000000 		.4byte	.LFB12
+ 1947 0064 0E000000 		.4byte	.LFE12
+ 1948 0068 00000000 		.4byte	.LFB13
+ 1949 006c 0A000000 		.4byte	.LFE13
+ 1950 0070 00000000 		.4byte	.LFB14
+ 1951 0074 0E000000 		.4byte	.LFE14
+ 1952 0078 00000000 		.4byte	0
+ 1953 007c 00000000 		.4byte	0
+ 1954              		.section	.debug_line,"",%progbits
+ 1955              	.Ldebug_line0:
+ 1956 0000 E2020000 		.section	.debug_str,"MS",%progbits,1
+ 1956      02004801 
+ 1956      00000201 
+ 1956      FB0E0D00 
+ 1956      01010101 
+ 1957              	.LASF39:
+ 1958 0000 47726170 		.ascii	"GraphicLCDIntf_ReadM8_A1\000"
+ 1958      6869634C 
+ 1958      4344496E 
+ 1958      74665F52 
+ 1958      6561644D 
+ 1959              	.LASF19:
+ 1960 0019 47726170 		.ascii	"GraphicLCDIntf_Init\000"
+ 1960      6869634C 
+ 1960      4344496E 
+ 1960      74665F49 
+ 1960      6E697400 
+ 1961              	.LASF2:
+ 1962 002d 73686F72 		.ascii	"short int\000"
+ 1962      7420696E 
+ 1962      7400
+ 1963              	.LASF26:
+ 1964 0037 636F6C6F 		.ascii	"color\000"
+ 1964      7200
+ 1965              	.LASF38:
+ 1966 003d 47726170 		.ascii	"GraphicLCDIntf_Read8_A1\000"
+ 1966      6869634C 
+ 1966      4344496E 
+ 1966      74665F52 
+ 1966      65616438 
+ 1967              	.LASF24:
+ 1968 0055 47726170 		.ascii	"GraphicLCDIntf_WriteM8\000"
+ 1968      6869634C 
+ 1968      4344496E 
+ 1968      74665F57 
+ 1968      72697465 
+ 1969              	.LASF31:
+ 1970 006c 47726170 		.ascii	"GraphicLCDIntf_ReadM8\000"
+ 1970      6869634C 
+ 1970      4344496E 
+ 1970      74665F52 
+ 1970      6561644D 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 44
+
+
+ 1971              	.LASF35:
+ 1972 0082 47726170 		.ascii	"GraphicLCDIntf_WriteM8_A0\000"
+ 1972      6869634C 
+ 1972      4344496E 
+ 1972      74665F57 
+ 1972      72697465 
+ 1973              	.LASF36:
+ 1974 009c 47726170 		.ascii	"GraphicLCDIntf_WriteM8_A1\000"
+ 1974      6869634C 
+ 1974      4344496E 
+ 1974      74665F57 
+ 1974      72697465 
+ 1975              	.LASF12:
+ 1976 00b6 75696E74 		.ascii	"uint16\000"
+ 1976      313600
+ 1977              	.LASF10:
+ 1978 00bd 75696E74 		.ascii	"uint8_t\000"
+ 1978      385F7400 
+ 1979              	.LASF11:
+ 1980 00c5 75696E74 		.ascii	"uint8\000"
+ 1980      3800
+ 1981              	.LASF43:
+ 1982 00cb 47726170 		.ascii	"GraphicLCDIntf_initVar\000"
+ 1982      6869634C 
+ 1982      4344496E 
+ 1982      74665F69 
+ 1982      6E697456 
+ 1983              	.LASF14:
+ 1984 00e2 666C6F61 		.ascii	"float\000"
+ 1984      7400
+ 1985              	.LASF33:
+ 1986 00e8 47726170 		.ascii	"GraphicLCDIntf_Write8_A0\000"
+ 1986      6869634C 
+ 1986      4344496E 
+ 1986      74665F57 
+ 1986      72697465 
+ 1987              	.LASF34:
+ 1988 0101 47726170 		.ascii	"GraphicLCDIntf_Write8_A1\000"
+ 1988      6869634C 
+ 1988      4344496E 
+ 1988      74665F57 
+ 1988      72697465 
+ 1989              	.LASF6:
+ 1990 011a 6C6F6E67 		.ascii	"long long int\000"
+ 1990      206C6F6E 
+ 1990      6720696E 
+ 1990      7400
+ 1991              	.LASF37:
+ 1992 0128 47726170 		.ascii	"GraphicLCDIntf_Read8\000"
+ 1992      6869634C 
+ 1992      4344496E 
+ 1992      74665F52 
+ 1992      65616438 
+ 1993              	.LASF42:
+ 1994 013d 433A5C55 		.ascii	"C:\\Users\\leoja\\Documents\\GitHub\\Dashboard-Firm"
+ 1994      73657273 
+ 1994      5C6C656F 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 45
+
+
+ 1994      6A615C44 
+ 1994      6F63756D 
+ 1995 016b 77617265 		.ascii	"ware-FE9-FE7-Board\\Dashboard.cydsn\000"
+ 1995      2D464539 
+ 1995      2D464537 
+ 1995      2D426F61 
+ 1995      72645C44 
+ 1996              	.LASF4:
+ 1997 018e 6C6F6E67 		.ascii	"long int\000"
+ 1997      20696E74 
+ 1997      00
+ 1998              	.LASF9:
+ 1999 0197 5F5F7569 		.ascii	"__uint8_t\000"
+ 1999      6E74385F 
+ 1999      7400
+ 2000              	.LASF41:
+ 2001 01a1 47656E65 		.ascii	"Generated_Source\\PSoC5\\GraphicLCDIntf.c\000"
+ 2001      72617465 
+ 2001      645F536F 
+ 2001      75726365 
+ 2001      5C50536F 
+ 2002              	.LASF1:
+ 2003 01c9 756E7369 		.ascii	"unsigned char\000"
+ 2003      676E6564 
+ 2003      20636861 
+ 2003      7200
+ 2004              	.LASF21:
+ 2005 01d7 47726170 		.ascii	"GraphicLCDIntf_Start\000"
+ 2005      6869634C 
+ 2005      4344496E 
+ 2005      74665F53 
+ 2005      74617274 
+ 2006              	.LASF0:
+ 2007 01ec 7369676E 		.ascii	"signed char\000"
+ 2007      65642063 
+ 2007      68617200 
+ 2008              	.LASF7:
+ 2009 01f8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2009      206C6F6E 
+ 2009      6720756E 
+ 2009      7369676E 
+ 2009      65642069 
+ 2010              	.LASF8:
+ 2011 020f 756E7369 		.ascii	"unsigned int\000"
+ 2011      676E6564 
+ 2011      20696E74 
+ 2011      00
+ 2012              	.LASF18:
+ 2013 021c 47726170 		.ascii	"GraphicLCDIntf_Enable\000"
+ 2013      6869634C 
+ 2013      4344496E 
+ 2013      74665F45 
+ 2013      6E61626C 
+ 2014              	.LASF3:
+ 2015 0232 73686F72 		.ascii	"short unsigned int\000"
+ 2015      7420756E 
+ 2015      7369676E 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 46
+
+
+ 2015      65642069 
+ 2015      6E7400
+ 2016              	.LASF16:
+ 2017 0245 63686172 		.ascii	"char\000"
+ 2017      00
+ 2018              	.LASF29:
+ 2019 024a 57484954 		.ascii	"WHITE\000"
+ 2019      4500
+ 2020              	.LASF23:
+ 2021 0250 77724461 		.ascii	"wrData\000"
+ 2021      746100
+ 2022              	.LASF13:
+ 2023 0257 75696E74 		.ascii	"uint32\000"
+ 2023      333200
+ 2024              	.LASF17:
+ 2025 025e 72656738 		.ascii	"reg8\000"
+ 2025      00
+ 2026              	.LASF5:
+ 2027 0263 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2027      20756E73 
+ 2027      69676E65 
+ 2027      6420696E 
+ 2027      7400
+ 2028              	.LASF15:
+ 2029 0275 646F7562 		.ascii	"double\000"
+ 2029      6C6500
+ 2030              	.LASF22:
+ 2031 027c 47726170 		.ascii	"GraphicLCDIntf_Write8\000"
+ 2031      6869634C 
+ 2031      4344496E 
+ 2031      74665F57 
+ 2031      72697465 
+ 2032              	.LASF20:
+ 2033 0292 47726170 		.ascii	"GraphicLCDIntf_Stop\000"
+ 2033      6869634C 
+ 2033      4344496E 
+ 2033      74665F53 
+ 2033      746F7000 
+ 2034              	.LASF32:
+ 2035 02a6 72644461 		.ascii	"rdData\000"
+ 2035      746100
+ 2036              	.LASF30:
+ 2037 02ad 73697A65 		.ascii	"sizetype\000"
+ 2037      74797065 
+ 2037      00
+ 2038              	.LASF28:
+ 2039 02b6 474F4C44 		.ascii	"GOLD\000"
+ 2039      00
+ 2040              	.LASF40:
+ 2041 02bb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2041      43313120 
+ 2041      352E342E 
+ 2041      31203230 
+ 2041      31363036 
+ 2042 02ee 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2042      20726576 
+ 2042      6973696F 
+ARM GAS  C:\Users\leoja\AppData\Local\Temp\ccAmkEYI.s 			page 47
+
+
+ 2042      6E203233 
+ 2042      37373135 
+ 2043 0321 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2043      66756E63 
+ 2043      74696F6E 
+ 2043      2D736563 
+ 2043      74696F6E 
+ 2044              	.LASF25:
+ 2045 0349 47726170 		.ascii	"GraphicLCDIntf_WriteM8_Compressed\000"
+ 2045      6869634C 
+ 2045      4344496E 
+ 2045      74665F57 
+ 2045      72697465 
+ 2046              	.LASF27:
+ 2047 036b 424C5545 		.ascii	"BLUE\000"
+ 2047      00
+ 2048              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

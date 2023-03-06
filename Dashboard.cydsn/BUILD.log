@@ -1,32 +1,30 @@
---------------- Build Started: 02/23/2023 14:32:42 Project: Dashboard, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\leoja\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cyprj -d CY8C4247AZI-M485 -s C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
-Elaborating Design...
-ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'ADC_DelSig_v3_20' in schematic 'TopDesign'.
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_GLV_V)
-ADD: fit.M0031: error: Clock Error: (Unable to find source clock 'BUS_CLK' for 'timer_clock_3'.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (timer_clock_3)
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:timer_clock_3)
-ADD: fit.M0006: error: Pin Error: (P3[3] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (BMS_LED)
-ADD: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-DEL: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-ADD: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-DEL: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-ADD: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-DEL: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-ADD: fit.M0006: error: Pin Error: (P3[2] has been reserved for SWD Debug in the DWR System settings.).
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\Dashboard.cydwr (GLV_V)
-ADD: sdb.M0059: error: Error in component: ADC_GLV_V. The ADC_DelSig_v3_20 component (ADC_GLV_V) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_GLV_V)
-ADD: sdb.M0059: error: Error in component: CAN. The SYSCLK clock is undefined or was changed. For proper bit timing calculation, launch the CAN configuration dialog and select the appropriate values in the Timing tab.
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
-ADD: sdb.M0060: warning: Warning in component: CAN. The SYSCLK clock accuracy should be 1.58% or better. Please, enable WCO PLL in the Design-Wide Resource (*.cydwr) editor or use an external clock to meet the CAN accurate clocking requirements.
- * C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
-Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
---------------- Build Failed: 02/23/2023 14:32:48 ---------------
+--------------- Build Started: 02/23/2023 14:45:40 Project: Dashboard, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ugui.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c ugui.c -o .\CortexM3\ARM_GCC_541\Debug\ugui.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ugui_SSD1963.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c ugui_SSD1963.c -o .\CortexM3\ARM_GCC_541\Debug\ugui_SSD1963.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/frucd_display.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c frucd_display.c -o .\CortexM3\ARM_GCC_541\Debug\frucd_display.o
+frucd_display.c: In function 'disp_glv_v':
+frucd_display.c:247:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+     sprintf(data_s, "%d", data);
+                     ^
+frucd_display.c:247:21: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:137:9: warning: variable 'bms_error' set but not used [-Wunused-but-set-variable]
+     int bms_error;
+         ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/can_manga.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c can_manga.c -o .\CortexM3\ARM_GCC_541\Debug\can_manga.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CAN_TX_RX_func.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\CAN_TX_RX_func.c -o .\CortexM3\ARM_GCC_541\Debug\CAN_TX_RX_func.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/GraphicLCDIntf.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\GraphicLCDIntf.c -o .\CortexM3\ARM_GCC_541\Debug\GraphicLCDIntf.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/GraphicLCDIntf_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\GraphicLCDIntf_PM.c -o .\CortexM3\ARM_GCC_541\Debug\GraphicLCDIntf_PM.o
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Dashboard.a .\CortexM3\ARM_GCC_541\Debug\RX.o .\CortexM3\ARM_GCC_541\Debug\TX.o .\CortexM3\ARM_GCC_541\Debug\CAN.o .\CortexM3\ARM_GCC_541\Debug\CAN_INT.o .\CortexM3\ARM_GCC_541\Debug\CAN_PM.o .\CortexM3\ARM_GCC_541\Debug\CAN_TX_RX_func.o .\CortexM3\ARM_GCC_541\Debug\Buzzer.o .\CortexM3\ARM_GCC_541\Debug\HV.o .\CortexM3\ARM_GCC_541\Debug\Drive.o .\CortexM3\ARM_GCC_541\Debug\RGB3_1.o .\CortexM3\ARM_GCC_541\Debug\RGB2_1.o .\CortexM3\ARM_GCC_541\Debug\RGB1_1.o .\CortexM3\ARM_GCC_541\Debug\GraphicLCDIntf.o .\CortexM3\ARM_GCC_541\Debug\GraphicLCDIntf_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\D_BL.o .\CortexM3\ARM_GCC_541\Debug\D_RST.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\GLV_V.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_INT.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_PM.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_theACLK.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_AMux.o .\CortexM3\ARM_GCC_541\Debug\ADC_GLV_V_Ext_CP_Clk.o .\CortexM3\ARM_GCC_541\Debug\IMD_LED.o .\CortexM3\ARM_GCC_541\Debug\BMS_LED.o .\CortexM3\ARM_GCC_541\Debug\ReadyToDrive_Timer.o .\CortexM3\ARM_GCC_541\Debug\ReadyToDrive_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\ReadyToDrive_Int.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Dashboard.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\CortexM3\ARM_GCC_541\Debug\Dashboard.elf .\CortexM3\ARM_GCC_541\Debug\ugui.o .\CortexM3\ARM_GCC_541\Debug\ugui_SSD1963.o .\CortexM3\ARM_GCC_541\Debug\frucd_display.o .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\can_manga.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Dashboard.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Dashboard.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\CortexM3\ARM_GCC_541\Debug\Dashboard.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S C:\Users\leoja\Documents\GitHub\Dashboard-Firmware-FE9-FE7-Board\Dashboard.cydsn\CortexM3\ARM_GCC_541\Debug\Dashboard.elf
+Flash used: 78696 of 262144 bytes (30.0%).
+SRAM used: 4737 of 65536 bytes (7.2%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 02/23/2023 14:45:48 ---------------
