@@ -23,7 +23,8 @@ typedef enum {
     SENSOR_DISCREPANCY,
     BRAKE_IMPLAUSIBLE,
     SHUTDOWN_CIRCUIT_OPEN,
-    UNCALIBRATED
+    UNCALIBRATED,
+    HARD_BSPD
 } vcu_fault;
 
 typedef enum{

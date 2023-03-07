@@ -202,6 +202,11 @@ void disp_state(uint8_t state, BMS_STATUS bms_status) { // TODO
                         state_rect(color);
                         UG_PutColorString(100, 195, "UNCALIBRATED", C_BLACK, color); //whitespace to clear
                         break;
+                    case HARD_BSPD:
+                        color = C_RED;
+                        state_rect(color);
+                        UG_PutColorString(100, 195, "HARD BSPD", C_BLACK, color); //whitespace to clear
+                        break;
                 }
                 
             } else {
